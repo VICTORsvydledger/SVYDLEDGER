@@ -1,0 +1,80 @@
+# Reports Service Deployment
+# SVYD LEDGER - Node.js/TypeScript
+# Region: Central US
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reports-service
+  namespace: production
+  labels:
+    app: reports-service
+    tier: backend
+    language: nodejs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reports-service
+  template:
+    metadata:
+      labels:
+        app: reports-service
+        tier: backend
+        language: nodejs
+    spec:
+      imagePullSecrets:
+        - name: acr-secret
+      containers:
+        - name: reports-service
+          image: svydledgeracrdev.azurecr.io/svydledger/reports-service:latest
+          ports:
+            - containerPort: 3000
+              name: http
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: DATABASE_URL
+            - name: NODE_ENV
+              value: "production"
+            - name: REGION
+              value: "centralus"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reports-service
+  namespace: production
+  labels:
+    app: reports-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
+      name: http
+  selector:
+    app: reports-service

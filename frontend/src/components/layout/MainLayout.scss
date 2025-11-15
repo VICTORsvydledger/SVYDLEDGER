@@ -1,0 +1,59 @@
+.main-layout {
+  min-height: 100vh;
+
+  .sidebar {
+    .logo {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 16px;
+      border-radius: 8px;
+    }
+  }
+
+  .header {
+    background: #fff;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .header-left {
+      .trigger {
+        font-size: 18px;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #1890ff;
+        }
+      }
+    }
+
+    .header-right {
+      .user-info {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #f0f0f0;
+        }
+      }
+    }
+  }
+
+  .content {
+    margin: 24px;
+    padding: 24px;
+    background: #fff;
+    min-height: 280px;
+    border-radius: 8px;
+  }
+}

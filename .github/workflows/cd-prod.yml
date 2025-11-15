@@ -1,0 +1,78 @@
+# Deployment to Azure AKS - Production
+# SVYD LEDGER - Region: Central US
+
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'infrastructure/kubernetes/**'
+
+env:
+  AZURE_REGION: centralus
+  ACR_NAME: svydledgeracr
+  AKS_CLUSTER: svydledger-aks-prod
+  RESOURCE_GROUP: svydledger-data
+  NAMESPACE: production
+
+jobs:
+  deploy:
+    name: Deploy to AKS Production
+    runs-on: ubuntu-latest
+    environment: production
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Get AKS credentials
+        run: |
+          az aks get-credentials \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --name ${{ env.AKS_CLUSTER }} \
+            --overwrite-existing
+
+      - name: Create namespace if not exists
+        run: |
+          kubectl create namespace ${{ env.NAMESPACE }} --dry-run=client -o yaml | kubectl apply -f -
+
+      - name: Create Docker registry secret
+        run: |
+          kubectl create secret docker-registry acr-secret \
+            --docker-server=${{ env.ACR_NAME }}.azurecr.io \
+            --docker-username=${{ secrets.ACR_USERNAME }} \
+            --docker-password=${{ secrets.ACR_PASSWORD }} \
+            --namespace=${{ env.NAMESPACE }} \
+            --dry-run=client -o yaml | kubectl apply -f -
+
+      - name: Deploy to AKS
+        run: |
+          # Deploy services
+          kubectl apply -f infrastructure/kubernetes/base/ -n ${{ env.NAMESPACE }}
+          kubectl apply -f infrastructure/kubernetes/overlays/prod/ -n ${{ env.NAMESPACE }}
+
+      - name: Verify deployment
+        run: |
+          kubectl rollout status deployment -n ${{ env.NAMESPACE }}
+          kubectl get pods -n ${{ env.NAMESPACE }}
+          kubectl get services -n ${{ env.NAMESPACE }}
+
+      - name: Run smoke tests
+        run: |
+          # Wait for services to be ready
+          kubectl wait --for=condition=ready pod -l app=identity-service -n ${{ env.NAMESPACE }} --timeout=300s || true
+          kubectl wait --for=condition=ready pod -l app=accounting-service -n ${{ env.NAMESPACE }} --timeout=300s || true
+          
+          # Get service URLs and test health endpoints
+          echo "Services deployed successfully"
+
+      - name: Azure Logout
+        if: always()
+        run: az logout

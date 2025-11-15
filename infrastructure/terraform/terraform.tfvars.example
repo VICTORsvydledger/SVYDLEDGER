@@ -1,0 +1,53 @@
+# Terraform Variables - Example
+# SVYD LEDGER
+# 
+# Copy this file to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars to version control
+
+# Environment
+environment = "dev"  # dev, stage, or prod
+
+# Location (must be centralus)
+location = "centralus"
+
+# SQL Server Credentials
+sql_admin_username = "svydadmin"
+sql_admin_password = "YourStrongPassword123!"  # Change this!
+
+# JWT Secret (generate a random 64-character string)
+jwt_secret_key = "your-jwt-secret-key-here-at-least-32-characters-long"
+
+# Stripe Configuration (optional for dev)
+stripe_secret_key     = ""  # From Stripe Dashboard
+stripe_webhook_secret = ""  # From Stripe Webhook configuration
+
+# Admin Email (for alerts and notifications)
+admin_email = "admin@svydledger.com"
+
+# Additional Alert Recipients (optional)
+alert_email_recipients = [
+  # "developer1@svydledger.com",
+  # "developer2@svydledger.com"
+]
+
+# Additional Tags (optional)
+additional_tags = {
+  # CostCenter = "IT"
+  # Owner      = "DevOps Team"
+}
+
+# ========================================
+# HOW TO GENERATE SECURE SECRETS
+# ========================================
+#
+# SQL Password (PowerShell):
+#   -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 20 | ForEach-Object {[char]$_})
+#
+# JWT Secret (PowerShell):
+#   -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 64 | ForEach-Object {[char]$_})
+#
+# Or use online tools:
+#   https://www.random.org/passwords/
+#   https://passwordsgenerator.net/
+#
+# ========================================

@@ -1,0 +1,83 @@
+// Prisma schema para Azure SQL Hyperscale
+// Region: Central US
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== ACCOUNTING SCHEMA ====================
+// Nota: SQL Server en Prisma no soporta ENUM, usamos String con validación
+
+model Account {
+  id          Int           @id @default(autoincrement())
+  code        String        @unique @db.VarChar(20)
+  name        String        @db.VarChar(200)
+  type        String        @db.VarChar(20) // ASSET, LIABILITY, EQUITY, REVENUE, EXPENSE, COST
+  parentId    Int?
+  parent      Account?      @relation("AccountHierarchy", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children    Account[]     @relation("AccountHierarchy")
+  balance     Decimal       @default(0) @db.Decimal(18, 2)
+  isActive    Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  
+  // Relaciones
+  journalLines JournalEntryLine[]
+  
+  @@index([type])
+  @@index([code])
+  @@map("accounts")
+}
+
+model JournalEntry {
+  id          Int                 @id @default(autoincrement())
+  date        DateTime            @db.Date
+  description String              @db.VarChar(500)
+  reference   String?             @db.VarChar(100)
+  userId      Int
+  isPosted    Boolean             @default(false)
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  
+  // Relaciones
+  lines       JournalEntryLine[]
+  
+  @@index([date])
+  @@index([userId])
+  @@map("journal_entries")
+}
+
+model JournalEntryLine {
+  id              Int           @id @default(autoincrement())
+  journalEntryId  Int
+  journalEntry    JournalEntry  @relation(fields: [journalEntryId], references: [id], onDelete: Cascade)
+  accountId       Int
+  account         Account       @relation(fields: [accountId], references: [id])
+  debit           Decimal       @default(0) @db.Decimal(18, 2)
+  credit          Decimal       @default(0) @db.Decimal(18, 2)
+  description     String?       @db.VarChar(500)
+  createdAt       DateTime      @default(now())
+  
+  @@index([journalEntryId])
+  @@index([accountId])
+  @@map("journal_entry_lines")
+}
+
+// Balance histórico para optimizar consultas
+model AccountBalance {
+  id          Int       @id @default(autoincrement())
+  accountId   Int
+  date        DateTime  @db.Date
+  balance     Decimal   @db.Decimal(18, 2)
+  createdAt   DateTime  @default(now())
+  
+  @@unique([accountId, date])
+  @@index([accountId])
+  @@index([date])
+  @@map("account_balances")
+}

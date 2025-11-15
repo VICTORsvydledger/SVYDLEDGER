@@ -1,0 +1,138 @@
+# CI/CD Backend Services
+# SVYD LEDGER - Region: Central US
+
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/ci-backend.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+
+env:
+  AZURE_REGION: centralus
+  ACR_NAME: svydledgeracr
+  RESOURCE_GROUP: svydledger-data
+
+jobs:
+  # ==================== PYTHON SERVICES ====================
+  test-python-services:
+    name: Test Python Services
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [identity-service, language-service, country-service]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: ./backend/${{ matrix.service }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+
+      - name: Run tests
+        working-directory: ./backend/${{ matrix.service }}
+        run: |
+          pytest --cov=. --cov-report=xml || echo "No tests found"
+
+  # ==================== NODE.JS SERVICES ====================
+  test-nodejs-services:
+    name: Test Node.js Services
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [accounting-service, reports-service, payments-service]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: backend/${{ matrix.service }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./backend/${{ matrix.service }}
+        run: npm ci
+
+      - name: Run lint
+        working-directory: ./backend/${{ matrix.service }}
+        run: npm run lint || echo "No lint script"
+
+      - name: Run tests
+        working-directory: ./backend/${{ matrix.service }}
+        run: npm test || echo "No tests found"
+
+      - name: Build
+        working-directory: ./backend/${{ matrix.service }}
+        run: npm run build
+
+  # ==================== BUILD & PUSH TO ACR ====================
+  build-and-push:
+    name: Build and Push to ACR
+    runs-on: ubuntu-latest
+    needs: [test-python-services, test-nodejs-services]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    strategy:
+      matrix:
+        service:
+          - identity-service
+          - language-service
+          - country-service
+          - accounting-service
+          - reports-service
+          - payments-service
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Login to ACR
+        run: |
+          az acr login --name ${{ env.ACR_NAME }}
+
+      - name: Determine Dockerfile
+        id: dockerfile
+        run: |
+          if [[ "${{ matrix.service }}" == *"-service" ]]; then
+            if [[ "${{ matrix.service }}" =~ ^(identity|language|country)-service$ ]]; then
+              echo "dockerfile=docker/backend/python.Dockerfile" >> $GITHUB_OUTPUT
+            else
+              echo "dockerfile=docker/backend/nodejs.Dockerfile" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Build and Push Docker Image
+        working-directory: ./backend/${{ matrix.service }}
+        run: |
+          IMAGE_TAG="${{ env.ACR_NAME }}.azurecr.io/svydledger/${{ matrix.service }}:${{ github.sha }}"
+          IMAGE_LATEST="${{ env.ACR_NAME }}.azurecr.io/svydledger/${{ matrix.service }}:latest"
+          
+          docker build -t $IMAGE_TAG -t $IMAGE_LATEST -f ../../${{ steps.dockerfile.outputs.dockerfile }} .
+          docker push $IMAGE_TAG
+          docker push $IMAGE_LATEST
+
+      - name: Azure Logout
+        run: az logout

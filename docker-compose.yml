@@ -1,0 +1,116 @@
+# Docker Compose para desarrollo local
+# Region: Central US
+version: '3.8'
+
+services:
+  # ==================== BACKEND SERVICES ====================
+  
+  identity-service:
+    build:
+      context: ./backend/identity-service
+      dockerfile: ../../docker/backend/python.Dockerfile
+    container_name: svyd-identity-service
+    ports:
+      - "8001:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - AZURE_KEY_VAULT_URL=${AZURE_KEY_VAULT_URL}
+    networks:
+      - svyd-network
+    restart: unless-stopped
+
+  language-service:
+    build:
+      context: ./backend/language-service
+      dockerfile: ../../docker/backend/python.Dockerfile
+    container_name: svyd-language-service
+    ports:
+      - "8002:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    networks:
+      - svyd-network
+    restart: unless-stopped
+
+  country-service:
+    build:
+      context: ./backend/country-service
+      dockerfile: ../../docker/backend/python.Dockerfile
+    container_name: svyd-country-service
+    ports:
+      - "8003:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    networks:
+      - svyd-network
+    restart: unless-stopped
+
+  accounting-service:
+    build:
+      context: ./backend/accounting-service
+      dockerfile: ../../docker/backend/nodejs.Dockerfile
+    container_name: svyd-accounting-service
+    ports:
+      - "8004:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - NODE_ENV=development
+    networks:
+      - svyd-network
+    restart: unless-stopped
+
+  reports-service:
+    build:
+      context: ./backend/reports-service
+      dockerfile: ../../docker/backend/nodejs.Dockerfile
+    container_name: svyd-reports-service
+    ports:
+      - "8005:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - NODE_ENV=development
+    networks:
+      - svyd-network
+    restart: unless-stopped
+
+  payments-service:
+    build:
+      context: ./backend/payments-service
+      dockerfile: ../../docker/backend/nodejs.Dockerfile
+    container_name: svyd-payments-service
+    ports:
+      - "8006:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - NODE_ENV=development
+    networks:
+      - svyd-network
+    restart: unless-stopped
+
+  # ==================== FRONTEND ====================
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/frontend/Dockerfile
+    container_name: svyd-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://localhost:8080
+    networks:
+      - svyd-network
+    restart: unless-stopped
+    depends_on:
+      - identity-service
+      - accounting-service
+
+networks:
+  svyd-network:
+    driver: bridge
+
+# Nota: Para producción, usar Azure Kubernetes Service (AKS)
+# Este docker-compose es solo para desarrollo local
