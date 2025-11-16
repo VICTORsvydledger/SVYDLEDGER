@@ -1,0 +1,235 @@
+# SVYD LEDGER - Ingress Configuration
+# Exposes all microservices through NGINX Ingress Controller
+# Region: Central US
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: svydledger-ingress
+  namespace: production
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+    # Main API Gateway - aggregates all services
+    - host: api.svydledger.com
+      http:
+        paths:
+          # Identity Service - handles /api/v1/auth/* endpoints
+          - path: /api/v1/auth
+            pathType: Prefix
+            backend:
+              service:
+                name: identity-service
+                port:
+                  number: 80
+          
+          # Identity Service - handles /api/v1/users/* and /api/v1/roles/* endpoints
+          - path: /api/v1/users
+            pathType: Prefix
+            backend:
+              service:
+                name: identity-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/roles
+            pathType: Prefix
+            backend:
+              service:
+                name: identity-service
+                port:
+                  number: 80
+          
+          # Language Service
+          - path: /api/v1/languages
+            pathType: Prefix
+            backend:
+              service:
+                name: language-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/translations
+            pathType: Prefix
+            backend:
+              service:
+                name: language-service
+                port:
+                  number: 80
+          
+          # Country Service
+          - path: /api/v1/countries
+            pathType: Prefix
+            backend:
+              service:
+                name: country-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/currencies
+            pathType: Prefix
+            backend:
+              service:
+                name: country-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/taxes
+            pathType: Prefix
+            backend:
+              service:
+                name: country-service
+                port:
+                  number: 80
+          
+          # Accounting Service
+          - path: /api/v1/accounts
+            pathType: Prefix
+            backend:
+              service:
+                name: accounting-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/journal-entries
+            pathType: Prefix
+            backend:
+              service:
+                name: accounting-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/balances
+            pathType: Prefix
+            backend:
+              service:
+                name: accounting-service
+                port:
+                  number: 80
+          
+          # Reports Service
+          - path: /api/v1/reports
+            pathType: Prefix
+            backend:
+              service:
+                name: reports-service
+                port:
+                  number: 80
+          
+          # Payments Service
+          - path: /api/v1/subscriptions
+            pathType: Prefix
+            backend:
+              service:
+                name: payments-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/invoices
+            pathType: Prefix
+            backend:
+              service:
+                name: payments-service
+                port:
+                  number: 80
+          
+          - path: /api/v1/webhooks
+            pathType: Prefix
+            backend:
+              service:
+                name: payments-service
+                port:
+                  number: 80
+
+---
+# Individual Service Subdomains
+# Each service gets its own subdomain for direct access
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: svydledger-services-ingress
+  namespace: production
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+    # Identity Service
+    - host: identity.svydledger.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: identity-service
+                port:
+                  number: 80
+    
+    # Language Service
+    - host: language.svydledger.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: language-service
+                port:
+                  number: 80
+    
+    # Country Service
+    - host: country.svydledger.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: country-service
+                port:
+                  number: 80
+    
+    # Accounting Service
+    - host: accounting.svydledger.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: accounting-service
+                port:
+                  number: 80
+    
+    # Reports Service
+    - host: reports.svydledger.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: reports-service
+                port:
+                  number: 80
+    
+    # Payments Service
+    - host: payments.svydledger.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: payments-service
+                port:
+                  number: 80

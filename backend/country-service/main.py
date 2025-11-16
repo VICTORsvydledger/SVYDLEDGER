@@ -230,7 +230,7 @@ async def get_accounting_config(country_code: str):
     """
     raise HTTPException(status_code=404, detail="Accounting config not found")
 
-@app.get(f"/api/{API_VERSION}/currencies")
+@app.get("/api/" + API_VERSION + "/currencies")
 async def list_currencies():
     """
     Listar monedas disponibles
@@ -238,8 +238,8 @@ async def list_currencies():
     return {
         "currencies": [
             {"code": "USD", "name": "US Dollar", "symbol": "$"},
-            {"code": "EUR", "name": "Euro", "symbol": "€"},
-            {"code": "GBP", "name": "British Pound", "symbol": "£"},
+            {"code": "EUR", "name": "Euro", "symbol": "EUR"},
+            {"code": "GBP", "name": "British Pound", "symbol": "GBP"},
             {"code": "MXN", "name": "Mexican Peso", "symbol": "$"},
             {"code": "COP", "name": "Colombian Peso", "symbol": "$"},
             {"code": "BRL", "name": "Brazilian Real", "symbol": "R$"},

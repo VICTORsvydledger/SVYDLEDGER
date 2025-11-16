@@ -29,7 +29,7 @@ spec:
         - name: payments-service
           image: svydledgeracrdev.azurecr.io/svydledger/payments-service:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 8006
               name: http
           env:
             - name: DATABASE_URL
@@ -51,6 +51,8 @@ spec:
               value: "production"
             - name: REGION
               value: "centralus"
+            - name: PORT
+              value: "8006"
           resources:
             requests:
               memory: "512Mi"
@@ -61,13 +63,13 @@ spec:
           livenessProbe:
             httpGet:
               path: /health
-              port: 3000
+              port: 8006
             initialDelaySeconds: 30
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /health
-              port: 3000
+              port: 8006
             initialDelaySeconds: 5
             periodSeconds: 5
 
@@ -83,7 +85,7 @@ spec:
   type: ClusterIP
   ports:
     - port: 80
-      targetPort: 3000
+      targetPort: 8006
       protocol: TCP
       name: http
   selector:
