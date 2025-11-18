@@ -8,23 +8,51 @@
 - Puerto 5173 ocupado
 - Error: "Port 5173 is already in use"
 
-### ? Solución Rápida
+### ? Solución Definitiva (NUEVA - Recomendada) ?
 
-#### Opción 1: Script Automático (Recomendado)
+#### Opción 1: Proceso Único Garantizado (Mejor Solución)
+```powershell
+.\start-single-process.ps1
+```
+
+**Características:**
+- ? Detecta procesos existentes automáticamente
+- ? Crea bloqueo para evitar duplicados
+- ? Auto-limpieza al salir (Ctrl+C)
+- ? Ofrece opciones si detecta servidor corriendo
+- ? GARANTIZA solo 1 proceso activo
+
+#### Opción 2: Dev Manager Mejorado
 ```powershell
 .\dev-manager.ps1
 ```
 Luego selecciona:
-- Opción `2`: Kill All Node.js Processes
-- Opción `1`: Start Frontend (Safe Mode)
+- **Opción `1`: Start Frontend (Single Process Mode)** ? RECOMENDADO
+- Opción `2`: Start Frontend (Safe Mode)
+- Opción `3`: Kill All Node.js Processes
 
-#### Opción 2: Script Directo
+#### Opción 3: Monitor Automático (Prevención)
+```powershell
+# Solo alertas
+.\monitor-node-processes.ps1
+
+# Auto-kill de procesos extras
+.\monitor-node-processes.ps1 -AutoKill
+```
+
+**Este monitor:**
+- ?? Revisa cada 30 segundos
+- ?? Alerta cuando detecta múltiples procesos
+- ?? Puede eliminar automáticamente procesos extras
+- ?? Muestra uso de memoria en tiempo real
+
+#### Opción 4: Script Directo (Método Anterior)
 ```powershell
 .\kill-node-processes.ps1
 .\start-frontend.ps1
 ```
 
-#### Opción 3: Manual
+#### Opción 5: Manual
 ```powershell
 # Matar procesos Node.js
 Get-Process node | Stop-Process -Force
@@ -37,11 +65,62 @@ cd frontend
 npm run dev
 ```
 
-#### Opción 4: Task Manager
+#### Opción 6: Task Manager
 1. Abrir Task Manager (Ctrl+Shift+Esc)
 2. Buscar "Node.js JavaScript Runtime"
 3. Click derecho ? End Task en cada uno
-4. Ejecutar `.\start-frontend.ps1`
+4. Ejecutar `.\start-single-process.ps1`
+
+### ?? Flujo Recomendado
+
+**Para trabajar diariamente:**
+```powershell
+# Simplemente ejecuta:
+.\start-single-process.ps1
+
+# O con menú:
+.\dev-manager.ps1
+# Y selecciona: Opción 1
+```
+
+**Para prevención continua (opcional):**
+```powershell
+# Terminal 1: Monitor con auto-kill
+.\monitor-node-processes.ps1 -AutoKill
+
+# Terminal 2: Desarrollo normal
+.\start-single-process.ps1
+```
+
+### ?? Verificación de Éxito
+
+Después de ejecutar `start-single-process.ps1`:
+
+**En PowerShell verás:**
+```
+? Lock acquired - Only ONE process will run
+? VITE v5.x.x  ready in xxx ms
+```
+
+**En Task Manager:**
+- Solo 1 proceso Node.js
+- Memoria: ~150-200 MB (no 862 MB)
+
+**Verificar manualmente:**
+```powershell
+Get-Process node | Measure-Object
+# Output: Count: 1 ?
+```
+
+### ?? Si el Problema Persiste
+
+```powershell
+# Limpieza extrema:
+taskkill /F /IM node.exe /T
+Start-Sleep -Seconds 3
+Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
+.\start-single-process.ps1
+```
 
 ---
 

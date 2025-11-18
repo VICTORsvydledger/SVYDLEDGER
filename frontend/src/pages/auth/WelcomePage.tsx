@@ -4,8 +4,6 @@ import { Typography, Select, Form, Input, Alert, Modal } from 'antd'
 import notify from '@/lib/notifications'
 import SignInForm from './components/SignInForm'
 import SignUpForm from './components/SignUpForm'
-import { useTranslation } from 'react-i18next'
-import '@/i18n/i18n'
 import './WelcomePage.scss'
 
 const { Title, Text } = Typography
@@ -16,14 +14,44 @@ interface Language {
   nativeName: string
 }
 
+// 27 idiomas completos según especificaciones originales
 const languages: Language[] = [
+  // Prioridad 1: Inglés y Español (por defecto primero)
   { code: 'en', name: 'English', nativeName: 'English' },
   { code: 'es', name: 'Spanish', nativeName: 'Español' },
+  
+  // Prioridad 2: Europeos principales
+  { code: 'fr', name: 'French', nativeName: 'Français' },
+  { code: 'it', name: 'Italian', nativeName: 'Italiano' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch' },
+  
+  // Resto alfabético por nombre en inglés
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
+  { code: 'ar-EG', name: 'Arabic (Egyptian)', nativeName: 'العربية المصرية' },
+  { code: 'bn', name: 'Bengali', nativeName: 'বাংলা' },
+  { code: 'zh', name: 'Chinese (Mandarin)', nativeName: '中文 (普通话)' },
+  { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी' },
+  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia' },
+  { code: 'ja', name: 'Japanese', nativeName: '日本語' },
+  { code: 'ko', name: 'Korean', nativeName: '한국어' },
+  { code: 'mr', name: 'Marathi', nativeName: 'मराठी' },
+  { code: 'pcm', name: 'Nigerian Pidgin', nativeName: 'Nigerian Pidgin' },
+  { code: 'pa', name: 'Panjabi', nativeName: 'ਪੰਜਾਬੀ' },
+  { code: 'fa', name: 'Persian', nativeName: 'فارسی' },
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português' },
+  { code: 'ru', name: 'Russian', nativeName: 'Русский' },
+  { code: 'sw', name: 'Swahili', nativeName: 'Kiswahili' },
+  { code: 'tl', name: 'Tagalog', nativeName: 'Tagalog' },
+  { code: 'ta', name: 'Tamil', nativeName: 'தமிழ்' },
+  { code: 'te', name: 'Telugu', nativeName: 'తెలుగు' },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe' },
+  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська' },
+  { code: 'ur', name: 'Urdu', nativeName: 'اردو' },
+  { code: 'vi', name: 'Vietnamese', nativeName: 'Tiếng Việt' },
 ]
 
 const WelcomePage: React.FC = () => {
-  const { t, i18n } = useTranslation()
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(i18n.language || 'es')
+  const [selectedLanguage, setSelectedLanguage] = useState<string>('en')
 
   const [forgotVisible, setForgotVisible] = useState(false)
   const [forgotEmail, setForgotEmail] = useState('')
@@ -36,16 +64,17 @@ const WelcomePage: React.FC = () => {
 
   const handleLanguage = (lng: string) => {
     setSelectedLanguage(lng)
-    i18n.changeLanguage(lng).catch(() => {})
+    // TODO: Implement i18n language change when system is ready
+    console.log('Language changed to:', lng)
   }
 
   const handleSendRecovery = async () => {
     if (!forgotEmail) return
     try {
       setForgotSent(true)
-      notify.success(t('auth.recovery.sent'))
+      notify.success('Recovery email sent! Check your inbox.')
     } catch (err) {
-      notify.error('No se pudo enviar el enlace de recuperación')
+      notify.error('Could not send recovery link')
     }
   }
 
@@ -53,10 +82,10 @@ const WelcomePage: React.FC = () => {
     if (twofaCode.length !== 6) return
     try {
       setTwofaVisible(false)
-      notify.success('Verificación exitosa')
+      notify.success('Verification successful')
       navigate('/app')
     } catch (err) {
-      notify.error('Código de verificación inválido')
+      notify.error('Invalid verification code')
     }
   }
 
@@ -66,36 +95,50 @@ const WelcomePage: React.FC = () => {
       <div className="overlay" />
 
       <div className="content">
-        <Title className="logo">{t('welcome.headline', { defaultValue: 'Svyd' })}</Title>
+        {/* Logo - Vladimir Script 48px */}
+        <Title className="logo">Svyd</Title>
+        
+        {/* Subtitle - Vladimir Script 30px */}
         <Title level={2} className="subtitle">
-          {t('app.subtitle')}
+          Sistema de Contabilidad Universal
         </Title>
 
-        <Text className="promotional-text">{t('welcome.promo')}</Text>
+        {/* Promotional Text - Arial 12px */}
+        <Text className="promotional-text">
+          Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica
+        </Text>
 
+        {/* Language Selector - 27 idiomas */}
         <div className="language-selector">
           <Select
             value={selectedLanguage}
             onChange={handleLanguage}
-            options={languages.map((l) => ({ value: l.code, label: `${l.name} (${l.nativeName})` }))}
+            options={languages.map((l) => ({ 
+              value: l.code, 
+              label: `${l.name} (${l.nativeName})` 
+            }))}
             style={{ width: 320 }}
+            showSearch
+            optionFilterProp="label"
+            placeholder="Select Language / Seleccionar Idioma"
           />
         </div>
 
+        {/* Forms Container */}
         <div className="forms-container">
-          {/* Sign In */}
+          {/* Sign In Form */}
           <div className="form-card">
             <Title level={3} className="form-title">
-              {t('auth.signin')}
+              Sign In
             </Title>
 
             <SignInForm onForgotPassword={() => setForgotVisible(true)} />
           </div>
 
-          {/* Sign Up */}
+          {/* Sign Up Form */}
           <div className="form-card">
             <Title level={3} className="form-title">
-              {t('auth.signup')}
+              Sign Up
             </Title>
 
             <SignUpForm />
@@ -103,7 +146,7 @@ const WelcomePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Forgot Password */}
+      {/* Forgot Password Modal */}
       <Modal
         open={forgotVisible}
         onCancel={() => {
@@ -112,41 +155,42 @@ const WelcomePage: React.FC = () => {
           setForgotEmail('')
         }}
         onOk={!forgotSent ? handleSendRecovery : undefined}
-        okText={forgotSent ? t('auth.recovery.cancel') : t('auth.recovery.send')}
-        cancelText={t('auth.recovery.cancel')}
-        title={t('auth.recovery.title')}
+        okText={forgotSent ? 'Close' : 'Send Recovery Email'}
+        cancelText="Cancel"
+        title="Forgot Password?"
       >
         {forgotSent ? (
-          <Alert type="success" message={t('auth.recovery.sent')} />
+          <Alert type="success" message="Recovery email sent! Check your inbox." />
         ) : (
           <Form layout="vertical">
-            <Form.Item label={t('auth.email')} required>
+            <Form.Item label="Email" required>
               <Input
                 type="email"
                 value={forgotEmail}
                 onChange={(e) => setForgotEmail(e.target.value)}
-                placeholder="tu@email.com"
+                placeholder="your@email.com"
               />
             </Form.Item>
           </Form>
         )}
       </Modal>
 
-      {/* Two-Factor */}
+      {/* Two-Factor Authentication Modal */}
       <Modal
         open={twofaVisible}
         onCancel={() => setTwofaVisible(false)}
         onOk={handleVerifyTwofa}
         okButtonProps={{ disabled: twofaCode.length !== 6 }}
-        title={t('auth.2fa.title')}
+        title="Two-Factor Authentication"
       >
-        <Text>{t('auth.2fa.text')}</Text>
+        <Text>Enter the 6-digit verification code sent to your email.</Text>
         <Form layout="vertical" style={{ marginTop: 12 }}>
-          <Form.Item label="Código de verificación" required>
+          <Form.Item label="Verification Code" required>
             <Input
               value={twofaCode}
               onChange={(e) => setTwofaCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
               maxLength={6}
+              placeholder="000000"
             />
           </Form.Item>
         </Form>

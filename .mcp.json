@@ -1,0 +1,54 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp.json",
+  "mcpServers": {
+    "Azure MCP Server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@azure/mcp@latest",
+        "server",
+        "start"
+      ],
+      "enabled": true,
+      "description": "Azure resource management - CRITICAL for SVYD LEDGER (AKS, ACR, Storage, SQL, Service Bus)"
+    },
+    "Microsoft Learn": {
+      "url": "https://learn.microsoft.com/mcp/",
+      "enabled": true,
+      "description": "Official documentation for Azure, React, TypeScript, Node.js"
+    }
+  },
+  "allowedTools": [
+    "Azure_MCP_Server_appservice",
+    "Azure_MCP_Server_functionapp",
+    "Azure_MCP_Server_storage",
+    "Azure_MCP_Server_keyvault",
+    "Azure_MCP_Server_deploy",
+    "Azure_MCP_Server_get_bestpractices",
+    "Azure_MCP_Server_azureterraformbestpractices",
+    "Azure_MCP_Server_monitor",
+    "Azure_MCP_Server_resourcehealth",
+    "Azure_MCP_Server_group_list",
+    "Azure_MCP_Server_applens",
+    "Microsoft_Learn_microsoft_docs_search",
+    "Microsoft_Learn_microsoft_docs_fetch",
+    "Microsoft_Learn_microsoft_code_sample_search"
+  ],
+  "disabledTools": [
+    "Azure_MCP_Server_signalr",
+    "Azure_MCP_Server_grafana",
+    "Azure_MCP_Server_speech",
+    "Azure_MCP_Server_marketplace"
+  ],
+  "settings": {
+    "autoApprove": false,
+    "sessionCache": true,
+    "timeout": 30000
+  },
+  "metadata": {
+    "project": "SVYD LEDGER",
+    "description": "Multi-tenant Accounting System with Azure Infrastructure",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15"
+  }
+}

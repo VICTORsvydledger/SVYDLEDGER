@@ -5,6 +5,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# Node.js process lock (single-process system)
+.node-lock
+
+# MCP (Model Context Protocol)
+.mcp-cache/
+.mcp-logs/
+
 # Python
 __pycache__/
 *.py[cod]

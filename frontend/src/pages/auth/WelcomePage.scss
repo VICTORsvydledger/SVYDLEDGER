@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
+// Vladimir Script Font (Local - Primary)
 @font-face {
   font-family: 'Vladimir Script';
   src: url('/fonts/VLADIMIR.TTF') format('truetype');
@@ -7,6 +8,9 @@
   font-style: normal;
   font-display: swap;
 }
+
+// Fallback: Pinyon Script (Google Fonts - Similar style)
+// Se usa si Vladimir Script no carga
 
 .welcome-page {
   position: relative;
@@ -28,6 +32,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #87CEEB; // Sky blue fallback
     z-index: -2;
     animation: subtle-zoom 30s ease-in-out infinite alternate;
   }
@@ -65,6 +70,7 @@
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
+    max-width: 100%;
     animation: fade-in 1s ease-out;
   }
 
@@ -79,49 +85,65 @@
     }
   }
 
-  // Logo - Vladimir Script style (48px as specified)
+  // Logo - Vladimir Script 48px (según especificaciones originales)
   .logo {
     font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
     font-size: 48px !important;
-    font-weight: normal !important; // Use normal weight for this script font
+    font-weight: normal !important;
     color: white !important;
     text-align: center !important;
     margin-bottom: 10px !important;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.2);
+    letter-spacing: 3px;
     animation: logo-glow 3s ease-in-out infinite alternate;
+    line-height: 1.2;
 
     @media (max-width: 768px) {
       font-size: 40px !important;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 36px !important;
+      letter-spacing: 1px;
     }
   }
 
   @keyframes logo-glow {
     from {
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
+                   0 0 20px rgba(255, 255, 255, 0.2);
     }
     to {
-      text-shadow: 2px 2px 16px rgba(255, 255, 255, 0.5),
-                   2px 2px 8px rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 16px rgba(255, 255, 255, 0.6),
+                   0 0 30px rgba(255, 255, 255, 0.4),
+                   2px 2px 8px rgba(0, 0, 0, 0.4);
     }
   }
 
-  // Subtitle - Vladimir Script style (30px as specified)
+  // Subtitle - Vladimir Script 30px (según especificaciones originales)
   .subtitle {
     font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
     font-size: 30px !important;
-    font-weight: normal !important; // Use normal weight for this script font
+    font-weight: normal !important;
     color: white !important;
     text-align: center !important;
     margin-bottom: 30px !important;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    line-height: 1.4;
+    max-width: 90%;
 
     @media (max-width: 768px) {
       font-size: 24px !important;
     }
+
+    @media (max-width: 480px) {
+      font-size: 20px !important;
+    }
   }
 
-  // Promotional Text - Arial 12px as specified
+  // Promotional Text - Arial 12px (según especificaciones originales)
   .promotional-text {
     font-family: Arial, sans-serif !important;
     font-size: 12px !important;
@@ -129,54 +151,71 @@
     text-align: center !important;
     max-width: 700px;
     margin-bottom: 30px !important;
-    line-height: 1.6 !important;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.8 !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     padding: 0 20px;
+    font-weight: 400;
 
     @media (max-width: 768px) {
       font-size: 11px !important;
+      max-width: 90%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 10px !important;
+      line-height: 1.6 !important;
     }
   }
 
   // Language Selector
   .language-selector {
     margin-bottom: 40px !important;
-    min-width: 300px;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 20px;
 
     @media (max-width: 768px) {
-      min-width: 250px;
+      max-width: 280px;
     }
 
-    .MuiOutlinedInput-root {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      color: white;
-      transition: all 0.3s ease;
+    // Ant Design Select customization
+    .ant-select {
+      width: 100% !important;
+    }
+
+    .ant-select-selector {
+      background: rgba(255, 255, 255, 0.15) !important;
+      backdrop-filter: blur(10px) !important;
+      border-radius: 12px !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      color: white !important;
+      transition: all 0.3s ease !important;
+      padding: 8px 12px !important;
+      height: auto !important;
+      min-height: 40px !important;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
       }
+    }
 
-      &.Mui-focused {
-        background: rgba(255, 255, 255, 0.25);
-      }
+    .ant-select-focused .ant-select-selector {
+      background: rgba(255, 255, 255, 0.25) !important;
+      border-color: rgba(255, 255, 255, 0.7) !important;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+    }
 
-      .MuiOutlinedInput-notchedOutline {
-        border-color: rgba(255, 255, 255, 0.3);
-      }
+    .ant-select-arrow {
+      color: white !important;
+    }
 
-      &:hover .MuiOutlinedInput-notchedOutline {
-        border-color: rgba(255, 255, 255, 0.5);
-      }
+    .ant-select-selection-search-input {
+      color: white !important;
+    }
 
-      &.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border-color: rgba(255, 255, 255, 0.7);
-      }
-
-      .MuiSvgIcon-root {
-        color: white;
-      }
+    .ant-select-selection-placeholder {
+      color: rgba(255, 255, 255, 0.7) !important;
     }
   }
 
@@ -188,10 +227,12 @@
     width: 100%;
     max-width: 900px;
     margin-top: 20px;
+    padding: 0 20px;
 
     @media (max-width: 968px) {
       grid-template-columns: 1fr;
       max-width: 450px;
+      gap: 20px;
     }
   }
 
@@ -215,6 +256,11 @@
     @media (max-width: 768px) {
       padding: 25px;
     }
+
+    @media (max-width: 480px) {
+      padding: 20px;
+      border-radius: 16px;
+    }
   }
 
   @keyframes card-slide-up {
@@ -235,109 +281,33 @@
     color: white !important;
     text-align: center !important;
     margin-bottom: 25px !important;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-  }
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    font-family: Arial, sans-serif !important;
 
-  // Form Field
-  .form-field {
-    margin-bottom: 20px;
-
-    .field-label {
-      color: white !important;
-      font-weight: 500 !important;
-      margin-bottom: 8px !important;
-      display: block;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    @media (max-width: 768px) {
+      font-size: 24px !important;
     }
 
-    .MuiOutlinedInput-root {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.95);
-      }
-
-      &.Mui-focused {
-        background: white;
-      }
-
-      input {
-        color: #333;
-      }
-
-      .MuiOutlinedInput-notchedOutline {
-        border-color: rgba(255, 255, 255, 0.3);
-      }
-
-      &:hover .MuiOutlinedInput-notchedOutline {
-        border-color: rgba(255, 255, 255, 0.5);
-      }
-
-      &.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border-color: #1976d2;
-        border-width: 2px;
-      }
+    @media (max-width: 480px) {
+      font-size: 22px !important;
     }
   }
 
-  // Forgot Password Link
-  .forgot-password-link {
-    color: white !important;
-    text-decoration: none !important;
-    display: block;
-    text-align: right;
-    margin-bottom: 20px !important;
-    font-size: 14px !important;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: #e3f2fd !important;
-      text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.5);
-    }
-  }
-
-  // Submit Button
-  .submit-button {
-    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%) !important;
-    color: white !important;
-    padding: 12px !important;
-    border-radius: 10px !important;
-    font-weight: 600 !important;
-    font-size: 16px !important;
-    text-transform: none !important;
-    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
-    transition: all 0.3s ease !important;
-
-    &:hover:not(:disabled) {
-      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%) !important;
-      box-shadow: 0 6px 16px rgba(25, 118, 210, 0.5) !important;
-      transform: translateY(-2px);
-    }
-
-    &:active:not(:disabled) {
-      transform: translateY(0);
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-  }
-
-  // Alert Styling
-  .MuiAlert-root {
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-  }
-
-  // Dialog Styling
-  .MuiDialog-paper {
+  // Ant Design Modal customization
+  .ant-modal-content {
     border-radius: 16px !important;
     backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
+
+  .ant-modal-header {
+    border-radius: 16px 16px 0 0 !important;
     background: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  // Ant Design Alert customization
+  .ant-alert {
+    border-radius: 10px;
   }
 }
 
@@ -364,14 +334,22 @@
   .welcome-page {
     .logo {
       font-size: 36px !important;
+      margin-bottom: 8px !important;
     }
 
     .subtitle {
       font-size: 20px !important;
+      margin-bottom: 20px !important;
     }
 
     .promotional-text {
       font-size: 10px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .language-selector {
+      margin-bottom: 30px !important;
+      max-width: 260px;
     }
 
     .form-card {
@@ -379,7 +357,38 @@
     }
 
     .form-title {
-      font-size: 24px !important;
+      font-size: 22px !important;
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+// Extra small devices
+@media (max-width: 480px) {
+  .welcome-page {
+    .content {
+      padding: 20px 10px;
+    }
+
+    .logo {
+      font-size: 32px !important;
+    }
+
+    .subtitle {
+      font-size: 18px !important;
+    }
+
+    .promotional-text {
+      font-size: 9px !important;
+      padding: 0 10px;
+    }
+
+    .forms-container {
+      padding: 0 10px;
+    }
+
+    .form-card {
+      padding: 15px;
     }
   }
 }

@@ -12,14 +12,34 @@ function Show-Menu {
     Write-Host "   SVYD LEDGER - Development Manager      " -ForegroundColor Cyan
     Write-Host "============================================" -ForegroundColor Cyan
     Write-Host ""
-    Write-Host "1. Start Frontend (Safe Mode)" -ForegroundColor Green
-    Write-Host "2. Kill All Node.js Processes" -ForegroundColor Red
-    Write-Host "3. Clean & Reinstall Dependencies" -ForegroundColor Yellow
-    Write-Host "4. Check System Status" -ForegroundColor Cyan
-    Write-Host "5. Open WelcomePage Documentation" -ForegroundColor Magenta
-    Write-Host "6. Deploy to Azure" -ForegroundColor Blue
+    
+    # Show current Node.js process status
+    $nodeProcesses = Get-Process node -ErrorAction SilentlyContinue
+    if ($nodeProcesses) {
+        $totalMemory = ($nodeProcesses | Measure-Object -Property WorkingSet64 -Sum).Sum / 1MB
+        Write-Host "? WARNING: $($nodeProcesses.Count) Node.js process(es) running - $([math]::Round($totalMemory, 1)) MB" -ForegroundColor Yellow
+        Write-Host ""
+    }
+    
+    Write-Host "1. Start Frontend (Single Process Mode) ? RECOMMENDED" -ForegroundColor Green
+    Write-Host "2. Start Frontend (Safe Mode)" -ForegroundColor Green
+    Write-Host "3. Kill All Node.js Processes" -ForegroundColor Red
+    Write-Host "4. Clean & Reinstall Dependencies" -ForegroundColor Yellow
+    Write-Host "5. Check System Status" -ForegroundColor Cyan
+    Write-Host "6. Open WelcomePage Documentation" -ForegroundColor Magenta
+    Write-Host "7. Deploy to Azure" -ForegroundColor Blue
     Write-Host "Q. Quit" -ForegroundColor Gray
     Write-Host ""
+}
+
+function Start-SingleProcess {
+    Write-Host ""
+    Write-Host "============================================" -ForegroundColor Cyan
+    Write-Host "   Starting Frontend (Single Process)     " -ForegroundColor Cyan
+    Write-Host "============================================" -ForegroundColor Cyan
+    Write-Host ""
+    
+    & "$PSScriptRoot\start-single-process.ps1"
 }
 
 function Start-Frontend {
@@ -258,12 +278,13 @@ do {
     $choice = Read-Host "Select an option"
     
     switch ($choice) {
-        '1' { Start-Frontend }
-        '2' { Kill-NodeProcesses }
-        '3' { Clean-Dependencies }
-        '4' { Show-SystemStatus }
-        '5' { Open-Documentation }
-        '6' { Deploy-ToAzure }
+        '1' { Start-SingleProcess }
+        '2' { Start-Frontend }
+        '3' { Kill-NodeProcesses }
+        '4' { Clean-Dependencies }
+        '5' { Show-SystemStatus }
+        '6' { Open-Documentation }
+        '7' { Deploy-ToAzure }
         'Q' { 
             Write-Host ""
             Write-Host "Goodbye!" -ForegroundColor Cyan
