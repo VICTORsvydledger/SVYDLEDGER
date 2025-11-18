@@ -3,25 +3,7 @@
  */
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-export interface JournalEntryLine {
-  id?: number
-  accountId: number
-  accountCode?: string
-  accountName?: string
-  debit: number
-  credit: number
-  description?: string
-}
-
-export interface JournalEntry {
-  id?: number
-  date: string
-  description: string
-  reference?: string
-  lines: JournalEntryLine[]
-  isPosted?: boolean
-}
+import type { JournalEntry } from '@/types/models'
 
 interface JournalState {
   entries: JournalEntry[]

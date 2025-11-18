@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-import { Layout, Menu, Avatar, Dropdown, Typography } from 'antd'
+import { Layout, Menu, Avatar, Dropdown, Typography, Select } from 'antd'
 import {
   DashboardOutlined,
   FileTextOutlined,
@@ -17,6 +17,8 @@ import {
 } from '@ant-design/icons'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { logout } from '@/store/slices/authSlice'
+import { useTranslation } from 'react-i18next'
+import '@/i18n/i18n'
 import './MainLayout.scss'
 
 const { Header, Sider, Content } = Layout
@@ -27,6 +29,7 @@ const MainLayout: React.FC = () => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const { user } = useAppSelector((state) => state.auth)
+  const { i18n } = useTranslation()
 
   const handleLogout = () => {
     dispatch(logout())
@@ -37,13 +40,13 @@ const MainLayout: React.FC = () => {
     {
       key: 'profile',
       icon: <UserOutlined />,
-      label: 'Profile',
-      onClick: () => navigate('/settings'),
+      label: 'Perfil',
+      onClick: () => navigate('/app/settings'),
     },
     {
       key: 'logout',
       icon: <LogoutOutlined />,
-      label: 'Logout',
+      label: 'Cerrar sesión',
       onClick: handleLogout,
     },
   ]
@@ -53,7 +56,7 @@ const MainLayout: React.FC = () => {
       key: 'dashboard',
       icon: <DashboardOutlined />,
       label: 'Dashboard',
-      onClick: () => navigate('/dashboard'),
+      onClick: () => navigate('/app/dashboard'),
     },
     {
       key: 'accounting',
@@ -63,12 +66,12 @@ const MainLayout: React.FC = () => {
         {
           key: 'accounts',
           label: 'Plan de Cuentas',
-          onClick: () => navigate('/accounting/accounts'),
+          onClick: () => navigate('/app/accounting/accounts'),
         },
         {
           key: 'journal-entries',
           label: 'Asientos Contables',
-          onClick: () => navigate('/accounting/journal-entries'),
+          onClick: () => navigate('/app/accounting/journal-entries'),
         },
       ],
     },
@@ -76,13 +79,13 @@ const MainLayout: React.FC = () => {
       key: 'reports',
       icon: <BarChartOutlined />,
       label: 'Reportes',
-      onClick: () => navigate('/reports'),
+      onClick: () => navigate('/app/reports'),
     },
     {
       key: 'settings',
       icon: <SettingOutlined />,
       label: 'Configuración',
-      onClick: () => navigate('/settings'),
+      onClick: () => navigate('/app/settings'),
     },
   ]
 
@@ -94,12 +97,7 @@ const MainLayout: React.FC = () => {
             {collapsed ? 'SL' : 'SVYD LEDGER'}
           </Text>
         </div>
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['dashboard']}
-          items={mainMenuItems}
-        />
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={['dashboard']} items={mainMenuItems} />
       </Sider>
       <Layout>
         <Header className="header">
@@ -109,11 +107,21 @@ const MainLayout: React.FC = () => {
               onClick: () => setCollapsed(!collapsed),
             })}
           </div>
-          <div className="header-right">
+          <div className="header-right" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <Select
+              size="small"
+              value={i18n.language?.startsWith('en') ? 'en' : 'es'}
+              style={{ width: 100 }}
+              onChange={(lng) => i18n.changeLanguage(lng)}
+              options={[
+                { value: 'es', label: 'Español' },
+                { value: 'en', label: 'English' },
+              ]}
+            />
             <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
               <div className="user-info">
                 <Avatar icon={<UserOutlined />} />
-                <Text style={{ marginLeft: 8 }}>{user?.fullName || 'User'}</Text>
+                <Text style={{ marginLeft: 8 }}>{user?.full_name || user?.username || 'Usuario'}</Text>
               </div>
             </Dropdown>
           </div>

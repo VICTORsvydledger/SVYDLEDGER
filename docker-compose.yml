@@ -112,5 +112,5 @@ networks:
   svyd-network:
     driver: bridge
 
-# Nota: Para producción, usar Azure Kubernetes Service (AKS)
+# Nota: Para producciÃ³n, usar Azure Kubernetes Service (AKS)
 # Este docker-compose es solo para desarrollo local

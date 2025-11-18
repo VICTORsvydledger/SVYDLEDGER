@@ -3,7 +3,7 @@
  */
 
 import apiClient from './apiClient'
-import { Account, JournalEntry } from '@/store/slices/accountsSlice'
+import type { Account, JournalEntry } from '@/types/models'
 
 const API_VERSION = 'v1'
 

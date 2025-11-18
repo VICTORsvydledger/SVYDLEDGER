@@ -3,14 +3,7 @@
  */
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-interface User {
-  id: number
-  email: string
-  username: string
-  fullName: string
-  roles: string[]
-}
+import type { User } from '@/types/models'
 
 interface AuthState {
   isAuthenticated: boolean

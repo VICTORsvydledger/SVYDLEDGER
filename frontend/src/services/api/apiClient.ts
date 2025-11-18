@@ -4,8 +4,11 @@
  */
 
 import axios, { AxiosInstance, AxiosError } from 'axios'
+import notify from '@/lib/notifications'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.svydledger.com'
+// Prefer env var, fallback to relative '/api' so dev proxy works
+const env = (import.meta as any).env || {}
+const API_BASE_URL: string = env.VITE_API_URL ? String(env.VITE_API_URL) : '/api'
 
 // Crear instancia de Axios
 export const apiClient: AxiosInstance = axios.create({
@@ -21,24 +24,34 @@ apiClient.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token')
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`
+      config.headers = config.headers ?? {}
+      ;(config.headers as any).Authorization = `Bearer ${token}`
     }
     return config
   },
-  (error) => {
-    return Promise.reject(error)
-  }
+  (error) => Promise.reject(error)
 )
 
 // Response interceptor - manejo de errores
 apiClient.interceptors.response.use(
   (response) => response,
-  (error: AxiosError) => {
-    if (error.response?.status === 401) {
-      // Token expirado o inv·lido
+  (error: AxiosError<any>) => {
+    const status = error.response?.status
+
+    // Evitar toasts para 401 (ya se maneja redirecci√≥n)
+    if (status === 401) {
       localStorage.removeItem('token')
-      window.location.href = '/login'
+      if (!location.pathname.includes('/login')) {
+        window.location.href = '/login'
+      }
+      return Promise.reject(error)
     }
+
+    // Mostrar toast de error para 4xx/5xx
+    const backendMsg = error.response?.data
+    const fallback = status ? `Error ${status}` : 'Error de red'
+    notify.error(backendMsg, error.message || fallback)
+
     return Promise.reject(error)
   }
 )

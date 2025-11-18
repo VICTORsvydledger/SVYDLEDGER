@@ -11,17 +11,17 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
+    port: 5173,
     proxy: {
       '/api': {
         target: 'https://api.svydledger.com',
         changeOrigin: true,
-        secure: true
-      }
-    }
+        secure: true,
+      },
+    },
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
-  }
+    sourcemap: true,
+  },
 })

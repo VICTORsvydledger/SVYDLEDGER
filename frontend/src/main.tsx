@@ -9,29 +9,16 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { ConfigProvider } from 'antd'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
 import App from './App'
 import { store } from './store'
 import './styles/main.scss'
-
-// Material-UI Theme
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-})
+import ErrorBoundary from '@/components/common/ErrorBoundary'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
+    <ErrorBoundary>
+      <Provider store={store}>
+        <BrowserRouter>
           <ConfigProvider
             theme={{
               token: {
@@ -39,11 +26,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               },
             }}
           >
-            <CssBaseline />
             <App />
           </ConfigProvider>
-        </ThemeProvider>
-      </BrowserRouter>
-    </Provider>
+        </BrowserRouter>
+      </Provider>
+    </ErrorBoundary>
   </React.StrictMode>,
 )

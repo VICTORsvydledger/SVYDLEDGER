@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVYD LEDGER - Acceso Rápido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 64px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .status {
+            background: #d4edda;
+            border: 2px solid #c3e6cb;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .status-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .link-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .link-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .info h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info li {
+            padding: 8px 0;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info li:last-child {
+            border-bottom: none;
+        }
+        
+        .info li strong {
+            color: #333;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Svyd</div>
+        <div class="subtitle">Sistema de Contabilidad Universal</div>
+        
+        <div class="status">
+            <div class="status-icon">?</div>
+            <div>Servidor ejecutándose correctamente</div>
+            <div style="font-size: 14px; margin-top: 10px; color: #666;">
+                Vite v5.4.21 | Puerto 3000
+            </div>
+        </div>
+        
+        <a href="http://localhost:3000" class="link-button" target="_blank">
+            ?? Abrir Aplicación
+        </a>
+        
+        <div class="info">
+            <h3>?? Información del Proyecto</h3>
+            <ul>
+                <li><strong>URL Local:</strong> http://localhost:3000</li>
+                <li><strong>Estado:</strong> Activo</li>
+                <li><strong>Framework:</strong> React 18 + TypeScript</li>
+                <li><strong>Build Tool:</strong> Vite 5.4.21</li>
+                <li><strong>Región:</strong> Central US</li>
+            </ul>
+        </div>
+        
+        <div class="info" style="margin-top: 20px;">
+            <h3>? Características de la Página</h3>
+            <ul>
+                <li>? Diseño responsive (móvil, tablet, desktop)</li>
+                <li>? Formularios Sign In / Sign Up</li>
+                <li>? Selector de 27 idiomas</li>
+                <li>? Autenticación de dos factores (2FA)</li>
+                <li>? Recuperación de contraseña</li>
+                <li>? Fondo de imagen animado</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p><strong>SVYD LEDGER</strong> | Versión 1.0.0</p>
+            <p>Región: Central US | Repository: VICTORsvydledger/SVYDLEDGER</p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh cada 5 segundos para verificar si el servidor sigue activo
+        setInterval(() => {
+            fetch('http://localhost:3000')
+                .then(() => {
+                    document.querySelector('.status').style.background = '#d4edda';
+                    document.querySelector('.status').style.borderColor = '#c3e6cb';
+                    document.querySelector('.status').style.color = '#155724';
+                    document.querySelector('.status-icon').textContent = '?';
+                    document.querySelector('.status div:nth-child(2)').textContent = 'Servidor ejecutándose correctamente';
+                })
+                .catch(() => {
+                    document.querySelector('.status').style.background = '#f8d7da';
+                    document.querySelector('.status').style.borderColor = '#f5c6cb';
+                    document.querySelector('.status').style.color = '#721c24';
+                    document.querySelector('.status-icon').textContent = '?';
+                    document.querySelector('.status div:nth-child(2)').textContent = 'Servidor no disponible';
+                });
+        }, 5000);
+    </script>
+</body>
+</html>

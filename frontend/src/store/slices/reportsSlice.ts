@@ -3,22 +3,7 @@
  */
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-export enum ReportType {
-  BALANCE_SHEET = 'balance_sheet',
-  INCOME_STATEMENT = 'income_statement',
-  CASH_FLOW = 'cash_flow',
-  TRIAL_BALANCE = 'trial_balance',
-}
-
-export interface Report {
-  id: string
-  type: ReportType
-  format: string
-  status: 'generating' | 'completed' | 'failed'
-  createdAt: string
-  downloadUrl?: string
-}
+import type { Report } from '@/types/models'
 
 interface ReportsState {
   reports: Report[]

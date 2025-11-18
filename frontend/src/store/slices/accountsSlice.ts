@@ -3,25 +3,7 @@
  */
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-export enum AccountType {
-  ASSET = 'ASSET',
-  LIABILITY = 'LIABILITY',
-  EQUITY = 'EQUITY',
-  REVENUE = 'REVENUE',
-  EXPENSE = 'EXPENSE',
-  COST = 'COST',
-}
-
-export interface Account {
-  id: number
-  code: string
-  name: string
-  type: AccountType
-  parentId?: number
-  balance: number
-  isActive: boolean
-}
+import type { Account } from '@/types/models'
 
 interface AccountsState {
   accounts: Account[]

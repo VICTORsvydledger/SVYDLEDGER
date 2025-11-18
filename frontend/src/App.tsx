@@ -4,8 +4,8 @@
 
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { Layout } from 'antd'
 import MainLayout from './components/layout/MainLayout'
+import WelcomePage from './pages/auth/WelcomePage'
 import LoginPage from './pages/auth/LoginPage'
 import RegisterPage from './pages/auth/RegisterPage'
 import DashboardPage from './pages/DashboardPage'
@@ -21,21 +21,22 @@ const App: React.FC = () => {
   return (
     <Routes>
       {/* Public Routes */}
+      <Route path="/" element={<WelcomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
 
       {/* Protected Routes */}
       <Route
-        path="/"
+        path="/app"
         element={
           isAuthenticated ? (
             <MainLayout />
           ) : (
-            <Navigate to="/login" replace />
+            <Navigate to="/" replace />
           )
         }
       >
-        <Route index element={<Navigate to="/dashboard" replace />} />
+        <Route index element={<Navigate to="/app/dashboard" replace />} />
         <Route path="dashboard" element={<DashboardPage />} />
         
         {/* Accounting */}

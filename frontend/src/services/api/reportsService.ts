@@ -3,22 +3,9 @@
  */
 
 import apiClient from './apiClient'
+import type { Report, ReportFormat, ReportType } from '@/types/models'
 
 const API_VERSION = 'v1'
-
-export enum ReportType {
-  BALANCE_SHEET = 'balance_sheet',
-  INCOME_STATEMENT = 'income_statement',
-  CASH_FLOW = 'cash_flow',
-  TRIAL_BALANCE = 'trial_balance',
-}
-
-export enum ReportFormat {
-  PDF = 'pdf',
-  EXCEL = 'excel',
-  CSV = 'csv',
-  JSON = 'json',
-}
 
 export interface GenerateReportRequest {
   type: ReportType
@@ -27,15 +14,6 @@ export interface GenerateReportRequest {
   endDate?: string
   asOfDate?: string
   parameters?: Record<string, any>
-}
-
-export interface Report {
-  reportId: string
-  type: ReportType
-  format: ReportFormat
-  status: 'generating' | 'completed' | 'failed'
-  createdAt: string
-  downloadUrl?: string
 }
 
 export const reportsService = {

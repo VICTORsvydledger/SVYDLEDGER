@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+@font-face {
+  font-family: 'Vladimir Script';
+  src: url('/fonts/VLADIMIR.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.welcome-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  // Background Image
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/backgrounds/background-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    animation: subtle-zoom 30s ease-in-out infinite alternate;
+  }
+
+  @keyframes subtle-zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  // Overlay
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    z-index: -1;
+  }
+
+  // Content Container
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    animation: fade-in 1s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Logo - Vladimir Script style (48px as specified)
+  .logo {
+    font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
+    font-size: 48px !important;
+    font-weight: normal !important; // Use normal weight for this script font
+    color: white !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    animation: logo-glow 3s ease-in-out infinite alternate;
+
+    @media (max-width: 768px) {
+      font-size: 40px !important;
+    }
+  }
+
+  @keyframes logo-glow {
+    from {
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    to {
+      text-shadow: 2px 2px 16px rgba(255, 255, 255, 0.5),
+                   2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  // Subtitle - Vladimir Script style (30px as specified)
+  .subtitle {
+    font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
+    font-size: 30px !important;
+    font-weight: normal !important; // Use normal weight for this script font
+    color: white !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 24px !important;
+    }
+  }
+
+  // Promotional Text - Arial 12px as specified
+  .promotional-text {
+    font-family: Arial, sans-serif !important;
+    font-size: 12px !important;
+    color: white !important;
+    text-align: center !important;
+    max-width: 700px;
+    margin-bottom: 30px !important;
+    line-height: 1.6 !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      font-size: 11px !important;
+    }
+  }
+
+  // Language Selector
+  .language-selector {
+    margin-bottom: 40px !important;
+    min-width: 300px;
+
+    @media (max-width: 768px) {
+      min-width: 250px;
+    }
+
+    .MuiOutlinedInput-root {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      color: white;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      &.Mui-focused {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .MuiOutlinedInput-notchedOutline {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: rgba(255, 255, 255, 0.7);
+      }
+
+      .MuiSvgIcon-root {
+        color: white;
+      }
+    }
+  }
+
+  // Forms Container
+  .forms-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+      max-width: 450px;
+    }
+  }
+
+  // Form Card
+  .form-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: card-slide-up 0.8s ease-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      padding: 25px;
+    }
+  }
+
+  @keyframes card-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Form Title
+  .form-title {
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: white !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  // Form Field
+  .form-field {
+    margin-bottom: 20px;
+
+    .field-label {
+      color: white !important;
+      font-weight: 500 !important;
+      margin-bottom: 8px !important;
+      display: block;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .MuiOutlinedInput-root {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      &.Mui-focused {
+        background: white;
+      }
+
+      input {
+        color: #333;
+      }
+
+      .MuiOutlinedInput-notchedOutline {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #1976d2;
+        border-width: 2px;
+      }
+    }
+  }
+
+  // Forgot Password Link
+  .forgot-password-link {
+    color: white !important;
+    text-decoration: none !important;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px !important;
+    font-size: 14px !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #e3f2fd !important;
+      text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  // Submit Button
+  .submit-button {
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%) !important;
+    color: white !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    text-transform: none !important;
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
+    transition: all 0.3s ease !important;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%) !important;
+      box-shadow: 0 6px 16px rgba(25, 118, 210, 0.5) !important;
+      transform: translateY(-2px);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  // Alert Styling
+  .MuiAlert-root {
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+
+  // Dialog Styling
+  .MuiDialog-paper {
+    border-radius: 16px !important;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+  .welcome-page .forms-container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 968px) {
+  .welcome-page {
+    .content {
+      padding: 30px 15px;
+    }
+
+    .forms-container {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-page {
+    .logo {
+      font-size: 36px !important;
+    }
+
+    .subtitle {
+      font-size: 20px !important;
+    }
+
+    .promotional-text {
+      font-size: 10px !important;
+    }
+
+    .form-card {
+      padding: 20px;
+    }
+
+    .form-title {
+      font-size: 24px !important;
+    }
+  }
+}

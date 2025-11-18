@@ -3,6 +3,7 @@
  */
 
 import apiClient from './apiClient'
+import type { AuthResponse, User } from '@/types/models'
 
 const API_VERSION = 'v1'
 
@@ -16,21 +17,6 @@ export interface RegisterRequest {
   username: string
   fullName: string
   password: string
-}
-
-export interface AuthResponse {
-  access_token: string
-  token_type: string
-  expires_in: number
-}
-
-export interface User {
-  id: number
-  email: string
-  username: string
-  full_name: string
-  is_active: boolean
-  roles: string[]
 }
 
 export const authService = {
