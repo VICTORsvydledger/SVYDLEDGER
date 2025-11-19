@@ -1,0 +1,114 @@
+import React, { useState } from 'react'
+import { Form, Input, Button } from 'antd'
+import { UserOutlined, LockOutlined } from '@ant-design/icons'
+import notify from '@/lib/notifications'
+
+const SignUpForm: React.FC = () => {
+  const [form] = Form.useForm()
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (values: { 
+    email: string
+    password: string
+    confirmPassword: string 
+  }) => {
+    setLoading(true)
+    try {
+      // TODO: Implement real registration service
+      console.log('Sign Up attempt:', values.email)
+      
+      // Simulación temporal
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      
+      notify.success('Account created successfully! Please check your email to verify.')
+      
+      // TODO: Trigger 2FA verification modal
+      form.resetFields()
+    } catch (error) {
+      notify.error('Could not create account. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <Form
+      form={form}
+      layout="vertical"
+      onFinish={handleSubmit}
+      autoComplete="off"
+      className="auth-form"
+    >
+      <Form.Item
+        label="Email"
+        name="email"
+        rules={[
+          { required: true, message: 'Email is required' },
+          { type: 'email', message: 'Invalid email format' },
+        ]}
+      >
+        <Input
+          prefix={<UserOutlined />}
+          placeholder=""
+          size="large"
+        />
+      </Form.Item>
+
+      <Form.Item
+        label="Password"
+        name="password"
+        rules={[
+          { required: true, message: 'Password is required' },
+          { min: 8, message: 'Password must be at least 8 characters' },
+          {
+            pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
+            message: 'Password must contain uppercase, lowercase, and number',
+          },
+        ]}
+      >
+        <Input.Password
+          prefix={<LockOutlined />}
+          placeholder=""
+          size="large"
+        />
+      </Form.Item>
+
+      <Form.Item
+        label="Confirm Password"
+        name="confirmPassword"
+        dependencies={['password']}
+        rules={[
+          { required: true, message: 'Please confirm your password' },
+          ({ getFieldValue }) => ({
+            validator(_, value) {
+              if (!value || getFieldValue('password') === value) {
+                return Promise.resolve()
+              }
+              return Promise.reject(new Error('Passwords do not match'))
+            },
+          }),
+        ]}
+      >
+        <Input.Password
+          prefix={<LockOutlined />}
+          placeholder=""
+          size="large"
+        />
+      </Form.Item>
+
+      <Form.Item>
+        <Button
+          type="primary"
+          htmlType="submit"
+          loading={loading}
+          block
+          size="large"
+        >
+          Create Account
+        </Button>
+      </Form.Item>
+    </Form>
+  )
+}
+
+export default SignUpForm

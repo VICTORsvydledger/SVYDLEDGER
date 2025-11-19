@@ -18,7 +18,6 @@ import {
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { logout } from '@/store/slices/authSlice'
 import { useTranslation } from 'react-i18next'
-import '@/i18n/i18n'
 import './MainLayout.scss'
 
 const { Header, Sider, Content } = Layout

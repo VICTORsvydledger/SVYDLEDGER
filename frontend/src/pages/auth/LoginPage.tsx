@@ -10,6 +10,11 @@ import './AuthPages.scss'
 const { Title, Text } = Typography
 
 const LoginPage: React.FC = () => {
+  const handleForgotPassword = () => {
+    // TODO: Implement forgot password modal
+    console.log('Forgot password clicked')
+  }
+
   return (
     <div className="auth-page">
       <Card className="auth-card">
@@ -18,7 +23,7 @@ const LoginPage: React.FC = () => {
           <Text type="secondary">Sistema de Contabilidad Universal</Text>
         </div>
 
-        <SignInForm buttonText="Iniciar sesión" />
+        <SignInForm onForgotPassword={handleForgotPassword} />
       </Card>
     </div>
   )
