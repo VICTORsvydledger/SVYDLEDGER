@@ -105,8 +105,13 @@
     }
 
     @media (max-width: 480px) {
-      font-size: 48px !important; // Ajustado proporcionalmente
+      font-size: 32px !important; // Reducido de 48px a 32px
       letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 36px !important;
+      margin-bottom: 8px !important;
     }
   }
 
@@ -139,7 +144,12 @@
     }
 
     @media (max-width: 480px) {
-      font-size: 24px !important; // Ajustado proporcionalmente
+      font-size: 18px !important; // Reducido de 24px a 18px
+    }
+
+    @media (max-width: 600px) {
+      font-size: 20px !important;
+      margin-bottom: 20px !important;
     }
   }
 
@@ -162,8 +172,13 @@
     }
 
     @media (max-width: 480px) {
-      font-size: 12px !important; // Ajustado proporcionalmente
-      line-height: 1.6 !important;
+      font-size: 9px !important; // Reducido de 12px a 9px
+      padding: 0 10px; // Reducido padding proporcionalmente
+    }
+
+    @media (max-width: 600px) {
+      font-size: 10px !important;
+      margin-bottom: 20px !important;
     }
   }
 
@@ -176,6 +191,11 @@
 
     @media (max-width: 768px) {
       max-width: 196px; // Reducido proporcionalmente (70% de 280px)
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 30px !important;
+      max-width: 182px;
     }
 
     // Ant Design Select customization
@@ -220,165 +240,153 @@
     }
   }
 
-  // Forms Container - Reducido al 70%
+  // Forms Container - Reducido al 55% del original (70% - 15% adicional)
   .forms-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 21px; // Reducido de 30px (70%)
+    gap: 16.5px; // Reducido de 30px (55%)
     width: 100%;
-    max-width: 630px; // Reducido de 900px a 630px (70%)
-    margin-top: 14px; // Reducido de 20px (70%)
-    padding: 0 14px; // Reducido de 20px (70%)
+    max-width: 495px; // Reducido de 900px a 495px (55%)
+    margin-top: 11px; // Reducido de 20px (55%)
+    padding: 0 11px; // Reducido de 20px (55%)
 
     @media (max-width: 968px) {
       grid-template-columns: 1fr;
-      max-width: 315px; // Reducido de 450px (70%)
-      gap: 14px; // Reducido de 20px (70%)
+      max-width: 247.5px; // Reducido de 450px (55%)
+      gap: 11px; // Reducido de 20px (55%)
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 440px; // Reducido de 800px (55%)
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 5.5px; // Reducido de 10px (55%)
     }
   }
 
-  // Form Card - Reducido al 70%
+  // Form Card - Reducido al 55%
   .form-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border-radius: 14px; // Reducido de 20px (70%)
-    padding: 24.5px; // Reducido de 35px (70%)
-    box-shadow: 0 5.6px 22.4px rgba(0, 0, 0, 0.2); // Reducido proporcionalmente
+    border-radius: 11px; // Reducido de 20px (55%)
+    padding: 19.25px; // Reducido de 35px (55%)
+    box-shadow: 0 4.4px 17.6px rgba(0, 0, 0, 0.2); // Reducido proporcionalmente
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     animation: card-slide-up 0.8s ease-out;
 
     &:hover {
-      transform: translateY(-3.5px); // Reducido de -5px (70%)
-      box-shadow: 0 8.4px 28px rgba(0, 0, 0, 0.3); // Reducido proporcionalmente
+      transform: translateY(-2.75px); // Reducido de -5px (55%)
+      box-shadow: 0 6.6px 22px rgba(0, 0, 0, 0.3); // Reducido proporcionalmente
       background: rgba(255, 255, 255, 0.2);
     }
 
     @media (max-width: 768px) {
-      padding: 17.5px; // Reducido de 25px (70%)
+      padding: 13.75px; // Reducido de 25px (55%)
     }
 
     @media (max-width: 480px) {
-      padding: 14px; // Reducido de 20px (70%)
-      border-radius: 11.2px; // Reducido de 16px (70%)
+      padding: 8.25px; // Reducido de 15px (55%)
+      border-radius: 8.8px; // Reducido de 16px
     }
   }
 
-  // Form Title - Reducido al 70%
+  // Form Title - Reducido al 55%
   .form-title {
-    font-size: 19.6px !important; // Reducido de 28px (70%)
+    font-size: 15.4px !important; // Reducido de 28px (55%)
     font-weight: 600 !important;
     color: white !important;
     text-align: center !important;
-    margin-bottom: 17.5px !important; // Reducido de 25px (70%)
+    margin-bottom: 13.75px !important; // Reducido de 25px (55%)
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     font-family: Arial, sans-serif !important;
 
     @media (max-width: 768px) {
-      font-size: 16.8px !important; // Reducido de 24px (70%)
+      font-size: 13.2px !important; // Reducido de 24px (55%)
     }
 
     @media (max-width: 480px) {
-      font-size: 15.4px !important; // Reducido de 22px (70%)
+      font-size: 12.1px !important; // Reducido de 22px (55%)
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 11px !important; // Reducido de 20px (55%)
     }
   }
 
-  // Ant Design Modal customization
-  .ant-modal-content {
-    border-radius: 16px !important;
-    backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.98) !important;
-  }
+  @media (max-width: 968px) {
+    .welcome-page {
+      .content {
+        padding: 16.5px 8.25px; // Reducido de 30px 15px (55%)
+      }
 
-  .ant-modal-header {
-    border-radius: 16px 16px 0 0 !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-  }
-
-  // Ant Design Alert customization
-  .ant-alert {
-    border-radius: 10px;
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 1200px) {
-  .welcome-page .forms-container {
-    max-width: 560px; // Reducido de 800px (70%)
-  }
-}
-
-@media (max-width: 968px) {
-  .welcome-page {
-    .content {
-      padding: 21px 10.5px; // Reducido de 30px 15px (70%)
-    }
-
-    .forms-container {
-      gap: 14px; // Reducido de 20px (70%)
+      .forms-container {
+        gap: 11px; // Reducido de 20px (55%)
+      }
     }
   }
-}
 
-@media (max-width: 600px) {
-  .welcome-page {
-    .logo {
-      font-size: 36px !important;
-      margin-bottom: 8px !important;
-    }
+  @media (max-width: 600px) {
+    .welcome-page {
+      .logo {
+        font-size: 36px !important;
+        margin-bottom: 8px !important;
+      }
 
-    .subtitle {
-      font-size: 20px !important;
-      margin-bottom: 20px !important;
-    }
+      .subtitle {
+        font-size: 20px !important;
+        margin-bottom: 20px !important;
+      }
 
-    .promotional-text {
-      font-size: 10px !important;
-      margin-bottom: 20px !important;
-    }
+      .promotional-text {
+        font-size: 10px !important;
+        margin-bottom: 20px !important;
+      }
 
-    .language-selector {
-      margin-bottom: 30px !important;
-      max-width: 182px;
-    }
+      .language-selector {
+        margin-bottom: 30px !important;
+        max-width: 182px;
+      }
 
-    .form-card {
-      padding: 14px; // Reducido de 20px (70%)
-    }
+      .form-card {
+        padding: 11px; // Reducido de 20px (55%)
+      }
 
-    .form-title {
-      font-size: 15.4px !important; // Reducido de 22px (70%)
-      margin-bottom: 14px !important; // Reducido de 20px (70%)
+      .form-title {
+        font-size: 12.1px !important; // Reducido de 22px (55%)
+        margin-bottom: 11px !important; // Reducido de 20px (55%)
+      }
     }
   }
-}
 
-// Extra small devices
-@media (max-width: 480px) {
-  .welcome-page {
-    .content {
-      padding: 20px 10px;
-    }
+  // Extra small devices
+  @media (max-width: 480px) {
+    .welcome-page {
+      .content {
+        padding: 20px 10px;
+      }
 
-    .logo {
-      font-size: 32px !important;
-    }
+      .logo {
+        font-size: 32px !important;
+      }
 
-    .subtitle {
-      font-size: 18px !important;
-    }
+      .subtitle {
+        font-size: 18px !important;
+      }
 
-    .promotional-text {
-      font-size: 9px !important;
-      padding: 0 10px;
-    }
+      .promotional-text {
+        font-size: 9px !important;
+        padding: 0 10px;
+      }
 
-    .forms-container {
-      padding: 0 7px; // Reducido de 10px (70%)
-    }
+      .forms-container {
+        padding: 0 5.5px; // Reducido de 10px (55%)
+      }
 
-    .form-card {
-      padding: 10.5px; // Reducido de 15px (70%)
+      .form-card {
+        padding: 8.25px; // Reducido de 15px (55%)
+      }
     }
   }
 }
