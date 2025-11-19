@@ -283,27 +283,66 @@
         }
       }
 
-      // Inputs - Reducir altura y padding al 70%
+      // Inputs - Completamente transparentes
       .ant-input,
       .ant-input-password {
         height: 28px !important; // 70% de 40px (size="large") = 28px
         padding: 2.8px 7.7px !important; // 70% de 4px-11px = 2.8px-7.7px
         font-size: 9.8px !important; // 70% de 14px = 9.8px
         border-radius: 4.2px !important; // 70% de 6px = 4.2px
+        background: transparent !important; // Fondo transparente
+        color: white !important; // Texto blanco
+        border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5) !important; // Placeholder blanco tenue
+        }
+        
+        &:hover {
+          background: transparent !important; // Mantener transparente en hover
+          border-color: rgba(255, 255, 255, 0.7) !important; // Borde más visible en hover
+        }
+        
+        &:focus {
+          background: transparent !important; // Mantener transparente en focus
+          border-color: white !important; // Borde blanco sólido en focus
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important; // Sombra blanca suave
+        }
       }
 
       .ant-input-affix-wrapper {
         padding: 2.8px 7.7px !important; // 70% de 4px-11px
         height: 28px !important; // 70% de 40px
+        background: transparent !important; // Fondo transparente
+        border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
+        
+        &:hover {
+          background: transparent !important; // Mantener transparente en hover
+          border-color: rgba(255, 255, 255, 0.7) !important; // Borde más visible en hover
+        }
+        
+        &:focus,
+        &.ant-input-affix-wrapper-focused {
+          background: transparent !important; // Mantener transparente en focus
+          border-color: white !important; // Borde blanco sólido en focus
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important; // Sombra blanca suave
+        }
         
         .ant-input {
           height: auto !important;
           padding: 0 !important;
+          background: transparent !important; // Fondo transparente
+          color: white !important; // Texto blanco
+          
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important; // Placeholder blanco tenue
+          }
         }
 
         .ant-input-prefix,
         .ant-input-suffix {
           font-size: 9.8px !important; // 70% de 14px
+          color: rgba(255, 255, 255, 0.7) !important; // Iconos blancos semi-transparentes
         }
       }
 
