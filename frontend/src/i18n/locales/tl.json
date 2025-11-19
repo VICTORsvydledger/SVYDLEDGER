@@ -1,0 +1,221 @@
+{
+  "welcomePage": {
+    "subtitle": "Pandaigdigang Sistema ng Pag-aakawnt at Pamamahala ng Pananalapi",
+    "description": "Ang sistemang ito ay gumagana: walang mga code, walang talahanayan ng mga kuwenta, walang mga journal entry, walang mga pagsasara ng libro, walang mga panahong piskal. Walang hangganan. Hindi kailangang magtangi sa pagitan ng natural na tao at legal na entidad",
+    "welcome": "Maligayang Pagdating"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Mag-sign In",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Tandaan Ako",
+      "forgotPassword": "Nakalimutan ang Password?",
+      "submit": "Mag-sign In",
+      "twoFactorRequired": "Kailangan ang Two-Factor Authentication"
+    },
+    "signUp": {
+      "title": "Mag-sign Up",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Kumpirmahin ang Password",
+      "firstName": "Pangalan",
+      "lastName": "Apelyido",
+      "company": "Kumpanya (Opsyonal)",
+      "submit": "Lumikha ng Account",
+      "termsAgreement": "Sumasang-ayon ako sa mga Tuntunin at Kondisyon"
+    },
+    "forgotPassword": {
+      "title": "Nakalimutan ang Password?",
+      "description": "Magpadala ng recovery email sa iyong inbox",
+      "email": "Email",
+      "send": "Magpadala ng Recovery Email",
+      "sent": "Recovery email ay ipinadala na! Tingnan ang iyong inbox.",
+      "close": "Isara",
+      "cancel": "Kanselahin"
+    },
+    "twoFactor": {
+      "title": "Two-Factor Authentication",
+      "description": "Ipasok ang 6-digit verification code na ipinadala sa iyong email.",
+      "code": "Verification Code",
+      "placeholder": "000000",
+      "verify": "I-verify"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard ng Pag-aakawnt",
+    "welcome": "Maligayang pagdating sa iyong accounting dashboard"
+  },
+  "accounts": {
+    "title": "Mga Kuwenta",
+    "chartOfAccounts": "Talahanayan ng mga Kuwenta",
+    "generalLedger": "Pangunahing Ledger",
+    "accountType": "Uri ng Kuwenta",
+    "accountNumber": "Numero ng Kuwenta",
+    "accountName": "Pangalan ng Kuwenta",
+    "balance": "Balanse",
+    "debit": "Debito",
+    "credit": "Kredito",
+    "create": "Lumikha ng Bagong Kuwenta",
+    "edit": "I-edit ang Kuwenta",
+    "delete": "Burahin ang Kuwenta",
+    "types": {
+      "asset": "Asset (Ari-arian)",
+      "liability": "Liability (Pananagutan)",
+      "equity": "Equity (Ekwidad)",
+      "revenue": "Revenue (Kita)",
+      "expense": "Expense (Gastos)",
+      "contraAsset": "Contra-Asset",
+      "contraLiability": "Contra-Liability",
+      "contraEquity": "Contra-Equity"
+    }
+  },
+  "journal": {
+    "title": "Mga Journal Entry",
+    "createEntry": "Lumikha ng Entry",
+    "entryDate": "Petsa ng Entry",
+    "description": "Paglalarawan",
+    "reference": "Reperensya",
+    "amount": "Halaga",
+    "post": "I-post ang Entry",
+    "posted": "Nai-post",
+    "pending": "Nakabinbin",
+    "reversed": "Nirebersa",
+    "adjusting": "Adjusting Entry",
+    "closing": "Closing Entry",
+    "opening": "Opening Entry"
+  },
+  "reports": {
+    "title": "Mga Ulat Pananalapi",
+    "balanceSheet": "Balance Sheet (Talaan ng Kalagayan Pinansyal)",
+    "incomeStatement": "Income Statement (Talaan ng Kita)",
+    "cashFlow": "Cash Flow Statement (Talaan ng Daloy ng Salapi)",
+    "trialBalance": "Trial Balance (Balanseng Pagsubok)",
+    "generalLedger": "General Ledger Report",
+    "accountsReceivable": "Accounts Receivable (Mga Utang sa Atin)",
+    "accountsPayable": "Accounts Payable (Mga Utang Natin)",
+    "aging": "Aging Report",
+    "generate": "Bumuo ng Ulat",
+    "export": "I-export",
+    "print": "I-print",
+    "dateRange": "Saklaw ng Petsa",
+    "fromDate": "Mula sa Petsa",
+    "toDate": "Hanggang Petsa"
+  },
+  "settings": {
+    "title": "Mga Setting",
+    "general": "Pangkalahatang Setting",
+    "company": "Impormasyon ng Kumpanya",
+    "fiscal": "Panahong Piskal",
+    "users": "Pamamahala ng mga User",
+    "security": "Seguridad",
+    "notifications": "Mga Notipikasyon",
+    "language": "Wika",
+    "currency": "Pera",
+    "dateFormat": "Format ng Petsa",
+    "timezone": "Timezone",
+    "save": "I-save ang mga Pagbabago",
+    "cancel": "Kanselahin"
+  },
+  "common": {
+    "save": "I-save",
+    "cancel": "Kanselahin",
+    "delete": "Burahin",
+    "edit": "I-edit",
+    "create": "Lumikha",
+    "search": "Maghanap",
+    "filter": "I-filter",
+    "export": "I-export",
+    "import": "I-import",
+    "refresh": "I-refresh",
+    "close": "Isara",
+    "submit": "Isumite",
+    "reset": "I-reset",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "previous": "Nakaraan",
+    "loading": "Naglo-load...",
+    "error": "Error",
+    "success": "Tagumpay",
+    "warning": "Babala",
+    "info": "Impormasyon",
+    "confirm": "Kumpirmahin",
+    "yes": "Oo",
+    "no": "Hindi",
+    "all": "Lahat",
+    "none": "Wala",
+    "select": "Pumili",
+    "selected": "Napili",
+    "total": "Kabuuan",
+    "subtotal": "Subtotal",
+    "date": "Petsa",
+    "time": "Oras",
+    "name": "Pangalan",
+    "description": "Paglalarawan",
+    "amount": "Halaga",
+    "status": "Katayuan",
+    "actions": "Mga Aksyon"
+  },
+  "validation": {
+    "required": "Ang field na ito ay kinakailangan",
+    "email": "Maglagay ng wastong email address",
+    "minLength": "Dapat may hindi bababa sa {min} character",
+    "maxLength": "Dapat may hindi hihigit sa {max} character",
+    "numeric": "Dapat numero lamang",
+    "positive": "Dapat positibong numero",
+    "passwordMatch": "Ang mga password ay hindi tugma",
+    "invalidDate": "Hindi wastong petsa",
+    "futureDate": "Hindi maaaring petsa sa hinaharap",
+    "pastDate": "Hindi maaaring petsa sa nakaraan"
+  },
+  "notifications": {
+    "success": {
+      "saved": "Matagumpay na na-save",
+      "deleted": "Matagumpay na nabura",
+      "created": "Matagumpay na nalikha",
+      "updated": "Matagumpay na na-update",
+      "exported": "Matagumpay na na-export",
+      "imported": "Matagumpay na na-import"
+    },
+    "error": {
+      "general": "Nangyari ang error. Subukan muli.",
+      "network": "Error sa network. Tingnan ang iyong koneksyon.",
+      "unauthorized": "Walang awtorisasyon. Mag-login muli.",
+      "notFound": "Hindi nahanap ang resource",
+      "validation": "Validation error. Tingnan ang iyong input.",
+      "server": "Server error. Subukan muli mamaya."
+    }
+  },
+  "fiscal": {
+    "period": "Panahong Piskal",
+    "year": "Taon ng Piskal",
+    "quarter": "Quarter",
+    "month": "Buwan",
+    "startDate": "Petsa ng Pagsisimula",
+    "endDate": "Petsa ng Pagtatapos",
+    "status": {
+      "open": "Bukas",
+      "closed": "Sarado",
+      "locked": "Naka-lock"
+    },
+    "closing": {
+      "title": "Pagsasara ng Panahong Piskal",
+      "description": "Isara ang kasalukuyang panahong piskal at maglipat sa susunod",
+      "confirm": "Sigurado ka bang nais mong isara ang panahong ito?",
+      "success": "Matagumpay na naisara ang panahong piskal",
+      "error": "Hindi maisara ang panahong piskal"
+    }
+  },
+  "taxes": {
+    "title": "Pamamahala ng Buwis",
+    "vatRate": "VAT Rate (Buwis sa Halaga na Idinagdag)",
+    "withholdingTax": "Withholding Tax",
+    "salesTax": "Sales Tax (Buwis sa Pagbebenta)",
+    "incomeTax": "Income Tax (Buwis sa Kita)",
+    "taxReport": "Ulat ng Buwis",
+    "taxPeriod": "Panahon ng Buwis",
+    "taxableAmount": "Halagang Nabubuwisan",
+    "taxAmount": "Halaga ng Buwis",
+    "netAmount": "Net na Halaga"
+  }
+}
