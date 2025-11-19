@@ -130,6 +130,11 @@ const translations = {
     subtitle: 'సార్వత్రిక అకౌంటింగ్ వ్యవస్థ మరియు ఆర్థిక నిర్వహణ',
     description: 'ఈ వ్యవస్థ పనిచేస్తుంది: ఖాతా కోడ్‌లు లేకుండా, ఖాతాల చార్ట్ లేకుండా, జర్నల్ ఎంట్రీలు లేకుండా, ఆర్థిక మూసివేతలు లేకుండా, ఆర్థిక కాలాలు లేకుండా. కాలరహితం. సహజ వ్యక్తి మరియు చట్టపరమైన సంస్థ మధ్య వేరు చేయవలసిన అవసరం లేదు',
     welcome: 'స్వాగతం'
+  },
+  tr: {
+    subtitle: 'Evrensel Muhasebe Sistemi ve Finansal Yönetim',
+    description: 'Bu sistem çalışır: hesap kodları olmadan, hesap planı olmadan, yevmiye kayıtları olmadan, mali kapanışlar olmadan, mali dönemler olmadan. Zamansız. Gerçek kişi ile tüzel kişi arasında ayrım yapma gereği yok',
+    welcome: 'Hoş Geldiniz'
   }
 }
 
