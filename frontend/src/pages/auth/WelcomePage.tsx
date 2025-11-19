@@ -73,13 +73,33 @@ const translations = {
   },
   hi: {
     subtitle: 'सार्वभौमिक लेखा प्रणाली एवं वित्तीय प्रबंधन',
-    description: 'आधुनिक उद्यमों के लिए खाता प्रबंधन, वित्तीय विवरण तैयारी और कर अनुपालन का संपूर्ण समाधान। खाता बही, रोजनामचा प्रविष्टियाँ और वित्तीय विवरणों का पूर्ण नियंत्रण सुरक्षित क्लाउड प्रौद्योगिकी में।',
+    description: 'आधुनिक उद्यमों के लिए खाता प्रmanagement, वित्तीय विवरण तैयारी और कर अनुपालन का संपूर्ण समाधान। खाता बही, रोजनामचा प्रविष्टियाँ और वित्तीय विवरणों का पूर्ण नियंत्रण सुरक्षित क्लाउड प्रौद्योगिकी में।',
     welcome: 'स्वागत है'
   },
   id: {
     subtitle: 'Sistem Akuntansi Universal dan Manajemen Keuangan',
     description: 'Solusi lengkap untuk manajemen akuntansi, penyusunan laporan keuangan, dan kepatuhan pajak untuk perusahaan modern. Kontrol penuh atas buku besar, jurnal entri, dan laporan keuangan dengan teknologi cloud yang aman.',
     welcome: 'Selamat Datang'
+  },
+  ko: {
+    subtitle: '범용 회계 시스템 및 재무 관리',
+    description: '현대 기업을 위한 회계 관리, 재무제표 작성 및 세무 준수의 완벽한 솔루션. 안전한 클라우드 기술로 총계정원장, 분개 및 재무제표를 완벽하게 제어할 수 있습니다.',
+    welcome: '환영합니다'
+  },
+  mr: {
+    subtitle: 'सार्वत्रिक लेखा प्रणाली आणि वित्तीय व्यवस्थापन',
+    description: 'आधुनिक उद्योगांसाठी लेखा व्यवस्थापन, आर्थिक विवरणपत्र तयार करणे आणि कर अनुपालनाचे संपूर्ण समाधान. सुरक्षित क्लाउड तंत्रज्ञानामध्ये खातेवही, नोंदी आणि आर्थिक विवरणांचे संपूर्ण नियंत्रण.',
+    welcome: 'स्वागत आहे'
+  },
+  pcm: {
+    subtitle: 'Universal Accounting System and Money Management',
+    description: 'Complete solution for account management, financial statement preparation, and tax compliance for modern businesses. Full control of ledger books, journal entries, and financial statements with secure cloud technology.',
+    welcome: 'Welcome'
+  },
+  pa: {
+    subtitle: 'ਸਰਵ-ਵਿਆਪਕ ਲੇਖਾ ਪ੍ਰਣਾਲੀ ਅਤੇ ਵਿੱਤੀ ਪ੍ਰਬੰਧਨ',
+    description: 'ਆਧੁਨਿਕ ਉਦਯੋਗਾਂ ਲਈ ਖਾਤਾ ਪ੍ਰਬੰਧਨ, ਵਿੱਤੀ ਬਿਆਨ ਤਿਆਰੀ ਅਤੇ ਟੈਕਸ ਪਾਲਣਾ ਦਾ ਸੰਪੂਰਨ ਹੱਲ। ਸੁਰੱਖਿਅਤ ਕਲਾਉਡ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਖਾਤਾ ਬਹੀ, ਰੋਜ਼ਨਾਮਚਾ ਐਂਟਰੀਆਂ ਅਤੇ ਵਿੱਤੀ ਬਿਆਨਾਂ ਦਾ ਪੂਰਾ ਨਿਯੰਤਰਣ।',
+    welcome: 'ਜੀ ਆਇਆਂ ਨੂੰ'
   }
 }
 
