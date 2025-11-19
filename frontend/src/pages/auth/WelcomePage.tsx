@@ -164,6 +164,13 @@ const WelcomePage: React.FC = () => {
           />
         </div>
 
+        {/* Welcome Message - Centered */}
+        <div className="welcome-message">
+          <Title level={2} className="welcome-text">
+            Bienvenido
+          </Title>
+        </div>
+
         {/* Forms Container */}
         <div className="forms-container">
           {/* Sign In Form */}
