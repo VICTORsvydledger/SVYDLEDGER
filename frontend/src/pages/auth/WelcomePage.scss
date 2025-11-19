@@ -283,12 +283,12 @@
         }
       }
 
-      // Inputs - Completamente transparentes
+      // Inputs - Texto digitado en 14px
       .ant-input,
       .ant-input-password {
         height: 28px !important; // 70% de 40px (size="large") = 28px
         padding: 2.8px 7.7px !important; // 70% de 4px-11px = 2.8px-7.7px
-        font-size: 9.8px !important; // 70% de 14px = 9.8px
+        font-size: 14px !important; // Aumentado a 14px para texto digitado
         border-radius: 4.2px !important; // 70% de 6px = 4.2px
         background: transparent !important; // Fondo transparente
         color: white !important; // Texto blanco
@@ -296,6 +296,7 @@
         
         &::placeholder {
           color: rgba(255, 255, 255, 0.5) !important; // Placeholder blanco tenue
+          font-size: 9.8px !important; // Placeholder más pequeño
         }
         
         &:hover {
@@ -333,9 +334,11 @@
           padding: 0 !important;
           background: transparent !important; // Fondo transparente
           color: white !important; // Texto blanco
+          font-size: 14px !important; // Aumentado a 14px para texto digitado
           
           &::placeholder {
             color: rgba(255, 255, 255, 0.5) !important; // Placeholder blanco tenue
+            font-size: 9.8px !important; // Placeholder más pequeño
           }
         }
 
