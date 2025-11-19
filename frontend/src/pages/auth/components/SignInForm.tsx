@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
+import { useState, forwardRef, useImperativeHandle } from 'react'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import notify from '@/lib/notifications'
 
 interface SignInFormProps {
   onForgotPassword: () => void
+  onFieldChange?: () => void
 }
 
-const SignInForm: React.FC<SignInFormProps> = ({ onForgotPassword }) => {
+const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onFieldChange }, ref) => {
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
+
+  // Exponer el método resetFields al componente padre
+  useImperativeHandle(ref, () => ({
+    resetFields: () => {
+      form.resetFields()
+    }
+  }))
 
   const handleSubmit = async (values: { email: string; password: string }) => {
     setLoading(true)
@@ -31,11 +39,19 @@ const SignInForm: React.FC<SignInFormProps> = ({ onForgotPassword }) => {
     }
   }
 
+  // Handler para detectar cambios en los campos
+  const handleFieldsChange = () => {
+    if (onFieldChange) {
+      onFieldChange()
+    }
+  }
+
   return (
     <Form
       form={form}
       layout="vertical"
       onFinish={handleSubmit}
+      onFieldsChange={handleFieldsChange}
       autoComplete="off"
       className="auth-form"
     >
@@ -92,6 +108,8 @@ const SignInForm: React.FC<SignInFormProps> = ({ onForgotPassword }) => {
       </Form.Item>
     </Form>
   )
-}
+})
+
+SignInForm.displayName = 'SignInForm'
 
 export default SignInForm

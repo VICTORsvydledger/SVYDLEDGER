@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Typography, Select, Form, Input, Alert, Modal } from 'antd'
 import notify from '@/lib/notifications'
@@ -60,6 +60,10 @@ const WelcomePage: React.FC = () => {
   const [twofaVisible, setTwofaVisible] = useState(false)
   const [twofaCode, setTwofaCode] = useState('')
 
+  // Referencias a los formularios para controlar la exclusividad mutua
+  const signInFormRef = useRef<any>(null)
+  const signUpFormRef = useRef<any>(null)
+
   const navigate = useNavigate()
 
   const handleLanguage = (lng: string) => {
@@ -89,21 +93,35 @@ const WelcomePage: React.FC = () => {
     }
   }
 
+  // Handler cuando el usuario empieza a escribir en Sign In
+  const handleSignInFieldChange = () => {
+    if (signUpFormRef.current) {
+      signUpFormRef.current.resetFields()
+    }
+  }
+
+  // Handler cuando el usuario empieza a escribir en Sign Up
+  const handleSignUpFieldChange = () => {
+    if (signInFormRef.current) {
+      signInFormRef.current.resetFields()
+    }
+  }
+
   return (
     <div className="welcome-page">
       <div className="background-image" />
       <div className="overlay" />
 
       <div className="content">
-        {/* Logo - Vladimir Script 48px */}
+        {/* Logo - Vladimir Script 72px */}
         <Title className="logo">Svyd</Title>
         
-        {/* Subtitle - Vladimir Script 30px */}
+        {/* Subtitle - Vladimir Script 36px */}
         <Title level={2} className="subtitle">
           Sistema de Contabilidad Universal
         </Title>
 
-        {/* Promotional Text - Arial 12px */}
+        {/* Promotional Text - Arial 14px */}
         <Text className="promotional-text">
           Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica
         </Text>
@@ -132,7 +150,11 @@ const WelcomePage: React.FC = () => {
               Sign In
             </Title>
 
-            <SignInForm onForgotPassword={() => setForgotVisible(true)} />
+            <SignInForm 
+              ref={signInFormRef}
+              onForgotPassword={() => setForgotVisible(true)}
+              onFieldChange={handleSignInFieldChange}
+            />
           </div>
 
           {/* Sign Up Form */}
@@ -141,7 +163,10 @@ const WelcomePage: React.FC = () => {
               Sign Up
             </Title>
 
-            <SignUpForm />
+            <SignUpForm 
+              ref={signUpFormRef}
+              onFieldChange={handleSignUpFieldChange}
+            />
           </div>
         </div>
       </div>
