@@ -31,18 +31,16 @@ const translations = {
 }
 
 // 27 idiomas completos según especificaciones originales
-// Inglés SIEMPRE primero como idioma por defecto
+// Orden: Inglés, Español, Portugués, Francés, Italiano, Alemán, Japonés, luego alfabético
 const languages: Language[] = [
-  // Prioridad 1: Inglés PRIMERO (por defecto)
+  // Prioridad 1: Idiomas principales en orden específico
   { code: 'en', name: 'English', nativeName: 'English' },
-  
-  // Prioridad 2: Español
   { code: 'es', name: 'Spanish', nativeName: 'Español' },
-  
-  // Prioridad 3: Europeos principales
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português' },
   { code: 'fr', name: 'French', nativeName: 'Français' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano' },
   { code: 'de', name: 'German', nativeName: 'Deutsch' },
+  { code: 'ja', name: 'Japanese', nativeName: '日本語' },
   
   // Resto alfabético por nombre en inglés
   { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
@@ -51,13 +49,11 @@ const languages: Language[] = [
   { code: 'zh', name: 'Chinese (Mandarin)', nativeName: '中文 (普通话)' },
   { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी' },
   { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia' },
-  { code: 'ja', name: 'Japanese', nativeName: '日本語' },
   { code: 'ko', name: 'Korean', nativeName: '한국어' },
   { code: 'mr', name: 'Marathi', nativeName: 'मराठी' },
   { code: 'pcm', name: 'Nigerian Pidgin', nativeName: 'Nigerian Pidgin' },
   { code: 'pa', name: 'Panjabi', nativeName: 'ਪੰਜਾਬੀ' },
   { code: 'fa', name: 'Persian', nativeName: 'فارسی' },
-  { code: 'pt', name: 'Portuguese', nativeName: 'Português' },
   { code: 'ru', name: 'Russian', nativeName: 'Русский' },
   { code: 'sw', name: 'Swahili', nativeName: 'Kiswahili' },
   { code: 'tl', name: 'Tagalog', nativeName: 'Tagalog' },
