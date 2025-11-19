@@ -130,42 +130,27 @@ const translations = {
     subtitle: 'సార్వత్రిక అకౌంటింగ్ వ్యవస్థ మరియు ఆర్థిక నిర్వహణ',
     description: 'ఈ వ్యవస్థ పనిచేస్తుంది: ఖాతా కోడ్‌లు లేకుండా, ఖాతాల చార్ట్ లేకుండా, జర్నల్ ఎంట్రీలు లేకుండా, ఆర్థిక మూసివేతలు లేకుండా, ఆర్థిక కాలాలు లేకుండా. కాలరహితం. సహజ వ్యక్తి మరియు చట్టపరమైన సంస్థ మధ్య వేరు చేయవలసిన అవసరం లేదు',
     welcome: 'స్వాగతం'
-  }
-}
-
-// 27 idiomas completos según especificaciones originales
-// Orden: Inglés, Español, Portugués, Francés, Italiano, Alemán, Japonés, luego alfabético
-const languages: Language[] = [
-  // Prioridad 1: Idiomas principales en orden específico
-  { code: 'en', name: 'English', nativeName: 'English' },
-  { code: 'es', name: 'Spanish', nativeName: 'Español' },
-  { code: 'pt', name: 'Portuguese', nativeName: 'Português' },
-  { code: 'fr', name: 'French', nativeName: 'Français' },
-  { code: 'it', name: 'Italian', nativeName: 'Italiano' },
-  { code: 'de', name: 'German', nativeName: 'Deutsch' },
-  { code: 'ja', name: 'Japanese', nativeName: '日本語' },
-  
-  // Resto alfabético por nombre en inglés
-  { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
-  { code: 'ar-EG', name: 'Arabic (Egyptian)', nativeName: 'العربية المصرية' },
-  { code: 'bn', name: 'Bengali', nativeName: 'বাংলা' },
-  { code: 'zh', name: 'Chinese (Mandarin)', nativeName: '中文 (普通话)' },
-  { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी' },
-  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia' },
-  { code: 'ko', name: 'Korean', nativeName: '한국어' },
-  { code: 'mr', name: 'Marathi', nativeName: 'मराठी' },
-  { code: 'pcm', name: 'Nigerian Pidgin', nativeName: 'Nigerian Pidgin' },
-  { code: 'pa', name: 'Panjabi', nativeName: 'ਪੰਜਾਬੀ' },
-  { code: 'fa', name: 'Persian', nativeName: 'فارسی' },
-  { code: 'ru', name: 'Russian', nativeName: 'Русский' },
-  { code: 'sw', name: 'Swahili', nativeName: 'Kiswahili' },
-  { code: 'tl', name: 'Tagalog', nativeName: 'Tagalog' },
-  { code: 'ta', name: 'Tamil', nativeName: 'தமிழ்' },
-  { code: 'te', name: 'Telugu', nativeName: 'తెలుగు' },
-  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe' },
-  { code: 'uk', name: 'Ukrainian', nativeName: 'Українська' },
-  { code: 'ur', name: 'Urdu', nativeName: 'اردو' },
-  { code: 'vi', name: 'Vietnamese', nativeName: 'Tiếng Việt' },
+  },
+  tr: {
+    subtitle: 'Evrensel Muhasebe Sistemi ve Finansal Yönetim',
+    description: 'Bu sistem çalışır: hesap kodları olmadan, hesap planı olmadan, yevmiye kayıtları olmadan, mali kapanışlar olmadan, mali dönemler olmadan. Zamansız. Gerçek kişi ile tüzel kişi arasında ayrım yapma gereği yok',
+    welcome: 'Hoş Geldiniz'
+  },
+  uk: {
+    subtitle: 'Універсальна система бухгалтерського обліку та фінансового управління',
+    description: 'Комплексне рішення для управління рахунками, підготовки фінансової звітності та податкового відповідності для сучасних підприємств. Повний контроль головної книги, журнальних записів і фінансових звітів у безпечній хмарній технології.',
+    welcome: 'Ласкаво просимо'
+  },
+  ur: {
+    subtitle: 'یونیورسل اکاؤنٹنگ سسٹم اور مالیاتی انتظام',
+    description: 'جدیدی کاروباروں کے لئے اکاؤنٹ منیجمنٹ، مالیاتی بیان کی تیاری اور ٹیکس کی تعمیل کے لئے مکمل حل۔ محفوظ کلاؤڈ ٹیکنالوجی کے ساتھ لیجر کی کتابوں، جریدے کی اندراجات، اور مالیاتی بیانات پر مکمل کنٹرول۔',
+    welcome: 'خوش آمدید'
+  },
+  vi: {
+    subtitle: 'Hệ thống Kế toán và Quản lý Tài chính Toàn cầu',
+    description: 'Giải pháp toàn diện cho quản lý tài khoản, lập báo cáo tài chính và tuân thủ thuế cho các doanh nghiệp hiện đại. Kiểm soát hoàn toàn sổ cái, nhật ký giao dịch và báo cáo tài chính với công nghệ đám mây an toàn.',
+    welcome: 'Chào mừng'
+  },
 ]
 
 const WelcomePage: React.FC = () => {
