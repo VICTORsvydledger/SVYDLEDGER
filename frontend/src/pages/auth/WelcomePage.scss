@@ -92,7 +92,7 @@
     font-weight: normal !important;
     color: white !important;
     text-align: center !important;
-    margin-bottom: 0px !important; // Cambiado de 10px a 0px para acercar al subtítulo
+    margin-bottom: 0px !important; // Cambiado de 10px a 0px para acercar al subt?tulo
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
                  0 0 20px rgba(255, 255, 255, 0.2);
     letter-spacing: 3px;
@@ -167,7 +167,7 @@
     }
   }
 
-  // Language Selector - Reducido a 70% del tamaño original
+  // Language Selector - Reducido a 70% del tama?o original
   .language-selector {
     margin-bottom: 40px !important;
     width: 100%;
@@ -219,29 +219,29 @@
     }
   }
 
-  // Forms Container
+  // Forms Container - Reducido a 70% del ancho original
   .forms-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 21px; // 70% de 30px = 21px
     width: 100%;
-    max-width: 900px;
+    max-width: 630px; // 70% de 900px = 630px
     margin-top: 20px;
     padding: 0 20px;
 
     @media (max-width: 968px) {
       grid-template-columns: 1fr;
-      max-width: 450px;
-      gap: 20px;
+      max-width: 315px; // 70% de 450px = 315px
+      gap: 14px; // 70% de 20px = 14px
     }
   }
 
-  // Form Card
+  // Form Card - Reducido a 70% de altura (padding vertical)
   .form-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border-radius: 20px;
-    padding: 35px;
+    border-radius: 14px; // 70% de 20px = 14px
+    padding: 24.5px; // 70% de 35px = 24.5px
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
@@ -254,12 +254,83 @@
     }
 
     @media (max-width: 768px) {
-      padding: 25px;
+      padding: 17.5px; // 70% de 25px = 17.5px
     }
 
     @media (max-width: 480px) {
-      padding: 20px;
-      border-radius: 16px;
+      padding: 14px; // 70% de 20px = 14px
+      border-radius: 11.2px; // 70% de 16px = 11.2px
+    }
+
+    // Reducir inputs y espacios al 70% dentro de los formularios
+    .auth-form {
+      // Form Items - Reducir espaciado al 70%
+      .ant-form-item {
+        margin-bottom: 10.5px !important; // 70% de 15px (aprox)
+      }
+
+      // Labels - Reducir tamaño de fuente al 70%
+      .ant-form-item-label {
+        padding-bottom: 2.8px !important; // 70% de 4px = 2.8px
+        
+        > label {
+          font-size: 9.8px !important; // 70% de 14px = 9.8px
+          height: auto !important;
+        }
+      }
+
+      // Inputs - Reducir altura y padding al 70%
+      .ant-input,
+      .ant-input-password {
+        height: 28px !important; // 70% de 40px (size="large") = 28px
+        padding: 2.8px 7.7px !important; // 70% de 4px-11px = 2.8px-7.7px
+        font-size: 9.8px !important; // 70% de 14px = 9.8px
+        border-radius: 4.2px !important; // 70% de 6px = 4.2px
+      }
+
+      .ant-input-affix-wrapper {
+        padding: 2.8px 7.7px !important; // 70% de 4px-11px
+        height: 28px !important; // 70% de 40px
+        
+        .ant-input {
+          height: auto !important;
+          padding: 0 !important;
+        }
+
+        .ant-input-prefix,
+        .ant-input-suffix {
+          font-size: 9.8px !important; // 70% de 14px
+        }
+      }
+
+      // Buttons - Reducir altura y padding al 70%
+      .ant-btn {
+        height: 28px !important; // 70% de 40px = 28px
+        padding: 2.8px 10.5px !important; // 70% de 4px-15px = 2.8px-10.5px
+        font-size: 9.8px !important; // 70% de 14px = 9.8px
+        border-radius: 4.2px !important; // 70% de 6px = 4.2px
+        line-height: 1.4 !important;
+      }
+
+      .ant-btn-lg {
+        height: 28px !important; // Forzar mismo tamaño
+        padding: 4.55px 10.5px !important; // 70% de 6.5px-15px = 4.55px-10.5px
+        font-size: 11.2px !important; // 70% de 16px = 11.2px
+      }
+
+      // Link buttons (Forgot Password)
+      .ant-btn-link {
+        height: auto !important;
+        padding: 0 !important;
+        font-size: 8.4px !important; // 70% de 12px = 8.4px
+        margin-bottom: 8.4px !important; // 70% de 12px
+      }
+
+      // Validation messages
+      .ant-form-item-explain {
+        font-size: 8.4px !important; // 70% de 12px = 8.4px
+        margin-top: 2.1px !important; // 70% de 3px = 2.1px
+      }
     }
   }
 
@@ -274,22 +345,22 @@
     }
   }
 
-  // Form Title
+  // Form Title - Reducido a 70% del tamaño original
   .form-title {
-    font-size: 28px !important;
+    font-size: 19.6px !important; // 70% de 28px = 19.6px
     font-weight: 600 !important;
     color: white !important;
     text-align: center !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 17.5px !important; // 70% de 25px = 17.5px
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     font-family: Arial, sans-serif !important;
 
     @media (max-width: 768px) {
-      font-size: 24px !important;
+      font-size: 16.8px !important; // 70% de 24px = 16.8px
     }
 
     @media (max-width: 480px) {
-      font-size: 22px !important;
+      font-size: 15.4px !important; // 70% de 22px = 15.4px
     }
   }
 
@@ -314,7 +385,7 @@
 // Responsive adjustments
 @media (max-width: 1200px) {
   .welcome-page .forms-container {
-    max-width: 800px;
+    max-width: 560px; // 70% de 800px = 560px
   }
 }
 
@@ -325,7 +396,7 @@
     }
 
     .forms-container {
-      gap: 20px;
+      gap: 14px; // 70% de 20px = 14px
     }
   }
 }
@@ -353,12 +424,12 @@
     }
 
     .form-card {
-      padding: 20px;
+      padding: 14px; // 70% de 20px = 14px
     }
 
     .form-title {
-      font-size: 22px !important;
-      margin-bottom: 20px !important;
+      font-size: 15.4px !important; // 70% de 22px = 15.4px
+      margin-bottom: 14px !important; // 70% de 20px = 14px
     }
   }
 }
@@ -388,7 +459,7 @@
     }
 
     .form-card {
-      padding: 15px;
+      padding: 10.5px; // 70% de 15px = 10.5px
     }
   }
 }
