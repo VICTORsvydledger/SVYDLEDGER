@@ -98,7 +98,7 @@ const translations = {
   },
   pa: {
     subtitle: 'ਸਰਵ-ਵਿਆਪਕ ਲੇਖਾ ਪ੍ਰਣਾਲੀ ਅਤੇ ਵਿੱਤੀ ਪ੍ਰਬੰਧਨ',
-    description: 'ਆਧੁਨਿਕ ਉਦਯੋਗਾਂ ਲਈ ਖਾਤਾ ਪ੍ਰਬੰਧਨ, ਵਿੱਤੀ ਬਿਆਨ ਤਿਆਰੀ ਅਤੇ ਟੈਕਸ ਪਾਲਣਾ ਦਾ ਸੰਪੂਰਨ ਹੱਲ। ਸੁਰੱਖਿਅਤ ਕਲਾਉਡ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਖਾਤਾ ਬਹੀ, ਰੋਜ਼ਨਾਮਚਾ ਐਂਟਰੀਆਂ ਅਤੇ ਵਿੱਤੀ ਬਿਆਨਾਂ ਦਾ ਪੂਰਾ ਨਿਯੰਤਰਣ।',
+    description: 'ਆਧੁਨਿਕ ਉਦਯੋਗਾਂ ਲਈ ਖਾਤਾ ਪ੍ਰਬੰਧਨ, ਵਿੱਤੀ ਬਿਆਨ ਤਿਆਰੀ ਅਤੇ ਟੈਕਸ ਪਾਲਣਾ ਦਾ ਸੰਪੂਰਨ ਹੱਲ। ਸੁਰੱਖਿਅਤ ਕਲਾਉਡ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਖਾਤਾ ਬਹੀ, ਰੋਜ਼ਨਾਮਚਾ ਐਂਟਰੀਆਂ ਅਤੇ ਵਿੱਤੀ ਬਿਆਨਾਂ ਦਾ ਪੂਰਾ ਨਿਯੰਤਰਣ។',
     welcome: 'ਜੀ ਆਇਆਂ ਨੂੰ'
   },
   fa: {
@@ -120,6 +120,11 @@ const translations = {
     subtitle: 'Pandaigdigang Sistema ng Accounting at Pamamahala ng Pananalapi',
     description: 'Ang sistemang ito ay gumagana: walang mga account codes, walang chart of accounts, walang mga journal entries, walang mga fiscal closing, walang mga fiscal periods. Walang panahon. Hindi kailangang magtangi sa pagitan ng natural person at juridical person',
     welcome: 'Maligayang Pagdating'
+  },
+  ta: {
+    subtitle: 'உலகளாவிய கணக்கியல் அமைப்பு மற்றும் நிதி மேலாண்மை',
+    description: 'இந்த அமைப்பு செயல்படுகிறது: கணக்கு குறியீடுகள் இல்லாமல், கணக்கு விளக்கப்படம் இல்லாமல், இதழ் பதிவுகள் இல்லாமல், நிதியாண்டு முடிவுகள் இல்லாமல், நிதி காலங்கள் இல்லாமல். காலவரையற்றது. இயற்கை நபர் மற்றும் சட்ட நிறுவனம் இடையே வேறுபடுத்த தேவையில்லை',
+    welcome: 'வரவேற்கிறோம்'
   }
 }
 
