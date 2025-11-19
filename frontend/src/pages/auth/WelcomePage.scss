@@ -345,7 +345,24 @@
         .ant-input-prefix,
         .ant-input-suffix {
           font-size: 9.8px !important; // 70% de 14px
-          color: rgba(255, 255, 255, 0.7) !important; // Iconos blancos semi-transparentes
+          color: white !important; // Iconos blancos (incluye el ojo)
+          
+          svg {
+            color: white !important; // SVG del ojo en blanco
+          }
+          
+          .anticon {
+            color: white !important; // Ant Icon en blanco
+          }
+        }
+        
+        // Icono del ojo específicamente
+        .ant-input-password-icon {
+          color: white !important; // Ojo para mostrar/ocultar password en blanco
+          
+          &:hover {
+            color: rgba(255, 255, 255, 0.8) !important; // Hover más suave
+          }
         }
       }
 
