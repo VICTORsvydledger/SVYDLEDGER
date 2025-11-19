@@ -219,6 +219,50 @@
     }
   }
 
+  // Welcome Message - Centered between language selector and forms
+  .welcome-message {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px !important;
+    margin-top: 0px !important; // Cambiado de 4px a 0px (4px más arriba)
+    
+    .welcome-text {
+      font-family: Arial, sans-serif !important; // Cambiado de Vladimir Script a Arial
+      font-size: 28px !important; // Cambiado de 22px a 28px
+      font-weight: normal !important;
+      color: white !important;
+      text-align: center !important;
+      margin-bottom: 0 !important;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
+                   0 0 20px rgba(255, 255, 255, 0.3);
+      letter-spacing: 2px;
+      animation: welcome-glow 3s ease-in-out infinite alternate;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 24px !important; // Ajustado proporcionalmente para tablets
+        letter-spacing: 1.5px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px !important; // Ajustado proporcionalmente para móviles
+        letter-spacing: 1px;
+      }
+    }
+
+    @keyframes welcome-glow {
+      from {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
+                     0 0 20px rgba(255, 255, 255, 0.3);
+      }
+      to {
+        text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.5),
+                     0 0 25px rgba(255, 255, 255, 0.4),
+                     2px 2px 8px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
   // Forms Container - Reducido a 70% del ancho original
   .forms-container {
     display: grid;
