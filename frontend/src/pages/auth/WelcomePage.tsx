@@ -24,6 +24,10 @@ const translations = {
     subtitle: 'Sistema de Contabilidad Universal',
     description: 'Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica'
   },
+  pt: {
+    subtitle: 'Sistema de Contabilidade Universal',
+    description: 'Este sistema funciona: sem códigos, sem plano de contas, sem lançamentos contábeis, sem encerramentos, sem períodos fiscais. Atemporal. Não precisa distinguir entre pessoa física e pessoa jurídica'
+  },
   fr: {
     subtitle: 'Système Comptable Universel',
     description: 'Ce système fonctionne: sans codes, sans plan comptable, sans écritures comptables, sans clôtures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale'
