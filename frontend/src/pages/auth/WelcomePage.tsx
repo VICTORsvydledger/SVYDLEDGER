@@ -14,23 +14,27 @@ interface Language {
   nativeName: string
 }
 
-// Traducciones del subtítulo y texto promocional
+// Traducciones del subtítulo, texto promocional y palabra de bienvenida
 const translations = {
   en: {
     subtitle: 'Universal Accounting System',
-    description: 'This system works: without codes, without chart of accounts, without journal entries, without closings, without fiscal periods. Timeless. No need to distinguish between natural person and legal entity'
+    description: 'This system works: without codes, without chart of accounts, without journal entries, without closings, without fiscal periods. Timeless. No need to distinguish between natural person and legal entity',
+    welcome: 'Welcome'
   },
   es: {
     subtitle: 'Sistema de Contabilidad Universal',
-    description: 'Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica'
+    description: 'Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica',
+    welcome: 'Bienvenido'
   },
   pt: {
     subtitle: 'Sistema de Contabilidade Universal',
-    description: 'Este sistema funciona: sem códigos, sem plano de contas, sem lançamentos contábeis, sem encerramentos, sem períodos fiscais. Atemporal. Não precisa distinguir entre pessoa física e pessoa jurídica'
+    description: 'Este sistema funciona: sem códigos, sem plano de contas, sem lançamentos contábeis, sem encerramentos, sem períodos fiscais. Atemporal. Não precisa distinguir entre pessoa física e pessoa jurídica',
+    welcome: 'Bem-vindo'
   },
   fr: {
     subtitle: 'Système Comptable Universel',
-    description: 'Ce système fonctionne: sans codes, sans plan comptable, sans écritures comptables, sans clôtures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale'
+    description: 'Ce système fonctionne: sans codes, sans plan comptable, sans écritures comptables, sans clôtures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale',
+    welcome: 'Bienvenue'
   }
 }
 
@@ -167,7 +171,7 @@ const WelcomePage: React.FC = () => {
         {/* Welcome Message - Centered */}
         <div className="welcome-message">
           <Title level={2} className="welcome-text">
-            Bienvenido
+            {currentTranslations.welcome}
           </Title>
         </div>
 
