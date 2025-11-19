@@ -167,7 +167,7 @@
     }
   }
 
-  // Language Selector - Reducido a 70% del tama?o original
+  // Language Selector - Totalmente transparente
   .language-selector {
     margin-bottom: 40px !important;
     width: 100%;
@@ -184,10 +184,10 @@
     }
 
     .ant-select-selector {
-      background: rgba(255, 255, 255, 0.15) !important;
-      backdrop-filter: blur(10px) !important;
+      background: transparent !important; // Fondo completamente transparente
+      backdrop-filter: none !important; // Sin blur
       border-radius: 12px !important;
-      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco más visible
       color: white !important;
       transition: all 0.3s ease !important;
       padding: 6px 10px !important; // Reducido proporcionalmente
@@ -195,14 +195,14 @@
       min-height: 28px !important; // 70% de 40px = 28px
 
       &:hover {
-        background: rgba(255, 255, 255, 0.2) !important;
-        border-color: rgba(255, 255, 255, 0.5) !important;
+        background: transparent !important; // Mantener transparente en hover
+        border-color: rgba(255, 255, 255, 0.8) !important; // Borde más brillante al hover
       }
     }
 
     .ant-select-focused .ant-select-selector {
-      background: rgba(255, 255, 255, 0.25) !important;
-      border-color: rgba(255, 255, 255, 0.7) !important;
+      background: transparent !important; // Mantener transparente cuando está enfocado
+      border-color: white !important; // Borde blanco sólido cuando está activo
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
     }
 
