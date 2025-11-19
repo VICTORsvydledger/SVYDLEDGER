@@ -1,0 +1,256 @@
+{
+  "welcome": {
+    "hero": {
+      "title": "Chào m?ng ??n v?i SVYD Ledger",
+      "subtitle": "Gi?i pháp toàn di?n cho k? toán ?a qu?c gia",
+      "description": "N?n t?ng m?nh m? ?? qu?n lý k? toán c?a b?n v?i h? tr? nhi?u ngôn ng?, ??n v? ti?n t? và tiêu chu?n báo cáo qu?c t?.",
+      "cta": {
+        "getStarted": "B?t ??u",
+        "learnMore": "Tìm hi?u thêm"
+      }
+    },
+    "features": {
+      "title": "Tính n?ng chính",
+      "subtitle": "M?i th? b?n c?n cho k? toán chuyên nghi?p",
+      "multiCurrency": {
+        "title": "H? tr? ?a ti?n t?",
+        "description": "Qu?n lý giao d?ch b?ng nhi?u lo?i ti?n t? v?i t? giá h?i ?oái t? ??ng và chuy?n ??i."
+      },
+      "realTime": {
+        "title": "Báo cáo th?i gian th?c",
+        "description": "T?o báo cáo tài chính ngay l?p t?c v?i d? li?u và phân tích c?p nh?t."
+      },
+      "compliance": {
+        "title": "Tuân th? quy ??nh",
+        "description": "Tuân th? các tiêu chu?n k? toán qu?c t? (IFRS, GAAP) và pháp lu?t ??a ph??ng."
+      },
+      "automation": {
+        "title": "T? ??ng hóa thông minh",
+        "description": "T? ??ng hóa các quy trình k? toán l?p ?i l?p l?i và gi?m thi?u r?i ro sai sót c?a con ng??i."
+      },
+      "multiLanguage": {
+        "title": "Giao di?n ?a ngôn ng?",
+        "description": "Làm vi?c b?ng ngôn ng? m? ?? c?a b?n v?i h? tr? h?n 26 ngôn ng?."
+      },
+      "security": {
+        "title": "B?o m?t c?p doanh nghi?p",
+        "description": "B?o v? d? li?u tài chính c?a b?n b?ng mã hóa và ki?m soát truy c?p."
+      }
+    },
+    "benefits": {
+      "title": "T?i sao ch?n SVYD Ledger",
+      "efficiency": {
+        "title": "T?ng hi?u qu?",
+        "description": "Gi?m 60% th?i gian x? lý nh? t? ??ng hóa thông minh và tích h?p."
+      },
+      "accuracy": {
+        "title": "C?i thi?n ?? chính xác",
+        "description": "Lo?i b? l?i thông qua ??i chi?u và xác th?c t? ??ng."
+      },
+      "visibility": {
+        "title": "Minh b?ch hoàn toàn",
+        "description": "Có cái nhìn toàn di?n v? tình hình tài chính c?a b?n theo th?i gian th?c."
+      },
+      "scalability": {
+        "title": "Kh? n?ng m? r?ng cho t?ng tr??ng",
+        "description": "Phát tri?n không gi?i h?n - t? công ty kh?i nghi?p ??n doanh nghi?p qu?c t?."
+      }
+    },
+    "howItWorks": {
+      "title": "Cách th?c ho?t ??ng",
+      "step1": {
+        "title": "T?o tài kho?n",
+        "description": "??ng ký mi?n phí và thi?t l?p t? ch?c c?a b?n trong vài phút."
+      },
+      "step2": {
+        "title": "Thi?t l?p h? th?ng tài kho?n",
+        "description": "Nh?p ho?c t?o h? th?ng tài kho?n c?a b?n theo nhu c?u."
+      },
+      "step3": {
+        "title": "B?t ??u ghi chép bút toán",
+        "description": "Ghi chép bút toán nh?t ký và t? ??ng t?o báo cáo tài chính."
+      },
+      "step4": {
+        "title": "Phân tích và báo cáo",
+        "description": "S? d?ng công c? phân tích m?nh m? ?? ??a ra quy?t ??nh sáng su?t."
+      }
+    },
+    "testimonials": {
+      "title": "Khách hàng nói gì v? chúng tôi",
+      "client1": {
+        "quote": "SVYD Ledger ?ã thay ??i quy trình k? toán c?a chúng tôi. H? tr? ?a ti?n t? th?t xu?t s?c cho ho?t ??ng kinh doanh qu?c t? c?a chúng tôi.",
+        "author": "Nguy?n Th? Mai",
+        "role": "Giám ??c Tài chính, Global Enterprises"
+      },
+      "client2": {
+        "quote": "T? ??ng hóa ?ã ti?t ki?m cho chúng tôi vô s? gi? làm vi?c. Bây gi? chúng tôi có th? t?p trung vào phân tích chi?n l??c thay vì nh?p li?u.",
+        "author": "Tr?n V?n Hùng",
+        "role": "K? toán tr??ng, Tech Solutions Inc."
+      },
+      "client3": {
+        "quote": "Báo cáo th?i gian th?c ?ã mang l?i cho chúng tôi s? minh b?ch ?áng kinh ng?c v? tình hình tài chính. Công c? không th? thi?u cho b?t k? CFO nào.",
+        "author": "Ph?m Th? H??ng",
+        "role": "Giám ??c Tài chính, Manufacturing Co."
+      }
+    },
+    "pricing": {
+      "title": "Gói giá minh b?ch",
+      "subtitle": "Ch?n gói phù h?p v?i nhu c?u c?a b?n",
+      "starter": {
+        "name": "Kh?i ??u",
+        "price": "Mi?n phí",
+        "description": "Hoàn h?o cho doanh nghi?p nh? và freelancer",
+        "features": {
+          "feature1": "T?i ?a 100 bút toán/tháng",
+          "feature2": "1 ng??i dùng",
+          "feature3": "Báo cáo c? b?n",
+          "feature4": "H? tr? qua email"
+        },
+        "cta": "B?t ??u mi?n phí"
+      },
+      "professional": {
+        "name": "Chuyên nghi?p",
+        "price": "$49",
+        "period": "/tháng",
+        "description": "Dành cho công ty ?ang phát tri?n v?i nhu c?u nâng cao",
+        "features": {
+          "feature1": "Bút toán không gi?i h?n",
+          "feature2": "T?i ?a 10 ng??i dùng",
+          "feature3": "Báo cáo và phân tích nâng cao",
+          "feature4": "H? tr? ?u tiên",
+          "feature5": "Giao d?ch ?a ti?n t?",
+          "feature6": "Truy c?p API"
+        },
+        "cta": "B?t ??u dùng th?",
+        "popular": "Ph? bi?n nh?t"
+      },
+      "enterprise": {
+        "name": "Doanh nghi?p",
+        "price": "Tùy ch?nh",
+        "description": "Dành cho t? ch?c l?n v?i yêu c?u ??c bi?t",
+        "features": {
+          "feature1": "Bút toán và ng??i dùng không gi?i h?n",
+          "feature2": "Qu?n lý tài kho?n chuyên trách",
+          "feature3": "Tích h?p tùy ch?nh",
+          "feature4": "H? tr? 24/7",
+          "feature5": "?ào t?o và h??ng d?n",
+          "feature6": "??m b?o SLA"
+        },
+        "cta": "Liên h? b? ph?n bán hàng"
+      }
+    },
+    "cta": {
+      "title": "S?n sàng chuy?n ??i k? toán c?a b?n?",
+      "subtitle": "Tham gia cùng hàng nghìn công ty tin t??ng SVYD Ledger ?? qu?n lý tài chính",
+      "button": "B?t ??u mi?n phí",
+      "note": "Không c?n th? tín d?ng • H? tr? mi?n phí • H?y b?t c? lúc nào"
+    },
+    "footer": {
+      "product": {
+        "title": "S?n ph?m",
+        "features": "Tính n?ng",
+        "pricing": "Giá c?",
+        "documentation": "Tài li?u",
+        "api": "API"
+      },
+      "company": {
+        "title": "Công ty",
+        "about": "V? chúng tôi",
+        "blog": "Blog",
+        "careers": "Tuy?n d?ng",
+        "contact": "Liên h?"
+      },
+      "legal": {
+        "title": "Pháp lý",
+        "privacy": "Chính sách b?o m?t",
+        "terms": "?i?u kho?n s? d?ng",
+        "security": "B?o m?t",
+        "compliance": "Tuân th?"
+      },
+      "social": {
+        "title": "M?ng xã h?i",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "youtube": "YouTube"
+      },
+      "copyright": "© 2024 SVYD Ledger. B?o l?u m?i quy?n."
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "??ng nh?p vào tài kho?n",
+      "subtitle": "Chào m?ng tr? l?i! Vui lòng nh?p thông tin c?a b?n.",
+      "email": "Email",
+      "emailPlaceholder": "email.cua.ban@example.com",
+      "password": "M?t kh?u",
+      "passwordPlaceholder": "Nh?p m?t kh?u c?a b?n",
+      "rememberMe": "Ghi nh? ??ng nh?p",
+      "forgotPassword": "Quên m?t kh?u?",
+      "signInButton": "??ng nh?p",
+      "divider": "HO?C",
+      "googleButton": "??ng nh?p b?ng Google",
+      "microsoftButton": "??ng nh?p b?ng Microsoft",
+      "noAccount": "Ch?a có tài kho?n?",
+      "signUpLink": "??ng ký mi?n phí",
+      "errors": {
+        "invalidEmail": "Vui lòng nh?p ??a ch? email h?p l?",
+        "requiredPassword": "M?t kh?u là b?t bu?c",
+        "invalidCredentials": "Email ho?c m?t kh?u không ?úng",
+        "accountLocked": "Tài kho?n b? khóa do nhi?u l?n ??ng nh?p th?t b?i",
+        "serverError": "Không th? ??ng nh?p. Vui lòng th? l?i sau."
+      }
+    },
+    "signUp": {
+      "title": "T?o tài kho?n",
+      "subtitle": "B?t ??u hành trình k? toán c?a b?n ngay hôm nay",
+      "fullName": "H? và tên",
+      "fullNamePlaceholder": "Nguy?n V?n A",
+      "email": "Email",
+      "emailPlaceholder": "email.cua.ban@example.com",
+      "password": "M?t kh?u",
+      "passwordPlaceholder": "T?o m?t kh?u m?nh",
+      "confirmPassword": "Xác nh?n m?t kh?u",
+      "confirmPasswordPlaceholder": "Xác nh?n m?t kh?u c?a b?n",
+      "company": "Tên công ty (tùy ch?n)",
+      "companyPlaceholder": "Công ty c?a b?n",
+      "agreeToTerms": "Tôi ??ng ý v?i",
+      "termsLink": "?i?u kho?n s? d?ng",
+      "and": "và",
+      "privacyLink": "Chính sách b?o m?t",
+      "signUpButton": "T?o tài kho?n",
+      "divider": "HO?C",
+      "googleButton": "??ng ký b?ng Google",
+      "microsoftButton": "??ng ký b?ng Microsoft",
+      "hasAccount": "?ã có tài kho?n?",
+      "signInLink": "??ng nh?p",
+      "passwordRequirements": {
+        "title": "M?t kh?u ph?i có:",
+        "minLength": "Ít nh?t 8 ký t?",
+        "uppercase": "M?t ch? hoa",
+        "lowercase": "M?t ch? th??ng",
+        "number": "M?t ch? s?",
+        "special": "M?t ký t? ??c bi?t"
+      },
+      "errors": {
+        "requiredName": "H? và tên là b?t bu?c",
+        "invalidEmail": "Vui lòng nh?p ??a ch? email h?p l?",
+        "emailExists": "Email này ?ã ???c ??ng ký",
+        "weakPassword": "M?t kh?u không ?áp ?ng yêu c?u b?o m?t",
+        "passwordMismatch": "M?t kh?u không kh?p",
+        "termsRequired": "B?n ph?i ch?p nh?n ?i?u kho?n và chính sách b?o m?t",
+        "serverError": "Không th? t?o tài kho?n. Vui lòng th? l?i sau."
+      },
+      "success": {
+        "title": "Tài kho?n ?ã ???c t?o thành công!",
+        "message": "Vui lòng ki?m tra email c?a b?n ?? xác nh?n tài kho?n.",
+        "redirecting": "?ang chuy?n h??ng ??n trang ??ng nh?p..."
+      }
+    },
+    "common": {
+      "loading": "?ang t?i...",
+      "processing": "?ang x? lý...",
+      "pleaseWait": "Vui lòng ??i..."
+    }
+  }
+}
