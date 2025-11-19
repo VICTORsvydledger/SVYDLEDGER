@@ -115,6 +115,11 @@ const translations = {
     subtitle: 'Mfumo wa Uhasibu wa Ulimwengu na Usimamizi wa Fedha',
     description: 'Suluhisho kamili kwa usimamizi wa akaunti, uandaaji wa taarifa za kifedha, na utii wa kodi kwa biashara za kisasa. Udhibiti kamili wa daftari kuu, maingizo ya jarida, na taarifa za kifedha kwa teknolojia salama ya wingu.',
     welcome: 'Karibu'
+  },
+  tl: {
+    subtitle: 'Pandaigdigang Sistema ng Accounting at Pamamahala ng Pananalapi',
+    description: 'Ang sistemang ito ay gumagana: walang mga account codes, walang chart of accounts, walang mga journal entries, walang mga fiscal closing, walang mga fiscal periods. Walang panahon. Hindi kailangang magtangi sa pagitan ng natural person at juridical person',
+    welcome: 'Maligayang Pagdating'
   }
 }
 
