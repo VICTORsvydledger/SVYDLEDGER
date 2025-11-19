@@ -346,11 +346,11 @@
         }
       }
 
-      // Buttons - Reducir altura y padding al 70%
+      // Buttons - Texto 14px para mejor legibilidad
       .ant-btn {
         height: 28px !important; // 70% de 40px = 28px
         padding: 2.8px 10.5px !important; // 70% de 4px-15px = 2.8px-10.5px
-        font-size: 9.8px !important; // 70% de 14px = 9.8px
+        font-size: 14px !important; // Aumentado a 14px para legibilidad
         border-radius: 4.2px !important; // 70% de 6px = 4.2px
         line-height: 1.4 !important;
       }
@@ -358,7 +358,7 @@
       .ant-btn-lg {
         height: 28px !important; // Forzar mismo tamaño
         padding: 4.55px 10.5px !important; // 70% de 6.5px-15px = 4.55px-10.5px
-        font-size: 11.2px !important; // 70% de 16px = 11.2px
+        font-size: 14px !important; // Aumentado a 14px para legibilidad
       }
 
       // Link buttons (Forgot Password) - 14px, blanco, sin negritas
