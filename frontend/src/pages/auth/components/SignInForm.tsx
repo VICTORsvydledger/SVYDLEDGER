@@ -1,4 +1,4 @@
-import { useState, forwardRef, useImperativeHandle } from 'react'
+import { useState, forwardRef, useImperativeHandle, useEffect } from 'react'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import notify from '@/lib/notifications'
@@ -11,13 +11,27 @@ interface SignInFormProps {
 const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onFieldChange }, ref) => {
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
+  const [hasContent, setHasContent] = useState(false)
 
   // Exponer el método resetFields al componente padre
   useImperativeHandle(ref, () => ({
     resetFields: () => {
       form.resetFields()
+      setHasContent(false) // Resetear también el estado del contenido
     }
   }))
+
+  // Verificar si hay contenido en los campos
+  useEffect(() => {
+    const checkContent = () => {
+      const values = form.getFieldsValue()
+      const hasAnyContent = Object.values(values).some(value => value && String(value).trim() !== '')
+      setHasContent(hasAnyContent)
+    }
+
+    // Verificar contenido inicial
+    checkContent()
+  }, [form])
 
   const handleSubmit = async (values: { email: string; password: string }) => {
     setLoading(true)
@@ -44,6 +58,11 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
     if (onFieldChange) {
       onFieldChange()
     }
+    
+    // Verificar si hay contenido
+    const values = form.getFieldsValue()
+    const hasAnyContent = Object.values(values).some(value => value && String(value).trim() !== '')
+    setHasContent(hasAnyContent)
   }
 
   return (
@@ -102,6 +121,7 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
           loading={loading}
           block
           size="large"
+          className={hasContent ? 'has-content' : ''}
         >
           Log In
         </Button>

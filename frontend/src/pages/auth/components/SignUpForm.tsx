@@ -1,4 +1,4 @@
-import { useState, forwardRef, useImperativeHandle } from 'react'
+import { useState, forwardRef, useImperativeHandle, useEffect } from 'react'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import notify from '@/lib/notifications'
@@ -10,13 +10,27 @@ interface SignUpFormProps {
 const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange }, ref) => {
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
+  const [hasContent, setHasContent] = useState(false)
 
   // Exponer el método resetFields al componente padre
   useImperativeHandle(ref, () => ({
     resetFields: () => {
       form.resetFields()
+      setHasContent(false) // Resetear también el estado del contenido
     }
   }))
+
+  // Verificar si hay contenido en los campos
+  useEffect(() => {
+    const checkContent = () => {
+      const values = form.getFieldsValue()
+      const hasAnyContent = Object.values(values).some(value => value && String(value).trim() !== '')
+      setHasContent(hasAnyContent)
+    }
+
+    // Verificar contenido inicial
+    checkContent()
+  }, [form])
 
   const handleSubmit = async (values: { 
     email: string
@@ -35,6 +49,7 @@ const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange }, ref) => 
       
       // TODO: Trigger 2FA verification modal
       form.resetFields()
+      setHasContent(false)
     } catch (error) {
       notify.error('Could not create account. Please try again.')
     } finally {
@@ -47,6 +62,11 @@ const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange }, ref) => 
     if (onFieldChange) {
       onFieldChange()
     }
+    
+    // Verificar si hay contenido
+    const values = form.getFieldsValue()
+    const hasAnyContent = Object.values(values).some(value => value && String(value).trim() !== '')
+    setHasContent(hasAnyContent)
   }
 
   return (
@@ -122,6 +142,7 @@ const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange }, ref) => 
           loading={loading}
           block
           size="large"
+          className={hasContent ? 'has-content' : ''}
         >
           Create Account
         </Button>

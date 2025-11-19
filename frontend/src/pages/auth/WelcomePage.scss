@@ -417,6 +417,7 @@
         background: transparent !important; // Fondo transparente
         border-color: rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
         color: white !important; // Texto blanco
+        transition: all 0.3s ease !important; // Transición suave
         
         &:hover {
           background: transparent !important; // Mantener transparente en hover
@@ -429,6 +430,29 @@
           background: transparent !important; // Mantener transparente
           border-color: white !important; // Borde blanco sólido
           color: white !important; // Mantener texto blanco
+        }
+        
+        // Botón con contenido - Verde vibrante
+        &.has-content {
+          background: #00ff88 !important; // Verde vibrante muy brillante
+          border-color: #00ff88 !important; // Borde verde vibrante
+          color: #000000 !important; // Texto negro para contraste
+          box-shadow: 0 0 20px rgba(0, 255, 136, 0.6) !important; // Glow verde
+          
+          &:hover {
+            background: #00ff99 !important; // Verde aún más brillante en hover
+            border-color: #00ff99 !important;
+            color: #000000 !important;
+            box-shadow: 0 0 30px rgba(0, 255, 153, 0.8) !important; // Glow más intenso
+          }
+          
+          &:focus,
+          &:active {
+            background: #00ff88 !important;
+            border-color: #00ff88 !important;
+            color: #000000 !important;
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.7) !important;
+          }
         }
       }
 
