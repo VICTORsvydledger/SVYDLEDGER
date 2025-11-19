@@ -280,6 +280,21 @@
           color: white !important; // Color blanco
           font-weight: normal !important; // Sin negritas
           height: auto !important;
+          
+          // Asterisco de campo requerido en blanco
+          &::before {
+            color: white !important; // Asterisco (*) en blanco
+          }
+          
+          // Asterisco después del texto también en blanco
+          .ant-form-item-required-mark {
+            color: white !important; // Marca de requerido en blanco
+          }
+        }
+        
+        // Asterisco de Ant Design en blanco
+        .ant-form-item-required-mark-optional {
+          color: white !important;
         }
       }
 
