@@ -346,13 +346,29 @@
         }
       }
 
-      // Buttons - Texto 14px para mejor legibilidad
+      // Buttons - Completamente transparentes con texto 14px
       .ant-btn {
         height: 28px !important; // 70% de 40px = 28px
         padding: 2.8px 10.5px !important; // 70% de 4px-15px = 2.8px-10.5px
         font-size: 14px !important; // Aumentado a 14px para legibilidad
         border-radius: 4.2px !important; // 70% de 6px = 4.2px
         line-height: 1.4 !important;
+        background: transparent !important; // Fondo transparente
+        color: white !important; // Texto blanco
+        border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
+        
+        &:hover {
+          background: transparent !important; // Mantener transparente en hover
+          border-color: rgba(255, 255, 255, 0.8) !important; // Borde más brillante en hover
+          color: white !important; // Mantener texto blanco
+        }
+        
+        &:focus,
+        &:active {
+          background: transparent !important; // Mantener transparente en focus/active
+          border-color: white !important; // Borde blanco sólido
+          color: white !important; // Mantener texto blanco
+        }
       }
 
       .ant-btn-lg {
@@ -360,18 +376,24 @@
         padding: 4.55px 10.5px !important; // 70% de 6.5px-15px = 4.55px-10.5px
         font-size: 14px !important; // Aumentado a 14px para legibilidad
       }
-
-      // Link buttons (Forgot Password) - 14px, blanco, sin negritas
-      .ant-btn-link {
-        height: auto !important;
-        padding: 0 !important;
-        font-size: 14px !important; // Aumentado a 14px
-        color: white !important; // Color blanco
-        font-weight: normal !important; // Sin negritas
-        margin-bottom: 8.4px !important; // 70% de 12px
+      
+      // Button primary - Override para mantener transparente
+      .ant-btn-primary {
+        background: transparent !important; // Fondo transparente
+        border-color: rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
+        color: white !important; // Texto blanco
         
         &:hover {
-          color: rgba(255, 255, 255, 0.8) !important; // Hover más suave
+          background: transparent !important; // Mantener transparente en hover
+          border-color: rgba(255, 255, 255, 0.8) !important; // Borde más brillante
+          color: white !important; // Mantener texto blanco
+        }
+        
+        &:focus,
+        &:active {
+          background: transparent !important; // Mantener transparente
+          border-color: white !important; // Borde blanco sólido
+          color: white !important; // Mantener texto blanco
         }
       }
 
