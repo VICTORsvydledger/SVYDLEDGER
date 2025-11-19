@@ -135,6 +135,11 @@ const translations = {
     subtitle: 'Evrensel Muhasebe Sistemi ve Finansal Yönetim',
     description: 'Bu sistem çalışır: hesap kodları olmadan, hesap planı olmadan, yevmiye kayıtları olmadan, mali kapanışlar olmadan, mali dönemler olmadan. Zamansız. Gerçek kişi ile tüzel kişi arasında ayrım yapma gereği yok',
     welcome: 'Hoş Geldiniz'
+  },
+  uk: {
+    subtitle: 'Комплексне рішення для багатонаціонального бухгалтерського обліку',
+    description: 'Потужна платформа для керування вашим бухгалтерським обліком з підтримкою декількох мов, валют та міжнародних стандартів звітності.',
+    welcome: 'Ласкаво просимо'
   }
 }
 
