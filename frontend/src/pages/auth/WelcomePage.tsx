@@ -45,6 +45,26 @@ const translations = {
     subtitle: 'Universelles Buchhaltungssystem',
     description: 'Dieses System funktioniert: ohne Kontonummern, ohne Kontenplan, ohne Buchungssätze, ohne Abschlüsse, ohne Geschäftsjahre. Zeitlos. Keine Unterscheidung zwischen natürlicher Person und juristischer Person erforderlich',
     welcome: 'Willkommen'
+  },
+  ja: {
+    subtitle: '統合会計システム',
+    description: '本システムは、勘定科目コード不要、勘定科目体系不要、仕訳伝票不要、決算処理不要、会計期間設定不要で稼働します。恒久的システム。自然人と法人の区別不要',
+    welcome: 'ようこそ'
+  },
+  ar: {
+    subtitle: 'منصة المحاسبة والإدارة المالية المتكاملة',
+    description: 'نظام شامل لإدارة الحسابات، إعداد التقارير المالية، والامتثال الضريبي للشركات الحديثة. تحكم كامل في دفتر الأستاذ العام، القيود اليومية، والقوائم المالية بتقنية سحابية آمنة.',
+    welcome: 'مرحباً'
+  },
+  'ar-EG': {
+    subtitle: 'نظام المحاسبة الشامل والمراجعة المالية',
+    description: 'نظام محاسبي متقدم لإدارة الدفاتر، إعداد الميزانيات، والإقرارات الضريبية للمؤسسات المصرية. تحكم كامل في دفتر الأستاذ، القيود المحاسبية، والقوائم المالية بتقنية سحابية آمنة.',
+    welcome: 'أهلاً وسهلاً'
+  },
+  bn: {
+    subtitle: 'সার্বজনীন হিসাববিজ্ঞান ও আর্থিক ব্যবস্থাপনা',
+    description: 'আধুনিক প্রতিষ্ঠানের জন্য হিসাব ব্যবস্থাপনা, আর্থিক প্রতিবেদন প্রস্তুতি এবং কর সম্মতির সম্পূর্ণ সমাধান। খতিয়ান, জাবেদা দাখিলা এবং আর্থিক বিবরণীর সম্পূর্ণ নিয়ন্ত্রণ নিরাপদ ক্লাউড প্রযুক্তিতে।',
+    welcome: 'স্বাগতম'
   }
 }
 
