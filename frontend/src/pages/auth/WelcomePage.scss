@@ -167,15 +167,15 @@
     }
   }
 
-  // Language Selector
+  // Language Selector - Reducido al 70% del tamaño original
   .language-selector {
     margin-bottom: 40px !important;
     width: 100%;
-    max-width: 320px;
+    max-width: 224px; // Reducido de 320px a 224px (70% del original)
     padding: 0 20px;
 
     @media (max-width: 768px) {
-      max-width: 280px;
+      max-width: 196px; // Reducido proporcionalmente (70% de 280px)
     }
 
     // Ant Design Select customization
@@ -190,9 +190,10 @@
       border: 1px solid rgba(255, 255, 255, 0.3) !important;
       color: white !important;
       transition: all 0.3s ease !important;
-      padding: 8px 12px !important;
+      padding: 6px 10px !important; // Reducido padding proporcionalmente
       height: auto !important;
-      min-height: 40px !important;
+      min-height: 36px !important; // Reducido de 40px a 36px
+      font-size: 14px !important; // Reducido tamaño de fuente
 
       &:hover {
         background: rgba(255, 255, 255, 0.2) !important;
@@ -349,7 +350,7 @@
 
     .language-selector {
       margin-bottom: 30px !important;
-      max-width: 260px;
+      max-width: 182px; // Reducido proporcionalmente (70% de 260px)
     }
 
     .form-card {
