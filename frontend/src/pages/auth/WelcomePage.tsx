@@ -70,6 +70,16 @@ const translations = {
     subtitle: '通用会计核算与财务管理系统',
     description: '现代企业的全方位会计管理、财务报表编制和税务合规解决方案。总账、会计分录和财务报表的完整控制，采用安全的云技术。',
     welcome: '欢迎'
+  },
+  hi: {
+    subtitle: 'सार्वभौमिक लेखा प्रणाली एवं वित्तीय प्रबंधन',
+    description: 'आधुनिक उद्यमों के लिए खाता प्रबंधन, वित्तीय विवरण तैयारी और कर अनुपालन का संपूर्ण समाधान। खाता बही, रोजनामचा प्रविष्टियाँ और वित्तीय विवरणों का पूर्ण नियंत्रण सुरक्षित क्लाउड प्रौद्योगिकी में।',
+    welcome: 'स्वागत है'
+  },
+  id: {
+    subtitle: 'Sistem Akuntansi Universal dan Manajemen Keuangan',
+    description: 'Solusi lengkap untuk manajemen akuntansi, penyusunan laporan keuangan, dan kepatuhan pajak untuk perusahaan modern. Kontrol penuh atas buku besar, jurnal entri, dan laporan keuangan dengan teknologi cloud yang aman.',
+    welcome: 'Selamat Datang'
   }
 }
 

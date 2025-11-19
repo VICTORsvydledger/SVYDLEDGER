@@ -181,6 +181,7 @@
     // Ant Design Select customization
     .ant-select {
       width: 100% !important;
+      cursor: pointer !important; // Cursor pointer para mostrar manita
     }
 
     .ant-select-selector {
@@ -193,10 +194,12 @@
       padding: 6px 10px !important; // Reducido proporcionalmente
       height: auto !important;
       min-height: 28px !important; // 70% de 40px = 28px
+      cursor: pointer !important; // Cursor pointer para mostrar manita
 
       &:hover {
         background: transparent !important; // Mantener transparente en hover
         border-color: rgba(255, 255, 255, 0.8) !important; // Borde más brillante al hover
+        cursor: pointer !important; // Cursor pointer en hover
       }
     }
 
@@ -208,6 +211,7 @@
 
     .ant-select-arrow {
       color: white !important;
+      cursor: pointer !important; // Cursor pointer en la flecha
     }
 
     .ant-select-selection-search-input {
