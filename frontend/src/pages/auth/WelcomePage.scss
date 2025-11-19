@@ -143,10 +143,10 @@
     }
   }
 
-  // Promotional Text - Arial 12px (según especificaciones originales)
+  // Promotional Text - Arial 14px (aumentado desde 12px)
   .promotional-text {
     font-family: Arial, sans-serif !important;
-    font-size: 12px !important;
+    font-size: 14px !important; // Aumentado de 12px a 14px
     color: white !important;
     text-align: center !important;
     max-width: 700px;
@@ -157,12 +157,12 @@
     font-weight: 400;
 
     @media (max-width: 768px) {
-      font-size: 11px !important;
+      font-size: 13px !important; // Ajustado proporcionalmente
       max-width: 90%;
     }
 
     @media (max-width: 480px) {
-      font-size: 10px !important;
+      font-size: 12px !important; // Ajustado proporcionalmente
       line-height: 1.6 !important;
     }
   }
