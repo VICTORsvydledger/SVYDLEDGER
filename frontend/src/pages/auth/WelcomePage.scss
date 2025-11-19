@@ -236,30 +236,32 @@
     }
   }
 
-  // Form Card - Reducido a 70% de altura (padding vertical)
+  // Form Card - Totalmente transparente con borde blanco de 4px
   .form-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
+    background: transparent !important; // Fondo completamente transparente
+    backdrop-filter: none !important; // Sin blur
     border-radius: 14px; // 70% de 20px = 14px
     padding: 24.5px; // 70% de 35px = 24.5px
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none !important; // Sin sombra
+    border: 4px solid white !important; // Borde blanco de 4px
     transition: all 0.3s ease;
     animation: card-slide-up 0.8s ease-out;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3) !important; // Sombra blanca suave al hover
+      border-color: rgba(255, 255, 255, 0.9) !important; // Borde más brillante al hover
     }
 
     @media (max-width: 768px) {
       padding: 17.5px; // 70% de 25px = 17.5px
+      border-width: 3px !important; // Borde un poco más delgado en tablet
     }
 
     @media (max-width: 480px) {
       padding: 14px; // 70% de 20px = 14px
       border-radius: 11.2px; // 70% de 16px = 11.2px
+      border-width: 2px !important; // Borde más delgado en móvil
     }
 
     // Reducir inputs y espacios al 70% dentro de los formularios
