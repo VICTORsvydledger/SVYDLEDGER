@@ -88,11 +88,11 @@
   // Logo - Vladimir Script 72px (aumentado desde 48px)
   .logo {
     font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
-    font-size: 72px !important; // Aumentado de 48px a 72px
+    font-size: 72px !important;
     font-weight: normal !important;
     color: white !important;
     text-align: center !important;
-    margin-bottom: 0px !important;
+    margin-bottom: 0px !important; // Cambiado de 10px a 0px para acercar al subtítulo
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
                  0 0 20px rgba(255, 255, 255, 0.2);
     letter-spacing: 3px;
@@ -100,18 +100,13 @@
     line-height: 1.2;
 
     @media (max-width: 768px) {
-      font-size: 56px !important; // Ajustado proporcionalmente
+      font-size: 60px !important;
       letter-spacing: 2px;
     }
 
     @media (max-width: 480px) {
-      font-size: 32px !important; // Reducido de 48px a 32px
+      font-size: 48px !important;
       letter-spacing: 1px;
-    }
-
-    @media (max-width: 600px) {
-      font-size: 36px !important;
-      margin-bottom: 8px !important;
     }
   }
 
@@ -130,7 +125,7 @@
   // Subtitle - Vladimir Script 36px (aumentado desde 30px)
   .subtitle {
     font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
-    font-size: 36px !important; // Aumentado de 30px a 36px
+    font-size: 36px !important;
     font-weight: normal !important;
     color: white !important;
     text-align: center !important;
@@ -140,23 +135,18 @@
     max-width: 90%;
 
     @media (max-width: 768px) {
-      font-size: 28px !important; // Ajustado proporcionalmente
+      font-size: 30px !important;
     }
 
     @media (max-width: 480px) {
-      font-size: 18px !important; // Reducido de 24px a 18px
-    }
-
-    @media (max-width: 600px) {
-      font-size: 20px !important;
-      margin-bottom: 20px !important;
+      font-size: 24px !important;
     }
   }
 
-  // Promotional Text - Arial 14px (aumentado desde 12px)
+  // Promotional Text - Arial 14px (reducido desde 16px)
   .promotional-text {
     font-family: Arial, sans-serif !important;
-    font-size: 14px !important; // Aumentado de 12px a 14px
+    font-size: 14px !important;
     color: white !important;
     text-align: center !important;
     max-width: 700px;
@@ -164,38 +154,28 @@
     line-height: 1.8 !important;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     padding: 0 20px;
-    font-weight: 400;
+    font-weight: normal !important;
 
     @media (max-width: 768px) {
-      font-size: 13px !important; // Ajustado proporcionalmente
+      font-size: 12px !important;
       max-width: 90%;
     }
 
     @media (max-width: 480px) {
-      font-size: 9px !important; // Reducido de 12px a 9px
-      padding: 0 10px; // Reducido padding proporcionalmente
-    }
-
-    @media (max-width: 600px) {
-      font-size: 10px !important;
-      margin-bottom: 20px !important;
+      font-size: 11px !important;
+      line-height: 1.6 !important;
     }
   }
 
-  // Language Selector - Reducido al 70% del tamaño original
+  // Language Selector - Reducido a 70% del tamaño original
   .language-selector {
     margin-bottom: 40px !important;
     width: 100%;
-    max-width: 224px; // Reducido de 320px a 224px (70% del original)
+    max-width: 224px !important; // 70% de 320px = 224px
     padding: 0 20px;
 
     @media (max-width: 768px) {
-      max-width: 196px; // Reducido proporcionalmente (70% de 280px)
-    }
-
-    @media (max-width: 600px) {
-      margin-bottom: 30px !important;
-      max-width: 182px;
+      max-width: 196px !important; // 70% de 280px = 196px
     }
 
     // Ant Design Select customization
@@ -210,10 +190,9 @@
       border: 1px solid rgba(255, 255, 255, 0.3) !important;
       color: white !important;
       transition: all 0.3s ease !important;
-      padding: 6px 10px !important; // Reducido padding proporcionalmente
+      padding: 6px 10px !important; // Reducido proporcionalmente
       height: auto !important;
-      min-height: 36px !important; // Reducido de 40px a 36px
-      font-size: 14px !important; // Reducido tamaño de fuente
+      min-height: 28px !important; // 70% de 40px = 28px
 
       &:hover {
         background: rgba(255, 255, 255, 0.2) !important;
@@ -240,153 +219,176 @@
     }
   }
 
-  // Forms Container - Reducido al 55% del original (70% - 15% adicional)
+  // Forms Container
   .forms-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16.5px; // Reducido de 30px (55%)
+    gap: 30px;
     width: 100%;
-    max-width: 495px; // Reducido de 900px a 495px (55%)
-    margin-top: 11px; // Reducido de 20px (55%)
-    padding: 0 11px; // Reducido de 20px (55%)
+    max-width: 900px;
+    margin-top: 20px;
+    padding: 0 20px;
 
     @media (max-width: 968px) {
       grid-template-columns: 1fr;
-      max-width: 247.5px; // Reducido de 450px (55%)
-      gap: 11px; // Reducido de 20px (55%)
-    }
-
-    @media (max-width: 1200px) {
-      max-width: 440px; // Reducido de 800px (55%)
-    }
-
-    @media (max-width: 480px) {
-      padding: 0 5.5px; // Reducido de 10px (55%)
+      max-width: 450px;
+      gap: 20px;
     }
   }
 
-  // Form Card - Reducido al 55%
+  // Form Card
   .form-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border-radius: 11px; // Reducido de 20px (55%)
-    padding: 19.25px; // Reducido de 35px (55%)
-    box-shadow: 0 4.4px 17.6px rgba(0, 0, 0, 0.2); // Reducido proporcionalmente
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     animation: card-slide-up 0.8s ease-out;
 
     &:hover {
-      transform: translateY(-2.75px); // Reducido de -5px (55%)
-      box-shadow: 0 6.6px 22px rgba(0, 0, 0, 0.3); // Reducido proporcionalmente
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
       background: rgba(255, 255, 255, 0.2);
     }
 
     @media (max-width: 768px) {
-      padding: 13.75px; // Reducido de 25px (55%)
+      padding: 25px;
     }
 
     @media (max-width: 480px) {
-      padding: 8.25px; // Reducido de 15px (55%)
-      border-radius: 8.8px; // Reducido de 16px
+      padding: 20px;
+      border-radius: 16px;
     }
   }
 
-  // Form Title - Reducido al 55%
+  @keyframes card-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Form Title
   .form-title {
-    font-size: 15.4px !important; // Reducido de 28px (55%)
+    font-size: 28px !important;
     font-weight: 600 !important;
     color: white !important;
     text-align: center !important;
-    margin-bottom: 13.75px !important; // Reducido de 25px (55%)
+    margin-bottom: 25px !important;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     font-family: Arial, sans-serif !important;
 
     @media (max-width: 768px) {
-      font-size: 13.2px !important; // Reducido de 24px (55%)
+      font-size: 24px !important;
     }
 
     @media (max-width: 480px) {
-      font-size: 12.1px !important; // Reducido de 22px (55%)
-    }
-
-    @media (max-width: 600px) {
-      margin-bottom: 11px !important; // Reducido de 20px (55%)
+      font-size: 22px !important;
     }
   }
 
-  @media (max-width: 968px) {
-    .welcome-page {
-      .content {
-        padding: 16.5px 8.25px; // Reducido de 30px 15px (55%)
-      }
-
-      .forms-container {
-        gap: 11px; // Reducido de 20px (55%)
-      }
-    }
+  // Ant Design Modal customization
+  .ant-modal-content {
+    border-radius: 16px !important;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.98) !important;
   }
 
-  @media (max-width: 600px) {
-    .welcome-page {
-      .logo {
-        font-size: 36px !important;
-        margin-bottom: 8px !important;
-      }
-
-      .subtitle {
-        font-size: 20px !important;
-        margin-bottom: 20px !important;
-      }
-
-      .promotional-text {
-        font-size: 10px !important;
-        margin-bottom: 20px !important;
-      }
-
-      .language-selector {
-        margin-bottom: 30px !important;
-        max-width: 182px;
-      }
-
-      .form-card {
-        padding: 11px; // Reducido de 20px (55%)
-      }
-
-      .form-title {
-        font-size: 12.1px !important; // Reducido de 22px (55%)
-        margin-bottom: 11px !important; // Reducido de 20px (55%)
-      }
-    }
+  .ant-modal-header {
+    border-radius: 16px 16px 0 0 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
   }
 
-  // Extra small devices
-  @media (max-width: 480px) {
-    .welcome-page {
-      .content {
-        padding: 20px 10px;
-      }
+  // Ant Design Alert customization
+  .ant-alert {
+    border-radius: 10px;
+  }
+}
 
-      .logo {
-        font-size: 32px !important;
-      }
+// Responsive adjustments
+@media (max-width: 1200px) {
+  .welcome-page .forms-container {
+    max-width: 800px;
+  }
+}
 
-      .subtitle {
-        font-size: 18px !important;
-      }
+@media (max-width: 968px) {
+  .welcome-page {
+    .content {
+      padding: 30px 15px;
+    }
 
-      .promotional-text {
-        font-size: 9px !important;
-        padding: 0 10px;
-      }
+    .forms-container {
+      gap: 20px;
+    }
+  }
+}
 
-      .forms-container {
-        padding: 0 5.5px; // Reducido de 10px (55%)
-      }
+@media (max-width: 600px) {
+  .welcome-page {
+    .logo {
+      font-size: 36px !important;
+      margin-bottom: 8px !important;
+    }
 
-      .form-card {
-        padding: 8.25px; // Reducido de 15px (55%)
-      }
+    .subtitle {
+      font-size: 20px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .promotional-text {
+      font-size: 10px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .language-selector {
+      margin-bottom: 30px !important;
+      max-width: 196px !important; // 70% de 280px = 196px
+    }
+
+    .form-card {
+      padding: 20px;
+    }
+
+    .form-title {
+      font-size: 22px !important;
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+// Extra small devices
+@media (max-width: 480px) {
+  .welcome-page {
+    .content {
+      padding: 20px 10px;
+    }
+
+    .logo {
+      font-size: 32px !important;
+    }
+
+    .subtitle {
+      font-size: 18px !important;
+    }
+
+    .promotional-text {
+      font-size: 9px !important;
+      padding: 0 10px;
+    }
+
+    .forms-container {
+      padding: 0 10px;
+    }
+
+    .form-card {
+      padding: 15px;
     }
   }
 }
