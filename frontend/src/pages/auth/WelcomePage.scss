@@ -122,10 +122,10 @@
     }
   }
 
-  // Subtitle - Vladimir Script 30px (según especificaciones originales)
+  // Subtitle - Vladimir Script 36px (aumentado desde 30px)
   .subtitle {
     font-family: 'Vladimir Script', 'Pinyon Script', cursive !important;
-    font-size: 30px !important;
+    font-size: 36px !important; // Aumentado de 30px a 36px
     font-weight: normal !important;
     color: white !important;
     text-align: center !important;
@@ -135,11 +135,11 @@
     max-width: 90%;
 
     @media (max-width: 768px) {
-      font-size: 24px !important;
+      font-size: 28px !important; // Ajustado proporcionalmente
     }
 
     @media (max-width: 480px) {
-      font-size: 20px !important;
+      font-size: 24px !important; // Ajustado proporcionalmente
     }
   }
 
