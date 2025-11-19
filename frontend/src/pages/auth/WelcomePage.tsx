@@ -14,13 +14,28 @@ interface Language {
   nativeName: string
 }
 
+// Traducciones del subtítulo y texto promocional
+const translations = {
+  en: {
+    subtitle: 'Universal Accounting System',
+    description: 'This system works: without codes, without chart of accounts, without journal entries, without closings, without fiscal periods. Timeless. No need to distinguish between natural person and legal entity'
+  },
+  es: {
+    subtitle: 'Sistema de Contabilidad Universal',
+    description: 'Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica'
+  }
+}
+
 // 27 idiomas completos según especificaciones originales
+// Inglés SIEMPRE primero como idioma por defecto
 const languages: Language[] = [
-  // Prioridad 1: Inglés y Español (por defecto primero)
+  // Prioridad 1: Inglés PRIMERO (por defecto)
   { code: 'en', name: 'English', nativeName: 'English' },
+  
+  // Prioridad 2: Español
   { code: 'es', name: 'Spanish', nativeName: 'Español' },
   
-  // Prioridad 2: Europeos principales
+  // Prioridad 3: Europeos principales
   { code: 'fr', name: 'French', nativeName: 'Français' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano' },
   { code: 'de', name: 'German', nativeName: 'Deutsch' },
@@ -51,6 +66,7 @@ const languages: Language[] = [
 ]
 
 const WelcomePage: React.FC = () => {
+  // Inglés por defecto
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en')
 
   const [forgotVisible, setForgotVisible] = useState(false)
@@ -68,7 +84,6 @@ const WelcomePage: React.FC = () => {
 
   const handleLanguage = (lng: string) => {
     setSelectedLanguage(lng)
-    // TODO: Implement i18n language change when system is ready
     console.log('Language changed to:', lng)
   }
 
@@ -107,6 +122,9 @@ const WelcomePage: React.FC = () => {
     }
   }
 
+  // Obtener traducciones del idioma seleccionado, con fallback a inglés
+  const currentTranslations = translations[selectedLanguage as keyof typeof translations] || translations.en
+
   return (
     <div className="welcome-page">
       <div className="background-image" />
@@ -116,17 +134,17 @@ const WelcomePage: React.FC = () => {
         {/* Logo - Vladimir Script 72px */}
         <Title className="logo">Svyd</Title>
         
-        {/* Subtitle - Vladimir Script 36px */}
+        {/* Subtitle - Vladimir Script 36px - TRADUCIDO */}
         <Title level={2} className="subtitle">
-          Sistema de Contabilidad Universal
+          {currentTranslations.subtitle}
         </Title>
 
-        {/* Promotional Text - Arial 14px */}
+        {/* Promotional Text - Arial 14px - TRADUCIDO */}
         <Text className="promotional-text">
-          Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica
+          {currentTranslations.description}
         </Text>
 
-        {/* Language Selector - 27 idiomas */}
+        {/* Language Selector - 27 idiomas - Inglés PRIMERO */}
         <div className="language-selector">
           <Select
             value={selectedLanguage}
