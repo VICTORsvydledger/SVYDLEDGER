@@ -5,7 +5,6 @@
 import React, { useState } from 'react'
 import { Typography, Card, Button, Select, DatePicker, Space, Table, Tag } from 'antd'
 import { DownloadOutlined, FileTextOutlined } from '@ant-design/icons'
-import type { RangePickerProps } from 'antd/es/date-picker'
 
 const { Title } = Typography
 const { RangePicker } = DatePicker
