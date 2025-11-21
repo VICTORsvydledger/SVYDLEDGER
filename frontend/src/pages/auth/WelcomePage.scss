@@ -492,6 +492,19 @@
           color: white !important; // Mantener texto blanco
         }
       }
+      
+      // Button type="link" (Forgot password) - SIN borde
+      .ant-btn-link {
+        border: none !important; // Sin borde para "Forgot your password?"
+        padding: 0 !important; // Sin padding
+        height: auto !important; // Altura automática
+        
+        &:hover,
+        &:focus,
+        &:active {
+          border: none !important; // Sin borde en todos los estados
+        }
+      }
 
       .ant-btn-lg {
         height: 28px !important; // Forzar mismo tamaño
