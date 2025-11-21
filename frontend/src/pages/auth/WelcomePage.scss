@@ -385,11 +385,11 @@
         }
       }
 
-      // Inputs - Texto digitado en 14px
+      // Inputs - Texto digitado en 14px - SIN padding interno
       .ant-input,
       .ant-input-password {
         height: 28px !important; // 70% de 40px (size="large") = 28px
-        padding: 2.8px 7.7px !important; // 70% de 4px-11px = 2.8px-7.7px
+        padding: 0 4px !important; // Padding mínimo solo horizontal
         font-size: 14px !important; // Aumentado a 14px para texto digitado
         border-radius: 4.2px !important; // 70% de 6px = 4.2px
         background: transparent !important; // Fondo transparente
@@ -414,7 +414,7 @@
       }
 
       .ant-input-affix-wrapper {
-        padding: 2.8px 7.7px !important; // 70% de 4px-11px
+        padding: 0 4px !important; // Padding mínimo solo horizontal
         height: 28px !important; // 70% de 40px
         background: transparent !important; // Fondo transparente
         border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
@@ -433,7 +433,7 @@
         
         .ant-input {
           height: auto !important;
-          padding: 0 !important;
+          padding: 0 !important; // Sin padding interno en el input dentro del wrapper
           background: transparent !important; // Fondo transparente
           color: white !important; // Texto blanco
           font-size: 14px !important; // Aumentado a 14px para texto digitado
@@ -448,6 +448,7 @@
         .ant-input-suffix {
           font-size: 9.8px !important; // 70% de 14px
           color: white !important; // Iconos blancos (incluye el ojo)
+          margin: 0 4px; // Espacio entre ícono y texto
           
           svg {
             color: white !important; // SVG del ojo en blanco
