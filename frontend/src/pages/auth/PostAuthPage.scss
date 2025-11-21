@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1000; // Sobreponer completamente a WelcomePage
+  z-index: 1000;
   overflow: hidden;
 }
 
@@ -19,7 +19,7 @@
   background-position: center;
   background-repeat: no-repeat;
   
-  // Overlay oscuro opcional para mejor legibilidad
+  // Overlay oscuro para contraste
   &::after {
     content: '';
     position: absolute;
@@ -27,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -37,178 +37,116 @@
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  flex-direction: column;
 }
 
-.post-auth-container {
-  width: 100%;
-  max-width: 800px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+// Botón Back en esquina superior izquierda
+.back-button-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
   
   @media (max-width: 768px) {
-    padding: 2rem 1.5rem;
-    max-width: 90%;
+    top: 1rem;
+    left: 1rem;
   }
 }
 
-.post-auth-header {
-  text-align: center;
+.back-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white !important;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
   
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 0.5rem 0;
-    
-    @media (max-width: 768px) {
-      font-size: 2rem;
-    }
+  &:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateX(-4px);
+    color: white !important;
   }
   
-  .user-email {
-    font-size: 1rem;
-    color: #666;
-    margin: 0;
+  &:active {
+    transform: translateX(-2px);
   }
-}
-
-.post-auth-main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
-}
-
-.success-message {
-  text-align: center;
-  padding: 2rem;
   
-  .success-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  // Asegurar que el ícono también sea blanco
+  .anticon {
     color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-    animation: successPulse 2s ease-in-out infinite;
   }
-  
-  h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 0 0 0.75rem 0;
-    
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
-  }
-  
-  p {
-    font-size: 1.125rem;
-    color: #666;
-    margin: 0;
-    
-    @media (max-width: 768px) {
-      font-size: 1rem;
-    }
-  }
-}
-
-@keyframes successPulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-  }
-}
-
-.post-auth-navigation {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-top: auto;
   
   @media (max-width: 576px) {
-    flex-direction: column;
+    font-size: 0.875rem;
+    height: 42px;
+    padding: 0 16px;
+  }
+}
+
+// Logo Svyd centrado
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.logo {
+  font-family: 'Vladimir Script', cursive;
+  font-size: 8rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
+  @media (max-width: 768px) {
+    font-size: 6rem;
   }
   
-  .nav-button {
-    flex: 1;
-    height: 48px;
+  @media (max-width: 576px) {
+    font-size: 4.5rem;
+  }
+}
+
+.user-email {
+  font-size: 1.5rem;
+  color: white;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  font-weight: 300;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 576px) {
     font-size: 1rem;
-    font-weight: 600;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    
-    @media (max-width: 576px) {
-      width: 100%;
-    }
-    
-    &.back-button {
-      background: white;
-      border: 2px solid #e0e0e0;
-      color: #666;
-      
-      &:hover {
-        background: #f5f5f5;
-        border-color: #d0d0d0;
-        transform: translateX(-4px);
-      }
-      
-      &:active {
-        transform: translateX(-2px);
-      }
-    }
-    
-    &.next-button {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border: none;
-      
-      &:hover {
-        background: linear-gradient(135deg, #5568d3 0%, #65408b 100%);
-        transform: translateX(4px);
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-      }
-      
-      &:active {
-        transform: translateX(2px);
-      }
-    }
+    margin-top: 1rem;
   }
 }
 
 // Animación de entrada
 .post-auth-page {
-  animation: fadeInSlideUp 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;
 }
 
-@keyframes fadeInSlideUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
