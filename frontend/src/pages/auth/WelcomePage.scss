@@ -340,16 +340,6 @@
       border-color: rgba(255, 255, 255, 0.9) !important; // Borde más brillante al hover
     }
 
-    // Segunda ventana (Sign Up) - Más luminosa
-    &:nth-child(2) {
-      background: rgba(255, 255, 255, 0.15) !important; // Fondo blanco semi-transparente para más claridad
-      backdrop-filter: blur(8px) !important; // Ligero blur para efecto glassmorphism
-      
-      &:hover {
-        background: rgba(255, 255, 255, 0.18) !important; // Más brillante en hover
-      }
-    }
-
     @media (max-width: 768px) {
       padding: 17.5px; // 70% de 25px = 17.5px
       border-width: 3px !important; // Borde un poco más delgado en tablet
