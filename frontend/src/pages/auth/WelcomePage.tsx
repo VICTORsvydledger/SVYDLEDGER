@@ -253,6 +253,11 @@ const WelcomePage: React.FC = () => {
       <div className="background-image" />
       <div className="overlay" />
 
+      {/* Under Construction Notice */}
+      <div className="under-construction">
+        This website is currently under construction
+      </div>
+
       <div className="content">
         {/* Logo - Vladimir Script 72px */}
         <Title className="logo">Svyd</Title>
