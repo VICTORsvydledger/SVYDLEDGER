@@ -6,9 +6,10 @@ import notify from '@/lib/notifications'
 interface SignInFormProps {
   onForgotPassword: () => void
   onFieldChange?: () => void
+  onSuccess?: (email: string) => void // Nueva prop para manejar el éxito
 }
 
-const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onFieldChange }, ref) => {
+const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onFieldChange, onSuccess }, ref) => {
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
   const [hasContent, setHasContent] = useState(false)
@@ -44,8 +45,10 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
       
       notify.success('Sign in successful!')
       
-      // TODO: Navigate to dashboard or trigger 2FA modal
-      // navigate('/app')
+      // Navegar a PostAuthPage
+      if (onSuccess) {
+        onSuccess(values.email)
+      }
     } catch (error) {
       notify.error('Invalid email or password')
     } finally {

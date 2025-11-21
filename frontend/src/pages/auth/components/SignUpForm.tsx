@@ -5,9 +5,10 @@ import notify from '@/lib/notifications'
 
 interface SignUpFormProps {
   onFieldChange?: () => void
+  onSuccess?: (email: string) => void // Nueva prop para manejar el éxito
 }
 
-const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange }, ref) => {
+const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange, onSuccess }, ref) => {
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
   const [hasContent, setHasContent] = useState(false)
@@ -45,9 +46,13 @@ const SignUpForm = forwardRef<any, SignUpFormProps>(({ onFieldChange }, ref) => 
       // Simulación temporal
       await new Promise((resolve) => setTimeout(resolve, 1000))
       
-      notify.success('Account created successfully! Please check your email to verify.')
+      notify.success('Account created successfully!')
       
-      // TODO: Trigger 2FA verification modal
+      // Navegar a PostAuthPage
+      if (onSuccess) {
+        onSuccess(values.email)
+      }
+      
       form.resetFields()
       setHasContent(false)
     } catch (error) {

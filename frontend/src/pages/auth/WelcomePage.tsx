@@ -4,6 +4,7 @@ import { Typography, Select, Form, Input, Alert, Modal } from 'antd'
 import notify from '@/lib/notifications'
 import SignInForm from './components/SignInForm'
 import SignUpForm from './components/SignUpForm'
+import PostAuthPage from './PostAuthPage'
 import './WelcomePage.scss'
 
 const { Title, Text } = Typography
@@ -98,7 +99,7 @@ const translations = {
   },
   pa: {
     subtitle: 'ਸਰਵ-ਵਿਆਪਕ ਲੇਖਾ ਪ੍ਰਣਾਲੀ ਅਤੇ ਵਿੱਤੀ ਪ੍ਰਬੰਧਨ',
-    description: 'ਆਧੁਨਿਕ Udਯੋਗਾਂ ਲਈ ਖਾਤਾ ਪ੍ਰਬੰਦਨ, ਵਿੱਤੀ ਬਿਆਨ ਤਿਆਰੀ ਅਤੇ ਟੈਕਸ ਪਾਲਣਾ ਦਾ ਸੰਪੂਰਨ ਹੱਲ। ਸੁਰੱਖਿਅਤ ਕਲਾਉਡ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਖਾਤਾ ਬਹੀ, ਰੋਜ਼ਨਾਮਚਾ ਐਂਟਰੀਆਂ ਅਤੇ ਵਿੱਤੀ ਬਿਆਨਾਂ ਦਾ ਪੂਰਾ ਨਿਯੰਤਰਣ।',
+    description: 'ਆਧੁਨਿਕ Udਯੋਗਾਂ ਲਈ ਖਾਤਾ ਪ੍ਰਬੰਤਨ, ਵਿੱਤੀ ਬਿਆਨ ਤਿਆਰੀ ਅਤੇ ਟੈਕਸ ਪਾਲਣਾ ਦਾ ਸੰਪੂਰਨ ਹੱਲ। ਸੁਰੱਖਿਅਤ ਕਲਾਉਡ ਤਕਨਾਲੋਜੀ ਵਿੱਚ ਖਾਤਾ ਬਹੀ, ਰੋਜ਼ਨਾਮਚਾ ਐਂਟਰੀਆਂ ਅਤੇ ਵਿੱਤੀ ਬਿਆਨਾਂ ਦਾ ਪੂਰਾ ਨਿਯੰਤਰਣ।',
     welcome: 'ਜੀ ਆਇਆਂ ਨੂੰ'
   },
   fa: {
@@ -189,6 +190,10 @@ const languages: Language[] = [
 ]
 
 const WelcomePage: React.FC = () => {
+  // Estado para mostrar PostAuthPage
+  const [showPostAuth, setShowPostAuth] = useState(false)
+  const [userEmail, setUserEmail] = useState('')
+
   // Inglés por defecto
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en')
 
@@ -245,8 +250,37 @@ const WelcomePage: React.FC = () => {
     }
   }
 
+  // Handler para cuando el login/registro sea exitoso
+  const handleAuthSuccess = (email: string) => {
+    setUserEmail(email)
+    setShowPostAuth(true)
+  }
+
+  // Handler para volver a WelcomePage desde PostAuthPage
+  const handleBackToWelcome = () => {
+    setShowPostAuth(false)
+    setUserEmail('')
+    // Resetear formularios
+    if (signInFormRef.current) {
+      signInFormRef.current.resetFields()
+    }
+    if (signUpFormRef.current) {
+      signUpFormRef.current.resetFields()
+    }
+  }
+
   // Obtener traducciones del idioma seleccionado, con fallback a inglés
   const currentTranslations = translations[selectedLanguage as keyof typeof translations] || translations.en
+
+  // Si showPostAuth es true, mostrar PostAuthPage
+  if (showPostAuth) {
+    return (
+      <PostAuthPage 
+        onBack={handleBackToWelcome}
+        userEmail={userEmail}
+      />
+    )
+  }
 
   return (
     <div className="welcome-page">
@@ -307,6 +341,7 @@ const WelcomePage: React.FC = () => {
               ref={signInFormRef}
               onForgotPassword={() => setForgotVisible(true)}
               onFieldChange={handleSignInFieldChange}
+              onSuccess={handleAuthSuccess}
             />
           </div>
 
@@ -319,6 +354,7 @@ const WelcomePage: React.FC = () => {
             <SignUpForm 
               ref={signUpFormRef}
               onFieldChange={handleSignUpFieldChange}
+              onSuccess={handleAuthSuccess}
             />
           </div>
         </div>
