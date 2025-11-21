@@ -1,4 +1,4 @@
-import { useState, forwardRef, useImperativeHandle, useEffect } from 'react'
+import { useState, forwardRef, useImperativeHandle, useEffect, useRef } from 'react'
 import { Form, Input, Button } from 'antd'
 import notify from '@/lib/notifications'
 
@@ -12,6 +12,7 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
   const [form] = Form.useForm()
   const [loading, setLoading] = useState(false)
   const [hasContent, setHasContent] = useState(false)
+  const emailInputRef = useRef<any>(null)
 
   // Exponer el método resetFields al componente padre
   useImperativeHandle(ref, () => ({
@@ -20,6 +21,18 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
       setHasContent(false) // Resetear también el estado del contenido
     }
   }))
+
+  // Establecer foco en el campo Email al montar el componente
+  useEffect(() => {
+    // Usar un pequeño delay para asegurar que el DOM esté listo
+    const timer = setTimeout(() => {
+      if (emailInputRef.current) {
+        emailInputRef.current.focus()
+      }
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   // Verificar si hay contenido en los campos
   useEffect(() => {
@@ -85,6 +98,7 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
         ]}
       >
         <Input
+          ref={emailInputRef}
           placeholder=""
           size="large"
         />
