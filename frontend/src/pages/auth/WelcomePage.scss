@@ -385,86 +385,85 @@
         }
       }
 
-      // Inputs - Texto digitado en 14px - SIN padding interno
+      // Inputs - SIN bordes, solo el borde del form-card
       .ant-input,
       .ant-input-password {
-        height: 28px !important; // 70% de 40px (size="large") = 28px
-        padding: 0 4px !important; // Padding mínimo solo horizontal
-        font-size: 14px !important; // Aumentado a 14px para texto digitado
-        border-radius: 4.2px !important; // 70% de 6px = 4.2px
-        background: transparent !important; // Fondo transparente
-        color: white !important; // Texto blanco
-        border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
+        height: 28px !important;
+        padding: 0 4px !important;
+        font-size: 14px !important;
+        border-radius: 4.2px !important;
+        background: transparent !important;
+        color: white !important;
+        border: none !important; // Eliminar borde del input
         
         &::placeholder {
-          color: rgba(255, 255, 255, 0.5) !important; // Placeholder blanco tenue
-          font-size: 9.8px !important; // Placeholder más pequeño
+          color: rgba(255, 255, 255, 0.5) !important;
+          font-size: 9.8px !important;
         }
         
         &:hover {
-          background: transparent !important; // Mantener transparente en hover
-          border-color: rgba(255, 255, 255, 0.7) !important; // Borde más visible en hover
+          background: transparent !important;
+          border: none !important; // Sin borde en hover
         }
         
         &:focus {
-          background: transparent !important; // Mantener transparente en focus
-          border-color: white !important; // Borde blanco sólido en focus
-          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important; // Sombra blanca suave
+          background: transparent !important;
+          border: none !important; // Sin borde en focus
+          box-shadow: none !important; // Sin sombra en focus
         }
       }
 
       .ant-input-affix-wrapper {
-        padding: 0 4px !important; // Padding mínimo solo horizontal
-        height: 28px !important; // 70% de 40px
-        background: transparent !important; // Fondo transparente
-        border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
+        padding: 0 4px !important;
+        height: 28px !important;
+        background: transparent !important;
+        border: none !important; // Eliminar borde del wrapper
         
         &:hover {
-          background: transparent !important; // Mantener transparente en hover
-          border-color: rgba(255, 255, 255, 0.7) !important; // Borde más visible en hover
+          background: transparent !important;
+          border: none !important; // Sin borde en hover
         }
         
         &:focus,
         &.ant-input-affix-wrapper-focused {
-          background: transparent !important; // Mantener transparente en focus
-          border-color: white !important; // Borde blanco sólido en focus
-          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) !important; // Sombra blanca suave
+          background: transparent !important;
+          border: none !important; // Sin borde en focus
+          box-shadow: none !important; // Sin sombra en focus
         }
         
         .ant-input {
           height: auto !important;
-          padding: 0 !important; // Sin padding interno en el input dentro del wrapper
-          background: transparent !important; // Fondo transparente
-          color: white !important; // Texto blanco
-          font-size: 14px !important; // Aumentado a 14px para texto digitado
+          padding: 0 !important;
+          background: transparent !important;
+          color: white !important;
+          font-size: 14px !important;
           
           &::placeholder {
-            color: rgba(255, 255, 255, 0.5) !important; // Placeholder blanco tenue
-            font-size: 9.8px !important; // Placeholder más pequeño
+            color: rgba(255, 255, 255, 0.5) !important;
+            font-size: 9.8px !important;
           }
         }
 
-        .ant-input-prefix,
         .ant-input-suffix {
-          font-size: 9.8px !important; // 70% de 14px
-          color: white !important; // Iconos blancos (incluye el ojo)
-          margin: 0 4px; // Espacio entre ícono y texto
+          font-size: 14px !important;
+          color: white !important;
+          margin-left: 8px; // Espacio entre texto y ojo
           
           svg {
-            color: white !important; // SVG del ojo en blanco
+            color: white !important;
           }
           
           .anticon {
-            color: white !important; // Ant Icon en blanco
+            color: white !important;
           }
         }
         
         // Icono del ojo específicamente
         .ant-input-password-icon {
-          color: white !important; // Ojo para mostrar/ocultar password en blanco
+          color: white !important;
           
           &:hover {
-            color: rgba(255, 255, 255, 0.8) !important; // Hover más suave
+            color: rgba(255, 255, 255, 0.8) !important;
           }
         }
       }

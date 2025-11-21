@@ -1,6 +1,5 @@
 import { useState, forwardRef, useImperativeHandle, useEffect } from 'react'
 import { Form, Input, Button } from 'antd'
-import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import notify from '@/lib/notifications'
 
 interface SignInFormProps {
@@ -86,7 +85,6 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
         ]}
       >
         <Input
-          prefix={<UserOutlined />}
           placeholder=""
           size="large"
         />
@@ -101,7 +99,6 @@ const SignInForm = forwardRef<any, SignInFormProps>(({ onForgotPassword, onField
         ]}
       >
         <Input.Password
-          prefix={<LockOutlined />}
           placeholder=""
           size="large"
         />
