@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Formulario reducido al 70%
+// Última actualización: 2025-01-15 - Formulario +50px de ancho
 // ===============================================
 
 .post-auth-page {
@@ -157,9 +157,9 @@
     gap: 2rem;
   }
   
-  // El bloque "Crear Usuario Nuevo" ahora ocupa 70% de su ancho original (35% del contenedor)
+  // El bloque "Crear Usuario Nuevo" aumentado en 50px de su ancho actual
   .create-user-block {
-    flex: 0 0 calc(35% - 32px); // 70% de 50% = 35%, menos la mitad del gap
+    flex: 0 0 calc(35% - 32px + 50px); // Ancho base + 50px adicionales
     min-width: 0;
     
     @media (max-width: 1200px) {
