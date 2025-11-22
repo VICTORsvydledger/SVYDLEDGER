@@ -285,6 +285,7 @@ const WelcomePage: React.FC = () => {
       <PostAuthPage 
         onBack={handleBackToWelcome}
         userEmail={userEmail}
+        selectedLanguage={selectedLanguage}
       />
     )
   }
