@@ -295,6 +295,11 @@
         font-weight: 600;
         font-size: 0.7rem;
         border: 2px solid #000;
+        min-width: 95px; // Ancho fijo igual para todos los botones (ancho del botón PAPELERA)
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
       }
 
       .entrar-btn {
