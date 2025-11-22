@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Formulario +50px de ancho
+// Última actualización: 2025-01-15 - Formularios ampliados (+70px y +200px)
 // ===============================================
 
 .post-auth-page {
@@ -157,9 +157,9 @@
     gap: 2rem;
   }
   
-  // El bloque "Crear Usuario Nuevo" aumentado en 50px de su ancho actual
+  // El bloque "Crear Usuario Nuevo" aumentado en 70px adicionales (total +120px del original)
   .create-user-block {
-    flex: 0 0 calc(35% - 32px + 50px); // Ancho base + 50px adicionales
+    flex: 0 0 calc(35% - 32px + 120px); // Ancho base + 50px anterior + 70px nuevos = +120px total
     min-width: 0;
     
     @media (max-width: 1200px) {
@@ -167,10 +167,14 @@
     }
   }
   
-  // El bloque "Lista de Usuarios" ocupa el espacio restante
+  // El bloque "Lista de Usuarios" aumentado en 200px
   .users-list-block {
-    flex: 1;
+    flex: 0 0 calc(65% - 32px + 200px); // Ancho restante + 200px adicionales
     min-width: 0;
+    
+    @media (max-width: 1200px) {
+      flex: 1;
+    }
   }
 }
 
