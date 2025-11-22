@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Bloques desplazados 200px derecha
+// Última actualización: 2025-01-15 - Bloques desplazados 50px derecha
 // ===============================================
 
 .post-auth-page {
@@ -140,7 +140,7 @@
   gap: 2rem;
   padding: 0 4rem 4rem 4rem;
   max-width: 1600px;
-  margin: 0 auto 0 calc(50% - 800px + 200px); // Desplazar 200px a la derecha del centro
+  margin: 0 auto 0 calc(50% - 800px + 50px); // Desplazar 50px a la derecha del centro
   
   @media (max-width: 1200px) {
     padding: 0 2rem 2rem 2rem;
@@ -362,4 +362,72 @@
       background: white;
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.7rem; // Reducido
-     
+      
+      &:first-child {
+        background: #D4F1D4;
+      }
+      
+      &:nth-child(2) {
+        background: #FFFF00;
+      }
+      
+      &:last-child {
+        background: #E8E8E8;
+      }
+    }
+  }
+}
+
+// ===============================================
+// BLOQUE 3: CORREOS AUTORIZADOS Y PASSWORD
+// ===============================================
+
+.bottom-tables-block {
+  .tables-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .table-section {
+    .table-header {
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #000;
+      text-align: center;
+      
+      &.correos-header {
+        background: #FFFF00;
+      }
+      
+      &.password-header {
+        background: #FFFF00;
+      }
+    }
+
+    .ant-table {
+      background: transparent;
+    }
+
+    .ant-table-tbody > tr > td {
+      background: white;
+      border: 1px solid #000;
+      padding: 8px 12px;
+    }
+  }
+}
+
+// Animación de entrada
+.post-auth-page {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
