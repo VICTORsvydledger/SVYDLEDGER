@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Bloques desplazados 50px derecha
+// Última actualización: 2025-01-15 - Bloques desplazados 230px derecha
 // ===============================================
 
 .post-auth-page {
@@ -140,7 +140,7 @@
   gap: 2rem;
   padding: 0 4rem 4rem 4rem;
   max-width: 1600px;
-  margin: 0 auto 0 calc(50% - 800px + 50px); // Desplazar 50px a la derecha del centro
+  margin: 0 auto 0 calc(50% - 800px + 230px); // Desplazar 230px a la derecha del centro (50px + 100px + 80px adicionales)
   
   @media (max-width: 1200px) {
     padding: 0 2rem 2rem 2rem;
@@ -363,6 +363,7 @@
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.7rem; // Reducido
       
+
       &:first-child {
         background: #D4F1D4;
       }

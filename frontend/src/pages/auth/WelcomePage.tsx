@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Typography, Select, Form, Input, Alert, Modal } from 'antd'
+import { Typography, Select, Form, Input, Alert, Modal, Button } from 'antd'
+import { ArrowRightOutlined } from '@ant-design/icons'
 import notify from '@/lib/notifications'
 import SignInForm from './components/SignInForm'
 import SignUpForm from './components/SignUpForm'
@@ -269,6 +270,12 @@ const WelcomePage: React.FC = () => {
     }
   }
 
+  // Handler para navegar directamente al PostAuthPage (PROVISIONAL)
+  const handleGoToPostAuth = () => {
+    setUserEmail('demo@svydledger.com') // Email provisional para demo
+    setShowPostAuth(true)
+  }
+
   // Obtener traducciones del idioma seleccionado, con fallback a inglés
   const currentTranslations = translations[selectedLanguage as keyof typeof translations] || translations.en
 
@@ -291,6 +298,17 @@ const WelcomePage: React.FC = () => {
       <div className="under-construction">
         This website is currently under construction
       </div>
+
+      {/* Botón flotante de navegación PROVISIONAL - Esquina inferior derecha */}
+      <Button
+        type="primary"
+        shape="circle"
+        size="large"
+        icon={<ArrowRightOutlined />}
+        onClick={handleGoToPostAuth}
+        className="provisional-nav-button"
+        title="Go to Logged-in Page (Provisional)"
+      />
 
       <div className="content">
         {/* Logo - Vladimir Script 72px */}

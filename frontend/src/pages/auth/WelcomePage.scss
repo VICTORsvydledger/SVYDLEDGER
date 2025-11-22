@@ -65,6 +65,69 @@
     }
   }
 
+  // Botón flotante de navegación PROVISIONAL - Esquina inferior derecha
+  .provisional-nav-button {
+    position: fixed !important;
+    bottom: 30px;
+    right: 30px;
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 100;
+    background: #00ff88 !important; // Verde vibrante como botones con contenido
+    border-color: #00ff88 !important;
+    color: #000000 !important; // Texto negro para contraste
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 
+                0 4px 12px rgba(0, 0, 0, 0.3) !important; // Glow verde + sombra
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    
+    // Icono dentro del botón
+    .anticon {
+      font-size: 24px !important;
+      color: #000000 !important;
+    }
+
+    &:hover {
+      background: #00ff99 !important; // Verde más brillante en hover
+      border-color: #00ff99 !important;
+      color: #000000 !important;
+      box-shadow: 0 0 30px rgba(0, 255, 153, 0.8), 
+                  0 6px 16px rgba(0, 0, 0, 0.4) !important; // Glow más intenso
+      transform: scale(1.1) !important; // Efecto de agrandamiento
+    }
+
+    &:focus,
+    &:active {
+      background: #00ff88 !important;
+      border-color: #00ff88 !important;
+      color: #000000 !important;
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.7), 
+                  0 5px 14px rgba(0, 0, 0, 0.35) !important;
+    }
+
+    @media (max-width: 768px) {
+      width: 50px !important;
+      height: 50px !important;
+      bottom: 20px;
+      right: 20px;
+
+      .anticon {
+        font-size: 20px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      width: 45px !important;
+      height: 45px !important;
+      bottom: 15px;
+      right: 15px;
+
+      .anticon {
+        font-size: 18px !important;
+      }
+    }
+  }
+
   @keyframes construction-pulse {
     0%, 100% {
       opacity: 0.9;
