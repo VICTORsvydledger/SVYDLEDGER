@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Formularios ampliados (+70px y +200px)
+// Última actualización: 2025-01-15 - Bloques desplazados 200px izquierda
 // ===============================================
 
 .post-auth-page {
@@ -140,10 +140,11 @@
   gap: 2rem;
   padding: 0 4rem 4rem 4rem;
   max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 auto 0 calc(50% - 800px - 200px); // Desplazar 200px a la izquierda
   
   @media (max-width: 1200px) {
     padding: 0 2rem 2rem 2rem;
+    margin: 0 auto; // Centrado en pantallas pequeñas
   }
 }
 
