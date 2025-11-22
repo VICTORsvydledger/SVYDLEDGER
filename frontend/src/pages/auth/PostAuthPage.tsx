@@ -19,8 +19,8 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
     idioma: ''
   })
 
-  // Datos de ejemplo para la tabla de usuarios
-  const usersData = Array(10).fill(null).map((_, i) => ({
+  // Datos de ejemplo para la tabla de usuarios (reducido a 5 filas)
+  const usersData = Array(5).fill(null).map((_, i) => ({
     key: i,
     nombre: '',
     id: '',

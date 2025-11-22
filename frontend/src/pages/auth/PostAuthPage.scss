@@ -190,26 +190,26 @@
 .create-user-block {
   .block-header {
     background: #FFFF00;
-    padding: 12px 20px;
+    padding: 6px 12px; // Reducido de 12px 20px
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.85rem; // Reducido de 1rem
     color: #000;
   }
 
   .form-fields {
-    padding: 20px;
+    padding: 10px 12px; // Reducido de 20px
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 6px; // Reducido de 12px
   }
 
   .form-field {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px; // Reducido de 4px
 
     label {
-      font-size: 0.9rem;
+      font-size: 0.75rem; // Reducido de 0.9rem
       color: #000;
       font-weight: 500;
     }
@@ -217,19 +217,20 @@
     .ant-input {
       background: #D4F1D4;
       border: 1px solid #999;
-      padding: 8px 12px;
-      font-size: 0.9rem;
+      padding: 4px 8px; // Reducido de 8px 12px
+      font-size: 0.75rem; // Reducido de 0.9rem
+      height: 28px; // Altura específica reducida
     }
   }
 
   .pay-button {
-    margin: 10px 20px;
+    margin: 6px 12px; // Reducido de 10px 20px
     background: #00FF00;
     border: 2px solid #000;
     color: #000;
     font-weight: 600;
-    height: 40px;
-    font-size: 0.9rem;
+    height: 32px; // Reducido de 40px
+    font-size: 0.75rem; // Reducido de 0.9rem
     
     &:hover {
       background: #00DD00 !important;
@@ -240,9 +241,9 @@
 
   .minimum-payment {
     background: #FFFFCC;
-    padding: 12px 20px;
+    padding: 6px 12px; // Reducido de 12px 20px
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.75rem; // Reducido de 0.9rem
     color: #000;
     font-weight: 500;
   }
@@ -286,26 +287,26 @@
 .users-list-block {
   .block-header-with-buttons {
     background: #FFFF00;
-    padding: 12px 20px;
+    padding: 6px 12px; // Reducido de 12px 20px
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .header-title {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.85rem; // Reducido de 1rem
       color: #000;
     }
 
     .header-buttons {
       display: flex;
-      gap: 8px;
+      gap: 4px; // Reducido de 8px
 
       .action-btn {
-        height: 32px;
-        padding: 0 16px;
+        height: 26px; // Reducido de 32px
+        padding: 0 10px; // Reducido de 0 16px
         font-weight: 600;
-        font-size: 0.85rem;
+        font-size: 0.7rem; // Reducido de 0.85rem
         border: 2px solid #000;
       }
 
@@ -344,6 +345,7 @@
   .users-table {
     .ant-table {
       background: transparent;
+      font-size: 0.75rem; // Reducir tamaño de fuente de la tabla
     }
 
     .ant-table-thead > tr > th {
@@ -352,6 +354,8 @@
       font-weight: 600;
       border-bottom: 2px solid #000;
       text-align: center;
+      padding: 4px 8px; // Reducido de padding por defecto
+      font-size: 0.75rem; // Reducido
       
       &.nombre-column {
         background: #D4F1D4;
@@ -369,6 +373,8 @@
     .ant-table-tbody > tr > td {
       border-bottom: 1px solid #000;
       background: white;
+      padding: 4px 8px; // Reducido de padding por defecto
+      font-size: 0.7rem; // Reducido
       
       &:first-child {
         background: #D4F1D4;
