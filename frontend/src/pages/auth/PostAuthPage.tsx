@@ -8,6 +8,50 @@ interface PostAuthPageProps {
   userEmail?: string
 }
 
+// Textos de la interfaz - Almacenados como variables JavaScript (UTF-8 seguro)
+const UI_TEXTS = {
+  backButton: 'Back to Welcome',
+  loggedInAs: 'Logged in as:',
+  headers: {
+    createUser: 'Crear Usuario Nuevo',
+    userList: 'Lista de Usuarios',
+    authorizedEmails: 'CORREOS AUTORIZADOS',
+    password: 'PASSWORD'
+  },
+  labels: {
+    nombre: 'Nombre',
+    id: 'Id',
+    idTributario: 'Id Tributario',
+    pais: 'País',
+    moneda: 'Moneda',
+    idioma: 'Idioma'
+  },
+  buttons: {
+    entrar: 'ENTRAR',
+    editar: 'EDITAR',
+    papelera: 'PAPELERA',
+    pagar: 'PAGAR',
+    saldo: 'SALDO',
+    pagarRegistro: 'Pagar registro de usuario nuevo'
+  },
+  messages: {
+    minimumPayment: 'Monto mínimo a pagar $10',
+    selectUser: 'Por favor selecciona un usuario de la lista',
+    selectUserEdit: 'Por favor selecciona un usuario para editar',
+    selectUserDelete: 'Por favor selecciona un usuario para eliminar',
+    selectUserPay: 'Por favor selecciona un usuario para pagar',
+    entering: 'Entrando al sistema con usuario ID:',
+    editing: 'Editando usuario ID:',
+    movedToTrash: 'Usuario ID: {id} movido a la papelera',
+    processingPayment: 'Procesando pago para usuario ID:'
+  },
+  tableColumns: {
+    nombre: 'NOMBRE',
+    id: 'ID',
+    saldo: '$'
+  }
+}
+
 const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
   // Estado para el formulario de crear usuario
   const [newUser, setNewUser] = useState({
@@ -45,19 +89,19 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
   // Columnas para la tabla de usuarios
   const userColumns = [
     {
-      title: 'NOMBRE',
+      title: UI_TEXTS.tableColumns.nombre,
       dataIndex: 'nombre',
       key: 'nombre',
       className: 'nombre-column'
     },
     {
-      title: 'ID',
+      title: UI_TEXTS.tableColumns.id,
       dataIndex: 'id',
       key: 'id',
       className: 'id-column'
     },
     {
-      title: '$',
+      title: UI_TEXTS.tableColumns.saldo,
       dataIndex: 'saldo',
       key: 'saldo',
       className: 'saldo-column'
@@ -85,38 +129,38 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
   // Handlers para los botones
   const handleEntrar = () => {
     if (selectedUser === null) {
-      message.warning('Por favor selecciona un usuario de la lista')
+      message.warning(UI_TEXTS.messages.selectUser)
       return
     }
-    message.success(`Entrando al sistema con usuario ID: ${selectedUser}`)
+    message.success(`${UI_TEXTS.messages.entering} ${selectedUser}`)
     // TODO: Implementar lógica de entrada al sistema
   }
 
   const handleEditar = () => {
     if (selectedUser === null) {
-      message.warning('Por favor selecciona un usuario para editar')
+      message.warning(UI_TEXTS.messages.selectUserEdit)
       return
     }
-    message.info(`Editando usuario ID: ${selectedUser}`)
+    message.info(`${UI_TEXTS.messages.editing} ${selectedUser}`)
     // TODO: Implementar lógica de edición
   }
 
   const handlePapelera = () => {
     if (selectedUser === null) {
-      message.warning('Por favor selecciona un usuario para eliminar')
+      message.warning(UI_TEXTS.messages.selectUserDelete)
       return
     }
-    message.warning(`Usuario ID: ${selectedUser} movido a la papelera`)
+    message.warning(UI_TEXTS.messages.movedToTrash.replace('{id}', String(selectedUser)))
     setSelectedUser(null)
     // TODO: Implementar lógica de eliminación
   }
 
   const handlePagar = () => {
     if (selectedUser === null) {
-      message.warning('Por favor selecciona un usuario para pagar')
+      message.warning(UI_TEXTS.messages.selectUserPay)
       return
     }
-    message.success(`Procesando pago para usuario ID: ${selectedUser}`)
+    message.success(`${UI_TEXTS.messages.processingPayment} ${selectedUser}`)
     // TODO: Implementar lógica de pago
   }
 
@@ -145,7 +189,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
             onClick={onBack}
             className="back-button"
           >
-            Back to Welcome
+            {UI_TEXTS.backButton}
           </Button>
         </div>
 
@@ -155,7 +199,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
           
           {/* Email del usuario debajo del logo */}
           {userEmail && (
-            <p className="user-email">Logged in as: {userEmail}</p>
+            <p className="user-email">{UI_TEXTS.loggedInAs} {userEmail}</p>
           )}
         </div>
 
@@ -165,45 +209,45 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
           <div className="top-row">
             {/* Bloque 1: Crear Usuario Nuevo */}
             <div className="block create-user-block">
-              <div className="block-header">Crear Usuario Nuevo</div>
+              <div className="block-header">{UI_TEXTS.headers.createUser}</div>
               <div className="form-fields">
                 <div className="form-field">
-                  <label>Nombre</label>
+                  <label>{UI_TEXTS.labels.nombre}</label>
                   <Input
                     value={newUser.nombre}
                     onChange={(e) => setNewUser({ ...newUser, nombre: e.target.value })}
                   />
                 </div>
                 <div className="form-field">
-                  <label>Id</label>
+                  <label>{UI_TEXTS.labels.id}</label>
                   <Input
                     value={newUser.id}
                     onChange={(e) => setNewUser({ ...newUser, id: e.target.value })}
                   />
                 </div>
                 <div className="form-field">
-                  <label>Id Tributario</label>
+                  <label>{UI_TEXTS.labels.idTributario}</label>
                   <Input
                     value={newUser.idTributario}
                     onChange={(e) => setNewUser({ ...newUser, idTributario: e.target.value })}
                   />
                 </div>
                 <div className="form-field">
-                  <label>País</label>
+                  <label>{UI_TEXTS.labels.pais}</label>
                   <Input
                     value={newUser.pais}
                     onChange={(e) => setNewUser({ ...newUser, pais: e.target.value })}
                   />
                 </div>
                 <div className="form-field">
-                  <label>Moneda</label>
+                  <label>{UI_TEXTS.labels.moneda}</label>
                   <Input
                     value={newUser.moneda}
                     onChange={(e) => setNewUser({ ...newUser, moneda: e.target.value })}
                   />
                 </div>
                 <div className="form-field">
-                  <label>Idioma</label>
+                  <label>{UI_TEXTS.labels.idioma}</label>
                   <Input
                     value={newUser.idioma}
                     onChange={(e) => setNewUser({ ...newUser, idioma: e.target.value })}
@@ -211,45 +255,45 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
                 </div>
               </div>
               <Button className="pay-button">
-                Pagar registro de usuario nuevo
+                {UI_TEXTS.buttons.pagarRegistro}
               </Button>
               <div className="minimum-payment">
-                Monto mínimo a pagar $10
+                {UI_TEXTS.messages.minimumPayment}
               </div>
             </div>
 
             {/* Bloque 2: Lista de Usuarios */}
             <div className="block users-list-block">
               <div className="block-header-with-buttons">
-                <span className="header-title">Lista de Usuarios</span>
+                <span className="header-title">{UI_TEXTS.headers.userList}</span>
                 <div className="header-buttons">
                   <Button 
                     className="action-btn entrar-btn"
                     onClick={handleEntrar}
                   >
-                    ENTRAR
+                    {UI_TEXTS.buttons.entrar}
                   </Button>
                   <Button 
                     className="action-btn editar-btn"
                     onClick={handleEditar}
                     icon={<EditOutlined />}
                   >
-                    EDITAR
+                    {UI_TEXTS.buttons.editar}
                   </Button>
                   <Button 
                     className="action-btn papelera-btn"
                     onClick={handlePapelera}
                     icon={<DeleteOutlined />}
                   >
-                    PAPELERA
+                    {UI_TEXTS.buttons.papelera}
                   </Button>
                   <Button 
                     className="action-btn pagar-btn"
                     onClick={handlePagar}
                   >
-                    PAGAR
+                    {UI_TEXTS.buttons.pagar}
                   </Button>
-                  <Button className="action-btn saldo-btn">SALDO</Button>
+                  <Button className="action-btn saldo-btn">{UI_TEXTS.buttons.saldo}</Button>
                 </div>
               </div>
               <Table
@@ -268,7 +312,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
             <div className="block bottom-tables-block">
               <div className="tables-container">
                 <div className="table-section">
-                  <div className="table-header correos-header">CORREOS AUTORIZADOS</div>
+                  <div className="table-header correos-header">{UI_TEXTS.headers.authorizedEmails}</div>
                   <Table
                     dataSource={correosData}
                     columns={correosColumns}
@@ -278,7 +322,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
                   />
                 </div>
                 <div className="table-section">
-                  <div className="table-header password-header">PASSWORD</div>
+                  <div className="table-header password-header">{UI_TEXTS.headers.password}</div>
                   <Table
                     dataSource={passwordsData}
                     columns={passwordsColumns}
