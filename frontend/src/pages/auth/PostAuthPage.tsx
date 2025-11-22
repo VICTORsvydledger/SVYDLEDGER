@@ -1,5 +1,6 @@
-import { Button } from 'antd'
+import { Button, Input, Table } from 'antd'
 import { ArrowLeftOutlined } from '@ant-design/icons'
+import { useState } from 'react'
 import './PostAuthPage.scss'
 
 interface PostAuthPageProps {
@@ -8,9 +9,79 @@ interface PostAuthPageProps {
 }
 
 const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
+  // Estado para el formulario de crear usuario
+  const [newUser, setNewUser] = useState({
+    nombre: '',
+    id: '',
+    idTributario: '',
+    pais: '',
+    moneda: '',
+    idioma: ''
+  })
+
+  // Datos de ejemplo para la tabla de usuarios
+  const usersData = Array(10).fill(null).map((_, i) => ({
+    key: i,
+    nombre: '',
+    id: '',
+    saldo: '$'
+  }))
+
+  // Datos de ejemplo para correos autorizados
+  const correosData = Array(8).fill(null).map((_, i) => ({
+    key: i,
+    correo: ''
+  }))
+
+  // Datos de ejemplo para passwords
+  const passwordsData = Array(8).fill(null).map((_, i) => ({
+    key: i,
+    password: ''
+  }))
+
+  // Columnas para la tabla de usuarios
+  const userColumns = [
+    {
+      title: 'NOMBRE',
+      dataIndex: 'nombre',
+      key: 'nombre',
+      className: 'nombre-column'
+    },
+    {
+      title: 'ID',
+      dataIndex: 'id',
+      key: 'id',
+      className: 'id-column'
+    },
+    {
+      title: '$',
+      dataIndex: 'saldo',
+      key: 'saldo',
+      className: 'saldo-column'
+    }
+  ]
+
+  // Columnas para correos autorizados
+  const correosColumns = [
+    {
+      title: '',
+      dataIndex: 'correo',
+      key: 'correo'
+    }
+  ]
+
+  // Columnas para passwords
+  const passwordsColumns = [
+    {
+      title: '',
+      dataIndex: 'password',
+      key: 'password'
+    }
+  ]
+
   return (
     <div className="post-auth-page">
-      {/* Fondo con background-2.png */}
+      {/* Fondo con background-3.png */}
       <div className="post-auth-background" />
       
       {/* Contenido principal */}
@@ -36,6 +107,123 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
           {userEmail && (
             <p className="user-email">Logged in as: {userEmail}</p>
           )}
+        </div>
+
+        {/* Cuatro bloques funcionales */}
+        <div className="main-blocks-container">
+          {/* Columna Izquierda */}
+          <div className="left-column">
+            {/* Bloque 1: Crear Usuario Nuevo */}
+            <div className="block create-user-block">
+              <div className="block-header">Crear Usuario Nuevo</div>
+              <div className="form-fields">
+                <div className="form-field">
+                  <label>Nombre</label>
+                  <Input
+                    value={newUser.nombre}
+                    onChange={(e) => setNewUser({ ...newUser, nombre: e.target.value })}
+                  />
+                </div>
+                <div className="form-field">
+                  <label>Id</label>
+                  <Input
+                    value={newUser.id}
+                    onChange={(e) => setNewUser({ ...newUser, id: e.target.value })}
+                  />
+                </div>
+                <div className="form-field">
+                  <label>Id Tributario</label>
+                  <Input
+                    value={newUser.idTributario}
+                    onChange={(e) => setNewUser({ ...newUser, idTributario: e.target.value })}
+                  />
+                </div>
+                <div className="form-field">
+                  <label>País</label>
+                  <Input
+                    value={newUser.pais}
+                    onChange={(e) => setNewUser({ ...newUser, pais: e.target.value })}
+                  />
+                </div>
+                <div className="form-field">
+                  <label>Moneda</label>
+                  <Input
+                    value={newUser.moneda}
+                    onChange={(e) => setNewUser({ ...newUser, moneda: e.target.value })}
+                  />
+                </div>
+                <div className="form-field">
+                  <label>Idioma</label>
+                  <Input
+                    value={newUser.idioma}
+                    onChange={(e) => setNewUser({ ...newUser, idioma: e.target.value })}
+                  />
+                </div>
+              </div>
+              <Button className="pay-button">
+                Pagar registro de usuario nuevo
+              </Button>
+              <div className="minimum-payment">
+                Monto mínimo a pagar $10
+              </div>
+            </div>
+
+            {/* Bloque 2: Cobro con Stripe */}
+            <div className="block stripe-block">
+              <div className="stripe-header">AQUÍ PARA COBRAR CON PASARELA STRIPE</div>
+              <div className="stripe-content">
+                <div className="stripe-field">NOMBRE</div>
+                <div className="stripe-field">ID</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Columna Derecha */}
+          <div className="right-column">
+            {/* Bloque 3: Lista de Usuarios */}
+            <div className="block users-list-block">
+              <div className="block-header-with-buttons">
+                <span className="header-title">Lista de Usuarios</span>
+                <div className="header-buttons">
+                  <Button className="action-btn entrar-btn">ENTRAR</Button>
+                  <Button className="action-btn pagar-btn">PAGAR</Button>
+                  <Button className="action-btn saldo-btn">SALDO</Button>
+                </div>
+              </div>
+              <Table
+                dataSource={usersData}
+                columns={userColumns}
+                pagination={false}
+                className="users-table"
+              />
+            </div>
+
+            {/* Bloque 4: Correos Autorizados y Password */}
+            <div className="block bottom-tables-block">
+              <div className="tables-container">
+                <div className="table-section">
+                  <div className="table-header correos-header">CORREOS AUTORIZADOS</div>
+                  <Table
+                    dataSource={correosData}
+                    columns={correosColumns}
+                    pagination={false}
+                    showHeader={false}
+                    className="correos-table"
+                  />
+                </div>
+                <div className="table-section">
+                  <div className="table-header password-header">PASSWORD</div>
+                  <Table
+                    dataSource={passwordsData}
+                    columns={passwordsColumns}
+                    pagination={false}
+                    showHeader={false}
+                    className="password-table"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
