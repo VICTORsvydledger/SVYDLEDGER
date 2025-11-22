@@ -152,10 +152,20 @@
     gap: 2rem;
   }
   
-  // Ambos bloques tienen el mismo ancho (50% cada uno menos 32px por el gap)
-  .block {
+  // El bloque "Crear Usuario Nuevo" ahora ocupa 70% de su ancho original (35% del contenedor)
+  .create-user-block {
+    flex: 0 0 calc(35% - 32px); // 70% de 50% = 35%, menos la mitad del gap
+    min-width: 0;
+    
+    @media (max-width: 1200px) {
+      flex: 1;
+    }
+  }
+  
+  // El bloque "Lista de Usuarios" ocupa el espacio restante
+  .users-list-block {
     flex: 1;
-    min-width: 0; // Prevenir overflow
+    min-width: 0;
   }
 }
 
