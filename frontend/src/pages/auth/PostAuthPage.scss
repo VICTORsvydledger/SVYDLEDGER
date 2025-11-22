@@ -274,26 +274,26 @@
 .users-list-block {
   .block-header-with-buttons {
     background: #FFFF00;
-    padding: 6px 12px; // Reducido de 12px 20px
+    padding: 6px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .header-title {
       font-weight: 600;
-      font-size: 0.85rem; // Reducido de 1rem
+      font-size: 0.85rem;
       color: #000;
     }
 
     .header-buttons {
       display: flex;
-      gap: 4px; // Reducido de 8px
+      gap: 4px;
 
       .action-btn {
-        height: 26px; // Reducido de 32px
-        padding: 0 10px; // Reducido de 0 16px
+        height: 26px;
+        padding: 0 10px;
         font-weight: 600;
-        font-size: 0.7rem; // Reducido de 0.85rem
+        font-size: 0.7rem;
         border: 2px solid #000;
       }
 
@@ -303,6 +303,26 @@
         
         &:hover {
           background: #00DD00 !important;
+          color: #000 !important;
+        }
+      }
+
+      .editar-btn {
+        background: #FFD700; // Dorado para editar
+        color: #000;
+        
+        &:hover {
+          background: #FFC700 !important;
+          color: #000 !important;
+        }
+      }
+
+      .papelera-btn {
+        background: #FF6B6B; // Rojo claro para papelera
+        color: #000;
+        
+        &:hover {
+          background: #FF5252 !important;
           color: #000 !important;
         }
       }
@@ -375,6 +395,29 @@
       &:last-child {
         background: #E8E8E8;
       }
+    }
+    
+    // Estilo para filas seleccionadas
+    .ant-table-tbody > tr.ant-table-row-selected > td {
+      background-color: rgba(0, 255, 0, 0.1) !important;
+      
+      &:first-child {
+        background: rgba(212, 241, 212, 0.8) !important;
+      }
+      
+      &:nth-child(2) {
+        background: rgba(255, 255, 0, 0.3) !important;
+      }
+      
+      &:last-child {
+        background: rgba(232, 232, 232, 0.8) !important;
+      }
+    }
+
+    // Estilo para la columna de selección
+    .ant-table-selection-column {
+      width: 40px;
+      padding-left: 12px !important;
     }
   }
 }

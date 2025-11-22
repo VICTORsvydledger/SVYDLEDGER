@@ -1,5 +1,5 @@
-import { Button, Input, Table } from 'antd'
-import { ArrowLeftOutlined } from '@ant-design/icons'
+import { Button, Input, Table, message } from 'antd'
+import { ArrowLeftOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import { useState } from 'react'
 import './PostAuthPage.scss'
 
@@ -18,6 +18,9 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
     moneda: '',
     idioma: ''
   })
+
+  // Estado para el usuario seleccionado
+  const [selectedUser, setSelectedUser] = useState<number | null>(null)
 
   // Datos de ejemplo para la tabla de usuarios (reducido a 5 filas)
   const usersData = Array(5).fill(null).map((_, i) => ({
@@ -78,6 +81,53 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
       key: 'password'
     }
   ]
+
+  // Handlers para los botones
+  const handleEntrar = () => {
+    if (selectedUser === null) {
+      message.warning('Por favor selecciona un usuario de la lista')
+      return
+    }
+    message.success(`Entrando al sistema con usuario ID: ${selectedUser}`)
+    // TODO: Implementar lógica de entrada al sistema
+  }
+
+  const handleEditar = () => {
+    if (selectedUser === null) {
+      message.warning('Por favor selecciona un usuario para editar')
+      return
+    }
+    message.info(`Editando usuario ID: ${selectedUser}`)
+    // TODO: Implementar lógica de edición
+  }
+
+  const handlePapelera = () => {
+    if (selectedUser === null) {
+      message.warning('Por favor selecciona un usuario para eliminar')
+      return
+    }
+    message.warning(`Usuario ID: ${selectedUser} movido a la papelera`)
+    setSelectedUser(null)
+    // TODO: Implementar lógica de eliminación
+  }
+
+  const handlePagar = () => {
+    if (selectedUser === null) {
+      message.warning('Por favor selecciona un usuario para pagar')
+      return
+    }
+    message.success(`Procesando pago para usuario ID: ${selectedUser}`)
+    // TODO: Implementar lógica de pago
+  }
+
+  // Handler para selección de fila en la tabla
+  const rowSelection = {
+    type: 'radio' as const,
+    onChange: (selectedRowKeys: React.Key[]) => {
+      setSelectedUser(selectedRowKeys[0] as number)
+    },
+    selectedRowKeys: selectedUser !== null ? [selectedUser] : []
+  }
 
   return (
     <div className="post-auth-page">
@@ -173,8 +223,32 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
               <div className="block-header-with-buttons">
                 <span className="header-title">Lista de Usuarios</span>
                 <div className="header-buttons">
-                  <Button className="action-btn entrar-btn">ENTRAR</Button>
-                  <Button className="action-btn pagar-btn">PAGAR</Button>
+                  <Button 
+                    className="action-btn entrar-btn"
+                    onClick={handleEntrar}
+                  >
+                    ENTRAR
+                  </Button>
+                  <Button 
+                    className="action-btn editar-btn"
+                    onClick={handleEditar}
+                    icon={<EditOutlined />}
+                  >
+                    EDITAR
+                  </Button>
+                  <Button 
+                    className="action-btn papelera-btn"
+                    onClick={handlePapelera}
+                    icon={<DeleteOutlined />}
+                  >
+                    PAPELERA
+                  </Button>
+                  <Button 
+                    className="action-btn pagar-btn"
+                    onClick={handlePagar}
+                  >
+                    PAGAR
+                  </Button>
                   <Button className="action-btn saldo-btn">SALDO</Button>
                 </div>
               </div>
@@ -183,6 +257,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
                 columns={userColumns}
                 pagination={false}
                 className="users-table"
+                rowSelection={rowSelection}
               />
             </div>
           </div>
