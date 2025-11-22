@@ -109,11 +109,11 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
           )}
         </div>
 
-        {/* Cuatro bloques funcionales */}
+        {/* Bloques reorganizados */}
         <div className="main-blocks-container">
-          {/* Columna Izquierda */}
-          <div className="left-column">
-            {/* Bloque 1: Crear Usuario Nuevo */}
+          {/* PRIMERA FILA: Crear Usuario Nuevo + Lista de Usuarios */}
+          <div className="top-row">
+            {/* Bloque 1: Crear Usuario Nuevo (50%) */}
             <div className="block create-user-block">
               <div className="block-header">Crear Usuario Nuevo</div>
               <div className="form-fields">
@@ -168,19 +168,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
               </div>
             </div>
 
-            {/* Bloque 2: Cobro con Stripe */}
-            <div className="block stripe-block">
-              <div className="stripe-header">AQUÍ PARA COBRAR CON PASARELA STRIPE</div>
-              <div className="stripe-content">
-                <div className="stripe-field">NOMBRE</div>
-                <div className="stripe-field">ID</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Columna Derecha */}
-          <div className="right-column">
-            {/* Bloque 3: Lista de Usuarios */}
+            {/* Bloque 3: Lista de Usuarios (50%) */}
             <div className="block users-list-block">
               <div className="block-header-with-buttons">
                 <span className="header-title">Lista de Usuarios</span>
@@ -196,6 +184,18 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
                 pagination={false}
                 className="users-table"
               />
+            </div>
+          </div>
+
+          {/* SEGUNDA FILA: Cobro con Stripe + Correos y Password */}
+          <div className="bottom-row">
+            {/* Bloque 2: Cobro con Stripe */}
+            <div className="block stripe-block">
+              <div className="stripe-header">AQUÍ PARA COBRAR CON PASARELA STRIPE</div>
+              <div className="stripe-content">
+                <div className="stripe-field">NOMBRE</div>
+                <div className="stripe-field">ID</div>
+              </div>
             </div>
 
             {/* Bloque 4: Correos Autorizados y Password */}

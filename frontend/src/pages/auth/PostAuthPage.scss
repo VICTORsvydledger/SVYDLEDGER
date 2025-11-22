@@ -130,24 +130,49 @@
 // ===============================================
 
 .main-blocks-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding: 0 4rem 4rem 4rem;
   max-width: 1600px;
   margin: 0 auto;
   
   @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
     padding: 0 2rem 2rem 2rem;
   }
 }
 
-.left-column,
-.right-column {
+// PRIMERA FILA: Crear Usuario Nuevo (50%) + Lista de Usuarios (50%)
+.top-row {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 64px; // Separación exacta de 64px
+  
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  // Ambos bloques tienen el mismo ancho (50% cada uno menos 32px por el gap)
+  .block {
+    flex: 1;
+    min-width: 0; // Prevenir overflow
+  }
+}
+
+// SEGUNDA FILA: Cobro con Stripe + Correos/Password
+.bottom-row {
+  display: flex;
+  gap: 64px; // Separación exacta de 64px
+  
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .block {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 // Estilos comunes de bloques
