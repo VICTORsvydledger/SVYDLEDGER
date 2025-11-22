@@ -131,7 +131,7 @@
 }
 
 // ===============================================
-// CUATRO BLOQUES PRINCIPALES
+// TRES BLOQUES PRINCIPALES
 // ===============================================
 
 .main-blocks-container {
@@ -174,14 +174,12 @@
   }
 }
 
-// SEGUNDA FILA: Cobro con Stripe + Correos/Password
+// SEGUNDA FILA: Correos/Password (ahora ocupa ancho completo)
 .bottom-row {
   display: flex;
-  gap: 64px; // Separación exacta de 64px
   
   @media (max-width: 1200px) {
     flex-direction: column;
-    gap: 2rem;
   }
   
   .block {
@@ -265,38 +263,7 @@
 }
 
 // ===============================================
-// BLOQUE 2: COBRO CON STRIPE
-// ===============================================
-
-.stripe-block {
-  .stripe-header {
-    background: #ADD8E6;
-    padding: 12px 20px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: #000;
-    text-align: center;
-  }
-
-  .stripe-content {
-    padding: 20px;
-    background: #ADD8E6;
-    min-height: 150px;
-
-    .stripe-field {
-      background: white;
-      padding: 8px 12px;
-      margin-bottom: 12px;
-      border: 1px solid #999;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #000;
-    }
-  }
-}
-
-// ===============================================
-// BLOQUE 3: LISTA DE USUARIOS
+// BLOQUE 2: LISTA DE USUARIOS
 // ===============================================
 
 .users-list-block {
@@ -407,7 +374,7 @@
 }
 
 // ===============================================
-// BLOQUE 4: CORREOS AUTORIZADOS Y PASSWORD
+// BLOQUE 3: CORREOS AUTORIZADOS Y PASSWORD
 // ===============================================
 
 .bottom-tables-block {

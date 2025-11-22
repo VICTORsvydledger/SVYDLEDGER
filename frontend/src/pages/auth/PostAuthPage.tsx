@@ -113,7 +113,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
         <div className="main-blocks-container">
           {/* PRIMERA FILA: Crear Usuario Nuevo + Lista de Usuarios */}
           <div className="top-row">
-            {/* Bloque 1: Crear Usuario Nuevo (50%) */}
+            {/* Bloque 1: Crear Usuario Nuevo */}
             <div className="block create-user-block">
               <div className="block-header">Crear Usuario Nuevo</div>
               <div className="form-fields">
@@ -168,7 +168,7 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
               </div>
             </div>
 
-            {/* Bloque 3: Lista de Usuarios (50%) */}
+            {/* Bloque 2: Lista de Usuarios */}
             <div className="block users-list-block">
               <div className="block-header-with-buttons">
                 <span className="header-title">Lista de Usuarios</span>
@@ -187,18 +187,9 @@ const PostAuthPage = ({ onBack, userEmail }: PostAuthPageProps) => {
             </div>
           </div>
 
-          {/* SEGUNDA FILA: Cobro con Stripe + Correos y Password */}
+          {/* SEGUNDA FILA: Correos Autorizados y Password (ancho completo) */}
           <div className="bottom-row">
-            {/* Bloque 2: Cobro con Stripe */}
-            <div className="block stripe-block">
-              <div className="stripe-header">AQUÍ PARA COBRAR CON PASARELA STRIPE</div>
-              <div className="stripe-content">
-                <div className="stripe-field">NOMBRE</div>
-                <div className="stripe-field">ID</div>
-              </div>
-            </div>
-
-            {/* Bloque 4: Correos Autorizados y Password */}
+            {/* Bloque 3: Correos Autorizados y Password */}
             <div className="block bottom-tables-block">
               <div className="tables-container">
                 <div className="table-section">
