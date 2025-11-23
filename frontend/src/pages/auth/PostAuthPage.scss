@@ -253,7 +253,7 @@
     }
 
     .ant-input {
-      background: rgba(212, 241, 212, 0.7); // Hacer semi-transparente
+      background: transparent; // Cambiado de rgba(212, 241, 212, 0.7) a transparent
       border: 1px solid #999;
       padding: 4px 8px; // Reducido de 8px 12px
       font-size: 0.75rem; // Reducido de 0.9rem
