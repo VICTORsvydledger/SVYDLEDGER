@@ -298,7 +298,7 @@
 
 .users-list-block {
   .block-header-with-buttons {
-    background: rgba(255, 255, 0, 0.7); // Hacer semi-transparente
+    background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
     padding: 6px 12px;
     display: flex;
     justify-content: space-between;
@@ -338,21 +338,21 @@
       }
 
       .editar-btn {
-        background: rgba(255, 215, 0, 0.8); // Dorado semi-transparente
+        background: rgba(0, 255, 0, 0.8); // Cambiado de dorado a verde vibrante
         color: white; // Cambiar de #000 a white
         
         &:hover {
-          background: rgba(255, 199, 0, 0.9) !important;
+          background: rgba(0, 221, 0, 0.9) !important;
           color: white !important; // Cambiar de #000 a white
         }
       }
 
       .papelera-btn {
-        background: rgba(255, 107, 107, 0.8); // Rojo claro semi-transparente
+        background: rgba(0, 255, 0, 0.8); // Cambiado de rojo a verde vibrante
         color: white; // Cambiar de #000 a white
         
         &:hover {
-          background: rgba(255, 82, 82, 0.9) !important;
+          background: rgba(0, 221, 0, 0.9) !important;
           color: white !important; // Cambiar de #000 a white
         }
       }
@@ -386,7 +386,7 @@
     }
 
     .ant-table-thead > tr > th {
-      background: #FFFF00;
+      background: transparent; // Cambiado de #FFFF00 a transparent
       color: white; // Cambiar de #000 a white
       font-weight: 600;
       border-bottom: 2px solid #000;
@@ -395,35 +395,35 @@
       font-size: 0.75rem; // Reducido
       
       &.nombre-column {
-        background: rgba(212, 241, 212, 0.7); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(212, 241, 212, 0.7) a transparent
       }
       
       &.id-column {
-        background: rgba(255, 255, 0, 0.7); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
       }
       
       &.saldo-column {
-        background: rgba(232, 232, 232, 0.7); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(232, 232, 232, 0.7) a transparent
       }
     }
 
     .ant-table-tbody > tr > td {
       border-bottom: 1px solid #000;
-      background: rgba(255, 255, 255, 0.5); // Hacer semi-transparente en lugar de white
+      background: transparent; // Cambiado de rgba(255, 255, 255, 0.5) a transparent
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.7rem; // Reducido
       color: white; // Añadir color blanco al texto de las celdas
 
       &:first-child {
-        background: rgba(212, 241, 212, 0.5); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(212, 241, 212, 0.5) a transparent
       }
       
       &:nth-child(2) {
-        background: rgba(255, 255, 0, 0.5); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(255, 255, 0, 0.5) a transparent
       }
       
       &:last-child {
-        background: rgba(232, 232, 232, 0.5); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(232, 232, 232, 0.5) a transparent
       }
     }
     
