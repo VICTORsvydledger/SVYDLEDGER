@@ -228,7 +228,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
                     style={{ width: '100%' }}
                     options={currencies.map(currency => ({
                       value: currency.code,
-                      label: `${currency.code} - ${currency.name} ${currency.symbol}`
+                      label: `${currency.code} - ${currency.name}`
                     }))}
                   />
                 </div>
