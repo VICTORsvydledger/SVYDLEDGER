@@ -179,17 +179,22 @@
   }
 }
 
-// SEGUNDA FILA: Correos/Password (ahora ocupa ancho completo)
+// SEGUNDA FILA: Correos/Password (reducido al 70% del ancho)
 .bottom-row {
   display: flex;
+  justify-content: center; // Centrar el bloque
   
   @media (max-width: 1200px) {
     flex-direction: column;
   }
   
   .block {
-    flex: 1;
+    flex: 0 0 70%; // Reducido al 70% del ancho
     min-width: 0;
+    
+    @media (max-width: 1200px) {
+      flex: 1; // En pantallas pequeñas mantener responsive
+    }
   }
 }
 
