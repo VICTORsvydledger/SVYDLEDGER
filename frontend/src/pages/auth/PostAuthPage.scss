@@ -226,7 +226,7 @@
 
 .create-user-block {
   .block-header {
-    background: rgba(255, 255, 0, 0.7); // Hacer semi-transparente
+    background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
     padding: 6px 12px; // Reducido de 12px 20px
     font-weight: 600;
     font-size: 0.85rem; // Reducido de 1rem
