@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import countries from '@/data/countries'
 import currencies from '@/data/currencies'
+import languages from '@/data/languages'
 import './PostAuthPage.scss'
 
 interface PostAuthPageProps {
@@ -30,7 +31,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
     idTributario: '',
     pais: 'US', // United States por defecto
     moneda: 'USD', // US Dollar por defecto
-    idioma: ''
+    idioma: 'en' // English por defecto
   })
 
   // Estado para el usuario seleccionado
@@ -234,9 +235,17 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
                 </div>
                 <div className="form-field">
                   <label>{t('postAuth.labels.idioma')}</label>
-                  <Input
+                  <Select
                     value={newUser.idioma}
-                    onChange={(e) => setNewUser({ ...newUser, idioma: e.target.value })}
+                    onChange={(value) => setNewUser({ ...newUser, idioma: value })}
+                    showSearch
+                    optionFilterProp="label"
+                    placeholder="Select language"
+                    style={{ width: '100%' }}
+                    options={languages.map(lang => ({
+                      value: lang.code,
+                      label: `${lang.name} - ${lang.nativeName}`
+                    }))}
                   />
                 </div>
               </div>
