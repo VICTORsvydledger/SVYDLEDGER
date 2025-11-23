@@ -182,11 +182,22 @@
 // SEGUNDA FILA: Correos/Password (reducido al 49% del ancho total - 70% del 70% original)
 .bottom-row {
   display: flex;
+  flex-direction: column; // Cambiar a columna para incluir el mensaje
+  align-items: center; // Centrar los elementos
   justify-content: center; // Centrar el bloque
   margin-top: 30px; // Desplazar 30px hacia abajo
   
   @media (max-width: 1200px) {
     flex-direction: column;
+  }
+  
+  .admin-only-message {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
   }
   
   .block {

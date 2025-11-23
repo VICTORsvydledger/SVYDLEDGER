@@ -14,6 +14,7 @@ interface PostAuthPageProps {
 interface PostAuthTranslation {
   backButton: string
   loggedInAs: string
+  adminOnly: string // Nuevo campo para el mensaje de solo administrador
   headers: {
     createUser: string
     userList: string
@@ -60,6 +61,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     en: {
       backButton: 'Back to Welcome',
       loggedInAs: 'Logged in as:',
+      adminOnly: 'Only the administrator can edit this block',
       headers: {
         createUser: 'Create New User',
         userList: 'User List',
@@ -102,6 +104,7 @@ function getTranslations(lang: string): PostAuthTranslation {
       es: {
           backButton: 'Volver a Bienvenida',
           loggedInAs: 'Sesión iniciada como:',
+          adminOnly: 'Solo el administrador puede editar este bloque',
           headers: {
               createUser: 'Crear Usuario Nuevo',
               userList: 'Lista de Usuarios',
@@ -144,6 +147,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     pt: {
       backButton: 'Voltar à Boas-vindas',
       loggedInAs: 'Conectado como:',
+      adminOnly: 'Somente o administrador pode editar este bloco',
       headers: {
         createUser: 'Criar Novo Usuário',
         userList: 'Lista de Usuários',
@@ -186,6 +190,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     fr: {
       backButton: 'Retour à l\'accueil',
       loggedInAs: 'Connecté en tant que:',
+      adminOnly: 'Seul l\'administrateur peut modifier ce bloc',
       headers: {
         createUser: 'Créer un Nouvel Utilisateur',
         userList: 'Liste des Utilisateurs',
@@ -228,6 +233,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     it: {
       backButton: 'Torna al Benvenuto',
       loggedInAs: 'Connesso come:',
+      adminOnly: 'Solo l\'amministratore può modificare questo blocco',
       headers: {
         createUser: 'Crea Nuovo Utente',
         userList: 'Elenco Utenti',
@@ -270,6 +276,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     de: {
       backButton: 'Zurück zur Willkommensseite',
       loggedInAs: 'Angemeldet als:',
+      adminOnly: 'Nur der Administrator kann diesen Block bearbeiten',
       headers: {
         createUser: 'Neuen Benutzer Erstellen',
         userList: 'Benutzerliste',
@@ -312,6 +319,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     ja: {
       backButton: '???????????',
       loggedInAs: '?????:',
+      adminOnly: '????????????????????',
       headers: {
         createUser: '????????',
         userList: '???????',
@@ -616,6 +624,11 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
 
           {/* SEGUNDA FILA: Correos Autorizados y Password (ancho completo) */}
           <div className="bottom-row">
+            {/* Mensaje de solo administrador */}
+            <div className="admin-only-message">
+              {t.adminOnly}
+            </div>
+            
             {/* Bloque 3: Correos Autorizados y Password */}
             <div className="block bottom-tables-block">
               <div className="tables-container">
