@@ -390,6 +390,8 @@
       color: white; // Cambiar de #000 a white
       font-weight: 600;
       border-bottom: 2px solid #000;
+      border-left: none; // Quitar bordes verticales
+      border-right: none; // Quitar bordes verticales
       text-align: center;
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.75rem; // Reducido
@@ -409,6 +411,8 @@
 
     .ant-table-tbody > tr > td {
       border-bottom: 1px solid #000;
+      border-left: none; // Quitar bordes verticales
+      border-right: none; // Quitar bordes verticales
       background: transparent; // Cambiado de rgba(255, 255, 255, 0.5) a transparent
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.7rem; // Reducido
