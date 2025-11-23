@@ -194,10 +194,11 @@
   .admin-only-message {
     font-size: 1.25rem;
     font-weight: 400;
-    color: #000;
+    color: white; // Cambiar de #000 a white
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // Añadir sombra negra para mejor legibilidad
   }
   
   .block {
@@ -229,7 +230,7 @@
     padding: 6px 12px; // Reducido de 12px 20px
     font-weight: 600;
     font-size: 0.85rem; // Reducido de 1rem
-    color: #000;
+    color: white; // Cambiar de #000 a white
   }
 
   .form-fields {
@@ -246,9 +247,9 @@
 
     label {
       font-size: 0.75rem; // Reducido de 0.9rem
-      color: #000;
+      color: white; // Cambiar de #000 a white
       font-weight: 500;
-      text-shadow: 0 0 3px white; // Añadir sombra blanca para mejorar legibilidad sobre fondo transparente
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); // Cambiar sombra blanca a negra para contraste
     }
 
     .ant-input {
@@ -257,6 +258,11 @@
       padding: 4px 8px; // Reducido de 8px 12px
       font-size: 0.75rem; // Reducido de 0.9rem
       height: 28px; // Altura específica reducida
+      color: white; // Añadir color blanco al texto del input
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6); // Placeholder en blanco semi-transparente
+      }
     }
   }
 
@@ -264,7 +270,7 @@
     margin: 6px 12px; // Reducido de 10px 20px
     background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
     border: 2px solid #000;
-    color: #000;
+    color: white; // Cambiar de #000 a white
     font-weight: 600;
     height: 32px; // Reducido de 40px
     font-size: 0.75rem; // Reducido de 0.9rem
@@ -272,7 +278,7 @@
     &:hover {
       background: rgba(0, 221, 0, 0.9) !important; // Hacer semi-transparente pero visible
       border-color: #000 !important;
-      color: #000 !important;
+      color: white !important; // Cambiar de #000 a white
     }
   }
 
@@ -281,7 +287,7 @@
     padding: 6px 12px; // Reducido de 12px 20px
     text-align: center;
     font-size: 0.75rem; // Reducido de 0.9rem
-    color: #000;
+    color: white; // Cambiar de #000 a white
     font-weight: 500;
   }
 }
@@ -301,7 +307,7 @@
     .header-title {
       font-weight: 600;
       font-size: 0.85rem;
-      color: #000;
+      color: white; // Cambiar de #000 a white
     }
 
     .header-buttons {
@@ -323,51 +329,51 @@
 
       .entrar-btn {
         background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-        color: #000;
+        color: white; // Cambiar de #000 a white
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: #000 !important;
+          color: white !important; // Cambiar de #000 a white
         }
       }
 
       .editar-btn {
         background: rgba(255, 215, 0, 0.8); // Dorado semi-transparente
-        color: #000;
+        color: white; // Cambiar de #000 a white
         
         &:hover {
           background: rgba(255, 199, 0, 0.9) !important;
-          color: #000 !important;
+          color: white !important; // Cambiar de #000 a white
         }
       }
 
       .papelera-btn {
         background: rgba(255, 107, 107, 0.8); // Rojo claro semi-transparente
-        color: #000;
+        color: white; // Cambiar de #000 a white
         
         &:hover {
           background: rgba(255, 82, 82, 0.9) !important;
-          color: #000 !important;
+          color: white !important; // Cambiar de #000 a white
         }
       }
 
       .pagar-btn {
         background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-        color: #000;
+        color: white; // Cambiar de #000 a white
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: #000 !important;
+          color: white !important; // Cambiar de #000 a white
         }
       }
 
       .saldo-btn {
         background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-        color: #000;
+        color: white; // Cambiar de #000 a white
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: #000 !important;
+          color: white !important; // Cambiar de #000 a white
         }
       }
     }
@@ -381,7 +387,7 @@
 
     .ant-table-thead > tr > th {
       background: #FFFF00;
-      color: #000;
+      color: white; // Cambiar de #000 a white
       font-weight: 600;
       border-bottom: 2px solid #000;
       text-align: center;
@@ -406,7 +412,7 @@
       background: rgba(255, 255, 255, 0.5); // Hacer semi-transparente en lugar de white
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.7rem; // Reducido
-      
+      color: white; // Añadir color blanco al texto de las celdas
 
       &:first-child {
         background: rgba(212, 241, 212, 0.5); // Hacer semi-transparente
@@ -424,6 +430,7 @@
     // Estilo para filas seleccionadas
     .ant-table-tbody > tr.ant-table-row-selected > td {
       background-color: rgba(0, 255, 0, 0.1) !important;
+      color: white; // Mantener texto blanco en filas seleccionadas
       
       &:first-child {
         background: rgba(212, 241, 212, 0.8) !important;
@@ -462,7 +469,7 @@
       padding: 12px 20px;
       font-weight: 600;
       font-size: 0.9rem;
-      color: #000;
+      color: white; // Cambiar de #000 a white
       text-align: center;
       
       &.correos-header {
@@ -482,6 +489,7 @@
       background: rgba(255, 255, 255, 0.5); // Hacer semi-transparente en lugar de white
       border: 1px solid #000;
       padding: 8px 12px;
+      color: white; // Añadir color blanco al texto de las celdas
     }
   }
 }
