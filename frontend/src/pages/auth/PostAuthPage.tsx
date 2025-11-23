@@ -382,8 +382,8 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
   // Estado para el usuario seleccionado
   const [selectedUser, setSelectedUser] = useState<number | null>(null)
 
-  // Datos de ejemplo para la tabla de usuarios (REDUCIDO A 13 FILAS)
-  const usersData = Array(13).fill(null).map((_, i) => ({
+  // Datos de ejemplo para la tabla de usuarios (REDUCIDO A 12 FILAS)
+  const usersData = Array(12).fill(null).map((_, i) => ({
     key: i,
     nombre: `User ${i + 1}`,
     id: `ID-${String(i + 1).padStart(3, '0')}`,
