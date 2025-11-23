@@ -3,6 +3,7 @@ import { ArrowLeftOutlined, EditOutlined, DeleteOutlined } from '@ant-design/ico
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import countries from '@/data/countries'
+import currencies from '@/data/currencies'
 import './PostAuthPage.scss'
 
 interface PostAuthPageProps {
@@ -28,7 +29,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
     id: '',
     idTributario: '',
     pais: 'US', // United States por defecto
-    moneda: '',
+    moneda: 'USD', // US Dollar por defecto
     idioma: ''
   })
 
@@ -218,9 +219,17 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
                 </div>
                 <div className="form-field">
                   <label>{t('postAuth.labels.moneda')}</label>
-                  <Input
+                  <Select
                     value={newUser.moneda}
-                    onChange={(e) => setNewUser({ ...newUser, moneda: e.target.value })}
+                    onChange={(value) => setNewUser({ ...newUser, moneda: value })}
+                    showSearch
+                    optionFilterProp="label"
+                    placeholder="Select currency"
+                    style={{ width: '100%' }}
+                    options={currencies.map(currency => ({
+                      value: currency.code,
+                      label: `${currency.code} - ${currency.name} (${currency.symbol})`
+                    }))}
                   />
                 </div>
                 <div className="form-field">
