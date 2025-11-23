@@ -382,12 +382,12 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
   // Estado para el usuario seleccionado
   const [selectedUser, setSelectedUser] = useState<number | null>(null)
 
-  // Datos de ejemplo para la tabla de usuarios (AUMENTADO A 50 FILAS)
-  const usersData = Array(50).fill(null).map((_, i) => ({
+  // Datos de ejemplo para la tabla de usuarios (REDUCIDO A 13 FILAS)
+  const usersData = Array(13).fill(null).map((_, i) => ({
     key: i,
-    nombre: `User ${i + 1}`, // Agregar número para visualizar mejor
-    id: `ID-${String(i + 1).padStart(3, '0')}`, // Agregar ID numérico
-    saldo: '$0.00' // Agregar saldo para mejor visualización
+    nombre: `User ${i + 1}`,
+    id: `ID-${String(i + 1).padStart(3, '0')}`,
+    saldo: '$0.00'
   }))
 
   // Datos de ejemplo para correos autorizados
