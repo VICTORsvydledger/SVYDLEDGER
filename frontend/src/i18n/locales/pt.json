@@ -2,25 +2,25 @@
   "welcome": {
     "title": "Bem-vindo",
     "subtitle": "Sistema de Contabilidade Universal",
-    "tagline": "Este sistema funciona: sem cÛdigos, sem plano de contas, sem lanÁamentos cont·beis, sem encerramentos, sem perÌodos fiscais. Atemporal. N„o precisa distinguir entre pessoa fÌsica e pessoa jurÌdica",
+    "tagline": "Este sistema funciona: sem c√≥digos, sem plano de contas, sem lan√ßamentos cont√°beis, sem encerramentos, sem per√≠odos fiscais. Atemporal. N√£o precisa distinguir entre pessoa f√≠sica e pessoa jur√≠dica",
     "signIn": "Entrar",
-    "signUp": "Registrar"
+    "signUp": "Cadastrar"
   },
   "postAuth": {
-    "backButton": "Voltar ‡ Boas-vindas",
+    "backButton": "Voltar √† Boas-vindas",
     "loggedInAs": "Conectado como:",
-    "adminOnly": "Somente o administrador pode editar este bloco",
+    "adminOnly": "Apenas o administrador pode editar este bloco",
     "headers": {
-      "createUser": "Criar Novo Usu·rio",
-      "userList": "Lista de Usu·rios",
+      "createUser": "Criar Novo Usu√°rio",
+      "userList": "Lista de Usu√°rios",
       "authorizedEmails": "E-MAILS AUTORIZADOS",
       "password": "SENHA"
     },
     "labels": {
       "nombre": "Nome",
       "id": "Id",
-      "idTributario": "ID Fiscal",
-      "pais": "PaÌs",
+      "idTributario": "Id Tribut√°rio",
+      "pais": "Pa√≠s",
       "moneda": "Moeda",
       "idioma": "Idioma"
     },
@@ -30,18 +30,18 @@
       "papelera": "LIXEIRA",
       "pagar": "PAGAR",
       "saldo": "SALDO",
-      "pagarRegistro": "Pagar registro de novo usu·rio"
+      "pagarRegistro": "Pagar registro de novo usu√°rio"
     },
     "messages": {
-      "minimumPayment": "Valor mÌnimo de pagamento $10",
-      "selectUser": "Por favor selecione um usu·rio da lista",
-      "selectUserEdit": "Por favor selecione um usu·rio para editar",
-      "selectUserDelete": "Por favor selecione um usu·rio para excluir",
-      "selectUserPay": "Por favor selecione um usu·rio para pagar",
-      "entering": "Entrando no sistema com usu·rio ID:",
-      "editing": "Editando usu·rio ID:",
-      "movedToTrash": "Usu·rio ID: {id} movido para a lixeira",
-      "processingPayment": "Processando pagamento para usu·rio ID:"
+      "minimumPayment": "Valor m√≠nimo a pagar $10",
+      "selectUser": "Por favor selecione um usu√°rio da lista",
+      "selectUserEdit": "Por favor selecione um usu√°rio para editar",
+      "selectUserDelete": "Por favor selecione um usu√°rio para excluir",
+      "selectUserPay": "Por favor selecione um usu√°rio para pagar",
+      "entering": "Entrando no sistema com usu√°rio ID:",
+      "editing": "Editando usu√°rio ID:",
+      "movedToTrash": "Usu√°rio ID: {id} movido para a lixeira",
+      "processingPayment": "Processando pagamento para usu√°rio ID:"
     },
     "tableColumns": {
       "nombre": "NOME",

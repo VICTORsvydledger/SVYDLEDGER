@@ -7,19 +7,19 @@
     "signUp": "Registrati"
   },
   "postAuth": {
-    "backButton": "Torna al Benvenuto",
+    "backButton": "Torna al benvenuto",
     "loggedInAs": "Connesso come:",
-    "adminOnly": "Solo l'amministratore pu� modificare questo blocco",
+    "adminOnly": "Solo l'amministratore può modificare questo blocco",
     "headers": {
-      "createUser": "Crea Nuovo Utente",
-      "userList": "Elenco Utenti",
+      "createUser": "Crea nuovo utente",
+      "userList": "Elenco utenti",
       "authorizedEmails": "E-MAIL AUTORIZZATE",
       "password": "PASSWORD"
     },
     "labels": {
       "nombre": "Nome",
       "id": "Id",
-      "idTributario": "ID Fiscale",
+      "idTributario": "Id fiscale",
       "pais": "Paese",
       "moneda": "Valuta",
       "idioma": "Lingua"
@@ -33,11 +33,11 @@
       "pagarRegistro": "Paga registrazione nuovo utente"
     },
     "messages": {
-      "minimumPayment": "Importo minimo di pagamento $10",
+      "minimumPayment": "Importo minimo da pagare $10",
       "selectUser": "Seleziona un utente dall'elenco",
       "selectUserEdit": "Seleziona un utente da modificare",
       "selectUserDelete": "Seleziona un utente da eliminare",
-      "selectUserPay": "Seleziona un utente da pagare",
+      "selectUserPay": "Seleziona un utente per il pagamento",
       "entering": "Accesso al sistema con utente ID:",
       "editing": "Modifica utente ID:",
       "movedToTrash": "Utente ID: {id} spostato nel cestino",

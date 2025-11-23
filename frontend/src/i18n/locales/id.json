@@ -2,7 +2,7 @@
   "welcome": {
     "title": "Selamat Datang",
     "subtitle": "Sistem Akuntansi Universal dan Manajemen Keuangan",
-    "tagline": "Solusi lengkap untuk manajemen akuntansi, penyusunan laporan keuangan, dan kepatuhan pajak untuk perusahaan modern. Kontrol penuh atas buku besar, jurnal entri, dan laporan keuangan dengan teknologi cloud yang aman.",
+    "tagline": "Solusi lengkap untuk manajemen akuntansi, penyusunan laporan keuangan, dan kepatuhan pajak untuk perusahaan modern",
     "signIn": "Masuk",
     "signUp": "Daftar"
   },
@@ -19,7 +19,7 @@
     "labels": {
       "nombre": "Nama",
       "id": "Id",
-      "idTributario": "ID Pajak",
+      "idTributario": "NPWP",
       "pais": "Negara",
       "moneda": "Mata Uang",
       "idioma": "Bahasa"
@@ -38,9 +38,9 @@
       "selectUserEdit": "Silakan pilih pengguna untuk diedit",
       "selectUserDelete": "Silakan pilih pengguna untuk dihapus",
       "selectUserPay": "Silakan pilih pengguna untuk dibayar",
-      "entering": "Masuk ke sistem dengan ID pengguna:",
+      "entering": "Memasuki sistem dengan ID pengguna:",
       "editing": "Mengedit ID pengguna:",
-      "movedToTrash": "ID pengguna: {id} dipindahkan ke tempat sampah",
+      "movedToTrash": "ID Pengguna: {id} dipindahkan ke sampah",
       "processingPayment": "Memproses pembayaran untuk ID pengguna:"
     },
     "tableColumns": {

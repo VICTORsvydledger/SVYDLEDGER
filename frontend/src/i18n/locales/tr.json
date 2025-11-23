@@ -2,35 +2,35 @@
   "welcome": {
     "title": "Ho? Geldiniz",
     "subtitle": "Evrensel Muhasebe Sistemi ve Finansal Y�netim",
-    "tagline": "Bu sistem �al???r: hesap kodlar? olmadan, hesap plan? olmadan, yevmiye kay?tlar? olmadan, mali kapan??lar olmadan, mali d�nemler olmadan. Zamans?z. Ger�ek ki?i ile t�zel ki?i aras?nda ayr?m yapma gere?i yok",
+    "tagline": "Bu sistem �al???r: hesap kodlar? olmadan, hesap plan? olmadan, yevmiye kay?tlar? olmadan",
     "signIn": "Giri? Yap",
     "signUp": "Kay?t Ol"
   },
   "postAuth": {
-    "backButton": "Ho? Geldinize D�n",
+    "backButton": "Ho? Geldiniz'e D�n",
     "loggedInAs": "Giri? yap?ld?:",
-    "adminOnly": "Bu blo?u yaln?zca y�netici d�zenleyebilir",
+    "adminOnly": "Sadece y�netici bu blo?u d�zenleyebilir",
     "headers": {
       "createUser": "Yeni Kullan?c? Olu?tur",
       "userList": "Kullan?c? Listesi",
-      "authorizedEmails": "YETK?LEND?R?LM?? E-POSTALAR",
+      "authorizedEmails": "YETK?L? E-POSTALAR",
       "password": "??FRE"
     },
     "labels": {
-      "nombre": "Ad",
-      "id": "Id",
+      "nombre": "?sim",
+      "id": "Kimlik",
       "idTributario": "Vergi Kimli?i",
       "pais": "�lke",
       "moneda": "Para Birimi",
       "idioma": "Dil"
     },
     "buttons": {
-      "entrar": "G?R",
+      "entrar": "G?R??",
       "editar": "D�ZENLE",
-      "papelera": "��P",
+      "papelera": "��P KUTUSU",
       "pagar": "�DE",
       "saldo": "BAK?YE",
-      "pagarRegistro": "Yeni kullan?c? kayd? i�in �deme yap"
+      "pagarRegistro": "Yeni kullan?c? kayd? i�in �de"
     },
     "messages": {
       "minimumPayment": "Minimum �deme tutar? $10",
@@ -38,14 +38,14 @@
       "selectUserEdit": "L�tfen d�zenlemek i�in bir kullan?c? se�in",
       "selectUserDelete": "L�tfen silmek i�in bir kullan?c? se�in",
       "selectUserPay": "L�tfen �deme yapmak i�in bir kullan?c? se�in",
-      "entering": "Kullan?c? kimli?i ile sisteme giri?:",
-      "editing": "Kullan?c? kimli?i d�zenleme:",
-      "movedToTrash": "Kullan?c? kimli?i: {id} ��pe ta??nd?",
-      "processingPayment": "Kullan?c? kimli?i i�in �deme i?lemi:"
+      "entering": "Kullan?c? kimli?i ile sisteme giri? yap?l?yor:",
+      "editing": "Kullan?c? kimli?i d�zenleniyor:",
+      "movedToTrash": "Kullan?c? kimli?i: {id} ��p kutusuna ta??nd?",
+      "processingPayment": "Kullan?c? kimli?i i�in �deme i?leniyor:"
     },
     "tableColumns": {
-      "nombre": "AD",
-      "id": "ID",
+      "nombre": "?S?M",
+      "id": "K?ML?K",
       "saldo": "$"
     }
   }

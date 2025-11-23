@@ -1,25 +1,25 @@
 ﻿{
   "welcome": {
     "title": "Bienvenue",
-    "subtitle": "Syst�me Comptable Universel",
-    "tagline": "Ce syst�me fonctionne: sans codes, sans plan comptable, sans �critures comptables, sans cl�tures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale",
-    "signIn": "Se Connecter",
+    "subtitle": "Système Comptable Universel",
+    "tagline": "Ce système fonctionne: sans codes, sans plan comptable, sans écritures comptables, sans clôtures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale",
+    "signIn": "Se connecter",
     "signUp": "S'inscrire"
   },
   "postAuth": {
-    "backButton": "Retour � l'accueil",
-    "loggedInAs": "Connect� en tant que:",
+    "backButton": "Retour à l'accueil",
+    "loggedInAs": "Connecté en tant que:",
     "adminOnly": "Seul l'administrateur peut modifier ce bloc",
     "headers": {
-      "createUser": "Cr�er un Nouvel Utilisateur",
-      "userList": "Liste des Utilisateurs",
-      "authorizedEmails": "E-MAILS AUTORIS�S",
+      "createUser": "Créer un nouvel utilisateur",
+      "userList": "Liste des utilisateurs",
+      "authorizedEmails": "E-MAILS AUTORISÉS",
       "password": "MOT DE PASSE"
     },
     "labels": {
       "nombre": "Nom",
       "id": "Id",
-      "idTributario": "ID Fiscal",
+      "idTributario": "Id fiscal",
       "pais": "Pays",
       "moneda": "Devise",
       "idioma": "Langue"
@@ -30,17 +30,17 @@
       "papelera": "CORBEILLE",
       "pagar": "PAYER",
       "saldo": "SOLDE",
-      "pagarRegistro": "Payer l'inscription du nouvel utilisateur"
+      "pagarRegistro": "Payer l'enregistrement du nouvel utilisateur"
     },
     "messages": {
-      "minimumPayment": "Montant minimum de paiement $10",
-      "selectUser": "Veuillez s�lectionner un utilisateur dans la liste",
-      "selectUserEdit": "Veuillez s�lectionner un utilisateur � modifier",
-      "selectUserDelete": "Veuillez s�lectionner un utilisateur � supprimer",
-      "selectUserPay": "Veuillez s�lectionner un utilisateur � payer",
-      "entering": "Entr�e dans le syst�me avec l'utilisateur ID:",
+      "minimumPayment": "Montant minimum à payer $10",
+      "selectUser": "Veuillez sélectionner un utilisateur dans la liste",
+      "selectUserEdit": "Veuillez sélectionner un utilisateur à modifier",
+      "selectUserDelete": "Veuillez sélectionner un utilisateur à supprimer",
+      "selectUserPay": "Veuillez sélectionner un utilisateur pour payer",
+      "entering": "Entrée dans le système avec l'utilisateur ID:",
       "editing": "Modification de l'utilisateur ID:",
-      "movedToTrash": "Utilisateur ID: {id} d�plac� vers la corbeille",
+      "movedToTrash": "Utilisateur ID: {id} déplacé vers la corbeille",
       "processingPayment": "Traitement du paiement pour l'utilisateur ID:"
     },
     "tableColumns": {

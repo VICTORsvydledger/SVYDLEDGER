@@ -2,25 +2,25 @@
   "welcome": {
     "title": "Bienvenido",
     "subtitle": "Sistema de Contabilidad Universal",
-    "tagline": "Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica",
-    "signIn": "Iniciar Sesión",
+    "tagline": "Este sistema trabaja: sin cÃ³digos, sin catÃ¡logos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona fÃ­sica y persona jurÃ­dica",
+    "signIn": "Iniciar SesiÃ³n",
     "signUp": "Registrarse"
   },
   "postAuth": {
     "backButton": "Volver a Bienvenida",
-    "loggedInAs": "Sesión iniciada como:",
+    "loggedInAs": "SesiÃ³n iniciada como:",
     "adminOnly": "Solo el administrador puede editar este bloque",
     "headers": {
       "createUser": "Crear Usuario Nuevo",
       "userList": "Lista de Usuarios",
       "authorizedEmails": "CORREOS AUTORIZADOS",
-      "password": "CONTRASEÑA"
+      "password": "CONTRASEÃ‘A"
     },
     "labels": {
       "nombre": "Nombre",
       "id": "Id",
       "idTributario": "Id Tributario",
-      "pais": "País",
+      "pais": "PaÃ­s",
       "moneda": "Moneda",
       "idioma": "Idioma"
     },
@@ -33,7 +33,7 @@
       "pagarRegistro": "Pagar registro de usuario nuevo"
     },
     "messages": {
-      "minimumPayment": "Monto mínimo a pagar $10",
+      "minimumPayment": "Monto mÃ­nimo a pagar $10",
       "selectUser": "Por favor selecciona un usuario de la lista",
       "selectUserEdit": "Por favor selecciona un usuario para editar",
       "selectUserDelete": "Por favor selecciona un usuario para eliminar",

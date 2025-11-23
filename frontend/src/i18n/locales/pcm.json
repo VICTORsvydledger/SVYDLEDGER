@@ -2,18 +2,18 @@
   "welcome": {
     "title": "Welcome",
     "subtitle": "Universal Accounting System and Money Management",
-    "tagline": "Complete solution for account management, financial statement preparation, and tax compliance for modern businesses. Full control of ledger books, journal entries, and financial statements with secure cloud technology.",
+    "tagline": "Complete solution for account management, financial statement preparation, and tax compliance for modern businesses",
     "signIn": "Sign In",
     "signUp": "Sign Up"
   },
   "postAuth": {
-    "backButton": "Go Back to Welcome",
-    "loggedInAs": "You don log in as:",
-    "adminOnly": "Na only admin fit edit dis block",
+    "backButton": "Back to Welcome",
+    "loggedInAs": "You don login as:",
+    "adminOnly": "Only di administrator fit edit dis block",
     "headers": {
       "createUser": "Create New User",
       "userList": "User List",
-      "authorizedEmails": "AUTHORIZED EMAILS",
+      "authorizedEmails": "EMAILS WE GET POWER",
       "password": "PASSWORD"
     },
     "labels": {
@@ -34,14 +34,14 @@
     },
     "messages": {
       "minimumPayment": "Minimum payment amount $10",
-      "selectUser": "Please choose one user from di list",
-      "selectUserEdit": "Please choose one user to edit",
-      "selectUserDelete": "Please choose one user to delete",
-      "selectUserPay": "Please choose one user to pay",
-      "entering": "Dey enter system with user ID:",
-      "editing": "Dey edit user ID:",
+      "selectUser": "Abeg select user from di list",
+      "selectUserEdit": "Abeg select user make you edit",
+      "selectUserDelete": "Abeg select user make you delete",
+      "selectUserPay": "Abeg select user make you pay",
+      "entering": "You dey enter system with user ID:",
+      "editing": "You dey edit user ID:",
       "movedToTrash": "User ID: {id} don move to trash",
-      "processingPayment": "Dey process payment for user ID:"
+      "processingPayment": "We dey process payment for user ID:"
     },
     "tableColumns": {
       "nombre": "NAME",

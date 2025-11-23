@@ -2,7 +2,7 @@
   "welcome": {
     "title": "Maligayang Pagdating",
     "subtitle": "Pandaigdigang Sistema ng Accounting at Pamamahala ng Pananalapi",
-    "tagline": "Ang sistemang ito ay gumagana: walang mga account codes, walang chart of accounts, walang mga journal entries, walang mga fiscal closing, walang mga fiscal periods. Walang panahon. Hindi kailangang magtangi sa pagitan ng natural person at juridical person",
+    "tagline": "Ang sistemang ito ay gumagana: walang mga account codes, walang chart of accounts, walang mga journal entries, walang mga fiscal closing, walang mga fiscal periods",
     "signIn": "Mag-sign In",
     "signUp": "Mag-sign Up"
   },
@@ -12,7 +12,7 @@
     "adminOnly": "Ang administrator lamang ang maaaring mag-edit ng block na ito",
     "headers": {
       "createUser": "Lumikha ng Bagong User",
-      "userList": "Listahan ng User",
+      "userList": "Listahan ng mga User",
       "authorizedEmails": "MGA AWTORISADONG EMAIL",
       "password": "PASSWORD"
     },
@@ -33,13 +33,13 @@
       "pagarRegistro": "Magbayad para sa bagong user registration"
     },
     "messages": {
-      "minimumPayment": "Minimum na halaga ng bayad $10",
-      "selectUser": "Pakipili ang isang user mula sa listahan",
-      "selectUserEdit": "Pakipili ang isang user na ie-edit",
-      "selectUserDelete": "Pakipili ang isang user na tatanggalin",
-      "selectUserPay": "Pakipili ang isang user na babayaran",
+      "minimumPayment": "Minimum na bayad $10",
+      "selectUser": "Mangyaring pumili ng user mula sa listahan",
+      "selectUserEdit": "Mangyaring pumili ng user para i-edit",
+      "selectUserDelete": "Mangyaring pumili ng user para tanggalin",
+      "selectUserPay": "Mangyaring pumili ng user para magbayad",
       "entering": "Pumapasok sa system gamit ang user ID:",
-      "editing": "Ine-edit ang user ID:",
+      "editing": "Ini-edit ang user ID:",
       "movedToTrash": "User ID: {id} ay inilipat sa basurahan",
       "processingPayment": "Pinoproseso ang bayad para sa user ID:"
     },

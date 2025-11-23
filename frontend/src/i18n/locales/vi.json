@@ -2,18 +2,18 @@
   "welcome": {
     "title": "Ch�o m?ng",
     "subtitle": "Gi?i ph�p to�n di?n cho k? to�n ?a qu?c gia",
-    "tagline": "N?n t?ng m?nh m? ?? qu?n l� k? to�n c?a b?n v?i h? tr? nhi?u ng�n ng?, ??n v? ti?n t? v� ti�u chu?n b�o c�o qu?c t?.",
+    "tagline": "N?n t?ng m?nh m? ?? qu?n l� k? to�n c?a b?n v?i h? tr? nhi?u ng�n ng?",
     "signIn": "??ng nh?p",
     "signUp": "??ng k�"
   },
   "postAuth": {
-    "backButton": "Quay l?i trang Ch�o m?ng",
-    "loggedInAs": "?� ??ng nh?p l�:",
+    "backButton": "Quay l?i Ch�o m?ng",
+    "loggedInAs": "?� ??ng nh?p v?i:",
     "adminOnly": "Ch? qu?n tr? vi�n m?i c� th? ch?nh s?a kh?i n�y",
     "headers": {
-      "createUser": "T?o Ng??i d�ng M?i",
-      "userList": "Danh s�ch Ng??i d�ng",
-      "authorizedEmails": "EMAIL ?� ?Y QUY?N",
+      "createUser": "T?o ng??i d�ng m?i",
+      "userList": "Danh s�ch ng??i d�ng",
+      "authorizedEmails": "EMAIL ???C ?Y QUY?N",
       "password": "M?T KH?U"
     },
     "labels": {
@@ -26,7 +26,7 @@
     },
     "buttons": {
       "entrar": "V�O",
-      "editar": "CH?NH S?A",
+      "editar": "S?A",
       "papelera": "TH�NG R�C",
       "pagar": "THANH TO�N",
       "saldo": "S? D?",
@@ -34,10 +34,10 @@
     },
     "messages": {
       "minimumPayment": "S? ti?n thanh to�n t?i thi?u $10",
-      "selectUser": "Vui l�ng ch?n ng??i d�ng t? danh s�ch",
-      "selectUserEdit": "Vui l�ng ch?n ng??i d�ng ?? ch?nh s?a",
-      "selectUserDelete": "Vui l�ng ch?n ng??i d�ng ?? x�a",
-      "selectUserPay": "Vui l�ng ch?n ng??i d�ng ?? thanh to�n",
+      "selectUser": "Vui l�ng ch?n m?t ng??i d�ng t? danh s�ch",
+      "selectUserEdit": "Vui l�ng ch?n m?t ng??i d�ng ?? ch?nh s?a",
+      "selectUserDelete": "Vui l�ng ch?n m?t ng??i d�ng ?? x�a",
+      "selectUserPay": "Vui l�ng ch?n m?t ng??i d�ng ?? thanh to�n",
       "entering": "?ang v�o h? th?ng v?i ID ng??i d�ng:",
       "editing": "?ang ch?nh s?a ID ng??i d�ng:",
       "movedToTrash": "ID ng??i d�ng: {id} ?� ???c chuy?n v�o th�ng r�c",
