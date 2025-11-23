@@ -13,6 +13,7 @@ import App from './App'
 import { store } from './store'
 import './styles/main.scss'
 import ErrorBoundary from '@/components/common/ErrorBoundary'
+import './i18n/i18n' // Inicializar i18n
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

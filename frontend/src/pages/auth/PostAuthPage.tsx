@@ -101,7 +101,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       return
     }
     message.success(`${t('postAuth.messages.entering')} ${selectedUser}`)
-    // TODO: Implementar lógica de entrada al sistema
+    // TODO: Implementar l�gica de entrada al sistema
   }
 
   const handleEditar = () => {
@@ -110,7 +110,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       return
     }
     message.info(`${t('postAuth.messages.editing')} ${selectedUser}`)
-    // TODO: Implementar lógica de edición
+    // TODO: Implementar l�gica de edici�n
   }
 
   const handlePapelera = () => {
@@ -120,7 +120,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
     }
     message.warning(t('postAuth.messages.movedToTrash', { id: String(selectedUser) }))
     setSelectedUser(null)
-    // TODO: Implementar lógica de eliminación
+    // TODO: Implementar l�gica de eliminaci�n
   }
 
   const handlePagar = () => {
@@ -129,10 +129,10 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       return
     }
     message.success(`${t('postAuth.messages.processingPayment')} ${selectedUser}`)
-    // TODO: Implementar lógica de pago
+    // TODO: Implementar l�gica de pago
   }
 
-  // Handler para selección de fila en la tabla
+  // Handler para selecci�n de fila en la tabla
   const rowSelection = {
     type: 'radio' as const,
     onChange: (selectedRowKeys: React.Key[]) => {
@@ -148,7 +148,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       
       {/* Contenido principal */}
       <div className="post-auth-content">
-        {/* Botón Back en esquina superior izquierda */}
+        {/* Bot�n Back en esquina superior izquierda */}
         <div className="back-button-container">
           <Button
             type="default"
