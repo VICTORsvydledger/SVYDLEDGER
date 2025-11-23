@@ -382,13 +382,13 @@
   .users-table {
     .ant-table {
       background: transparent;
-      font-size: 0.75rem; // Reducir tama?o de fuente de la tabla
+      font-size: 0.75rem; // Reducir tamaño de fuente de la tabla
     }
     
-    // AGREGAR SCROLL VERTICAL CON ALTURA FIJA
+    // AGREGAR SCROLL VERTICAL CON ALTURA FIJA PARA 13 FILAS VISIBLES
     .ant-table-body {
       overflow-y: auto !important;
-      max-height: 300px !important; // Altura fija para mostrar ~8-10 filas y permitir scroll
+      max-height: 390px !important; // Altura ajustada para mostrar exactamente 13 filas (30px por fila * 13 = 390px)
       
       // Estilos para la barra de desplazamiento
       &::-webkit-scrollbar {
