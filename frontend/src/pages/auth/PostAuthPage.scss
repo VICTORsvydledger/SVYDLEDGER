@@ -473,15 +473,16 @@
       padding: 12px 20px;
       font-weight: 600;
       font-size: 0.9rem;
-      color: white; // Cambiar de #000 a white
+      color: white;
       text-align: center;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // Añadir sombra para mejor legibilidad
       
       &.correos-header {
-        background: rgba(255, 255, 0, 0.7); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
       }
       
       &.password-header {
-        background: rgba(255, 255, 0, 0.7); // Hacer semi-transparente
+        background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
       }
     }
 
@@ -490,10 +491,21 @@
     }
 
     .ant-table-tbody > tr > td {
-      background: rgba(255, 255, 255, 0.5); // Hacer semi-transparente en lugar de white
-      border: 1px solid white; // Cambiado de #000 a white
+      background: transparent; // Cambiado de rgba(255, 255, 255, 0.5) a transparent
+      border: 1px solid white;
       padding: 8px 12px;
-      color: white; // Añadir color blanco al texto de las celdas
+      color: white;
+      
+      // Hacer los inputs dentro de las celdas transparentes también
+      .ant-input {
+        background: transparent !important;
+        border: 1px solid white !important;
+        color: white !important;
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
     }
   }
 }
