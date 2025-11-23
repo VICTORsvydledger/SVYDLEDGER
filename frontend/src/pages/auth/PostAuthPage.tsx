@@ -1,7 +1,8 @@
-import { Button, Input, Table, message } from 'antd'
+import { Button, Input, Table, message, Select } from 'antd'
 import { ArrowLeftOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import countries from '@/data/countries'
 import './PostAuthPage.scss'
 
 interface PostAuthPageProps {
@@ -26,7 +27,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
     nombre: '',
     id: '',
     idTributario: '',
-    pais: '',
+    pais: 'US', // United States por defecto
     moneda: '',
     idioma: ''
   })
@@ -202,9 +203,17 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
                 </div>
                 <div className="form-field">
                   <label>{t('postAuth.labels.pais')}</label>
-                  <Input
+                  <Select
                     value={newUser.pais}
-                    onChange={(e) => setNewUser({ ...newUser, pais: e.target.value })}
+                    onChange={(value) => setNewUser({ ...newUser, pais: value })}
+                    showSearch
+                    optionFilterProp="label"
+                    placeholder="Select country"
+                    style={{ width: '100%' }}
+                    options={countries.map(country => ({
+                      value: country.code,
+                      label: country.name
+                    }))}
                   />
                 </div>
                 <div className="form-field">
