@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Bloques desplazados 230px derecha
+// Última actualización: 2025-01-15 - Combo de países transparente
 // ===============================================
 
 .post-auth-page {
@@ -81,7 +81,7 @@
     font-size: 0.875rem;
     height: 42px;
     padding: 0 16px;
-    border-width: 3px; // Borde un poco más delgado en móvil
+    border-width: 3px;
   }
 }
 
@@ -95,7 +95,7 @@
 
 .logo {
   font-family: 'Vladimir Script', cursive;
-  font-size: 72px; // Reducido de 8rem (128px) a 72px para igualar WelcomePage
+  font-size: 72px;
   font-weight: 400;
   color: white;
   margin: 0;
@@ -104,11 +104,11 @@
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   
   @media (max-width: 768px) {
-    font-size: 60px; // Ajustado proporcionalmente para tablet
+    font-size: 60px;
   }
   
   @media (max-width: 576px) {
-    font-size: 48px; // Ajustado proporcionalmente para móvil
+    font-size: 48px;
   }
 }
 
@@ -140,27 +140,26 @@
   gap: 2rem;
   padding: 0 4rem 4rem 4rem;
   max-width: 1600px;
-  margin: 0 auto 0 calc(50% - 800px + 230px); // Desplazar 230px a la derecha del centro (50px + 100px + 80px adicionales)
+  margin: 0 auto 0 calc(50% - 800px + 230px);
   
   @media (max-width: 1200px) {
     padding: 0 2rem 2rem 2rem;
-    margin: 0 auto; // Centrado en pantallas pequeñas
+    margin: 0 auto;
   }
 }
 
 // PRIMERA FILA: Crear Usuario Nuevo (50%) + Lista de Usuarios (50%)
 .top-row {
   display: flex;
-  gap: 64px; // Separación exacta de 64px
+  gap: 64px;
   
   @media (max-width: 1200px) {
     flex-direction: column;
     gap: 2rem;
   }
   
-  // El bloque "Crear Usuario Nuevo" aumentado en 70px adicionales (total +120px del original)
   .create-user-block {
-    flex: 0 0 calc(35% - 32px + 120px); // Ancho base + 50px anterior + 70px nuevos = +120px total
+    flex: 0 0 calc(35% - 32px + 120px);
     min-width: 0;
     
     @media (max-width: 1200px) {
@@ -168,9 +167,8 @@
     }
   }
   
-  // El bloque "Lista de Usuarios" aumentado en 200px
   .users-list-block {
-    flex: 0 0 calc(65% - 32px + 200px); // Ancho restante + 200px adicionales
+    flex: 0 0 calc(65% - 32px + 200px);
     min-width: 0;
     
     @media (max-width: 1200px) {
@@ -179,13 +177,13 @@
   }
 }
 
-// SEGUNDA FILA: Correos/Password (reducido al 49% del ancho total - 70% del 70% original)
+// SEGUNDA FILA: Correos/Password
 .bottom-row {
   display: flex;
-  flex-direction: column; // Cambiar a columna para incluir el mensaje
-  align-items: center; // Centrar los elementos
-  justify-content: center; // Centrar el bloque
-  margin-top: 10px; // Cambiado de 30px a 10px (mover 20px hacia arriba)
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
   
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -194,30 +192,30 @@
   .admin-only-message {
     font-size: 1.25rem;
     font-weight: 400;
-    color: white; // Cambiar de #000 a white
+    color: white;
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // Añadir sombra negra para mejor legibilidad
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
   
   .block {
-    flex: 0 0 49%; // Reducido de 70% a 49% (70% del 70% original)
+    flex: 0 0 49%;
     min-width: 0;
     
     @media (max-width: 1200px) {
-      flex: 1; // En pantallas pequeñas mantener responsive
+      flex: 1;
     }
   }
 }
 
 // Estilos comunes de bloques
 .block {
-  background: transparent; // Cambiado de rgba(255, 255, 255, 0.95) a transparent
+  background: transparent;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border: 4px solid white; // Agregar borde blanco de 4px
+  border: 4px solid white;
 }
 
 // ===============================================
@@ -226,69 +224,142 @@
 
 .create-user-block {
   .block-header {
-    background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
-    padding: 6px 12px; // Reducido de 12px 20px
+    background: transparent;
+    padding: 6px 12px;
     font-weight: 600;
-    font-size: 0.85rem; // Reducido de 1rem
-    color: white; // Cambiar de #000 a white
+    font-size: 0.85rem;
+    color: white;
   }
 
   .form-fields {
-    padding: 10px 12px; // Reducido de 20px
+    padding: 10px 12px;
     display: flex;
     flex-direction: column;
-    gap: 6px; // Reducido de 12px
+    gap: 6px;
   }
 
   .form-field {
     display: flex;
     flex-direction: column;
-    gap: 2px; // Reducido de 4px
+    gap: 2px;
 
     label {
-      font-size: 0.75rem; // Reducido de 0.9rem
-      color: white; // Cambiar de #000 a white
+      font-size: 0.75rem;
+      color: white;
       font-weight: 500;
-      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); // Cambiar sombra blanca a negra para contraste
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     }
 
     .ant-input {
-      background: transparent; // Cambiado de rgba(212, 241, 212, 0.7) a transparent
-      border: 2px solid white; // Cambiado de 1px solid #999 a 2px solid white
-      padding: 4px 8px; // Reducido de 8px 12px
-      font-size: 0.75rem; // Reducido de 0.9rem
-      height: 28px; // Altura específica reducida
-      color: white; // Añadir color blanco al texto del input
+      background: transparent;
+      border: 2px solid white;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      height: 28px;
+      color: white;
       
       &::placeholder {
-        color: rgba(255, 255, 255, 0.6); // Placeholder en blanco semi-transparente
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    
+    // ===============================================
+    // ESTILOS PARA EL SELECT (COMBO DE PAÍSES) - TRANSPARENTE
+    // ===============================================
+    .ant-select {
+      .ant-select-selector {
+        background: transparent !important;
+        border: 2px solid white !important;
+        padding: 0 8px !important;
+        height: 28px !important;
+        color: white !important;
+        
+        .ant-select-selection-search-input {
+          height: 24px !important;
+          color: white !important;
+        }
+        
+        .ant-select-selection-placeholder {
+          color: rgba(255, 255, 255, 0.6) !important;
+        }
+        
+        .ant-select-selection-item {
+          color: white !important;
+          line-height: 24px !important;
+        }
+      }
+      
+      // Flecha del dropdown
+      .ant-select-arrow {
+        color: white !important;
+      }
+      
+      // Estilo hover
+      &:hover .ant-select-selector {
+        border-color: white !important;
+      }
+      
+      // Estilo focus
+      &.ant-select-focused .ant-select-selector {
+        border-color: white !important;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
       }
     }
   }
 
   .pay-button {
-    margin: 6px 12px; // Reducido de 10px 20px
-    background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-    border: 2px solid white; // Cambiado de 2px solid #000 a 2px solid white
-    color: white; // Cambiar de #000 a white
+    margin: 6px 12px;
+    background: rgba(0, 255, 0, 0.8);
+    border: 2px solid white;
+    color: white;
     font-weight: 600;
-    height: 32px; // Reducido de 40px
-    font-size: 0.75rem; // Reducido de 0.9rem
+    height: 32px;
+    font-size: 0.75rem;
     
     &:hover {
-      background: rgba(0, 221, 0, 0.9) !important; // Hacer semi-transparente pero visible
-      border-color: white !important; // Cambiado de #000 a white
-      color: white !important; // Cambiar de #000 a white
+      background: rgba(0, 221, 0, 0.9) !important;
+      border-color: white !important;
+      color: white !important;
     }
   }
 
   .minimum-payment {
-    background: rgba(0, 255, 0, 0.8); // Cambiado de rgba(255, 255, 204, 0.7) a verde vibrante igual que el botón
-    padding: 6px 12px; // Reducido de 12px 20px
+    background: rgba(0, 255, 0, 0.8);
+    padding: 6px 12px;
     text-align: center;
-    font-size: 0.75rem; // Reducido de 0.9rem
-    color: white; // Cambiar de #000 a white
+    font-size: 0.75rem;
+    color: white;
     font-weight: 500;
+  }
+}
+
+// ===============================================
+// DROPDOWN DEL SELECT (MENÚ DESPLEGABLE) - TRANSPARENTE
+// ===============================================
+:global {
+  .ant-select-dropdown {
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border: 2px solid white !important;
+    border-radius: 4px;
+    
+    .ant-select-item {
+      color: white !important;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+      }
+      
+      &.ant-select-item-option-selected {
+        background: rgba(0, 255, 0, 0.3) !important;
+        font-weight: 600;
+      }
+    }
+    
+    // Input de búsqueda dentro del dropdown
+    .ant-select-selection-search-input {
+      color: white !important;
+    }
   }
 }
 
@@ -298,7 +369,7 @@
 
 .users-list-block {
   .block-header-with-buttons {
-    background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
+    background: transparent;
     padding: 6px 12px;
     display: flex;
     justify-content: space-between;
@@ -307,7 +378,7 @@
     .header-title {
       font-weight: 600;
       font-size: 0.85rem;
-      color: white; // Cambiar de #000 a white
+      color: white;
     }
 
     .header-buttons {
@@ -319,8 +390,8 @@
         padding: 0 10px;
         font-weight: 600;
         font-size: 0.7rem;
-        border: 2px solid white; // Cambiado de #000 a white
-        min-width: 95px; // Ancho fijo igual para todos los botones (ancho del bot?n PAPELERA)
+        border: 2px solid white;
+        min-width: 95px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -328,52 +399,52 @@
       }
 
       .entrar-btn {
-        background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-        color: white; // Cambiar de #000 a white
+        background: rgba(0, 255, 0, 0.8);
+        color: white;
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: white !important; // Cambiar de #000 a white
+          color: white !important;
         }
       }
 
       .editar-btn {
-        background: rgba(0, 255, 0, 0.8); // Cambiado de dorado a verde vibrante
-        color: white; // Cambiar de #000 a white
+        background: rgba(0, 255, 0, 0.8);
+        color: white;
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: white !important; // Cambiar de #000 a white
+          color: white !important;
         }
       }
 
       .papelera-btn {
-        background: rgba(0, 255, 0, 0.8); // Cambiado de rojo a verde vibrante
-        color: white; // Cambiar de #000 a white
+        background: rgba(0, 255, 0, 0.8);
+        color: white;
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: white !important; // Cambiar de #000 a white
+          color: white !important;
         }
       }
 
       .pagar-btn {
-        background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-        color: white; // Cambiar de #000 a white
+        background: rgba(0, 255, 0, 0.8);
+        color: white;
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: white !important; // Cambiar de #000 a white
+          color: white !important;
         }
       }
 
       .saldo-btn {
-        background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-        color: white; // Cambiar de #000 a white
+        background: rgba(0, 255, 0, 0.8);
+        color: white;
         
         &:hover {
           background: rgba(0, 221, 0, 0.9) !important;
-          color: white !important; // Cambiar de #000 a white
+          color: white !important;
         }
       }
     }
@@ -382,15 +453,13 @@
   .users-table {
     .ant-table {
       background: transparent;
-      font-size: 0.75rem; // Reducir tamaño de fuente de la tabla
+      font-size: 0.75rem;
     }
     
-    // AGREGAR SCROLL VERTICAL CON ALTURA FIJA PARA 13 FILAS VISIBLES
     .ant-table-body {
       overflow-y: auto !important;
-      max-height: 390px !important; // Altura ajustada para mostrar exactamente 13 filas (30px por fila * 13 = 390px)
+      max-height: 390px !important;
       
-      // Estilos para la barra de desplazamiento
       &::-webkit-scrollbar {
         width: 8px;
       }
@@ -411,70 +480,68 @@
     }
 
     .ant-table-thead > tr > th {
-      background: transparent; // Cambiado de #FFFF00 a transparent
-      color: white; // Cambiar de #000 a white
+      background: transparent;
+      color: white;
       font-weight: 600;
-      border-bottom: 2px solid white; // Cambiado de #000 a white
-      border-left: none; // Quitar bordes verticales
-      border-right: none; // Quitar bordes verticales
+      border-bottom: 2px solid white;
+      border-left: none;
+      border-right: none;
       text-align: center;
-      padding: 4px 8px; // Reducido de padding por defecto
-      font-size: 0.75rem; // Reducido
+      padding: 4px 8px;
+      font-size: 0.75rem;
       
       &.nombre-column {
-        background: transparent; // Cambiado de rgba(212, 241, 212, 0.7) a transparent
+        background: transparent;
       }
       
       &.id-column {
-        background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
+        background: transparent;
       }
       
       &.saldo-column {
-        background: transparent; // Cambiado de rgba(232, 232, 232, 0.7) a transparent
+        background: transparent;
       }
     }
 
     .ant-table-tbody > tr > td {
-      border-bottom: 1px solid white; // Cambiado de #000 a white
-      border-left: none; // Quitar bordes verticales
-      border-right: none; // Quitar bordes verticales
-      background: transparent; // Cambiado de rgba(255, 255, 255, 0.5) a transparent
-      padding: 4px 8px; // Reducido de padding por defecto
-      font-size: 0.7rem; // Reducido
-      color: white; // Añadir color blanco al texto de las celdas
+      border-bottom: 1px solid white;
+      border-left: none;
+      border-right: none;
+      background: transparent;
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      color: white;
 
       &:first-child {
-        background: transparent; // Cambiado de rgba(212, 241, 212, 0.5) a transparent
+        background: transparent;
       }
       
       &:nth-child(2) {
-        background: transparent; // Cambiado de rgba(255, 255, 0, 0.5) a transparent
+        background: transparent;
       }
       
       &:last-child {
-        background: transparent; // Cambiado de rgba(232, 232, 232, 0.5) a transparent
+        background: transparent;
       }
     }
     
-    // Estilo para filas seleccionadas
     .ant-table-tbody > tr.ant-table-row-selected > td {
-      background-color: rgba(0, 255, 0, 0.8) !important; // Cambiado de rgba(0, 255, 0, 0.1) a rgba(0, 255, 0, 0.8)
-      color: white; // Mantener texto blanco en filas seleccionadas
+      background-color: rgba(0, 255, 0, 0.8) !important;
+      color: white;
       
       &:first-child {
-        background: rgba(0, 255, 0, 0.8) !important; // Cambiado de rgba(212, 241, 212, 0.8) a verde vibrante
+        background: rgba(0, 255, 0, 0.8) !important;
       }
       
       &:nth-child(2) {
-        background: rgba(0, 255, 0, 0.8) !important; // Cambiado de rgba(255, 255, 0, 0.3) a verde vibrante
+        background: rgba(0, 255, 0, 0.8) !important;
       }
       
       &:last-child {
-        background: rgba(0, 255, 0, 0.8) !important; // Cambiado de rgba(232, 232, 232, 0.8) a verde vibrante
+        background: rgba(0, 255, 0, 0.8) !important;
       }
     }
 
-    // Estilo para la columna de selección
     .ant-table-selection-column {
       width: 40px;
       padding-left: 12px !important;
@@ -500,14 +567,14 @@
       font-size: 0.9rem;
       color: white;
       text-align: center;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // Añadir sombra para mejor legibilidad
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
       
       &.correos-header {
-        background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
+        background: transparent;
       }
       
       &.password-header {
-        background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
+        background: transparent;
       }
     }
 
@@ -516,12 +583,11 @@
     }
 
     .ant-table-tbody > tr > td {
-      background: transparent; // Cambiado de rgba(255, 255, 255, 0.5) a transparent
+      background: transparent;
       border: 1px solid white;
       padding: 8px 12px;
       color: white;
       
-      // Hacer los inputs dentro de las celdas transparentes también
       .ant-input {
         background: transparent !important;
         border: 1px solid white !important;
