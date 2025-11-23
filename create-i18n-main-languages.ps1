@@ -1,26 +1,26 @@
-# Script para crear archivos i18n JSON con codificación UTF-8
+# Script para crear archivos i18n JSON con codificaciï¿½n UTF-8
 # SVYD Ledger - PostAuth i18n Implementation
 
 $localesPath = "frontend/src/i18n/locales"
 
-# Francés
+# Francï¿½s
 $frContent = @'
 {
   "welcome": {
     "title": "Bienvenue",
-    "subtitle": "Système Comptable Universel",
-    "tagline": "Ce système fonctionne: sans codes, sans plan comptable, sans écritures comptables, sans clôtures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale",
+    "subtitle": "Systï¿½me Comptable Universel",
+    "tagline": "Ce systï¿½me fonctionne: sans codes, sans plan comptable, sans ï¿½critures comptables, sans clï¿½tures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale",
     "signIn": "Se Connecter",
     "signUp": "S'inscrire"
   },
   "postAuth": {
-    "backButton": "Retour à l'accueil",
-    "loggedInAs": "Connecté en tant que:",
+    "backButton": "Retour ï¿½ l'accueil",
+    "loggedInAs": "Connectï¿½ en tant que:",
     "adminOnly": "Seul l'administrateur peut modifier ce bloc",
     "headers": {
-      "createUser": "Créer un Nouvel Utilisateur",
+      "createUser": "Crï¿½er un Nouvel Utilisateur",
       "userList": "Liste des Utilisateurs",
-      "authorizedEmails": "E-MAILS AUTORISÉS",
+      "authorizedEmails": "E-MAILS AUTORISï¿½S",
       "password": "MOT DE PASSE"
     },
     "labels": {
@@ -41,13 +41,13 @@ $frContent = @'
     },
     "messages": {
       "minimumPayment": "Montant minimum de paiement $10",
-      "selectUser": "Veuillez sélectionner un utilisateur dans la liste",
-      "selectUserEdit": "Veuillez sélectionner un utilisateur à modifier",
-      "selectUserDelete": "Veuillez sélectionner un utilisateur à supprimer",
-      "selectUserPay": "Veuillez sélectionner un utilisateur à payer",
-      "entering": "Entrée dans le système avec l'utilisateur ID:",
+      "selectUser": "Veuillez sï¿½lectionner un utilisateur dans la liste",
+      "selectUserEdit": "Veuillez sï¿½lectionner un utilisateur ï¿½ modifier",
+      "selectUserDelete": "Veuillez sï¿½lectionner un utilisateur ï¿½ supprimer",
+      "selectUserPay": "Veuillez sï¿½lectionner un utilisateur ï¿½ payer",
+      "entering": "Entrï¿½e dans le systï¿½me avec l'utilisateur ID:",
       "editing": "Modification de l'utilisateur ID:",
-      "movedToTrash": "Utilisateur ID: {id} déplacé vers la corbeille",
+      "movedToTrash": "Utilisateur ID: {id} dï¿½placï¿½ vers la corbeille",
       "processingPayment": "Traitement du paiement pour l'utilisateur ID:"
     },
     "tableColumns": {
@@ -72,7 +72,7 @@ $itContent = @'
   "postAuth": {
     "backButton": "Torna al Benvenuto",
     "loggedInAs": "Connesso come:",
-    "adminOnly": "Solo l'amministratore può modificare questo blocco",
+    "adminOnly": "Solo l'amministratore puï¿½ modificare questo blocco",
     "headers": {
       "createUser": "Crea Nuovo Utente",
       "userList": "Elenco Utenti",
@@ -115,18 +115,18 @@ $itContent = @'
 }
 '@
 
-# Alemán
+# Alemï¿½n
 $deContent = @'
 {
   "welcome": {
     "title": "Willkommen",
     "subtitle": "Universelles Buchhaltungssystem",
-    "tagline": "Dieses System funktioniert: ohne Kontonummern, ohne Kontenplan, ohne Buchungssätze, ohne Abschlüsse, ohne Geschäftsjahre. Zeitlos. Keine Unterscheidung zwischen natürlicher Person und juristischer Person erforderlich",
+    "tagline": "Dieses System funktioniert: ohne Kontonummern, ohne Kontenplan, ohne Buchungssï¿½tze, ohne Abschlï¿½sse, ohne Geschï¿½ftsjahre. Zeitlos. Keine Unterscheidung zwischen natï¿½rlicher Person und juristischer Person erforderlich",
     "signIn": "Anmelden",
     "signUp": "Registrieren"
   },
   "postAuth": {
-    "backButton": "Zurück zur Willkommensseite",
+    "backButton": "Zurï¿½ck zur Willkommensseite",
     "loggedInAs": "Angemeldet als:",
     "adminOnly": "Nur der Administrator kann diesen Block bearbeiten",
     "headers": {
@@ -140,7 +140,7 @@ $deContent = @'
       "id": "Id",
       "idTributario": "Steuernummer",
       "pais": "Land",
-      "moneda": "Währung",
+      "moneda": "Wï¿½hrung",
       "idioma": "Sprache"
     },
     "buttons": {
@@ -153,14 +153,14 @@ $deContent = @'
     },
     "messages": {
       "minimumPayment": "Mindestbetrag $10",
-      "selectUser": "Bitte wählen Sie einen Benutzer aus der Liste",
-      "selectUserEdit": "Bitte wählen Sie einen Benutzer zum Bearbeiten",
-      "selectUserDelete": "Bitte wählen Sie einen Benutzer zum Löschen",
-      "selectUserPay": "Bitte wählen Sie einen Benutzer zum Bezahlen",
+      "selectUser": "Bitte wï¿½hlen Sie einen Benutzer aus der Liste",
+      "selectUserEdit": "Bitte wï¿½hlen Sie einen Benutzer zum Bearbeiten",
+      "selectUserDelete": "Bitte wï¿½hlen Sie einen Benutzer zum Lï¿½schen",
+      "selectUserPay": "Bitte wï¿½hlen Sie einen Benutzer zum Bezahlen",
       "entering": "Systemzugriff mit Benutzer ID:",
       "editing": "Bearbeitung Benutzer ID:",
       "movedToTrash": "Benutzer ID: {id} in den Papierkorb verschoben",
-      "processingPayment": "Zahlungsabwicklung für Benutzer ID:"
+      "processingPayment": "Zahlungsabwicklung fï¿½r Benutzer ID:"
     },
     "tableColumns": {
       "nombre": "NAME",
@@ -171,7 +171,7 @@ $deContent = @'
 }
 '@
 
-# Crear archivos con codificación UTF-8
+# Crear archivos con codificaciï¿½n UTF-8
 [System.IO.File]::WriteAllText("$localesPath/fr.json", $frContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/it.json", $itContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/de.json", $deContent, [System.Text.Encoding]::UTF8)

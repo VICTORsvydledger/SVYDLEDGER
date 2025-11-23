@@ -1,4 +1,4 @@
-# Script para crear los últimos 4 idiomas faltantes
+# Script para crear los ï¿½ltimos 4 idiomas faltantes
 # SVYD Ledger - Completing 27 languages
 
 $localesPath = "frontend/src/i18n/locales"
@@ -227,7 +227,7 @@ $swContent = @'
 }
 '@
 
-# Crear archivos con codificación UTF-8
+# Crear archivos con codificaciï¿½n UTF-8
 [System.IO.File]::WriteAllText("$localesPath/pa.json", $paContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/fa.json", $faContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/ru.json", $ruContent, [System.Text.Encoding]::UTF8)

@@ -3,7 +3,7 @@
 
 $localesPath = "frontend/src/i18n/locales"
 
-# Japonés
+# Japonï¿½s
 $jaContent = @'
 {
   "welcome": {
@@ -59,7 +59,7 @@ $jaContent = @'
 }
 '@
 
-# Árabe (Estándar)
+# ï¿½rabe (Estï¿½ndar)
 $arContent = @'
 {
   "welcome": {
@@ -115,7 +115,7 @@ $arContent = @'
 }
 '@
 
-# Chino Mandarín
+# Chino Mandarï¿½n
 $zhContent = @'
 {
   "welcome": {
@@ -227,7 +227,7 @@ $hiContent = @'
 }
 '@
 
-# Crear archivos con codificación UTF-8
+# Crear archivos con codificaciï¿½n UTF-8
 [System.IO.File]::WriteAllText("$localesPath/ja.json", $jaContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/ar.json", $arContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/zh.json", $zhContent, [System.Text.Encoding]::UTF8)

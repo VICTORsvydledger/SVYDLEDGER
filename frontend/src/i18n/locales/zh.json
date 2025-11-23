@@ -1,50 +1,50 @@
 ﻿{
   "welcome": {
-    "title": "欢迎",
-    "subtitle": "通用会计核算与财务管理系统",
-    "tagline": "现代企业的全方位会计管理、财务报表编制和税务合规解决方案",
-    "signIn": "登录",
-    "signUp": "注册"
+    "title": "??",
+    "subtitle": "?????????????",
+    "tagline": "????????????????????????????",
+    "signIn": "??",
+    "signUp": "??"
   },
   "postAuth": {
-    "backButton": "返回欢迎页",
-    "loggedInAs": "已登录:",
-    "adminOnly": "只有管理员可以编辑此块",
+    "backButton": "?????",
+    "loggedInAs": "???:",
+    "adminOnly": "???????????",
     "headers": {
-      "createUser": "创建新用户",
-      "userList": "用户列表",
-      "authorizedEmails": "授权邮箱",
-      "password": "密码"
+      "createUser": "?????",
+      "userList": "????",
+      "authorizedEmails": "????",
+      "password": "??"
     },
     "labels": {
-      "nombre": "姓名",
+      "nombre": "??",
       "id": "ID",
-      "idTributario": "税号",
-      "pais": "国家",
-      "moneda": "货币",
-      "idioma": "语言"
+      "idTributario": "??",
+      "pais": "??",
+      "moneda": "??",
+      "idioma": "??"
     },
     "buttons": {
-      "entrar": "进入",
-      "editar": "编辑",
-      "papelera": "回收站",
-      "pagar": "支付",
-      "saldo": "余额",
-      "pagarRegistro": "支付新用户注册费"
+      "entrar": "??",
+      "editar": "??",
+      "papelera": "???",
+      "pagar": "??",
+      "saldo": "??",
+      "pagarRegistro": "????????"
     },
     "messages": {
-      "minimumPayment": "最低支付金额 $10",
-      "selectUser": "请从列表中选择一个用户",
-      "selectUserEdit": "请选择要编辑的用户",
-      "selectUserDelete": "请选择要删除的用户",
-      "selectUserPay": "请选择要支付的用户",
-      "entering": "正在以用户ID进入系统:",
-      "editing": "正在编辑用户ID:",
-      "movedToTrash": "用户ID: {id} 已移至回收站",
-      "processingPayment": "正在处理用户ID的支付:"
+      "minimumPayment": "?????? $10",
+      "selectUser": "???????????",
+      "selectUserEdit": "?????????",
+      "selectUserDelete": "?????????",
+      "selectUserPay": "?????????",
+      "entering": "?????ID????:",
+      "editing": "??????ID:",
+      "movedToTrash": "??ID: {id} ??????",
+      "processingPayment": "??????ID???:"
     },
     "tableColumns": {
-      "nombre": "姓名",
+      "nombre": "??",
       "id": "ID",
       "saldo": "$"
     }

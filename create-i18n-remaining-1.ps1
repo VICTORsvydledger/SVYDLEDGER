@@ -227,7 +227,7 @@ $pcmContent = @'
 }
 '@
 
-# Crear archivos con codificación UTF-8
+# Crear archivos con codificaciï¿½n UTF-8
 [System.IO.File]::WriteAllText("$localesPath/id.json", $idContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/ko.json", $koContent, [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("$localesPath/mr.json", $mrContent, [System.Text.Encoding]::UTF8)

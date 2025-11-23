@@ -14,7 +14,7 @@ Write-Host "==========================================" -ForegroundColor Cyan
 Write-Host "`n?? Creando snapshot en: $snapshotDir" -ForegroundColor Yellow
 New-Item -Path $snapshotDir -ItemType Directory -Force | Out-Null
 
-# Archivos críticos a respaldar
+# Archivos crï¿½ticos a respaldar
 $criticalFiles = @(
     "frontend\src\pages\auth\WelcomePage.tsx",
     "frontend\src\pages\auth\WelcomePage.scss",
@@ -54,13 +54,13 @@ $metadata = @{
 
 $metadata | Out-File -FilePath "$snapshotDir\metadata.json" -Encoding UTF8
 
-# Crear commit automático
+# Crear commit automï¿½tico
 Write-Host "`n?? Creando commit de snapshot..." -ForegroundColor Yellow
 git add .snapshots
 git commit -m "Snapshot: WelcomePage - $timestamp" 2>&1 | Out-Null
 
-Write-Host "`n? ¡SNAPSHOT CREADO!" -ForegroundColor Green
-Write-Host "   ?? Ubicación: $snapshotDir" -ForegroundColor Gray
+Write-Host "`n? ï¿½SNAPSHOT CREADO!" -ForegroundColor Green
+Write-Host "   ?? Ubicaciï¿½n: $snapshotDir" -ForegroundColor Gray
 Write-Host "   ?? Timestamp: $timestamp" -ForegroundColor Gray
 
 Write-Host "`n?? Para restaurar este snapshot:" -ForegroundColor Cyan

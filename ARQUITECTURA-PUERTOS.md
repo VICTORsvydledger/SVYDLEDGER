@@ -22,7 +22,7 @@ URL: http://localhost:5173
 - `frontend/package.json` (script `dev`)
 - Todos los scripts PowerShell
 
-**Este es el ÚNICO puerto que usarás para desarrollo local del frontend.**
+**Este es el ï¿½NICO puerto que usarï¿½s para desarrollo local del frontend.**
 
 ---
 
@@ -39,11 +39,11 @@ Los servicios backend usan puertos diferentes para no colisionar:
 | **Reports Service** | 3000 | http://localhost:3000 | `backend/reports-service/src/index.ts` |
 | **Payments Service** | 3000 | http://localhost:3000 | `backend/payments-service/src/index.ts` |
 
-**Nota:** Los servicios Node.js usan puerto 3000 porque se ejecutan en **contenedores Docker separados**, no en tu máquina local directamente.
+**Nota:** Los servicios Node.js usan puerto 3000 porque se ejecutan en **contenedores Docker separados**, no en tu mï¿½quina local directamente.
 
 ---
 
-### **? PRODUCCIÓN - AZURE**
+### **? PRODUCCIï¿½N - AZURE**
 
 ```
 Frontend (Static Web App):
@@ -57,32 +57,32 @@ Backend (AKS + API Management):
 
 **Configurado en:**
 - `infrastructure/terraform/` (infraestructura Azure)
-- `docs/AZURE-DNS-SETUP.md` (configuración DNS)
+- `docs/AZURE-DNS-SETUP.md` (configuraciï¿½n DNS)
 
 ---
 
-## ?? **¿POR QUÉ DIFERENTES PUERTOS?**
+## ?? **ï¿½POR QUï¿½ DIFERENTES PUERTOS?**
 
 ### **Frontend: Puerto 5173**
-- ? Puerto estándar de Vite (herramienta de build)
+- ? Puerto estï¿½ndar de Vite (herramienta de build)
 - ? Usado solo en desarrollo local
 - ? No colisiona con nada
 
 ### **Backend Services: Puertos 3000, 8001-8003**
 - ? Python services: 8001-8003 (desarrollo local directo)
 - ? Node.js services: 3000 (dentro de Docker, aislados)
-- ? En producción: Todo detrás de HTTPS/443
+- ? En producciï¿½n: Todo detrï¿½s de HTTPS/443
 
-### **Producción: Puerto 443**
-- ? HTTPS estándar
-- ? Certificado SSL/TLS automático
+### **Producciï¿½n: Puerto 443**
+- ? HTTPS estï¿½ndar
+- ? Certificado SSL/TLS automï¿½tico
 - ? Azure gestiona todo
 
 ---
 
-## ?? **CÓMO FUNCIONA EN CADA ENTORNO**
+## ?? **Cï¿½MO FUNCIONA EN CADA ENTORNO**
 
-### **Desarrollo Local (TÚ)**
+### **Desarrollo Local (Tï¿½)**
 
 ```
 Tu navegador:
@@ -125,14 +125,14 @@ docker-compose up
 
 ---
 
-### **Producción Azure**
+### **Producciï¿½n Azure**
 
 ```
 Usuario:
   https://www.svydledger.com
   ?
 Azure Static Web App (Frontend):
-  Certificado SSL automático
+  Certificado SSL automï¿½tico
   Puerto: 443 (HTTPS)
   ?
 Azure API Management:
@@ -150,27 +150,27 @@ AKS (Backend Services):
 | Entorno | Frontend | Backend | Protocolo | SSL |
 |---------|----------|---------|-----------|-----|
 | **Desarrollo Local** | 5173 | N/A* | HTTP | ? |
-| **Docker Local** | 5173 | 3000† | HTTP | ? |
-| **Producción Azure** | 443 | 443 | HTTPS | ? |
+| **Docker Local** | 5173 | 3000ï¿½ | HTTP | ? |
+| **Producciï¿½n Azure** | 443 | 443 | HTTPS | ? |
 
 **Notas:**
-- \* Backend en producción (Azure), no local
-- † Puerto interno de Docker, no accesible directamente
+- \* Backend en producciï¿½n (Azure), no local
+- ï¿½ Puerto interno de Docker, no accesible directamente
 
 ---
 
-## ?? **PUERTOS QUE NO SE USAN (PARA EVITAR CONFUSIÓN)**
+## ?? **PUERTOS QUE NO SE USAN (PARA EVITAR CONFUSIï¿½N)**
 
-| Puerto | Estado | Razón |
+| Puerto | Estado | Razï¿½n |
 |--------|--------|-------|
 | 3000 | ?? Solo en Docker | No se usa en desarrollo local del frontend |
-| 80 | ? No usado | Desarrollo usa 5173, producción usa 443 |
+| 80 | ? No usado | Desarrollo usa 5173, producciï¿½n usa 443 |
 | 8080 | ? No usado | No es necesario |
 | 4200 | ? No usado | Ese es Angular, no Vite |
 
 ---
 
-## ?? **CONFIGURACIÓN DE ARCHIVOS**
+## ?? **CONFIGURACIï¿½N DE ARCHIVOS**
 
 ### **frontend/vite.config.ts** ?
 
@@ -198,7 +198,7 @@ export default defineConfig({
 ```python
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8001)  # ? Puerto específico
+    uvicorn.run(app, host="0.0.0.0", port=8001)  # ? Puerto especï¿½fico
 ```
 
 **? Correcto y no tocar**
@@ -237,7 +237,7 @@ http://localhost:5173
 
 ### **2. Backend Services**
 ```powershell
-# En producción (Azure):
+# En producciï¿½n (Azure):
 https://api.svydledger.com
 
 # En desarrollo local (Docker):
@@ -245,21 +245,21 @@ docker-compose up
 # Puertos internos: 3000, 8001-8003
 ```
 
-### **3. Producción**
+### **3. Producciï¿½n**
 ```
 Frontend: https://www.svydledger.com (Puerto 443)
 Backend: https://api.svydledger.com (Puerto 443)
 
 ? Todo HTTPS
-? Certificados automáticos
+? Certificados automï¿½ticos
 ? Gestionado por Azure
 ```
 
 ---
 
-## ?? **VERIFICACIÓN DE PUERTOS**
+## ?? **VERIFICACIï¿½N DE PUERTOS**
 
-### **Ver Qué Está Usando el Puerto 5173**
+### **Ver Quï¿½ Estï¿½ Usando el Puerto 5173**
 
 ```powershell
 Get-NetTCPConnection -LocalPort 5173 -State Listen -ErrorAction SilentlyContinue
@@ -271,14 +271,14 @@ Get-NetTCPConnection -LocalPort 5173 -State Listen -ErrorAction SilentlyContinue
 
 ---
 
-### **Ver Qué Está Usando el Puerto 3000**
+### **Ver Quï¿½ Estï¿½ Usando el Puerto 3000**
 
 ```powershell
 Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue
 ```
 
 **Resultado esperado:**
-- En desarrollo local: No debería haber nada
+- En desarrollo local: No deberï¿½a haber nada
 - En Docker: Muestra procesos de Docker
 
 ---
@@ -295,11 +295,11 @@ Get-Process node -ErrorAction SilentlyContinue |
 
 ---
 
-## ?? **TROUBLESHOOTING COMÚN**
+## ?? **TROUBLESHOOTING COMï¿½N**
 
 ### **Problema: "Puerto 5173 ocupado"**
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # Matar proceso en puerto 5173
 $proc = Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue
@@ -317,54 +317,54 @@ if ($proc) {
 
 **Causa:** El puerto 3000 es interno de Docker o backend, no es para acceso directo.
 
-**Solución:**
+**Soluciï¿½n:**
 ```
 En desarrollo local del frontend:
   ? Usa: http://localhost:5173
 
-En producción:
+En producciï¿½n:
   ? Usa: https://www.svydledger.com
 ```
 
 ---
 
-### **Problema: "Veo referencias al puerto 3000 en el código"**
+### **Problema: "Veo referencias al puerto 3000 en el cï¿½digo"**
 
 **Es normal:** El puerto 3000 es para:
 1. Backend services (dentro de Docker)
-2. Dockerfiles (definición de contenedores)
+2. Dockerfiles (definiciï¿½n de contenedores)
 3. No afecta tu desarrollo del frontend
 
 **No cambiar nada** en esos archivos.
 
 ---
 
-## ?? **DOCUMENTACIÓN RELACIONADA**
+## ?? **DOCUMENTACIï¿½N RELACIONADA**
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
-| `frontend/vite.config.ts` | Configuración del puerto 5173 |
+| `frontend/vite.config.ts` | Configuraciï¿½n del puerto 5173 |
 | `docker-compose.yml` | Puertos de Docker |
-| `docs/AZURE-DNS-SETUP.md` | Configuración de producción |
+| `docs/AZURE-DNS-SETUP.md` | Configuraciï¿½n de producciï¿½n |
 | `ARQUITECTURA-PUERTOS.md` | Este documento |
 
 ---
 
-## ? **CHECKLIST DE VERIFICACIÓN**
+## ? **CHECKLIST DE VERIFICACIï¿½N**
 
 Antes de reportar problemas de puertos, verifica:
 
-- [ ] ¿Estás usando `.\start-single-process.ps1`?
-- [ ] ¿Abres http://localhost:**5173** (no 3000)?
-- [ ] ¿Solo hay 1 proceso Node.js corriendo?
-- [ ] ¿El puerto 5173 está libre?
-- [ ] ¿Reiniciaste VS Code después de cambios?
+- [ ] ï¿½Estï¿½s usando `.\start-single-process.ps1`?
+- [ ] ï¿½Abres http://localhost:**5173** (no 3000)?
+- [ ] ï¿½Solo hay 1 proceso Node.js corriendo?
+- [ ] ï¿½El puerto 5173 estï¿½ libre?
+- [ ] ï¿½Reiniciaste VS Code despuï¿½s de cambios?
 
 ---
 
-## ?? **CONCLUSIÓN**
+## ?? **CONCLUSIï¿½N**
 
-### **Para Desarrollo Local (TÚ):**
+### **Para Desarrollo Local (Tï¿½):**
 
 ```
 Puerto: 5173
@@ -372,12 +372,12 @@ Comando: .\start-single-process.ps1
 URL: http://localhost:5173
 ```
 
-**¡Eso es TODO lo que necesitas saber!** ??
+**ï¿½Eso es TODO lo que necesitas saber!** ??
 
 El puerto 3000 y otros son internos y no te afectan.
 
 ---
 
 **Estado:** ? Arquitectura de puertos documentada y unificada  
-**Última actualización:** 2024-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
 **Puerto de desarrollo:** 5173 (DEFINITIVO)
