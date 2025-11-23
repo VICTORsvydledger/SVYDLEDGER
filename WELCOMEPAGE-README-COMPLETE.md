@@ -1,8 +1,8 @@
-# ?? WelcomePage - Guía Completa y Documentación
+# ?? WelcomePage - Guï¿½a Completa y Documentaciï¿½n
 
 ## ?? **RESUMEN EJECUTIVO**
 
-La **WelcomePage** es la página de bienvenida y autenticación de SVYD LEDGER. Implementa un diseño minimalista y elegante con fondo de cielo azul, formularios de autenticación (Sign In / Sign Up), y selector de 27 idiomas.
+La **WelcomePage** es la pï¿½gina de bienvenida y autenticaciï¿½n de SVYD LEDGER. Implementa un diseï¿½o minimalista y elegante con fondo de cielo azul, formularios de autenticaciï¿½n (Sign In / Sign Up), y selector de 27 idiomas.
 
 ---
 
@@ -11,67 +11,67 @@ La **WelcomePage** es la página de bienvenida y autenticación de SVYD LEDGER. Im
 | Componente | Estado | Notas |
 |------------|--------|-------|
 | **Estructura base** | ? Completado | Componente React + TypeScript |
-| **27 Idiomas** | ? Completado | Ordenados según especificaciones |
+| **27 Idiomas** | ? Completado | Ordenados segï¿½n especificaciones |
 | **Fuente Vladimir Script** | ? Implementado | Con fallback Pinyon Script |
-| **Diseño responsive** | ? Completado | Mobile, tablet, desktop |
+| **Diseï¿½o responsive** | ? Completado | Mobile, tablet, desktop |
 | **Formularios** | ? Funcionales | Sign In + Sign Up |
-| **2FA Modal** | ? Implementado | Autenticación de dos factores |
-| **Forgot Password** | ? Implementado | Recuperación de contraseña |
+| **2FA Modal** | ? Implementado | Autenticaciï¿½n de dos factores |
+| **Forgot Password** | ? Implementado | Recuperaciï¿½n de contraseï¿½a |
 | **Puerto unificado** | ? 5173 | Puerto de desarrollo definitivo |
 
 ---
 
 ## ?? **ESPECIFICACIONES ORIGINALES CUMPLIDAS**
 
-### **1. Logo y Tipografía** ?
+### **1. Logo y Tipografï¿½a** ?
 
 ```
 Logo: "Svyd"
 - Fuente: Vladimir Script
-- Tamaño: 48px
+- Tamaï¿½o: 48px
 - Color: Blanco (bold)
-- Ubicación: Superior, centrado
+- Ubicaciï¿½n: Superior, centrado
 - Fallback: Pinyon Script (Google Fonts)
 ```
 
-### **2. Subtítulo** ?
+### **2. Subtï¿½tulo** ?
 
 ```
 Texto: "Sistema de Contabilidad Universal"
 - Fuente: Vladimir Script
-- Tamaño: 30px
+- Tamaï¿½o: 30px
 - Color: Blanco (bold)
-- Ubicación: Debajo del logo, centrado
+- Ubicaciï¿½n: Debajo del logo, centrado
 ```
 
-### **3. Párrafo Promocional** ?
+### **3. Pï¿½rrafo Promocional** ?
 
 ```
-Texto: "Este sistema trabaja: sin códigos, sin catálogos 
+Texto: "Este sistema trabaja: sin cï¿½digos, sin catï¿½logos 
 de cuenta, sin asientos contables, sin cierres, sin 
 periodos fiscales. Atemporal. No necesita distinguir 
-entre persona física y persona jurídica"
+entre persona fï¿½sica y persona jurï¿½dica"
 
 - Fuente: Arial
-- Tamaño: 12px
+- Tamaï¿½o: 12px
 - Color: Blanco
-- Ubicación: Debajo del subtítulo, centrado
+- Ubicaciï¿½n: Debajo del subtï¿½tulo, centrado
 ```
 
 ### **4. Selector de Idiomas** ?
 
 ```
-27 Idiomas (orden según especificaciones):
+27 Idiomas (orden segï¿½n especificaciones):
 1. English (English)
-2. Spanish (Español)
-3. French (Français)
+2. Spanish (Espaï¿½ol)
+3. French (Franï¿½ais)
 4. Italian (Italiano)
 5. German (Deutsch)
-... resto alfabético por nombre en inglés
+... resto alfabï¿½tico por nombre en inglï¿½s
 
-Características:
-- Búsqueda habilitada
-- Muestra nombre nativo entre paréntesis
+Caracterï¿½sticas:
+- Bï¿½squeda habilitada
+- Muestra nombre nativo entre parï¿½ntesis
 - Ancho: 320px
 - Default: English
 ```
@@ -87,7 +87,7 @@ Campos:
 Enlaces:
 - "Forgot password?" (funcional)
 
-Botón:
+Botï¿½n:
 - "Log in" (funcional)
 ```
 
@@ -98,7 +98,7 @@ Campos:
 - Password (input)
 - Confirm Password (input)
 
-Botón:
+Botï¿½n:
 - "Create Account" (funcional)
 ```
 
@@ -106,11 +106,11 @@ Botón:
 
 ```
 Archivo: /images/backgrounds/background-1.png
-Descripción: Cielo azul, cálido, transparente, 
+Descripciï¿½n: Cielo azul, cï¿½lido, transparente, 
 tranquilo, con nubes blancas
 
-Características:
-- Animación sutil de zoom (30s)
+Caracterï¿½sticas:
+- Animaciï¿½n sutil de zoom (30s)
 - Overlay semitransparente
 - Fallback: Color azul cielo (#87CEEB)
 ```
@@ -118,17 +118,17 @@ Características:
 ### **7. Seguridad** ?
 
 ```
-- Autenticación de dos factores (2FA)
-- Recuperación de contraseña
-- Validación de formularios
-- Protección contra duplicados
+- Autenticaciï¿½n de dos factores (2FA)
+- Recuperaciï¿½n de contraseï¿½a
+- Validaciï¿½n de formularios
+- Protecciï¿½n contra duplicados
 ```
 
 ---
 
-## ?? **ARQUITECTURA TÉCNICA**
+## ?? **ARQUITECTURA Tï¿½CNICA**
 
-### **Stack Tecnológico**
+### **Stack Tecnolï¿½gico**
 
 ```
 Frontend:
@@ -138,11 +138,11 @@ Frontend:
 - Ant Design 5.12.8
 - SCSS/SASS
 
-Librerías:
-- react-router-dom (navegación)
+Librerï¿½as:
+- react-router-dom (navegaciï¿½n)
 - @reduxjs/toolkit (estado)
 - react-hook-form (formularios)
-- zod (validación)
+- zod (validaciï¿½n)
 ```
 
 ### **Estructura de Archivos**
@@ -170,11 +170,11 @@ URL: http://localhost:5173
 Comando: .\start-single-process.ps1
 ```
 
-**Ver documentación completa en:** `ARQUITECTURA-PUERTOS.md`
+**Ver documentaciï¿½n completa en:** `ARQUITECTURA-PUERTOS.md`
 
 ---
 
-## ?? **DISEÑO Y ESTILOS**
+## ?? **DISEï¿½O Y ESTILOS**
 
 ### **Paleta de Colores**
 
@@ -248,11 +248,11 @@ $sky-blue: #87CEEB;
 
 ### **27 Idiomas Implementados**
 
-| # | Código | Nombre | Nativo |
+| # | Cï¿½digo | Nombre | Nativo |
 |---|--------|--------|--------|
 | 1 | en | English | English |
-| 2 | es | Spanish | Español |
-| 3 | fr | French | Français |
+| 2 | es | Spanish | Espaï¿½ol |
+| 3 | fr | French | Franï¿½ais |
 | 4 | it | Italian | Italiano |
 | 5 | de | German | Deutsch |
 | 6 | ar | Arabic | ??????? |
@@ -267,13 +267,13 @@ $sky-blue: #87CEEB;
 | 15 | pcm | Nigerian Pidgin | Nigerian Pidgin |
 | 16 | pa | Panjabi | ?????? |
 | 17 | fa | Persian | ????? |
-| 18 | pt | Portuguese | Português |
+| 18 | pt | Portuguese | Portuguï¿½s |
 | 19 | ru | Russian | ??????? |
 | 20 | sw | Swahili | Kiswahili |
 | 21 | tl | Tagalog | Tagalog |
 | 22 | ta | Tamil | ????? |
 | 23 | te | Telugu | ?????? |
-| 24 | tr | Turkish | Türkçe |
+| 24 | tr | Turkish | Tï¿½rkï¿½e |
 | 25 | uk | Ukrainian | ?????????? |
 | 26 | ur | Urdu | ???? |
 | 27 | vi | Vietnamese | Ti?ng Vi?t |
@@ -282,35 +282,35 @@ $sky-blue: #87CEEB;
 
 ```typescript
 // TODO: Implementar sistema completo de i18n
-// Por ahora, los textos están en español directamente
-// Los formularios (Sign In/Up) permanecen en inglés
+// Por ahora, los textos estï¿½n en espaï¿½ol directamente
+// Los formularios (Sign In/Up) permanecen en inglï¿½s
 
 // Estructura propuesta:
 frontend/src/i18n/
-??? i18n.ts              // Configuración
+??? i18n.ts              // Configuraciï¿½n
 ??? locales/
-?   ??? en.json          // Inglés
-?   ??? es.json          // Español
-?   ??? fr.json          // Francés
+?   ??? en.json          // Inglï¿½s
+?   ??? es.json          // Espaï¿½ol
+?   ??? fr.json          // Francï¿½s
 ?   ??? ... (27 idiomas)
 ??? translations.ts      // Helper functions
 ```
 
 ---
 
-## ?? **CÓMO INICIAR**
+## ?? **Cï¿½MO INICIAR**
 
 ### **Desarrollo Local**
 
 ```powershell
-# Opción 1: Proceso único (Recomendado)
+# Opciï¿½n 1: Proceso ï¿½nico (Recomendado)
 .\start-single-process.ps1
 
-# Opción 2: Dev Manager
+# Opciï¿½n 2: Dev Manager
 .\dev-manager.ps1
-# Selecciona: Opción 1 (Single Process Mode)
+# Selecciona: Opciï¿½n 1 (Single Process Mode)
 
-# El servidor iniciará en:
+# El servidor iniciarï¿½ en:
 # http://localhost:5173
 ```
 
@@ -318,24 +318,24 @@ frontend/src/i18n/
 
 ```
 URL Local: http://localhost:5173
-URL Producción: https://www.svydledger.com
+URL Producciï¿½n: https://www.svydledger.com
 ```
 
 ---
 
-## ?? **VERIFICACIÓN Y TESTING**
+## ?? **VERIFICACIï¿½N Y TESTING**
 
-### **Checklist de Verificación**
+### **Checklist de Verificaciï¿½n**
 
 - [ ] Logo "Svyd" visible con fuente Vladimir Script
-- [ ] Subtítulo visible y centrado
-- [ ] Párrafo promocional legible
+- [ ] Subtï¿½tulo visible y centrado
+- [ ] Pï¿½rrafo promocional legible
 - [ ] Selector de idiomas funcional (27 idiomas)
 - [ ] Imagen de fondo visible (cielo azul)
 - [ ] Formulario Sign In funcional
 - [ ] Formulario Sign Up funcional
 - [ ] Link "Forgot password?" funcional
-- [ ] Modal de recuperación funcional
+- [ ] Modal de recuperaciï¿½n funcional
 - [ ] Modal 2FA funcional
 - [ ] Responsive en mobile
 - [ ] Responsive en tablet
@@ -354,7 +354,7 @@ URL Producción: https://www.svydledger.com
 # - Logo en Vladimir Script
 # - 27 idiomas en selector
 # - Formularios funcionales
-# - Modales de 2FA y recuperación
+# - Modales de 2FA y recuperaciï¿½n
 
 # 4. Probar responsive
 # - Redimensionar ventana
@@ -364,18 +364,18 @@ URL Producción: https://www.svydledger.com
 ### **Testing con Errores**
 
 ```powershell
-# Ver errores de compilación
+# Ver errores de compilaciï¿½n
 .\start-single-process.ps1
-# (Si hay errores, se mostrarán en terminal)
+# (Si hay errores, se mostrarï¿½n en terminal)
 
 # Verificar en navegador (F12)
-# - Console: No debería haber errores
-# - Network: Verificar carga de fuentes/imágenes
+# - Console: No deberï¿½a haber errores
+# - Network: Verificar carga de fuentes/imï¿½genes
 ```
 
 ---
 
-## ?? **MÉTRICAS Y RENDIMIENTO**
+## ?? **Mï¿½TRICAS Y RENDIMIENTO**
 
 ### **Performance**
 
@@ -407,13 +407,13 @@ Cumulative Layout Shift: < 0.1
 
 ### **Problema: Fuente no aparece**
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # 1. Verificar que existe la fuente
 Test-Path "frontend/public/fonts/VLADIMIR.TTF"
 # Debe devolver: True
 
-# 2. Limpiar caché de Vite
+# 2. Limpiar cachï¿½ de Vite
 Remove-Item -Recurse -Force "frontend/node_modules/.vite"
 
 # 3. Reiniciar servidor
@@ -422,7 +422,7 @@ Remove-Item -Recurse -Force "frontend/node_modules/.vite"
 
 ### **Problema: Imagen de fondo no aparece**
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # 1. Verificar imagen
 Test-Path "frontend/public/images/backgrounds/background-1.png"
@@ -437,20 +437,20 @@ Test-Path "frontend/public/images/backgrounds/background-1.png"
 
 ### **Problema: Selector de idiomas no funciona**
 
-**Solución:**
+**Soluciï¿½n:**
 ```typescript
 // Verificar en WelcomePage.tsx:
 // 1. Array de languages definido (27 idiomas)
 // 2. useState para selectedLanguage
-// 3. Función handleLanguage implementada
+// 3. Funciï¿½n handleLanguage implementada
 // 4. Select de Ant Design con options correcto
 ```
 
 ### **Problema: Puerto 5173 ocupado**
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
-# Usar el script automático
+# Usar el script automï¿½tico
 .\kill-node-processes.ps1
 .\start-single-process.ps1
 
@@ -459,32 +459,32 @@ Get-Process node | Stop-Process -Force
 .\start-single-process.ps1
 ```
 
-**Ver guía completa:** `docs/TROUBLESHOOTING.md`
+**Ver guï¿½a completa:** `docs/TROUBLESHOOTING.md`
 
 ---
 
-## ?? **DOCUMENTACIÓN RELACIONADA**
+## ?? **DOCUMENTACIï¿½N RELACIONADA**
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
 | `WELCOMEPAGE-README.md` | Este archivo |
-| `ARQUITECTURA-PUERTOS.md` | Documentación de puertos |
-| `docs/WELCOMEPAGE-QUICKSTART.md` | Inicio rápido |
+| `ARQUITECTURA-PUERTOS.md` | Documentaciï¿½n de puertos |
+| `docs/WELCOMEPAGE-QUICKSTART.md` | Inicio rï¿½pido |
 | `docs/WELCOMEPAGE-STATUS.md` | Estado del proyecto |
-| `docs/TROUBLESHOOTING.md` | Solución de problemas |
-| `frontend/FONT-GUIDE.md` | Guía de fuentes |
+| `docs/TROUBLESHOOTING.md` | Soluciï¿½n de problemas |
+| `frontend/FONT-GUIDE.md` | Guï¿½a de fuentes |
 
 ---
 
-## ?? **PRÓXIMOS PASOS (ROADMAP)**
+## ?? **PRï¿½XIMOS PASOS (ROADMAP)**
 
 ### **Fase 1: Sistema i18n Completo** (Pendiente)
 
 ```
 - [ ] Implementar react-i18next completo
-- [ ] Crear archivos de traducción (27 idiomas)
-- [ ] Traducir logo, subtítulo, promocional
-- [ ] Mantener formularios en inglés
+- [ ] Crear archivos de traducciï¿½n (27 idiomas)
+- [ ] Traducir logo, subtï¿½tulo, promocional
+- [ ] Mantener formularios en inglï¿½s
 - [ ] Testing de todos los idiomas
 ```
 
@@ -493,19 +493,19 @@ Get-Process node | Stop-Process -Force
 ```
 - [ ] Conectar Sign In con Identity Service
 - [ ] Conectar Sign Up con Identity Service
-- [ ] Implementar 2FA real (envío de email)
-- [ ] Implementar recuperación real
-- [ ] JWT tokens y autenticación
+- [ ] Implementar 2FA real (envï¿½o de email)
+- [ ] Implementar recuperaciï¿½n real
+- [ ] JWT tokens y autenticaciï¿½n
 ```
 
 ### **Fase 3: Deployment** (Pendiente)
 
 ```
-- [ ] Build de producción
+- [ ] Build de producciï¿½n
 - [ ] Deploy a Azure Static Web Apps
 - [ ] Configurar DNS (www.svydledger.com)
-- [ ] SSL/TLS automático
-- [ ] CDN para imágenes/fuentes
+- [ ] SSL/TLS automï¿½tico
+- [ ] CDN para imï¿½genes/fuentes
 ```
 
 ---
@@ -515,17 +515,17 @@ Get-Process node | Stop-Process -Force
 ### **Lo que Tienes Ahora:**
 
 ? **WelcomePage completamente funcional**
-- Diseño minimalista y elegante
+- Diseï¿½o minimalista y elegante
 - 27 idiomas disponibles
 - Fuente Vladimir Script correctamente implementada
 - Formularios Sign In / Sign Up funcionales
-- Modales 2FA y recuperación
+- Modales 2FA y recuperaciï¿½n
 - Responsive para todos los dispositivos
 - Animaciones suaves y profesionales
 - Puerto unificado (5173)
-- Documentación completa
+- Documentaciï¿½n completa
 
-### **Calidad del Código:**
+### **Calidad del Cï¿½digo:**
 
 ? **TypeScript** - Type-safe
 ? **React Best Practices** - Hooks, functional components
@@ -537,16 +537,16 @@ Get-Process node | Stop-Process -Force
 
 ---
 
-## ?? **CÓDIGO SALVADO EXITOSAMENTE**
+## ?? **Cï¿½DIGO SALVADO EXITOSAMENTE**
 
-**Estado:** ? Código salvado y mejorado  
+**Estado:** ? Cï¿½digo salvado y mejorado  
 **Calidad:** ????? (5/5)  
 **Listo para:** Desarrollo local y testing  
-**Próximo paso:** Backend integration  
+**Prï¿½ximo paso:** Backend integration  
 
-**Última actualización:** 2024-01-15  
-**Versión:** 2.0.0 (Salvado y mejorado)
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
+**Versiï¿½n:** 2.0.0 (Salvado y mejorado)
 
 ---
 
-**¡WelcomePage completamente salvada, documentada y lista para usar!** ???
+**ï¿½WelcomePage completamente salvada, documentada y lista para usar!** ???

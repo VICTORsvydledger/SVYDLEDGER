@@ -1,25 +1,25 @@
-# ?? CÓMO GUARDAR TUS CAMBIOS (Versión Súper Simple)
+# ?? Cï¿½MO GUARDAR TUS CAMBIOS (Versiï¿½n Sï¿½per Simple)
 
-**Para personas SIN experiencia en programación** ?
+**Para personas SIN experiencia en programaciï¿½n** ?
 
 ---
 
 ## ?? LO QUE NECESITAS SABER
 
-### ¿Qué hace este sistema?
+### ï¿½Quï¿½ hace este sistema?
 
-Imagina que estás trabajando en Word y presionas **Ctrl+S** para guardar.
+Imagina que estï¿½s trabajando en Word y presionas **Ctrl+S** para guardar.
 
 Esto es **EXACTAMENTE LO MISMO**, pero para tu proyecto completo:
 - ?? Guarda todos los archivos
 - ?? Los sube a GitHub (tu respaldo en la nube)
-- ?? Quedan protegidos contra pérdidas
+- ?? Quedan protegidos contra pï¿½rdidas
 
 ---
 
 ## ?? INSTRUCCIONES PASO A PASO
 
-### **Opción 1: EL MÁS SIMPLE** ? (Recomendado)
+### **Opciï¿½n 1: EL Mï¿½S SIMPLE** ? (Recomendado)
 
 **Cada vez que quieras guardar cambios:**
 
@@ -30,9 +30,9 @@ Esto es **EXACTAMENTE LO MISMO**, pero para tu proyecto completo:
    .\save
    ```
 
-3. **¡ESO ES TODO!** ?
+3. **ï¿½ESO ES TODO!** ?
 
-**Verás algo así:**
+**Verï¿½s algo asï¿½:**
 
 ```
 ?? GUARDANDO CAMBIOS...
@@ -45,42 +45,42 @@ Esto es **EXACTAMENTE LO MISMO**, pero para tu proyecto completo:
 ? Guardando... ?
 ? Subiendo a GitHub... ?
 
-?? ¡GUARDADO EXITOSO!
-   ?? Tus cambios están seguros en GitHub
+?? ï¿½GUARDADO EXITOSO!
+   ?? Tus cambios estï¿½n seguros en GitHub
 ```
 
 ---
 
-### **Opción 2: Con Descripción** (Si quieres anotar qué cambiaste)
+### **Opciï¿½n 2: Con Descripciï¿½n** (Si quieres anotar quï¿½ cambiaste)
 
-Si quieres recordar qué hiciste, puedes escribir una nota:
+Si quieres recordar quï¿½ hiciste, puedes escribir una nota:
 
 ```powershell
 .\save-with-note
 ```
 
-Te preguntará:
+Te preguntarï¿½:
 ```
-?? ¿Qué cambiaste? (o presiona Enter para omitir): _
+?? ï¿½Quï¿½ cambiaste? (o presiona Enter para omitir): _
 ```
 
 Escribe algo como:
-- "Cambié el color del botón"
-- "Arreglé el formulario de login"
-- "Agregué el logo"
+- "Cambiï¿½ el color del botï¿½n"
+- "Arreglï¿½ el formulario de login"
+- "Agreguï¿½ el logo"
 
 O simplemente presiona **Enter** si no quieres escribir nada.
 
 ---
 
-## ?? ¿CADA CUÁNTO DEBO GUARDAR?
+## ?? ï¿½CADA CUï¿½NTO DEBO GUARDAR?
 
-### Recomendación:
+### Recomendaciï¿½n:
 
 ? **Guarda CADA 5-10 MINUTOS** mientras trabajas
-? **Guarda INMEDIATAMENTE** después de que algo funcione
+? **Guarda INMEDIATAMENTE** despuï¿½s de que algo funcione
 ? **Guarda ANTES** de hacer cambios grandes
-? **Guarda AL FINAL** de cada sesión
+? **Guarda AL FINAL** de cada sesiï¿½n
 
 ### Ejemplo de flujo de trabajo:
 
@@ -88,17 +88,17 @@ O simplemente presiona **Enter** si no quieres escribir nada.
 9:00 AM  - Empiezas a trabajar
           .\save
 
-9:15 AM  - Cambiaste el color de un botón
+9:15 AM  - Cambiaste el color de un botï¿½n
           .\save
 
 9:30 AM  - Agregaste un nuevo formulario
           .\save
 
-9:45 AM  - El chat se congeló ?
-          (Pero NO PROBLEM! Todo está guardado hasta 9:30)
-          Refrescas la página y continúas
+9:45 AM  - El chat se congelï¿½ ?
+          (Pero NO PROBLEM! Todo estï¿½ guardado hasta 9:30)
+          Refrescas la pï¿½gina y continï¿½as
 
-10:00 AM - Continúas trabajando
+10:00 AM - Continï¿½as trabajando
           .\save
 
 10:15 AM - Terminas
@@ -106,15 +106,15 @@ O simplemente presiona **Enter** si no quieres escribir nada.
 ```
 
 **Perdiste solo 15 minutos de trabajo** (de 9:30 a 9:45) 
-en lugar de **TODO el día**. ??
+en lugar de **TODO el dï¿½a**. ??
 
 ---
 
-## ? ATAJOS RÁPIDOS
+## ? ATAJOS Rï¿½PIDOS
 
 ### Crear un Atajo de Teclado (Opcional)
 
-Si quieres guardar aún más rápido, puedes crear un alias:
+Si quieres guardar aï¿½n mï¿½s rï¿½pido, puedes crear un alias:
 
 1. Abre PowerShell
 2. Escribe:
@@ -127,32 +127,32 @@ Si quieres guardar aún más rápido, puedes crear un alias:
    s
    ```
 
-**¡Súper rápido!** ?
+**ï¿½Sï¿½per rï¿½pido!** ?
 
 ---
 
-## ?? VERIFICAR QUE SE GUARDÓ
+## ?? VERIFICAR QUE SE GUARDï¿½
 
-### ¿Cómo saber si funcionó?
+### ï¿½Cï¿½mo saber si funcionï¿½?
 
-Después de ejecutar `.\save`, verás:
+Despuï¿½s de ejecutar `.\save`, verï¿½s:
 
-? **SI TODO ESTÁ BIEN:**
+? **SI TODO ESTï¿½ BIEN:**
 ```
-?? ¡GUARDADO EXITOSO!
-   ?? Tus cambios están seguros en GitHub
+?? ï¿½GUARDADO EXITOSO!
+   ?? Tus cambios estï¿½n seguros en GitHub
 ```
 
 ?? **SI NO HAY INTERNET:**
 ```
 ?? Guardado localmente (GitHub no disponible)
-   ?? Tus cambios están guardados en tu computadora
+   ?? Tus cambios estï¿½n guardados en tu computadora
 ```
-(Está bien, se subirán cuando vuelva internet)
+(Estï¿½ bien, se subirï¿½n cuando vuelva internet)
 
 ?? **SI NO HAY CAMBIOS:**
 ```
-? Ya está todo guardado (no hay cambios nuevos)
+? Ya estï¿½ todo guardado (no hay cambios nuevos)
 ```
 (Perfecto, significa que ya lo guardaste antes)
 
@@ -162,7 +162,7 @@ Después de ejecutar `.\save`, verás:
 
 ### Problema 1: "No se puede ejecutar el script"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
@@ -173,9 +173,9 @@ Presiona **Y** (Yes) y Enter.
 
 ### Problema 2: "Git no reconocido"
 
-**Significa:** Git no está instalado.
+**Significa:** Git no estï¿½ instalado.
 
-**Solución:**
+**Soluciï¿½n:**
 1. Descarga Git desde: https://git-scm.com/download/win
 2. Instala (siguiente, siguiente, siguiente...)
 3. Reinicia PowerShell
@@ -183,16 +183,16 @@ Presiona **Y** (Yes) y Enter.
 
 ---
 
-### Problema 3: El chat se congeló y NO guardé
+### Problema 3: El chat se congelï¿½ y NO guardï¿½
 
-**Solución:**
+**Soluciï¿½n:**
 
-1. Refresca la página del navegador
+1. Refresca la pï¿½gina del navegador
 2. Ve a tu repositorio GitHub:
    https://github.com/VICTORsvydledger/SVYDLEDGER
 
-3. Busca el último commit (guarda do)
-4. Verás la fecha y hora del último guardado
+3. Busca el ï¿½ltimo commit (guarda do)
+4. Verï¿½s la fecha y hora del ï¿½ltimo guardado
 5. Usa los snapshots para recuperar (si creaste alguno):
    ```powershell
    .\restore-snapshot.ps1
@@ -200,7 +200,7 @@ Presiona **Y** (Yes) y Enter.
 
 ---
 
-## ?? COMPARACIÓN VISUAL
+## ?? COMPARACIï¿½N VISUAL
 
 ### ? SIN GUARDAR FRECUENTEMENTE:
 
@@ -229,14 +229,14 @@ Presiona **Y** (Yes) y Enter.
 
 ## ?? CHEAT SHEET (Hoja de Trucos)
 
-**Imprime esto y pégalo cerca de tu monitor:**
+**Imprime esto y pï¿½galo cerca de tu monitor:**
 
 ```
 ???????????????????????????????????????????
 ?   COMANDOS PARA GUARDAR CAMBIOS         ?
 ???????????????????????????????????????????
 ?                                          ?
-?  ?? Guardar rápido:                     ?
+?  ?? Guardar rï¿½pido:                     ?
 ?     .\save                               ?
 ?                                          ?
 ?  ?? Guardar con nota:                   ?
@@ -257,13 +257,13 @@ Presiona **Y** (Yes) y Enter.
 
 ## ?? TIPS PRO
 
-### 1. **Rutina de Guardado Automático Mental**
+### 1. **Rutina de Guardado Automï¿½tico Mental**
 
 Cada vez que:
 - ? Algo funcione
-- ? Termines una tarea pequeña
-- ? Vayas a tomar un café
-- ? Vayas al baño ??
+- ? Termines una tarea pequeï¿½a
+- ? Vayas a tomar un cafï¿½
+- ? Vayas al baï¿½o ??
 
 **? Ejecuta: `.\save`**
 
@@ -277,16 +277,16 @@ Si vas a probar algo nuevo que puede romper cosas:
 
 # 2. Experimentar...
 
-# 3a. Si funcionó: guardar
+# 3a. Si funcionï¿½: guardar
 .\save
 
-# 3b. Si no funcionó: restaurar
+# 3b. Si no funcionï¿½: restaurar
 .\restore-snapshot.ps1
 ```
 
 ### 3. **Temporizador Visual**
 
-Usa un temporizador en tu teléfono:
+Usa un temporizador en tu telï¿½fono:
 - ? Alarma cada 10 minutos
 - ?? Cuando suene ? `.\save`
 
@@ -296,13 +296,13 @@ Usa un temporizador en tu teléfono:
 
 **Si el chat se congela AHORA MISMO:**
 
-1. ? **NO ENTRES EN PÁNICO**
+1. ? **NO ENTRES EN Pï¿½NICO**
 2. ? Abre PowerShell
 3. ? Ejecuta: `.\save`
-4. ? Espera a ver: "?? ¡GUARDADO EXITOSO!"
-5. ? Ahora SÍ puedes refrescar el navegador
+4. ? Espera a ver: "?? ï¿½GUARDADO EXITOSO!"
+5. ? Ahora Sï¿½ puedes refrescar el navegador
 
-**Tu trabajo está seguro** ?
+**Tu trabajo estï¿½ seguro** ?
 
 ---
 
@@ -311,20 +311,20 @@ Usa un temporizador en tu teléfono:
 1. **`.\save` NO rompe nada**
    - Es seguro ejecutarlo 1000 veces
    - Si no hay cambios, simplemente te lo dice
-   - No puede dañar tu proyecto
+   - No puede daï¿½ar tu proyecto
 
-2. **Guardar de más es MEJOR que guardar de menos**
+2. **Guardar de mï¿½s es MEJOR que guardar de menos**
    - Guardar 100 veces ? ? Seguro
-   - Guardar 1 vez al día ? ? Arriesgado
+   - Guardar 1 vez al dï¿½a ? ? Arriesgado
 
 3. **GitHub es tu amigo**
-   - Es como Google Drive para código
-   - Tus cambios quedan ahí para siempre
+   - Es como Google Drive para cï¿½digo
+   - Tus cambios quedan ahï¿½ para siempre
    - Puedes acceder desde cualquier computadora
 
 ---
 
-## ?? PRÁCTICA AHORA
+## ?? PRï¿½CTICA AHORA
 
 **Vamos a probarlo juntos:**
 
@@ -337,24 +337,24 @@ Usa un temporizador en tu teléfono:
 
 3. Mira el resultado
 
-4. **¡Listo!** Ya sabes cómo proteger tu trabajo ?
+4. **ï¿½Listo!** Ya sabes cï¿½mo proteger tu trabajo ?
 
 ---
 
 ## ?? DOCUMENTOS RELACIONADOS
 
 - `PREVENCION-PERDIDA-CAMBIOS.md` - Sistema completo
-- `auto-commit-changes.ps1` - Script automático (para el agente)
+- `auto-commit-changes.ps1` - Script automï¿½tico (para el agente)
 - `create-welcomepage-snapshot.ps1` - Snapshots de seguridad
 
 ---
 
-**¡Ahora tienes el poder de guardar tus cambios cuando quieras!** ??
+**ï¿½Ahora tienes el poder de guardar tus cambios cuando quieras!** ??
 
 **Usa `.\save` como si fuera Ctrl+S** ??
 
 ---
 
-**Última actualización:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
 **Nivel requerido:** ? Principiante - SIN experiencia necesaria  
 **Tiempo de aprendizaje:** ?? 2 minutos

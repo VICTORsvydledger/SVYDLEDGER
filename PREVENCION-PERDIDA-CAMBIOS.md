@@ -1,8 +1,8 @@
-# ??? PREVENCIÓN DE PÉRDIDA DE CAMBIOS
+# ??? PREVENCIï¿½N DE Pï¿½RDIDA DE CAMBIOS
 
 **FECHA:** 2025-01-15  
-**PROBLEMA RESUELTO:** Pérdida de progreso cuando se pierde el hilo del chat  
-**SOLUCIÓN:** Sistema de respaldos automáticos multi-capa
+**PROBLEMA RESUELTO:** Pï¿½rdida de progreso cuando se pierde el hilo del chat  
+**SOLUCIï¿½N:** Sistema de respaldos automï¿½ticos multi-capa
 
 ---
 
@@ -13,19 +13,19 @@
 **Cada vez que el agente haga cambios importantes:**
 
 ```powershell
-.\auto-commit-changes.ps1 "Descripción del cambio"
+.\auto-commit-changes.ps1 "Descripciï¿½n del cambio"
 ```
 
 **Ejemplo:**
 ```powershell
 .\auto-commit-changes.ps1 "WelcomePage: Agregado selector de idioma"
-.\auto-commit-changes.ps1 "WelcomePage: Mejorado diseño de formularios"
+.\auto-commit-changes.ps1 "WelcomePage: Mejorado diseï¿½o de formularios"
 .\auto-commit-changes.ps1 "WelcomePage: Corregidos estilos de botones"
 ```
 
-**¿Qué hace?**
+**ï¿½Quï¿½ hace?**
 - ? Crea commit local
-- ? Sube a GitHub automáticamente
+- ? Sube a GitHub automï¿½ticamente
 - ? Incluye timestamp
 - ? Todo tu trabajo queda respaldado
 
@@ -39,21 +39,21 @@
 .\create-welcomepage-snapshot.ps1
 ```
 
-**¿Qué hace?**
-- ?? Crea copia completa de archivos críticos
+**ï¿½Quï¿½ hace?**
+- ?? Crea copia completa de archivos crï¿½ticos
 - ??? Etiqueta con timestamp
 - ?? Guarda metadata (commit, rama, fecha)
-- ?? Permite restauración fácil
+- ?? Permite restauraciï¿½n fï¿½cil
 
-**¿Cuándo usarlo?**
-- ? Antes de refactorizar código
-- ? Al terminar una sesión de trabajo
-- ? Después de lograr algo que funciona bien
+**ï¿½Cuï¿½ndo usarlo?**
+- ? Antes de refactorizar cï¿½digo
+- ? Al terminar una sesiï¿½n de trabajo
+- ? Despuï¿½s de lograr algo que funciona bien
 - ? Antes de probar cambios experimentales
 
 ---
 
-### **Capa 3: Restauración Rápida** ?? (SI ALGO SALE MAL)
+### **Capa 3: Restauraciï¿½n Rï¿½pida** ?? (SI ALGO SALE MAL)
 
 **Si se pierde el progreso o algo se rompe:**
 
@@ -61,14 +61,14 @@
 # Listar snapshots disponibles
 .\restore-snapshot.ps1
 
-# Restaurar snapshot específico
+# Restaurar snapshot especï¿½fico
 .\restore-snapshot.ps1 2025-01-15_143022
 ```
 
-**¿Qué hace?**
+**ï¿½Quï¿½ hace?**
 - ?? Lista todos los snapshots disponibles
 - ?? Restaura archivos completos
-- ?? Crea commit de restauración
+- ?? Crea commit de restauraciï¿½n
 - ? Vuelve a estado funcional conocido
 
 ---
@@ -86,13 +86,13 @@
 # (WelcomePage.scss editado)
 # (etc.)
 
-# 3. DESPUÉS DE CADA CAMBIO IMPORTANTE: Commit
+# 3. DESPUï¿½S DE CADA CAMBIO IMPORTANTE: Commit
 .\auto-commit-changes.ps1 "WelcomePage: Cambio importante"
 
 # 4. CADA 30 MIN O ANTES DE CAMBIOS GRANDES: Snapshot
 .\create-welcomepage-snapshot.ps1
 
-# 5. FIN DE SESIÓN: Snapshot final
+# 5. FIN DE SESIï¿½N: Snapshot final
 .\create-welcomepage-snapshot.ps1
 .\auto-commit-changes.ps1 "Session complete: WelcomePage improvements"
 ```
@@ -104,13 +104,13 @@
 ### Escenario 1: Cambios Ya Commiteados
 
 ```powershell
-# Ver últimos commits
+# Ver ï¿½ltimos commits
 git log --oneline -10
 
-# Ver cambios específicos
+# Ver cambios especï¿½ficos
 git show [commit-hash]
 
-# Tu código está SEGURO en GitHub ?
+# Tu cï¿½digo estï¿½ SEGURO en GitHub ?
 ```
 
 ### Escenario 2: Cambios No Commiteados
@@ -126,13 +126,13 @@ git diff
 .\auto-commit-changes.ps1 "Recovered: WelcomePage changes before chat loss"
 ```
 
-### Escenario 3: Algo Se Rompió
+### Escenario 3: Algo Se Rompiï¿½
 
 ```powershell
 # Ver snapshots disponibles
 .\restore-snapshot.ps1
 
-# Restaurar último snapshot funcional
+# Restaurar ï¿½ltimo snapshot funcional
 .\restore-snapshot.ps1 [timestamp-del-snapshot-bueno]
 ```
 
@@ -144,11 +144,11 @@ git diff
 
 ### ? SIEMPRE HAZ ESTO:
 
-1. **Después de cada cambio importante:**
+1. **Despuï¿½s de cada cambio importante:**
    ```
    [Editas archivos]
    [Verificas que compila]
-   [Ejecutas]: .\auto-commit-changes.ps1 "Descripción clara del cambio"
+   [Ejecutas]: .\auto-commit-changes.ps1 "Descripciï¿½n clara del cambio"
    ```
 
 2. **Antes de refactorizar o cambios grandes:**
@@ -156,10 +156,10 @@ git diff
    [Ejecutas]: .\create-welcomepage-snapshot.ps1
    [Haces los cambios]
    [Si funciona]: .\auto-commit-changes.ps1 "Refactor exitoso"
-   [Si falla]: .\restore-snapshot.ps1 [último-snapshot]
+   [Si falla]: .\restore-snapshot.ps1 [ï¿½ltimo-snapshot]
    ```
 
-3. **Al finalizar sesión:**
+3. **Al finalizar sesiï¿½n:**
    ```
    [Ejecutas]: .\create-welcomepage-snapshot.ps1
    [Ejecutas]: .\auto-commit-changes.ps1 "Session complete - WelcomePage stable"
@@ -167,10 +167,10 @@ git diff
 
 ### ? NUNCA HAGAS ESTO:
 
-- ? Hacer múltiples cambios sin commits intermedios
-- ? Editar archivos críticos sin snapshot previo
-- ? Terminar sesión sin commit final
-- ? Asumir que los cambios están seguros sin verificar
+- ? Hacer mï¿½ltiples cambios sin commits intermedios
+- ? Editar archivos crï¿½ticos sin snapshot previo
+- ? Terminar sesiï¿½n sin commit final
+- ? Asumir que los cambios estï¿½n seguros sin verificar
 
 ---
 
@@ -179,23 +179,23 @@ git diff
 ### Ver Estado Actual:
 
 ```powershell
-# ¿Hay cambios sin commitear?
+# ï¿½Hay cambios sin commitear?
 git status
 
-# ¿Cuál fue el último commit?
+# ï¿½Cuï¿½l fue el ï¿½ltimo commit?
 git log -1
 
-# ¿Cuántos snapshots tengo?
+# ï¿½Cuï¿½ntos snapshots tengo?
 Get-ChildItem .snapshots\welcomepage -Directory | Measure-Object
 ```
 
 ### Ver Historial:
 
 ```powershell
-# Últimos 10 commits
+# ï¿½ltimos 10 commits
 git log --oneline -10
 
-# Commits específicos de WelcomePage
+# Commits especï¿½ficos de WelcomePage
 git log --oneline -- frontend/src/pages/auth/WelcomePage.*
 
 # Snapshots disponibles
@@ -204,13 +204,13 @@ git log --oneline -- frontend/src/pages/auth/WelcomePage.*
 
 ---
 
-## ?? CONFIGURACIÓN ADICIONAL
+## ?? CONFIGURACIï¿½N ADICIONAL
 
 ### .gitignore Ya Configurado
 
-El archivo `.snapshots` está incluido en el repositorio para:
+El archivo `.snapshots` estï¿½ incluido en el repositorio para:
 - ? Respaldar snapshots en GitHub
-- ? Compartir entre máquinas
+- ? Compartir entre mï¿½quinas
 - ? Recuperar desde cualquier clone
 
 ### Estructura de Directorios
@@ -236,13 +236,13 @@ El archivo `.snapshots` está incluido en el repositorio para:
 
 ## ?? TIPS AVANZADOS
 
-### 1. Crear Snapshot con Descripción
+### 1. Crear Snapshot con Descripciï¿½n
 
 ```powershell
 # Crear snapshot
 .\create-welcomepage-snapshot.ps1
 
-# Inmediatamente después, commit con contexto
+# Inmediatamente despuï¿½s, commit con contexto
 .\auto-commit-changes.ps1 "Snapshot: WelcomePage antes de agregar animaciones"
 ```
 
@@ -271,31 +271,31 @@ git push origin main
 
 ## ? CHECKLIST DE SEGURIDAD
 
-**Antes de cada sesión de trabajo:**
-- [ ] Verificar que estás en la rama correcta (`git branch`)
-- [ ] Verificar conexión con GitHub (`git remote -v`)
+**Antes de cada sesiï¿½n de trabajo:**
+- [ ] Verificar que estï¿½s en la rama correcta (`git branch`)
+- [ ] Verificar conexiï¿½n con GitHub (`git remote -v`)
 - [ ] Crear snapshot de estado actual
 
 **Durante el trabajo:**
-- [ ] Commit después de cada feature completada
+- [ ] Commit despuï¿½s de cada feature completada
 - [ ] Snapshot antes de refactors grandes
 - [ ] Verificar que cambios compilan
 
-**Al finalizar sesión:**
+**Al finalizar sesiï¿½n:**
 - [ ] Crear snapshot final
 - [ ] Commit y push a GitHub
-- [ ] Verificar que todo está subido (`git status`)
+- [ ] Verificar que todo estï¿½ subido (`git status`)
 
 ---
 
 ## ?? RESUMEN EJECUTIVO
 
-| Situación | Acción | Script |
+| Situaciï¿½n | Acciï¿½n | Script |
 |-----------|--------|--------|
-| Cambio importante hecho | Guardar inmediatamente | `.\auto-commit-changes.ps1 "descripción"` |
+| Cambio importante hecho | Guardar inmediatamente | `.\auto-commit-changes.ps1 "descripciï¿½n"` |
 | Antes de cambio grande | Crear punto de control | `.\create-welcomepage-snapshot.ps1` |
-| Algo se rompió | Volver a versión anterior | `.\restore-snapshot.ps1` |
-| Fin de sesión | Asegurar todo | `.\create-welcomepage-snapshot.ps1` + commit |
+| Algo se rompiï¿½ | Volver a versiï¿½n anterior | `.\restore-snapshot.ps1` |
+| Fin de sesiï¿½n | Asegurar todo | `.\create-welcomepage-snapshot.ps1` + commit |
 | Chat perdido | Recuperar trabajo | `git log` ? ver commits recientes |
 
 ---
@@ -304,10 +304,10 @@ git push origin main
 
 **CON ESTE SISTEMA:**
 
-? **Nunca más perderás cambios** cuando se pierde el chat  
-? **Siempre puedes volver atrás** a una versión funcional  
-? **Todo está en GitHub** para acceso desde cualquier lugar  
-? **Proceso automático** que no interrumpe el flujo de trabajo  
+? **Nunca mï¿½s perderï¿½s cambios** cuando se pierde el chat  
+? **Siempre puedes volver atrï¿½s** a una versiï¿½n funcional  
+? **Todo estï¿½ en GitHub** para acceso desde cualquier lugar  
+? **Proceso automï¿½tico** que no interrumpe el flujo de trabajo  
 ? **Historial completo** de todos los cambios  
 
 ---
@@ -316,7 +316,7 @@ git push origin main
 
 **Si algo no funciona:**
 
-1. Verifica que Git está configurado: `git status`
+1. Verifica que Git estï¿½ configurado: `git status`
 2. Verifica que tienes acceso a GitHub: `git push origin main`
 3. Verifica que los scripts tienen permisos: `Get-ExecutionPolicy`
 4. Lee los logs de error del script
@@ -324,13 +324,13 @@ git push origin main
 **Documentos relacionados:**
 - `RESPALDO-GITHUB-COMPLETADO.md` - Sistema de respaldo general
 - `.github\copilot-instructions.md` - Instrucciones para el agente
-- `SOLUCION-COMPONENTES-AUTH.md` - Código de WelcomePage
+- `SOLUCION-COMPONENTES-AUTH.md` - Cï¿½digo de WelcomePage
 
 ---
 
-**Última actualización:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
 **Estado:** ? Sistema implementado y probado  
-**Prioridad:** ?? CRÍTICA - Usar SIEMPRE
+**Prioridad:** ?? CRï¿½TICA - Usar SIEMPRE
 
 ---
 

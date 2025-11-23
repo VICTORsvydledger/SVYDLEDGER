@@ -1,8 +1,8 @@
-# ? SOLUCIÓN AL PROBLEMA DE MÚLTIPLES PROCESOS NODE.JS
+# ? SOLUCIï¿½N AL PROBLEMA DE Mï¿½LTIPLES PROCESOS NODE.JS
 
 ## ?? PROBLEMA DETECTADO
 
-Tienes **4 procesos Node.js** corriendo simultáneamente:
+Tienes **4 procesos Node.js** corriendo simultï¿½neamente:
 - Node.js JavaScript Runtime: 350.6 MB
 - Node.js JavaScript Runtime: 207.2 MB
 - Node.js JavaScript Runtime (2): 276.0 MB
@@ -12,23 +12,23 @@ Tienes **4 procesos Node.js** corriendo simultáneamente:
 
 ---
 
-## ? SOLUCIÓN DEFINITIVA IMPLEMENTADA
+## ? SOLUCIï¿½N DEFINITIVA IMPLEMENTADA
 
-### ?? Nuevo Sistema de Proceso Único
+### ?? Nuevo Sistema de Proceso ï¿½nico
 
-Se ha implementado un sistema que **GARANTIZA** que solo un proceso Node.js esté activo:
+Se ha implementado un sistema que **GARANTIZA** que solo un proceso Node.js estï¿½ activo:
 
 #### 1. **start-single-process.ps1** (? RECOMENDADO)
 ```powershell
 .\start-single-process.ps1
 ```
 
-**Características:**
+**Caracterï¿½sticas:**
 - ? Detecta si ya hay un servidor corriendo
 - ? Crea un archivo de bloqueo (.node-lock)
 - ? Mata TODOS los procesos Node.js antes de iniciar
 - ? Solo permite UN proceso activo a la vez
-- ? Se limpia automáticamente al salir (Ctrl+C)
+- ? Se limpia automï¿½ticamente al salir (Ctrl+C)
 - ? Ofrece opciones si detecta otro proceso:
   - Abrir en navegador
   - Matar y reiniciar
@@ -51,7 +51,7 @@ Se ha implementado un sistema que **GARANTIZA** que solo un proceso Node.js esté
 
 Este monitor:
 - ?? Revisa cada 30 segundos (configurable)
-- ?? Alerta cuando detecta múltiples procesos
+- ?? Alerta cuando detecta mï¿½ltiples procesos
 - ?? Puede auto-eliminar procesos extras (modo -AutoKill)
 - ?? Muestra uso de memoria en tiempo real
 
@@ -72,42 +72,42 @@ Q. Quit
 
 ---
 
-## ?? SOLUCIÓN RÁPIDA (USAR ESTO)
+## ?? SOLUCIï¿½N Rï¿½PIDA (USAR ESTO)
 
 ### Para Empezar a Trabajar Hoy:
 
-**Opción 1: Proceso Único (Recomendado) ?**
+**Opciï¿½n 1: Proceso ï¿½nico (Recomendado) ?**
 ```powershell
 .\start-single-process.ps1
 ```
 
-**Opción 2: Dev Manager**
+**Opciï¿½n 2: Dev Manager**
 ```powershell
 .\dev-manager.ps1
 ```
-Luego selecciona: Opción `1` (Single Process Mode)
+Luego selecciona: Opciï¿½n `1` (Single Process Mode)
 
 ---
 
-## ??? PREVENCIÓN AUTOMÁTICA
+## ??? PREVENCIï¿½N AUTOMï¿½TICA
 
 ### Ejecutar Monitor en Segundo Plano
 
-**Opción A: Terminal Separada (Solo Alertas)**
+**Opciï¿½n A: Terminal Separada (Solo Alertas)**
 ```powershell
 # En una nueva ventana de PowerShell
 .\monitor-node-processes.ps1
 ```
 
-**Opción B: Auto-Kill Automático**
+**Opciï¿½n B: Auto-Kill Automï¿½tico**
 ```powershell
 # En una nueva ventana de PowerShell
 .\monitor-node-processes.ps1 -AutoKill
 ```
 
 Este monitor:
-- Te avisará si se inician múltiples procesos
-- En modo -AutoKill, mantendrá automáticamente solo 1 proceso
+- Te avisarï¿½ si se inician mï¿½ltiples procesos
+- En modo -AutoKill, mantendrï¿½ automï¿½ticamente solo 1 proceso
 - Se ejecuta continuamente hasta que lo detengas (Ctrl+C)
 
 ---
@@ -116,11 +116,11 @@ Este monitor:
 
 ### Scripts Principales
 
-| Script | Descripción | Uso Recomendado |
+| Script | Descripciï¿½n | Uso Recomendado |
 |--------|-------------|-----------------|
-| `start-single-process.ps1` | ? Inicio con proceso único garantizado | **Usar siempre** |
-| `monitor-node-processes.ps1` | Monitor de procesos Node.js | Prevención automática |
-| `dev-manager.ps1` | Menú interactivo mejorado | Gestión general |
+| `start-single-process.ps1` | ? Inicio con proceso ï¿½nico garantizado | **Usar siempre** |
+| `monitor-node-processes.ps1` | Monitor de procesos Node.js | Prevenciï¿½n automï¿½tica |
+| `dev-manager.ps1` | Menï¿½ interactivo mejorado | Gestiï¿½n general |
 | `start-frontend.ps1` | Inicio seguro tradicional | Alternativa |
 | `kill-node-processes.ps1` | Mata todos los procesos | Limpieza manual |
 
@@ -128,18 +128,18 @@ Este monitor:
 
 ## ?? FLUJO DE TRABAJO RECOMENDADO
 
-### 1?? Al Iniciar Sesión Cada Día:
+### 1?? Al Iniciar Sesiï¿½n Cada Dï¿½a:
 
 ```powershell
-# Opción A: Directo
+# Opciï¿½n A: Directo
 .\start-single-process.ps1
 
-# Opción B: Con menú
+# Opciï¿½n B: Con menï¿½
 .\dev-manager.ps1
 # Selecciona: 1 (Single Process Mode)
 ```
 
-### 2?? Si Quieres Protección Continua:
+### 2?? Si Quieres Protecciï¿½n Continua:
 
 ```powershell
 # Terminal 1: Monitor (auto-kill)
@@ -152,7 +152,7 @@ Este monitor:
 ### 3?? Si Aparece el Problema:
 
 ```powershell
-# Limpieza rápida
+# Limpieza rï¿½pida
 .\kill-node-processes.ps1
 
 # Luego reinicia
@@ -163,37 +163,37 @@ Este monitor:
 
 ## ? PREGUNTAS FRECUENTES
 
-### Q: ¿Por qué aparecen múltiples procesos?
+### Q: ï¿½Por quï¿½ aparecen mï¿½ltiples procesos?
 **A:** Ocurre cuando:
 - Cierras el terminal sin Ctrl+C
 - El sistema crashea
-- Inicias npm run dev múltiples veces
+- Inicias npm run dev mï¿½ltiples veces
 - Hay errores que no cierran el proceso
 
-### Q: ¿Cómo evito que vuelva a pasar?
+### Q: ï¿½Cï¿½mo evito que vuelva a pasar?
 **A:** Usa `start-single-process.ps1` que:
 - Mata todos los procesos antes de iniciar
 - Crea un bloqueo para evitar duplicados
-- Se limpia automáticamente al salir
+- Se limpia automï¿½ticamente al salir
 
-### Q: ¿Puedo dejar el monitor corriendo siempre?
-**A:** Sí, pero:
-- Sin -AutoKill: Solo te alertará
-- Con -AutoKill: Matará procesos extras automáticamente
-- Usa -IntervalSeconds para ajustar frecuencia de revisión
+### Q: ï¿½Puedo dejar el monitor corriendo siempre?
+**A:** Sï¿½, pero:
+- Sin -AutoKill: Solo te alertarï¿½
+- Con -AutoKill: Matarï¿½ procesos extras automï¿½ticamente
+- Usa -IntervalSeconds para ajustar frecuencia de revisiï¿½n
 
-### Q: ¿Qué pasa con mis datos si se mata un proceso?
+### Q: ï¿½Quï¿½ pasa con mis datos si se mata un proceso?
 **A:** No pasa nada porque:
 - Es solo el servidor de desarrollo (Vite)
 - No maneja datos persistentes
-- Tu código está seguro en archivos
-- Redux/stores están en memoria del navegador
+- Tu cï¿½digo estï¿½ seguro en archivos
+- Redux/stores estï¿½n en memoria del navegador
 
 ---
 
-## ?? VERIFICACIÓN DE ÉXITO
+## ?? VERIFICACIï¿½N DE ï¿½XITO
 
-### Después de usar `start-single-process.ps1`:
+### Despuï¿½s de usar `start-single-process.ps1`:
 
 **En PowerShell:**
 ```
@@ -206,7 +206,7 @@ Este monitor:
 - ? Solo **1 proceso** Node.js
 - ? Memoria: ~150-200 MB (no 862 MB)
 
-**En otro terminal (verificación):**
+**En otro terminal (verificaciï¿½n):**
 ```powershell
 Get-Process node | Measure-Object
 # Output: Count: 1
@@ -214,7 +214,7 @@ Get-Process node | Measure-Object
 
 ---
 
-## ?? SOLUCIÓN DE EMERGENCIA
+## ?? SOLUCIï¿½N DE EMERGENCIA
 
 Si todo falla, ejecuta esta secuencia:
 
@@ -225,7 +225,7 @@ Start-Sleep -Seconds 3
 
 # 2. Verificar
 Get-Process node -ErrorAction SilentlyContinue
-# Debería devolver: nada o error
+# Deberï¿½a devolver: nada o error
 
 # 3. Limpiar lock file
 Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
@@ -236,9 +236,9 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 
 ---
 
-## ?? COMPARACIÓN DE MÉTODOS
+## ?? COMPARACIï¿½N DE Mï¿½TODOS
 
-| Método | Seguridad | Auto-Limpieza | Prevención | Recomendado |
+| Mï¿½todo | Seguridad | Auto-Limpieza | Prevenciï¿½n | Recomendado |
 |--------|-----------|---------------|------------|-------------|
 | `npm run dev` manual | ? | ? | ? | ? |
 | `start-frontend.ps1` | ? | ?? | ? | ?? |
@@ -247,7 +247,7 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 
 ---
 
-## ?? PARA ENTENDER QUÉ HACE EL SISTEMA
+## ?? PARA ENTENDER QUï¿½ HACE EL SISTEMA
 
 ### Archivo de Bloqueo (.node-lock)
 ```json
@@ -262,14 +262,14 @@ Este archivo:
 - Se crea al iniciar
 - Contiene info del proceso activo
 - Se verifica antes de iniciar nuevo proceso
-- Se elimina automáticamente al salir (Ctrl+C)
+- Se elimina automï¿½ticamente al salir (Ctrl+C)
 
 ### Flujo de `start-single-process.ps1`
 ```
-1. ¿Existe .node-lock?
+1. ï¿½Existe .node-lock?
    ?? NO  ? Continuar
-   ?? SÍ  ? ¿El proceso sigue vivo?
-            ?? SÍ ? Mostrar opciones (abrir/matar/salir)
+   ?? Sï¿½  ? ï¿½El proceso sigue vivo?
+            ?? Sï¿½ ? Mostrar opciones (abrir/matar/salir)
             ?? NO ? Limpiar lock y continuar
 
 2. Matar TODOS los procesos Node.js existentes
@@ -282,7 +282,7 @@ Este archivo:
 
 6. Iniciar npm run dev
 
-7. Al salir (Ctrl+C): Eliminar .node-lock automáticamente
+7. Al salir (Ctrl+C): Eliminar .node-lock automï¿½ticamente
 ```
 
 ---
@@ -301,7 +301,7 @@ Task Manager:
   Procesos: 4
 ```
 
-### Después (con start-single-process.ps1):
+### Despuï¿½s (con start-single-process.ps1):
 ```
 Task Manager:
   Node.js (180 MB)
@@ -314,7 +314,7 @@ Task Manager:
 
 ---
 
-## ?? ACCIÓN INMEDIATA
+## ?? ACCIï¿½N INMEDIATA
 
 **Ahora mismo, ejecuta:**
 
@@ -328,14 +328,14 @@ O con el dev manager mejorado:
 .\dev-manager.ps1
 ```
 
-Y selecciona: **Opción 1** (Single Process Mode)
+Y selecciona: **Opciï¿½n 1** (Single Process Mode)
 
 ---
 
-**¡Problema resuelto de forma DEFINITIVA!** ???
+**ï¿½Problema resuelto de forma DEFINITIVA!** ???
 
-**Sistema de Prevención:** ? Implementado  
+**Sistema de Prevenciï¿½n:** ? Implementado  
 **Auto-Limpieza:** ? Activado  
 **Monitoreo Opcional:** ? Disponible  
-**Última actualización:** 2024-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
 **Estado:** ?? Completamente funcional

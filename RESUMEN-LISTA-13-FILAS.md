@@ -20,7 +20,7 @@ const usersData = Array(50).fill(null).map((_, i) => ({
   saldo: '$0.00'
 }))
 
-// DESPUÉS (13 filas)
+// DESPUï¿½S (13 filas)
 const usersData = Array(13).fill(null).map((_, i) => ({
   key: i,
   nombre: `User ${i + 1}`,
@@ -41,16 +41,16 @@ const usersData = Array(13).fill(null).map((_, i) => ({
 ### 2. **Scroll Vertical Preparado**
 - ? El SCSS ya tiene configurado `max-height: 390px` para 13 filas
 - ? Scroll personalizado con estilos webkit
-- ? Listo para cuando se agreguen más registros desde el formulario
+- ? Listo para cuando se agreguen mï¿½s registros desde el formulario
 
 ### 3. **Filas No Editables**
 - ? Las filas son de solo lectura
-- ? Solo permiten selección con radio button
+- ? Solo permiten selecciï¿½n con radio button
 - ? Preparadas para recibir datos del formulario "Crear Usuario Nuevo" en el futuro
 
 ---
 
-## ?? DESPLIEGUE AUTOMÁTICO
+## ?? DESPLIEGUE AUTOMï¿½TICO
 
 ### Commit y Push
 ```bash
@@ -64,7 +64,7 @@ git push origin main
 - ? Build completado
 - ? Despliegue a Azure Static Web Apps completado
 
-### URL de Producción
+### URL de Producciï¿½n
 ?? **https://www.svydledger.com**
 
 ---
@@ -95,9 +95,9 @@ git push origin main
 
 ---
 
-## ?? PRÓXIMOS PASOS (PENDIENTES)
+## ?? PRï¿½XIMOS PASOS (PENDIENTES)
 
-### 1. **Integración con Formulario "Crear Usuario Nuevo"**
+### 1. **Integraciï¿½n con Formulario "Crear Usuario Nuevo"**
 - ? Conectar el formulario con la lista
 - ? Agregar nuevos usuarios a la lista al hacer clic en "Pay for new user registration"
 - ? Validar datos antes de agregar
@@ -110,18 +110,18 @@ git push origin main
 
 ### 3. **Persistencia de Datos**
 - ? Guardar usuarios en base de datos
-- ? Cargar usuarios existentes al iniciar sesión
+- ? Cargar usuarios existentes al iniciar sesiï¿½n
 - ? Sincronizar con backend
 
 ---
 
-## ?? NOTAS TÉCNICAS
+## ?? NOTAS Tï¿½CNICAS
 
 ### Scroll Vertical (Ya Configurado en SCSS)
 ```scss
 .ant-table-body {
   overflow-y: auto !important;
-  max-height: 390px !important; // 13 filas × 30px = 390px
+  max-height: 390px !important; // 13 filas ï¿½ 30px = 390px
   
   &::-webkit-scrollbar {
     width: 8px;
@@ -143,23 +143,23 @@ git push origin main
 }
 ```
 
-### Características del Scroll
-- ? Aparece automáticamente cuando hay más de 13 registros
+### Caracterï¿½sticas del Scroll
+- ? Aparece automï¿½ticamente cuando hay mï¿½s de 13 registros
 - ? Estilo personalizado con barra blanca semi-transparente
-- ? Altura fija de 390px (30px por fila × 13 filas)
+- ? Altura fija de 390px (30px por fila ï¿½ 13 filas)
 
 ---
 
-## ? VERIFICACIÓN DE CAMBIOS
+## ? VERIFICACIï¿½N DE CAMBIOS
 
 ### En Local
 1. Abrir navegador en: http://localhost:5173
-2. Hacer clic en el botón flotante de navegación (flecha circular)
+2. Hacer clic en el botï¿½n flotante de navegaciï¿½n (flecha circular)
 3. Verificar que la Lista de Usuarios muestre solo 13 filas
 
-### En Producción
+### En Producciï¿½n
 1. Abrir navegador en: https://www.svydledger.com
-2. Hacer clic en el botón flotante de navegación (flecha circular)
+2. Hacer clic en el botï¿½n flotante de navegaciï¿½n (flecha circular)
 3. Verificar que la Lista de Usuarios muestre solo 13 filas
 
 ---
@@ -169,8 +169,8 @@ git push origin main
 **Commit:** `f3e2941`  
 **Mensaje:** "feat: Reduce user list to 13 rows with vertical scroll"  
 **Archivos modificados:** 1  
-**Líneas agregadas:** 5  
-**Líneas eliminadas:** 5  
+**Lï¿½neas agregadas:** 5  
+**Lï¿½neas eliminadas:** 5  
 
 ---
 
@@ -181,10 +181,10 @@ git push origin main
 - ? Bordes blancos
 - ? Texto blanco
 - ? Headers con fondo transparente
-- ? Selección con color verde vibrante (rgba(0, 255, 0, 0.8))
+- ? Selecciï¿½n con color verde vibrante (rgba(0, 255, 0, 0.8))
 - ? Scroll personalizado
 
-### Botones de Acción
+### Botones de Acciï¿½n
 - ? ENTRAR, EDITAR, PAPELERA, PAGAR, SALDO: Verde vibrante
 - ? Bordes blancos de 2px
 - ? Texto blanco
@@ -199,7 +199,7 @@ git push origin main
 gh run list --limit 3
 ```
 
-### Ver Logs del Último Despliegue
+### Ver Logs del ï¿½ltimo Despliegue
 ```powershell
 gh run view $(gh run list --limit 1 --json databaseId -q '.[0].databaseId')
 ```
@@ -213,14 +213,14 @@ git log --oneline -5
 
 ## ?? DOCUMENTOS RELACIONADOS
 
-- `RESUMEN-SESION-LISTA-50-FILAS.md` - Sesión anterior (50 filas)
-- `VERIFICAR-LISTA-50-FILAS.md` - Verificación de 50 filas
-- `CORRECCION-13-FILAS-VISIBLES.md` - Esta corrección
-- `POST-AUTH-PAGE-IMPLEMENTATION.md` - Documentación general
-- `POSTAUTH-I18N-IMPLEMENTATION.md` - Internacionalización
+- `RESUMEN-SESION-LISTA-50-FILAS.md` - Sesiï¿½n anterior (50 filas)
+- `VERIFICAR-LISTA-50-FILAS.md` - Verificaciï¿½n de 50 filas
+- `CORRECCION-13-FILAS-VISIBLES.md` - Esta correcciï¿½n
+- `POST-AUTH-PAGE-IMPLEMENTATION.md` - Documentaciï¿½n general
+- `POSTAUTH-I18N-IMPLEMENTATION.md` - Internacionalizaciï¿½n
 
 ---
 
 **Estado:** ? COMPLETADO  
 **Desplegado en:** https://www.svydledger.com  
-**Última actualización:** 2025-01-15
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15

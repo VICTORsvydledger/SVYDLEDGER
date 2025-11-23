@@ -1,7 +1,7 @@
-# ?? VERIFICACIÓN VISUAL: Lista de Usuarios 13 Filas
+# ?? VERIFICACIï¿½N VISUAL: Lista de Usuarios 13 Filas
 
 **Fecha:** 2025-01-15  
-**Cambio:** Reducción de 50 filas a 13 filas con scroll vertical
+**Cambio:** Reducciï¿½n de 50 filas a 13 filas con scroll vertical
 
 ---
 
@@ -12,7 +12,7 @@
 ```
 ??????????????????????????????????????????????????????????????????????
 ?                         User List                                  ?
-?                                                    [BTNS DE ACCIÓN] ?
+?                                                    [BTNS DE ACCIï¿½N] ?
 ?????????????????????????????????????????????????????????????????????
 ?  ?   NAME      ?    ID     ?      $        ?                      ?
 ?????????????????????????????????????????????????????????????????????
@@ -28,17 +28,17 @@
 ?  ?   User 10   ?  ID-010   ?   $0.00       ?                      ?
 ?  ?   User 11   ?  ID-011   ?   $0.00       ?                      ?
 ?  ?   User 12   ?  ID-012   ?   $0.00       ?                      ?
-?  ?   User 13   ?  ID-013   ?   $0.00       ? ? ÚLTIMA FILA        ?
+?  ?   User 13   ?  ID-013   ?   $0.00       ? ? ï¿½LTIMA FILA        ?
 ?????????????????????????????????????????????????????????????????????
 ```
 
 **Total de filas visibles:** 13  
 **Scroll vertical:** Preparado para futuros registros  
-**Altura fija:** 390px (30px × 13 filas)
+**Altura fija:** 390px (30px ï¿½ 13 filas)
 
 ---
 
-## ?? COMPARACIÓN ANTES Y DESPUÉS
+## ?? COMPARACIï¿½N ANTES Y DESPUï¿½S
 
 ### ANTES (50 Filas)
 ```
@@ -56,11 +56,11 @@
 ```
 
 **Problemas:**
-- ? Demasiadas filas vacías
+- ? Demasiadas filas vacï¿½as
 - ? Scroll muy largo innecesario
 - ? Datos de ejemplo excesivos
 
-### DESPUÉS (13 Filas)
+### DESPUï¿½S (13 Filas)
 ```
 ???????????????????????????????????????
 ? User List                           ?
@@ -76,9 +76,9 @@
 ```
 
 **Beneficios:**
-- ? Número razonable de filas de ejemplo
+- ? Nï¿½mero razonable de filas de ejemplo
 - ? Scroll preparado para futuros datos reales
-- ? Mejor visualización en pantalla
+- ? Mejor visualizaciï¿½n en pantalla
 - ? Menos datos dummy innecesarios
 
 ---
@@ -96,7 +96,7 @@
 ??????????????????????????????????????
 ```
 
-### Botones de Acción (Todos Verde Vibrante)
+### Botones de Acciï¿½n (Todos Verde Vibrante)
 ```
 ????????????????????????????????????????????????????????
 ? [ENTRAR] [EDIT] [TRASH] [PAY] [BALANCE]             ?
@@ -117,16 +117,16 @@
 
 ---
 
-## ?? VERIFICACIÓN EN NAVEGADOR
+## ?? VERIFICACIï¿½N EN NAVEGADOR
 
 ### 1. **Abrir WelcomePage**
 ```
 URL Local:      http://localhost:5173
-URL Producción: https://www.svydledger.com
+URL Producciï¿½n: https://www.svydledger.com
 ```
 
 ### 2. **Navegar a PostAuthPage**
-- Hacer clic en el botón flotante (flecha circular) en la esquina inferior derecha
+- Hacer clic en el botï¿½n flotante (flecha circular) en la esquina inferior derecha
 
 ### 3. **Verificar Lista de Usuarios**
 - ? Debe mostrar exactamente 13 filas
@@ -135,34 +135,34 @@ URL Producción: https://www.svydledger.com
 - ? Todos los saldos en $0.00
 - ? Scroll NO visible (solo 13 filas)
 
-### 4. **Funcionalidad de Selección**
+### 4. **Funcionalidad de Selecciï¿½n**
 - ? Radio button funcional
 - ? Solo una fila seleccionable a la vez
 - ? Fila seleccionada cambia a verde vibrante
-- ? Botones de acción muestran mensajes al hacer clic
+- ? Botones de acciï¿½n muestran mensajes al hacer clic
 
 ---
 
-## ?? MÉTRICAS
+## ?? Mï¿½TRICAS
 
-### Tamaño del Array
+### Tamaï¿½o del Array
 ```typescript
 ANTES:  Array(50)  // 50 elementos
-DESPUÉS: Array(13)  // 13 elementos
+DESPUï¿½S: Array(13)  // 13 elementos
 ```
 
-### Reducción
+### Reducciï¿½n
 ```
 50 - 13 = 37 filas eliminadas
-37 / 50 = 74% de reducción
-13 / 50 = 26% del tamaño original
+37 / 50 = 74% de reducciï¿½n
+13 / 50 = 26% del tamaï¿½o original
 ```
 
 ### Altura de la Tabla
 ```
 Altura por fila: 30px
 Total de filas: 13
-Altura total: 13 × 30px = 390px
+Altura total: 13 ï¿½ 30px = 390px
 
 max-height configurado: 390px ?
 ```
@@ -171,7 +171,7 @@ max-height configurado: 390px ?
 
 ## ?? COMPORTAMIENTO FUTURO
 
-### Cuando se agreguen más usuarios desde el formulario:
+### Cuando se agreguen mï¿½s usuarios desde el formulario:
 
 ```
 Filas 1-13: Visibles sin scroll
@@ -193,11 +193,11 @@ Fila 14+: Requieren scroll
 
 ---
 
-## ?? CÓDIGO FUENTE
+## ?? Cï¿½DIGO FUENTE
 
 ### TypeScript (PostAuthPage.tsx)
 ```typescript
-// Línea ~123
+// Lï¿½nea ~123
 const usersData = Array(13).fill(null).map((_, i) => ({
   key: i,
   nombre: `User ${i + 1}`,
@@ -208,10 +208,10 @@ const usersData = Array(13).fill(null).map((_, i) => ({
 
 ### SCSS (PostAuthPage.scss)
 ```scss
-// Línea ~269
+// Lï¿½nea ~269
 .ant-table-body {
   overflow-y: auto !important;
-  max-height: 390px !important; // 13 filas × 30px
+  max-height: 390px !important; // 13 filas ï¿½ 30px
   
   &::-webkit-scrollbar {
     width: 8px;
@@ -235,11 +235,11 @@ const usersData = Array(13).fill(null).map((_, i) => ({
 
 ---
 
-## ? CHECKLIST DE VERIFICACIÓN
+## ? CHECKLIST DE VERIFICACIï¿½N
 
 ### Visual
 - [x] Lista muestra exactamente 13 filas
-- [x] Numeración correcta (User 1 - User 13)
+- [x] Numeraciï¿½n correcta (User 1 - User 13)
 - [x] IDs correctos (ID-001 - ID-013)
 - [x] Saldos en $0.00
 - [x] Scroll NO visible (solo 13 filas actualmente)
@@ -248,10 +248,10 @@ const usersData = Array(13).fill(null).map((_, i) => ({
 - [x] Radio buttons funcionan
 - [x] Solo una fila seleccionable
 - [x] Fila seleccionada cambia a verde
-- [x] Botones muestran mensajes de advertencia/información
+- [x] Botones muestran mensajes de advertencia/informaciï¿½n
 - [x] Filas son no editables (solo lectura)
 
-### Estético
+### Estï¿½tico
 - [x] Fondo transparente
 - [x] Bordes blancos de 4px
 - [x] Texto blanco
@@ -274,20 +274,20 @@ const usersData = Array(13).fill(null).map((_, i) => ({
 ### URLs
 ```
 Local:      http://localhost:5173
-Producción: https://www.svydledger.com ?
+Producciï¿½n: https://www.svydledger.com ?
 ```
 
 ---
 
 ## ?? TIMELINE
 
-1. **12:00** - Solicitud de reducción de 50 a 13 filas
-2. **12:05** - Análisis del código actual
-3. **12:10** - Modificación del array de datos
-4. **12:15** - Verificación de compilación
+1. **12:00** - Solicitud de reducciï¿½n de 50 a 13 filas
+2. **12:05** - Anï¿½lisis del cï¿½digo actual
+3. **12:10** - Modificaciï¿½n del array de datos
+4. **12:15** - Verificaciï¿½n de compilaciï¿½n
 5. **12:20** - Commit y push a GitHub
-6. **12:25** - Verificación de despliegue exitoso
-7. **12:30** - Documentación completada
+6. **12:25** - Verificaciï¿½n de despliegue exitoso
+7. **12:30** - Documentaciï¿½n completada
 
 **Tiempo total:** ~30 minutos  
 **Estado:** ? COMPLETADO
@@ -299,10 +299,10 @@ Producción: https://www.svydledger.com ?
 - Archivo modificado: `frontend/src/pages/auth/PostAuthPage.tsx`
 - Estilos: `frontend/src/pages/auth/PostAuthPage.scss`
 - Resumen: `RESUMEN-LISTA-13-FILAS.md`
-- Verificación: Este documento
+- Verificaciï¿½n: Este documento
 
 ---
 
-**Última actualización:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
 **Desplegado en:** https://www.svydledger.com  
 **Estado:** ? OPERATIVO

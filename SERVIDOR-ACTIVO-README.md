@@ -1,25 +1,25 @@
 # ? SVYD LEDGER - Servidor Iniciado Correctamente
 
-## ?? ¡TODO ESTÁ FUNCIONANDO!
+## ?? ï¿½TODO ESTï¿½ FUNCIONANDO!
 
 ---
 
-## ?? ACCESO RÁPIDO
+## ?? ACCESO Rï¿½PIDO
 
-### **Opción 1: Archivo HTML (RECOMENDADO)**
+### **Opciï¿½n 1: Archivo HTML (RECOMENDADO)**
 ?? Archivo: `ACCESO-RAPIDO.html`
-- Ya se abrió automáticamente en tu navegador
-- Si no se abrió, haz doble clic en el archivo `ACCESO-RAPIDO.html`
-- Tiene un botón grande para abrir la aplicación
+- Ya se abriï¿½ automï¿½ticamente en tu navegador
+- Si no se abriï¿½, haz doble clic en el archivo `ACCESO-RAPIDO.html`
+- Tiene un botï¿½n grande para abrir la aplicaciï¿½n
 
-### **Opción 2: URL Directa**
+### **Opciï¿½n 2: URL Directa**
 ?? Copia y pega en tu navegador:
 ```
 http://localhost:3000
 ```
 
-### **Opción 3: Desde la Terminal de VS Code**
-1. En la terminal, mantén presionada la tecla **Ctrl**
+### **Opciï¿½n 3: Desde la Terminal de VS Code**
+1. En la terminal, mantï¿½n presionada la tecla **Ctrl**
 2. Haz clic en: `http://localhost:3000/`
 
 ---
@@ -32,17 +32,17 @@ http://localhost:3000
 | **Puerto** | ? 3000 | Escuchando |
 | **Procesos Node.js** | ? 3 | Normal (proceso principal + workers) |
 | **Memoria** | ? ~115 MB | Uso normal |
-| **Hot Reload** | ? Activo | Los cambios se reflejan automáticamente |
+| **Hot Reload** | ? Activo | Los cambios se reflejan automï¿½ticamente |
 
 ---
 
-## ?? ¿QUÉ VERÁS EN LA PÁGINA?
+## ?? ï¿½QUï¿½ VERï¿½S EN LA Pï¿½GINA?
 
-### Página de Bienvenida - SVYD LEDGER
+### Pï¿½gina de Bienvenida - SVYD LEDGER
 
 1. **Fondo hermoso** ??
    - Cielo azul con nubes blancas
-   - Animación de zoom sutil
+   - Animaciï¿½n de zoom sutil
    - Overlay semitransparente
 
 2. **Logo "Svyd"** ?
@@ -50,40 +50,40 @@ http://localhost:3000
    - Color blanco con efecto glow
    - Centrado en la parte superior
 
-3. **Subtítulo**
+3. **Subtï¿½tulo**
    - "Sistema de Contabilidad Universal"
    - Fuente Carattere, 36px
 
 4. **Texto promocional**
-   - Descripción del sistema
-   - Con tildes y ñ correctas:
-     - ? códigos
-     - ? catálogos
-     - ? física
-     - ? jurídica
+   - Descripciï¿½n del sistema
+   - Con tildes y ï¿½ correctas:
+     - ? cï¿½digos
+     - ? catï¿½logos
+     - ? fï¿½sica
+     - ? jurï¿½dica
 
 5. **Selector de idiomas** ??
    - 27 idiomas disponibles
-   - Formato: "English (English)", "Spanish (Español)", etc.
-   - Caracteres especiales: árabe, chino, hindi, etc.
+   - Formato: "English (English)", "Spanish (Espaï¿½ol)", etc.
+   - Caracteres especiales: ï¿½rabe, chino, hindi, etc.
 
 6. **Formularios elegantes** ??
    - **Sign In** (izquierda):
      - Email
      - Password
-     - "¿Forgot your password?" (funcional)
-     - Botón "Log in"
+     - "ï¿½Forgot your password?" (funcional)
+     - Botï¿½n "Log in"
    
    - **Sign Up** (derecha):
      - Email
      - Password
      - Confirm password
-     - Botón "Create Account"
+     - Botï¿½n "Create Account"
 
 7. **Funciones interactivas** ??
-   - Recuperación de contraseña (cuadro de diálogo)
-   - Autenticación de dos factores (código de 6 dígitos)
-   - Validación de campos
+   - Recuperaciï¿½n de contraseï¿½a (cuadro de diï¿½logo)
+   - Autenticaciï¿½n de dos factores (cï¿½digo de 6 dï¿½gitos)
+   - Validaciï¿½n de campos
    - Efectos hover elegantes
 
 ---
@@ -92,9 +92,9 @@ http://localhost:3000
 
 1. ? **Cambiar el idioma** en el selector
 2. ? **Escribir** en los campos de email y password
-3. ? **Hacer clic** en "¿Forgot your password?"
-4. ? **Intentar login** (verás el cuadro de 2FA)
-5. ? **Intentar crear cuenta** (verás validación de contraseñas)
+3. ? **Hacer clic** en "ï¿½Forgot your password?"
+4. ? **Intentar login** (verï¿½s el cuadro de 2FA)
+5. ? **Intentar crear cuenta** (verï¿½s validaciï¿½n de contraseï¿½as)
 6. ? **Redimensionar** la ventana del navegador (responsive)
 7. ? **Hover** sobre las tarjetas de formularios (efectos visuales)
 
@@ -126,89 +126,89 @@ npm run dev
 ## ?? ARCHIVOS CREADOS
 
 ### Archivos de Utilidad
-1. **ACCESO-RAPIDO.html** - Página HTML con enlace directo y estado del servidor
+1. **ACCESO-RAPIDO.html** - Pï¿½gina HTML con enlace directo y estado del servidor
 2. **monitor-server.ps1** - Script para monitorear el estado del servidor
 3. **kill-node-processes.ps1** - Script para limpiar procesos Node.js
-4. **start-dev.bat** - Script para iniciar el servidor fácilmente
+4. **start-dev.bat** - Script para iniciar el servidor fï¿½cilmente
 
-### Código del Proyecto
+### Cï¿½digo del Proyecto
 1. **frontend/src/pages/auth/WelcomePage.tsx** - Componente React principal
 2. **frontend/src/pages/auth/WelcomePage.scss** - Estilos SCSS profesionales
 3. **frontend/src/App.tsx** - Rutas actualizadas
 4. **frontend/index.html** - HTML base con UTF-8
 
-### Documentación
-1. **INSTRUCCIONES-DETALLADAS.md** - Guía paso a paso
-2. **frontend/INSTALLATION.md** - Guía de instalación
-3. **frontend/FONT-GUIDE.md** - Guía sobre fuentes
+### Documentaciï¿½n
+1. **INSTRUCCIONES-DETALLADAS.md** - Guï¿½a paso a paso
+2. **frontend/INSTALLATION.md** - Guï¿½a de instalaciï¿½n
+3. **frontend/FONT-GUIDE.md** - Guï¿½a sobre fuentes
 4. **DEPLOYMENT-CHECKLIST.md** - Checklist de despliegue
 
 ---
 
-## ?? PRÓXIMOS PASOS
+## ?? PRï¿½XIMOS PASOS
 
 ### Inmediato (Ahora)
-1. ? Abre la página en tu navegador
+1. ? Abre la pï¿½gina en tu navegador
 2. ? Prueba todas las funcionalidades
-3. ? Verifica que el texto se vea correctamente (tildes y ñ)
-4. ? Prueba el diseño responsive
+3. ? Verifica que el texto se vea correctamente (tildes y ï¿½)
+4. ? Prueba el diseï¿½o responsive
 
 ### Corto Plazo (Esta semana)
-1. ? Ajustar diseño si es necesario
+1. ? Ajustar diseï¿½o si es necesario
 2. ? Conectar con Identity Service API
-3. ? Implementar autenticación real con JWT
-4. ? Configurar envío de emails para 2FA
+3. ? Implementar autenticaciï¿½n real con JWT
+4. ? Configurar envï¿½o de emails para 2FA
 
-### Mediano Plazo (Próximas semanas)
-1. ? Implementar traducción multi-idioma real
+### Mediano Plazo (Prï¿½ximas semanas)
+1. ? Implementar traducciï¿½n multi-idioma real
 2. ? Crear los 6 microservicios backend
 3. ? Configurar Azure Kubernetes Service (AKS)
 4. ? Configurar CI/CD con GitHub Actions
 
-### Largo Plazo (Próximo mes)
+### Largo Plazo (Prï¿½ximo mes)
 1. ? Desplegar en Azure (www.svydledger.com)
 2. ? Configurar DNS y SSL
-3. ? Configurar CDN y caché
+3. ? Configurar CDN y cachï¿½
 4. ? Implementar monitoreo y alertas
 
 ---
 
-## ?? SOLUCIÓN DE PROBLEMAS
+## ?? SOLUCIï¿½N DE PROBLEMAS
 
-### Problema 1: La página no carga
-**Solución**:
-1. Verifica que el servidor esté corriendo (deberías ver mensajes en la terminal)
+### Problema 1: La pï¿½gina no carga
+**Soluciï¿½n**:
+1. Verifica que el servidor estï¿½ corriendo (deberï¿½as ver mensajes en la terminal)
 2. Verifica la URL: `http://localhost:3000`
 3. Presiona F5 o Ctrl+R para refrescar
 
-### Problema 2: Múltiples procesos Node.js
-**Solución**:
+### Problema 2: Mï¿½ltiples procesos Node.js
+**Soluciï¿½n**:
 1. Ejecuta: `.\kill-node-processes.ps1`
 2. O presiona Ctrl+C en todas las terminales abiertas
 3. Reinicia el servidor con `npm run dev`
 
 ### Problema 3: Puerto 3000 ocupado
-**Solución**:
+**Soluciï¿½n**:
 ```powershell
 Get-NetTCPConnection -LocalPort 3000 | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
 npm run dev
 ```
 
 ### Problema 4: Cambios no se reflejan
-**Solución**:
-1. El Hot Reload debería funcionar automáticamente
+**Soluciï¿½n**:
+1. El Hot Reload deberï¿½a funcionar automï¿½ticamente
 2. Si no funciona, presiona Ctrl+Shift+R (recarga forzada)
-3. O detén el servidor (Ctrl+C) y reinícialo
+3. O detï¿½n el servidor (Ctrl+C) y reinï¿½cialo
 
 ---
 
-## ?? INFORMACIÓN DEL PROYECTO
+## ?? INFORMACIï¿½N DEL PROYECTO
 
 | Detalle | Valor |
 |---------|-------|
 | **Proyecto** | SVYD LEDGER |
-| **Versión** | 1.0.0 |
-| **Región** | Central US (centralus) |
+| **Versiï¿½n** | 1.0.0 |
+| **Regiï¿½n** | Central US (centralus) |
 | **Repositorio** | github.com/VICTORsvydledger/SVYDLEDGER |
 | **Branch** | main |
 | **Node.js** | v24.11.1 |
@@ -219,30 +219,30 @@ npm run dev
 
 ---
 
-## ?? ¡FELICIDADES!
+## ?? ï¿½FELICIDADES!
 
-Tu página de bienvenida está funcionando perfectamente. Ahora puedes:
+Tu pï¿½gina de bienvenida estï¿½ funcionando perfectamente. Ahora puedes:
 
-1. ?? Disfrutar del diseño elegante
+1. ?? Disfrutar del diseï¿½o elegante
 2. ?? Probar todas las funcionalidades
 3. ?? Verificar que sea responsive
 4. ?? Cambiar entre los 27 idiomas
-5. ?? Probar los formularios de autenticación
+5. ?? Probar los formularios de autenticaciï¿½n
 
 ---
 
 ## ?? NOTAS ADICIONALES
 
 - Las advertencias de "Deprecation Warning [legacy-js-api]" son normales y no afectan el funcionamiento
-- El servidor se mantendrá corriendo hasta que presiones Ctrl+C
-- Los cambios que hagas en el código se reflejarán automáticamente en el navegador
-- Las imágenes de fondo están en: `frontend/public/images/backgrounds/`
+- El servidor se mantendrï¿½ corriendo hasta que presiones Ctrl+C
+- Los cambios que hagas en el cï¿½digo se reflejarï¿½n automï¿½ticamente en el navegador
+- Las imï¿½genes de fondo estï¿½n en: `frontend/public/images/backgrounds/`
 
 ---
 
-**Última actualización**: 2025-01-16  
+**ï¿½ltima actualizaciï¿½n**: 2025-01-16  
 **Estado**: ? Servidor activo y funcionando perfectamente
 
 ---
 
-**¡Disfruta tu aplicación!** ??
+**ï¿½Disfruta tu aplicaciï¿½n!** ??

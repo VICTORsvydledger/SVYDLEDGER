@@ -1,7 +1,7 @@
 # ?? SVYD LEDGER - Instrucciones Paso a Paso (Para Principiantes)
 
 ## ?? Objetivo
-Instalar Node.js, ejecutar el servidor de desarrollo y ver la página de bienvenida en tu navegador.
+Instalar Node.js, ejecutar el servidor de desarrollo y ver la pï¿½gina de bienvenida en tu navegador.
 
 ---
 
@@ -11,37 +11,37 @@ Instalar Node.js, ejecutar el servidor de desarrollo y ver la página de bienveni
 
 ## ?? PASO 1: Descargar Node.js
 
-### Acción:
+### Acciï¿½n:
 1. Abre tu navegador web (Chrome, Edge, Firefox)
-2. Ve a esta dirección: **https://nodejs.org/**
-3. Verás DOS botones verdes grandes
-4. Haz clic en el botón de la **IZQUIERDA** que dice:
+2. Ve a esta direcciï¿½n: **https://nodejs.org/**
+3. Verï¿½s DOS botones verdes grandes
+4. Haz clic en el botï¿½n de la **IZQUIERDA** que dice:
    - "20.x.x LTS" (Recommended For Most Users)
    - O el que diga "LTS" (Long Term Support)
 
-### ¿Qué estás descargando?
-Un archivo llamado algo como: `node-v20.11.0-x64.msi` (el número puede variar)
+### ï¿½Quï¿½ estï¿½s descargando?
+Un archivo llamado algo como: `node-v20.11.0-x64.msi` (el nï¿½mero puede variar)
 
 ### Espera a que termine la descarga
-- Verás el archivo en tu carpeta de Descargas
-- Tamaño aproximado: 30-40 MB
+- Verï¿½s el archivo en tu carpeta de Descargas
+- Tamaï¿½o aproximado: 30-40 MB
 
 ---
 
 ## ?? PASO 2: Instalar Node.js
 
-### Acción:
+### Acciï¿½n:
 1. Ve a tu carpeta de **Descargas**
 2. Busca el archivo que acabas de descargar (`.msi`)
 3. Haz **doble clic** en el archivo
-4. Si Windows pregunta "¿Quieres permitir que esta aplicación haga cambios?", haz clic en **Sí**
+4. Si Windows pregunta "ï¿½Quieres permitir que esta aplicaciï¿½n haga cambios?", haz clic en **Sï¿½**
 
-### Durante la instalación:
+### Durante la instalaciï¿½n:
 1. Pantalla 1: Haz clic en **Next**
-2. Pantalla 2: Acepta los términos (checkbox) y haz clic en **Next**
+2. Pantalla 2: Acepta los tï¿½rminos (checkbox) y haz clic en **Next**
 3. Pantalla 3: Deja la carpeta por defecto, haz clic en **Next**
 4. Pantalla 4: **MUY IMPORTANTE**
-   - Verás una opción que dice:
+   - Verï¿½s una opciï¿½n que dice:
    - "Automatically install the necessary tools"
    - ? **Marca esta casilla** (muy importante)
    - Haz clic en **Next**
@@ -49,9 +49,9 @@ Un archivo llamado algo como: `node-v20.11.0-x64.msi` (el número puede variar)
 6. Espera 2-3 minutos mientras se instala
 7. Pantalla final: Haz clic en **Finish**
 
-### Después de hacer clic en Finish:
-- Se abrirá una ventana negra (PowerShell)
-- Dirá algo como "Installing additional tools"
+### Despuï¿½s de hacer clic en Finish:
+- Se abrirï¿½ una ventana negra (PowerShell)
+- Dirï¿½ algo como "Installing additional tools"
 - **NO CIERRES ESTA VENTANA**
 - Espera hasta que termine (puede tomar 5-10 minutos)
 - Cuando termine, puedes cerrar la ventana
@@ -60,33 +60,33 @@ Un archivo llamado algo como: `node-v20.11.0-x64.msi` (el número puede variar)
 
 ## ?? PASO 3: Reiniciar Visual Studio Code
 
-### ¿Por qué?
-Para que VS Code reconozca que Node.js está instalado.
+### ï¿½Por quï¿½?
+Para que VS Code reconozca que Node.js estï¿½ instalado.
 
-### Acción:
-1. En Visual Studio Code, ve al menú **File** (arriba a la izquierda)
+### Acciï¿½n:
+1. En Visual Studio Code, ve al menï¿½ **File** (arriba a la izquierda)
 2. Haz clic en **Exit** (o presiona Alt+F4)
 3. Espera 5 segundos
 4. Abre Visual Studio Code de nuevo
 
 ---
 
-## ?? PASO 4: Verificar que Node.js está instalado
+## ?? PASO 4: Verificar que Node.js estï¿½ instalado
 
-### Acción:
+### Acciï¿½n:
 1. En Visual Studio Code, presiona **Ctrl + `** (la tecla arriba de Tab)
-   - Esto abrirá la Terminal en la parte inferior
+   - Esto abrirï¿½ la Terminal en la parte inferior
 2. En la terminal, escribe (o copia y pega):
    ```
    node --version
    ```
 3. Presiona **Enter**
 
-### ¿Qué deberías ver?
-Algo como: `v20.11.0` (el número puede variar)
+### ï¿½Quï¿½ deberï¿½as ver?
+Algo como: `v20.11.0` (el nï¿½mero puede variar)
 
-### Si ves el número:
-? ¡Perfecto! Node.js está instalado correctamente
+### Si ves el nï¿½mero:
+? ï¿½Perfecto! Node.js estï¿½ instalado correctamente
 
 ### Si dice "no se reconoce el comando":
 ? Repite el Paso 3 (cerrar y abrir VS Code)
@@ -96,7 +96,7 @@ Algo como: `v20.11.0` (el número puede variar)
 
 ## ?? PASO 5: Instalar las dependencias del proyecto
 
-### Acción:
+### Acciï¿½n:
 1. En la Terminal de VS Code (la ventana negra abajo)
 2. Escribe (o copia y pega):
    ```
@@ -109,36 +109,36 @@ Algo como: `v20.11.0` (el número puede variar)
    ```
 5. Presiona **Enter**
 
-### ¿Qué está pasando?
-- npm está descargando e instalando todas las librerías que el proyecto necesita
-- Verás muchos mensajes pasando rápidamente
+### ï¿½Quï¿½ estï¿½ pasando?
+- npm estï¿½ descargando e instalando todas las librerï¿½as que el proyecto necesita
+- Verï¿½s muchos mensajes pasando rï¿½pidamente
 - Esto puede tomar **5-10 minutos**
 
-### ¿Qué deberías ver?
-- Líneas de texto pasando
+### ï¿½Quï¿½ deberï¿½as ver?
+- Lï¿½neas de texto pasando
 - Barras de progreso
-- Al final: "added 1234 packages" (el número varía)
+- Al final: "added 1234 packages" (el nï¿½mero varï¿½a)
 
-### ?? ¿Ves errores en rojo?
+### ?? ï¿½Ves errores en rojo?
 - Si son **"WARN"**: No te preocupes, son solo advertencias
-- Si son **"ERR!"**: Avísame y te ayudo
+- Si son **"ERR!"**: Avï¿½same y te ayudo
 
 ---
 
 ## ?? PASO 6: Iniciar el servidor de desarrollo
 
-### Acción:
-1. En la Terminal (debería estar en `frontend`), escribe:
+### Acciï¿½n:
+1. En la Terminal (deberï¿½a estar en `frontend`), escribe:
    ```
    npm run dev
    ```
 2. Presiona **Enter**
 
-### ¿Qué está pasando?
-- El servidor de desarrollo se está iniciando
-- Va a compilar todo el código de React
+### ï¿½Quï¿½ estï¿½ pasando?
+- El servidor de desarrollo se estï¿½ iniciando
+- Va a compilar todo el cï¿½digo de React
 
-### ¿Qué deberías ver?
+### ï¿½Quï¿½ deberï¿½as ver?
 Algo como:
 ```
   VITE v5.0.11  ready in 1234 ms
@@ -149,18 +149,18 @@ Algo como:
 ```
 
 ### ? Si ves esto:
-¡Perfecto! El servidor está corriendo
+ï¿½Perfecto! El servidor estï¿½ corriendo
 
 ---
 
-## ?? PASO 7: Abrir la página en tu navegador
+## ?? PASO 7: Abrir la pï¿½gina en tu navegador
 
-### Opción 1: Hacer clic en el enlace
-1. En VS Code, mantén presionada la tecla **Ctrl**
+### Opciï¿½n 1: Hacer clic en el enlace
+1. En VS Code, mantï¿½n presionada la tecla **Ctrl**
 2. Haz clic en el enlace `http://localhost:3000/`
-3. Se abrirá en tu navegador
+3. Se abrirï¿½ en tu navegador
 
-### Opción 2: Copiar y pegar
+### Opciï¿½n 2: Copiar y pegar
 1. Abre tu navegador (Chrome, Edge, Firefox)
 2. En la barra de direcciones, escribe:
    ```
@@ -170,25 +170,25 @@ Algo como:
 
 ---
 
-## ?? PASO 8: ¡Disfruta la página!
+## ?? PASO 8: ï¿½Disfruta la pï¿½gina!
 
-### ¿Qué deberías ver?
+### ï¿½Quï¿½ deberï¿½as ver?
 
 1. **Fondo**: Una hermosa imagen del cielo azul con nubes blancas
 2. **Logo**: "Svyd" en letras grandes y elegantes (blancas)
-3. **Subtítulo**: "Sistema de Contabilidad Universal"
-4. **Párrafo**: Descripción del sistema
+3. **Subtï¿½tulo**: "Sistema de Contabilidad Universal"
+4. **Pï¿½rrafo**: Descripciï¿½n del sistema
 5. **Selector de idioma**: Combo con 27 idiomas
 6. **Dos formularios**:
-   - Izquierda: "Sign in" (Iniciar sesión)
+   - Izquierda: "Sign in" (Iniciar sesiï¿½n)
    - Derecha: "Sign up" (Crear cuenta)
 
 ### Prueba las funciones:
 - ? Cambia el idioma en el selector
 - ? Escribe en los campos de Email y Password
-- ? Haz clic en "¿Forgot your password?"
+- ? Haz clic en "ï¿½Forgot your password?"
 - ? Intenta hacer clic en "Log in" o "Create Account"
-- ? Ve el cuadro de diálogo de verificación de dos pasos
+- ? Ve el cuadro de diï¿½logo de verificaciï¿½n de dos pasos
 
 ---
 
@@ -203,7 +203,7 @@ Algo como:
 
 ## ?? Para volver a iniciar el servidor
 
-### La próxima vez que quieras ver la página:
+### La prï¿½xima vez que quieras ver la pï¿½gina:
 1. Abre Visual Studio Code
 2. Abre la Terminal (**Ctrl + `**)
 3. Escribe:
@@ -215,39 +215,39 @@ Algo como:
 
 ---
 
-## ?? ¡FELICIDADES!
+## ?? ï¿½FELICIDADES!
 
-Has completado la configuración del frontend de SVYD LEDGER.
+Has completado la configuraciï¿½n del frontend de SVYD LEDGER.
 
 ---
 
 ## ?? Problemas Comunes
 
 ### Problema 1: "node no se reconoce como comando"
-**Solución**:
+**Soluciï¿½n**:
 1. Cierra VS Code completamente
 2. Abre VS Code de nuevo
 3. Si sigue sin funcionar, reinicia tu computadora
 
-### Problema 2: "Puerto 3000 ya está en uso"
-**Solución**:
+### Problema 2: "Puerto 3000 ya estï¿½ en uso"
+**Soluciï¿½n**:
 1. Presiona **Ctrl + C** en la terminal para detener cualquier servidor
 2. Espera 5 segundos
 3. Intenta `npm run dev` de nuevo
 
-### Problema 3: La página no carga
-**Solución**:
-1. Verifica que el servidor esté corriendo (deberías ver mensajes en la terminal)
+### Problema 3: La pï¿½gina no carga
+**Soluciï¿½n**:
+1. Verifica que el servidor estï¿½ corriendo (deberï¿½as ver mensajes en la terminal)
 2. Verifica la URL: debe ser exactamente `http://localhost:3000`
-3. Intenta refrescar la página (**F5** o **Ctrl + R**)
+3. Intenta refrescar la pï¿½gina (**F5** o **Ctrl + R**)
 
-### Problema 4: No veo las imágenes de fondo
-**Solución**:
-1. Verifica que las 5 imágenes estén en:
+### Problema 4: No veo las imï¿½genes de fondo
+**Soluciï¿½n**:
+1. Verifica que las 5 imï¿½genes estï¿½n en:
    ```
    C:\Users\svcon\Desktop\SVYDDATALEDGER\frontend\public\images\backgrounds\
    ```
-2. Las imágenes deben llamarse:
+2. Las imï¿½genes deben llamarse:
    - background-1.png.png
    - background-2.png.png
    - etc.
@@ -256,7 +256,7 @@ Has completado la configuración del frontend de SVYD LEDGER.
 
 ## ?? Si necesitas ayuda
 
-Avísame en qué paso estás y qué error o mensaje ves en la pantalla.
+Avï¿½same en quï¿½ paso estï¿½s y quï¿½ error o mensaje ves en la pantalla.
 
 ---
 
@@ -271,12 +271,12 @@ Marca cada paso cuando lo completes:
 - [ ] PASO 5: Ejecutar `npm install` en frontend
 - [ ] PASO 6: Ejecutar `npm run dev`
 - [ ] PASO 7: Abrir http://localhost:3000 en el navegador
-- [ ] PASO 8: ¡Ver la página de bienvenida funcionando!
+- [ ] PASO 8: ï¿½Ver la pï¿½gina de bienvenida funcionando!
 
 ---
 
 **Tiempo Total Estimado**: 15-20 minutos  
-**Dificultad**: ? Fácil (paso a paso)  
+**Dificultad**: ? Fï¿½cil (paso a paso)  
 **Prerequisitos**: Ninguno (todo se explica)
 
-**¡Mucha suerte! ??**
+**ï¿½Mucha suerte! ??**

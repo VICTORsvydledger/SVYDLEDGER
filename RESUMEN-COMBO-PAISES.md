@@ -1,8 +1,8 @@
-# ? COMBO DE PAÍSES IMPLEMENTADO - 2025-01-15
+# ? COMBO DE PAï¿½SES IMPLEMENTADO - 2025-01-15
 
 ## ?? RESUMEN
 
-Se ha implementado exitosamente un selector de países (combo/dropdown) en el formulario "Crear Usuario Nuevo" de la página PostAuthPage.
+Se ha implementado exitosamente un selector de paï¿½ses (combo/dropdown) en el formulario "Crear Usuario Nuevo" de la pï¿½gina PostAuthPage.
 
 ---
 
@@ -10,20 +10,20 @@ Se ha implementado exitosamente un selector de países (combo/dropdown) en el for
 
 ### 1?? **Nuevo Archivo: `frontend/src/data/countries.ts`**
 
-Creado archivo con lista completa de países del mundo:
+Creado archivo con lista completa de paï¿½ses del mundo:
 
-**Características:**
+**Caracterï¿½sticas:**
 - ? **Estados Unidos primero** en la lista
-- ? **Todos los demás países ordenados alfabéticamente**
-- ? **Formato**: Nombre en inglés (Nombre nativo)
-- ? **Incluye caracteres especiales**: árabe, chino, japonés, cirílico, etc.
-- ? **195 países** reconocidos por la ONU
+- ? **Todos los demï¿½s paï¿½ses ordenados alfabï¿½ticamente**
+- ? **Formato**: Nombre en inglï¿½s (Nombre nativo)
+- ? **Incluye caracteres especiales**: ï¿½rabe, chino, japonï¿½s, cirï¿½lico, etc.
+- ? **195 paï¿½ses** reconocidos por la ONU
 
 **Estructura de datos:**
 ```typescript
 export interface Country {
-  code: string        // Código ISO (US, ES, JP, etc.)
-  nameEn: string      // Nombre en inglés
+  code: string        // Cï¿½digo ISO (US, ES, JP, etc.)
+  nameEn: string      // Nombre en inglï¿½s
   nameNative: string  // Nombre en idioma nativo
   displayName: string // Formato combinado "English (Native)"
 }
@@ -31,11 +31,11 @@ export interface Country {
 
 **Ejemplos:**
 - `United States (United States)` - Primero en la lista
-- `Afghanistan (?????????)` - Árabe
+- `Afghanistan (?????????)` - ï¿½rabe
 - `China (??)` - Chino
-- `Japan (??)` - Japonés
-- `Russia (??????)` - Cirílico
-- `Spain (España)` - Caracteres latinos extendidos
+- `Japan (??)` - Japonï¿½s
+- `Russia (??????)` - Cirï¿½lico
+- `Spain (Espaï¿½a)` - Caracteres latinos extendidos
 
 ---
 
@@ -43,17 +43,17 @@ export interface Country {
 
 **Cambios realizados:**
 
-1. **Import añadido:**
+1. **Import aï¿½adido:**
    ```typescript
    import { Select } from 'antd'
    import countries from '@/data/countries'
    ```
 
-2. **Campo País reemplazado:**
+2. **Campo Paï¿½s reemplazado:**
    - ? **Antes**: `<Input>` (texto libre)
    - ? **Ahora**: `<Select>` (combo desplegable)
 
-3. **Características del Select:**
+3. **Caracterï¿½sticas del Select:**
    ```typescript
    <Select
      value={newUser.pais}
@@ -62,37 +62,37 @@ export interface Country {
        value: country.code,
        label: country.displayName
      }))}
-     showSearch              // ? Búsqueda integrada
+     showSearch              // ? Bï¿½squeda integrada
      optionFilterProp="label" // ? Filtro por nombre
-     placeholder="Select Country / Seleccionar País"
+     placeholder="Select Country / Seleccionar Paï¿½s"
      style={{ width: '100%' }}
    />
    ```
 
 **Funcionalidades:**
-- ? **Búsqueda en tiempo real** (typeahead)
+- ? **Bï¿½squeda en tiempo real** (typeahead)
 - ? **Scroll infinito** para navegar lista completa
-- ? **Filtrado** por nombre en inglés o nativo
-- ? **Placeholder bilingüe** (inglés/español)
+- ? **Filtrado** por nombre en inglï¿½s o nativo
+- ? **Placeholder bilingï¿½e** (inglï¿½s/espaï¿½ol)
 - ? **Ancho completo** adaptable
 
 ---
 
-## ?? PAÍSES INCLUIDOS
+## ?? PAï¿½SES INCLUIDOS
 
-### Primer País:
+### Primer Paï¿½s:
 1. **United States** - Siempre primero
 
-### Resto Alfabético (A-Z):
+### Resto Alfabï¿½tico (A-Z):
 - Afghanistan (?????????)
-- Albania (Shqipëri)
+- Albania (Shqipï¿½ri)
 - Algeria (???????)
 - ...
 - Yemen (?????)
 - Zambia (Zambia)
 - Zimbabwe (Zimbabwe)
 
-**Total: 195 países**
+**Total: 195 paï¿½ses**
 
 ---
 
@@ -100,24 +100,24 @@ export interface Country {
 
 ### Idiomas con Caracteres Especiales Soportados:
 
-| Script | Ejemplo País | Caracteres |
+| Script | Ejemplo Paï¿½s | Caracteres |
 |--------|--------------|------------|
-| Árabe | Egypt (???) | RTL, caracteres árabes |
+| ï¿½rabe | Egypt (???) | RTL, caracteres ï¿½rabes |
 | Chino | China (??) | Caracteres simplificados |
-| Japonés | Japan (??) | Kanji |
-| Cirílico | Russia (??????) | Alfabeto cirílico |
+| Japonï¿½s | Japan (??) | Kanji |
+| Cirï¿½lico | Russia (??????) | Alfabeto cirï¿½lico |
 | Griego | Greece (??????) | Alfabeto griego |
 | Hebreo | Israel (?????) | RTL, caracteres hebreos |
 | Hindi | India (????) | Devanagari |
 | Coreano | South Korea (??) | Hangul |
-| Tailandés | Thailand (?????????) | Script tailandés |
+| Tailandï¿½s | Thailand (?????????) | Script tailandï¿½s |
 | Georgiano | Georgia (??????????) | Alfabeto georgiano |
 
 ---
 
 ## ?? DESPLIEGUE
 
-### Proceso Automático:
+### Proceso Automï¿½tico:
 
 1. ? **Commit realizado:**
    ```
@@ -132,7 +132,7 @@ export interface Country {
 3. ?? **GitHub Actions disparado:**
    - Workflow: `.github/workflows/swa-frontend.yml`
    - Trigger: Push a rama `main`
-   - Acción: Build + Deploy a Azure Static Web Apps
+   - Acciï¿½n: Build + Deploy a Azure Static Web Apps
 
 4. ?? **URL de despliegue:**
    ```
@@ -141,7 +141,7 @@ export interface Country {
 
 ---
 
-## ? VERIFICACIÓN
+## ? VERIFICACIï¿½N
 
 ### Para probar el cambio:
 
@@ -151,21 +151,21 @@ export interface Country {
    ```
 
 2. **Navegar a PostAuthPage:**
-   - Hacer clic en el botón flotante (esquina inferior derecha)
+   - Hacer clic en el botï¿½n flotante (esquina inferior derecha)
    - O completar login/registro en WelcomePage
 
 3. **Ir al formulario "Crear Usuario Nuevo":**
-   - Campo **País** ahora muestra un dropdown
+   - Campo **Paï¿½s** ahora muestra un dropdown
    - **Estados Unidos** aparece primero en la lista
-   - Todos los demás países ordenados alfabéticamente
-   - Se muestran nombres nativos entre paréntesis
+   - Todos los demï¿½s paï¿½ses ordenados alfabï¿½ticamente
+   - Se muestran nombres nativos entre parï¿½ntesis
 
 4. **Probar funcionalidades:**
    - ? Click en dropdown: Lista completa visible
    - ? Escribir "Japan": Filtra a `Japan (??)`
    - ? Escribir "??": Filtra a `China (??)`
-   - ? Scroll: Navegación fluida por 195 países
-   - ? Selección: Guarda código ISO (US, JP, CN, etc.)
+   - ? Scroll: Navegaciï¿½n fluida por 195 paï¿½ses
+   - ? Selecciï¿½n: Guarda cï¿½digo ISO (US, JP, CN, etc.)
 
 ---
 
@@ -173,13 +173,13 @@ export interface Country {
 
 | Componente | Estado | Notas |
 |------------|--------|-------|
-| `countries.ts` | ? Creado | 195 países completos |
-| `PostAuthPage.tsx` | ? Modificado | Campo País como Select |
-| Compilación TypeScript | ? Sin errores | Verificado con `npx tsc --noEmit` |
+| `countries.ts` | ? Creado | 195 paï¿½ses completos |
+| `PostAuthPage.tsx` | ? Modificado | Campo Paï¿½s como Select |
+| Compilaciï¿½n TypeScript | ? Sin errores | Verificado con `npx tsc --noEmit` |
 | Git commit | ? Completado | Hash: 771d5a3 |
 | Git push | ? Completado | Enviado a GitHub |
-| GitHub Actions | ?? En progreso | Despliegue automático |
-| Producción | ? Pendiente | Esperar ~3-5 minutos |
+| GitHub Actions | ?? En progreso | Despliegue automï¿½tico |
+| Producciï¿½n | ? Pendiente | Esperar ~3-5 minutos |
 
 ---
 
@@ -187,23 +187,23 @@ export interface Country {
 
 ### Estilos heredados:
 
-El Select de Ant Design hereda automáticamente los estilos existentes de PostAuthPage:
+El Select de Ant Design hereda automï¿½ticamente los estilos existentes de PostAuthPage:
 
 - ? **Fondo transparente** con borde blanco
 - ? **Texto blanco** sobre fondo oscuro
 - ? **Dropdown con fondo oscuro** (tema de Ant Design)
-- ? **Scroll personalizado** (si está configurado en SCSS)
+- ? **Scroll personalizado** (si estï¿½ configurado en SCSS)
 
 ### Compatibilidad RTL:
 
 El componente Select de Ant Design soporta nativamente idiomas RTL (Right-to-Left):
-- ? Árabe
+- ? ï¿½rabe
 - ? Hebreo
 - ? Persa
 
 ---
 
-## ?? CONFIGURACIÓN TÉCNICA
+## ?? CONFIGURACIï¿½N Tï¿½CNICA
 
 ### Path Alias usado:
 ```typescript
@@ -234,29 +234,29 @@ import { Select } from 'antd'
 
 ---
 
-## ?? PRÓXIMOS PASOS OPCIONALES
+## ?? PRï¿½XIMOS PASOS OPCIONALES
 
-### Mejoras futuras (NO implementadas aún):
+### Mejoras futuras (NO implementadas aï¿½n):
 
-1. **Banderas de países:**
-   - Agregar iconos de banderas al lado de cada país
-   - Usar librería como `country-flag-icons`
+1. **Banderas de paï¿½ses:**
+   - Agregar iconos de banderas al lado de cada paï¿½s
+   - Usar librerï¿½a como `country-flag-icons`
 
-2. **Monedas automáticas:**
-   - Pre-llenar campo Moneda al seleccionar país
+2. **Monedas automï¿½ticas:**
+   - Pre-llenar campo Moneda al seleccionar paï¿½s
    - Ejemplo: US ? USD, JP ? JPY
 
 3. **Traducciones del formulario:**
-   - Traducir labels según idioma seleccionado en WelcomePage
+   - Traducir labels segï¿½n idioma seleccionado en WelcomePage
    - Ya preparado con sistema de traducciones existente
 
 4. **Validaciones:**
-   - Requerir selección de país antes de submit
-   - Mostrar error si campo vacío
+   - Requerir selecciï¿½n de paï¿½s antes de submit
+   - Mostrar error si campo vacï¿½o
 
 ---
 
-## ?? CÓDIGO GUARDADO
+## ?? Cï¿½DIGO GUARDADO
 
 ### Ubicaciones:
 
@@ -280,10 +280,10 @@ import { Select } from 'antd'
 
 ## ?? TIEMPO ESTIMADO DE DESPLIEGUE
 
-Desde push hasta producción:
+Desde push hasta producciï¿½n:
 - **GitHub Actions:** 2-3 minutos (build)
 - **Azure SWA Deploy:** 1-2 minutos (deploy)
-- **Propagación CDN:** 30-60 segundos
+- **Propagaciï¿½n CDN:** 30-60 segundos
 
 **Total estimado:** 3-5 minutos
 
@@ -293,14 +293,14 @@ Desde push hasta producción:
 
 El formulario "Crear Usuario Nuevo" ahora tiene:
 
-1. ? Campo **País** como combo desplegable
+1. ? Campo **Paï¿½s** como combo desplegable
 2. ? **Estados Unidos primero** en la lista
-3. ? Todos los países **ordenados alfabéticamente**
-4. ? Nombres en **inglés + nombre nativo** entre paréntesis
-5. ? **Búsqueda integrada** (typeahead)
-6. ? Soporte para **195 países**
-7. ? Soporte para **caracteres especiales** (árabe, chino, etc.)
-8. ? **Despliegue automático** a producción
+3. ? Todos los paï¿½ses **ordenados alfabï¿½ticamente**
+4. ? Nombres en **inglï¿½s + nombre nativo** entre parï¿½ntesis
+5. ? **Bï¿½squeda integrada** (typeahead)
+6. ? Soporte para **195 paï¿½ses**
+7. ? Soporte para **caracteres especiales** (ï¿½rabe, chino, etc.)
+8. ? **Despliegue automï¿½tico** a producciï¿½n
 
 ---
 
@@ -311,4 +311,4 @@ El formulario "Crear Usuario Nuevo" ahora tiene:
 
 ---
 
-**CAMBIOS DESPLEGADOS AUTOMÁTICAMENTE EN PRODUCCIÓN** ??
+**CAMBIOS DESPLEGADOS AUTOMï¿½TICAMENTE EN PRODUCCIï¿½N** ??

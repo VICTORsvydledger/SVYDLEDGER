@@ -1,11 +1,11 @@
-# ?? ¡DESPLIEGUE EXITOSO! - SVYD LEDGER
+# ?? ï¿½DESPLIEGUE EXITOSO! - SVYD LEDGER
 
-## ? TU WELCOMEPAGE YA ESTÁ EN VIVO
+## ? TU WELCOMEPAGE YA ESTï¿½ EN VIVO
 
 **URL Temporal (Activa AHORA)**:  
 ?? https://calm-cliff-0f4ed1210.3.azurestaticapps.net
 
-**URL Final (Después de configurar GoDaddy)**:  
+**URL Final (Despuï¿½s de configurar GoDaddy)**:  
 ?? https://www.svydledger.com
 
 ---
@@ -22,7 +22,7 @@
 ?       ?? URL: calm-cliff-0f4ed1210.3.azurestaticapps.net     ?
 ?                                                               ?
 ?  [?] Paso 2: Token de Despliegue Obtenido                   ?
-?       ?? Método: Azure CLI                                   ?
+?       ?? Mï¿½todo: Azure CLI                                   ?
 ?       ?? Estado: Configurado                                 ?
 ?                                                               ?
 ?  [?] Paso 3: GitHub Secret Configurado                      ?
@@ -34,7 +34,7 @@
 ?       ?? Destino: calm-cliff-0f4ed1210.3.azurestaticapps.net ?
 ?                                                               ?
 ?  [?] Paso 5: Configurar Nameservers en GoDaddy              ?
-?       ?? Estado: PENDIENTE - Acción Manual Requerida         ?
+?       ?? Estado: PENDIENTE - Acciï¿½n Manual Requerida         ?
 ?       ?? Instrucciones: docs/CONFIGURACION-DNS-GODADDY.md    ?
 ?                                                               ?
 ????????????????????????????????????????????????????????????????
@@ -53,16 +53,16 @@
 ?  Estado: ? FUNCIONANDO                                      ?
 ?                                                               ?
 ?  Triggers:                                                    ?
-?    • Push a main con cambios en frontend/                    ?
-?    • Dispatch manual                                         ?
+?    ï¿½ Push a main con cambios en frontend/                    ?
+?    ï¿½ Dispatch manual                                         ?
 ?                                                               ?
-?  Último Despliegue:                                          ?
-?    • Estado: ? EXITOSO                                      ?
-?    • Commit: Fix TypeScript error in ReportsPage             ?
-?    • URL: github.com/.../actions/runs/19554215335            ?
+?  ï¿½ltimo Despliegue:                                          ?
+?    ï¿½ Estado: ? EXITOSO                                      ?
+?    ï¿½ Commit: Fix TypeScript error in ReportsPage             ?
+?    ï¿½ URL: github.com/.../actions/runs/19554215335            ?
 ?                                                               ?
 ?  Proceso:                                                     ?
-?    1. ? Checkout código                                     ?
+?    1. ? Checkout cï¿½digo                                     ?
 ?    2. ? Setup Node.js 20                                    ?
 ?    3. ? npm ci                                              ?
 ?    4. ? npm run build                                       ?
@@ -75,11 +75,11 @@
 
 ## ?? SIGUIENTE PASO: CONFIGURAR GODADDY
 
-### ?? Qué hacer AHORA
+### ?? Quï¿½ hacer AHORA
 
 1. **Ve a GoDaddy** (5 minutos):
    - https://www.godaddy.com
-   - Inicia sesión
+   - Inicia sesiï¿½n
    - My Products ? svydledger.com ? DNS
 
 2. **Cambia los Nameservers** a:
@@ -90,21 +90,21 @@
    ns4-07.azure-dns.info
    ```
 
-3. **Espera la propagación** (1-4 horas):
+3. **Espera la propagaciï¿½n** (1-4 horas):
    - GoDaddy dice "hasta 48 horas"
    - Generalmente tarda 1-4 horas
    - Puedes usar la URL temporal mientras esperas
 
-4. **Ejecuta el script de validación**:
+4. **Ejecuta el script de validaciï¿½n**:
    ```powershell
    .\add-custom-domain.ps1
    ```
 
 ---
 
-## ?? DOCUMENTACIÓN CREADA
+## ?? DOCUMENTACIï¿½N CREADA
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
 | `docs/DESPLIEGUE-COMPLETADO.md` | Resumen completo del despliegue |
 | `docs/CONFIGURACION-DNS-GODADDY.md` | Instrucciones detalladas para GoDaddy |
@@ -121,15 +121,15 @@
 ????????????????????????????????????????????????????????????????
 ?                                                               ?
 ?  Certificado SSL/TLS:                                        ?
-?    • Tipo: Let's Encrypt (Gratuito)                          ?
-?    • Renovación: Automática                                  ?
-?    • HTTPS: Forzado                                          ?
-?    • Estado: Se generará automáticamente después de DNS      ?
+?    ï¿½ Tipo: Let's Encrypt (Gratuito)                          ?
+?    ï¿½ Renovaciï¿½n: Automï¿½tica                                  ?
+?    ï¿½ HTTPS: Forzado                                          ?
+?    ï¿½ Estado: Se generarï¿½ automï¿½ticamente despuï¿½s de DNS      ?
 ?                                                               ?
 ?  Security Headers:                                            ?
-?    • X-Frame-Options: DENY                                   ?
-?    • X-Content-Type-Options: nosniff                         ?
-?    • Referrer-Policy: strict-origin-when-cross-origin        ?
+?    ï¿½ X-Frame-Options: DENY                                   ?
+?    ï¿½ X-Content-Type-Options: nosniff                         ?
+?    ï¿½ Referrer-Policy: strict-origin-when-cross-origin        ?
 ?                                                               ?
 ????????????????????????????????????????????????????????????????
 ```
@@ -144,17 +144,17 @@
 ????????????????????????????????????????????????????????????????
 ?                                                               ?
 ?  Azure Static Web Apps (Free Tier):                          ?
-?    • Costo: $0.00/mes                                        ?
-?    • Incluye:                                                ?
+?    ï¿½ Costo: $0.00/mes                                        ?
+?    ï¿½ Incluye:                                                ?
 ?      - 100 GB bandwidth                                      ?
 ?      - 2 dominios personalizados                             ?
 ?      - Certificados SSL gratis                               ?
 ?      - CI/CD integrado                                       ?
 ?                                                               ?
 ?  Azure DNS:                                                   ?
-?    • Costo: ~$0.50/mes                                       ?
+?    ï¿½ Costo: ~$0.50/mes                                       ?
 ?      - $0.50 por zona DNS                                    ?
-?      - $0.40 por millón de consultas                         ?
+?      - $0.40 por millï¿½n de consultas                         ?
 ?                                                               ?
 ?  TOTAL ESTIMADO: $0.50/mes                                   ?
 ?                                                               ?
@@ -163,36 +163,36 @@
 
 ---
 
-## ?? LO QUE SE LOGRÓ
+## ?? LO QUE SE LOGRï¿½
 
 ### Infraestructura Azure ?
 - [x] Azure Static Web App creada y configurada
 - [x] Azure DNS Zone configurada
 - [x] CNAME record creado
-- [x] Certificado SSL configurado (se activará automáticamente)
+- [x] Certificado SSL configurado (se activarï¿½ automï¿½ticamente)
 
 ### CI/CD Pipeline ?
 - [x] GitHub Actions workflow configurado
 - [x] GitHub Secret configurado
-- [x] Despliegue automático en push a main
+- [x] Despliegue automï¿½tico en push a main
 - [x] Build automatizado con TypeScript
 - [x] Deployment exitoso
 
-### Configuración de Red ?
+### Configuraciï¿½n de Red ?
 - [x] Dominio personalizado configurado en Azure
 - [x] CNAME apuntando a Static Web App
 - [x] Nameservers de Azure DNS listos
 - [x] Security headers configurados
 
-### Documentación ?
-- [x] Guía de configuración de GoDaddy
+### Documentaciï¿½n ?
+- [x] Guï¿½a de configuraciï¿½n de GoDaddy
 - [x] Resumen completo del despliegue
-- [x] Script automatizado de validación
+- [x] Script automatizado de validaciï¿½n
 - [x] Resumen visual (este documento)
 
 ---
 
-## ?? COMANDOS ÚTILES
+## ?? COMANDOS ï¿½TILES
 
 ### Verificar Estado
 
@@ -200,29 +200,29 @@
 # Ver tu sitio en vivo
 Start-Process "https://calm-cliff-0f4ed1210.3.azurestaticapps.net"
 
-# Ver últimos deployments
+# Ver ï¿½ltimos deployments
 gh run list --workflow="swa-frontend.yml" --limit 5
 
 # Ver estado de Azure Static Web App
 az staticwebapp show --name svydledger-frontend --resource-group svydledger-data
 
-# Verificar nameservers (después de configurar GoDaddy)
+# Verificar nameservers (despuï¿½s de configurar GoDaddy)
 nslookup -type=NS svydledger.com
 
-# Verificar CNAME (después de propagación)
+# Verificar CNAME (despuï¿½s de propagaciï¿½n)
 nslookup www.svydledger.com
 
-# Agregar dominio personalizado (después de DNS propagado)
+# Agregar dominio personalizado (despuï¿½s de DNS propagado)
 .\add-custom-domain.ps1
 ```
 
 ---
 
-## ?? ACCESO RÁPIDO
+## ?? ACCESO Rï¿½PIDO
 
 ### URLs Importantes
 
-| Descripción | URL |
+| Descripciï¿½n | URL |
 |-------------|-----|
 | **Tu WelcomePage (Activa AHORA)** | https://calm-cliff-0f4ed1210.3.azurestaticapps.net |
 | **GitHub Actions** | https://github.com/VICTORsvydledger/SVYDLEDGER/actions |
@@ -239,43 +239,43 @@ nslookup www.svydledger.com
 
 ---
 
-## ?? PRÓXIMOS PASOS
+## ?? PRï¿½XIMOS PASOS
 
 ### AHORA (5 minutos)
 1. ? **Abre tu WelcomePage**: https://calm-cliff-0f4ed1210.3.azurestaticapps.net
 2. ?? **Configura GoDaddy**: Ver `docs/CONFIGURACION-DNS-GODADDY.md`
 3. ?? **Usa esta URL para tu cuenta bancaria**: La URL temporal ya funciona
 
-### EN 1-4 HORAS (Después de configurar GoDaddy)
-1. ?? **Verifica propagación DNS**:
+### EN 1-4 HORAS (Despuï¿½s de configurar GoDaddy)
+1. ?? **Verifica propagaciï¿½n DNS**:
    ```powershell
    nslookup -type=NS svydledger.com
    ```
-2. ?? **Ejecuta script de validación**:
+2. ?? **Ejecuta script de validaciï¿½n**:
    ```powershell
    .\add-custom-domain.ps1
    ```
 3. ?? **Abre tu dominio personalizado**: https://www.svydledger.com
 
-### DESPUÉS (Continuar desarrollo)
+### DESPUï¿½S (Continuar desarrollo)
 1. ?? Personalizar WelcomePage con tu branding
-2. ?? Agregar más funcionalidades
+2. ?? Agregar mï¿½s funcionalidades
 3. ?? Conectar con backend APIs
 4. ?? Configurar analytics
 
 ---
 
-## ?? CELEBRACIÓN
+## ?? CELEBRACIï¿½N
 
 ```
     ??????????????????????????????????????????????????????????
     ?                                                        ?
-    ?        ¡FELICITACIONES! ??????                         ?
+    ?        ï¿½FELICITACIONES! ??????                         ?
     ?                                                        ?
-    ?    Tu WelcomePage de SVYD LEDGER está EN VIVO         ?
+    ?    Tu WelcomePage de SVYD LEDGER estï¿½ EN VIVO         ?
     ?    y lista para tu cuenta bancaria en USA!            ?
     ?                                                        ?
-    ?    ? Aplicación desplegada                           ?
+    ?    ? Aplicaciï¿½n desplegada                           ?
     ?    ? CI/CD funcionando                               ?
     ?    ? SSL/TLS configurado                             ?
     ?    ? Dominio personalizado listo                     ?
@@ -306,20 +306,20 @@ nslookup www.svydledger.com
    az staticwebapp show --name svydledger-frontend --resource-group svydledger-data
    ```
 
-4. **Revisa la documentación**:
+4. **Revisa la documentaciï¿½n**:
    - `docs/DESPLIEGUE-COMPLETADO.md`
    - `docs/CONFIGURACION-DNS-GODADDY.md`
 
 ---
 
-## ?? CARACTERÍSTICAS DEL DESPLIEGUE
+## ?? CARACTERï¿½STICAS DEL DESPLIEGUE
 
-? **Deployment Automático**: Cada push a `main` despliega automáticamente  
-? **SSL/TLS Gratuito**: Certificado gestionado automáticamente por Azure  
+? **Deployment Automï¿½tico**: Cada push a `main` despliega automï¿½ticamente  
+? **SSL/TLS Gratuito**: Certificado gestionado automï¿½ticamente por Azure  
 ? **CDN Global**: Tu sitio se sirve desde la red global de Azure  
 ? **Alta Disponibilidad**: 99.95% SLA  
 ? **Staging Environments**: Puedes crear ambientes de prueba  
-? **Rollback Fácil**: Vuelve a versiones anteriores en segundos  
+? **Rollback Fï¿½cil**: Vuelve a versiones anteriores en segundos  
 ? **Monitoreo Integrado**: Application Insights incluido  
 
 ---
@@ -332,4 +332,4 @@ nslookup www.svydledger.com
 
 ---
 
-**?? ¡A CONQUISTAR EL MUNDO CON SVYD LEDGER!** ??
+**?? ï¿½A CONQUISTAR EL MUNDO CON SVYD LEDGER!** ??

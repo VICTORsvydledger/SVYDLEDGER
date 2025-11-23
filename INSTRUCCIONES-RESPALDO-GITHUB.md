@@ -2,33 +2,33 @@
 
 **FECHA:** 2025-01-15  
 **ESTADO:** ? Listo para ejecutar  
-**RAZÓN:** Respaldar todo el trabajo sin congelar el agente
+**RAZï¿½N:** Respaldar todo el trabajo sin congelar el agente
 
 ---
 
-## ?? ¿QUÉ VOY A RESPALDAR?
+## ?? ï¿½QUï¿½ VOY A RESPALDAR?
 
 ### Archivos Modificados:
-- ? `frontend/src/components/layout/MainLayout.tsx` - Importación i18n arreglada
+- ? `frontend/src/components/layout/MainLayout.tsx` - Importaciï¿½n i18n arreglada
 
 ### Archivos Verificados (ya existen):
 - ? `frontend/src/pages/auth/components/SignInForm.tsx` - Funcional
 - ? `frontend/src/pages/auth/components/SignUpForm.tsx` - Funcional
 
-### Documentación:
+### Documentaciï¿½n:
 - ? `.github/copilot-instructions.md` - Reglas anti-congelamiento
-- ? `SOLUCION-CONGELAMIENTO.md` - Solución documentada
+- ? `SOLUCION-CONGELAMIENTO.md` - Soluciï¿½n documentada
 - ? `SOLUCION-COMPONENTES-AUTH.md` - Componentes Auth
-- ? Toda la documentación existente
+- ? Toda la documentaciï¿½n existente
 
 ---
 
-## ?? OPCIÓN 1: SCRIPT AUTOMÁTICO (RECOMENDADO)
+## ?? OPCIï¿½N 1: SCRIPT AUTOMï¿½TICO (RECOMENDADO)
 
 ### Paso 1: Abrir PowerShell
 
 ```powershell
-# Ya deberías estar en:
+# Ya deberï¿½as estar en:
 cd C:\Users\svcon\Desktop\SVYDDATALEDGER
 ```
 
@@ -40,26 +40,26 @@ cd C:\Users\svcon\Desktop\SVYDDATALEDGER
 
 ### Paso 3: Seguir las instrucciones del script
 
-El script te mostrará:
-1. ? Qué archivos han cambiado
-2. ? Te pedirá confirmación
-3. ? Hará el commit automáticamente
-4. ? Subirá a GitHub
-5. ? Te mostrará el enlace para verificar
+El script te mostrarï¿½:
+1. ? Quï¿½ archivos han cambiado
+2. ? Te pedirï¿½ confirmaciï¿½n
+3. ? Harï¿½ el commit automï¿½ticamente
+4. ? Subirï¿½ a GitHub
+5. ? Te mostrarï¿½ el enlace para verificar
 
 **Ventaja:** El script hace todo por ti de forma segura.
 
 ---
 
-## ??? OPCIÓN 2: COMANDOS MANUALES (SI PREFIERES CONTROL TOTAL)
+## ??? OPCIï¿½N 2: COMANDOS MANUALES (SI PREFIERES CONTROL TOTAL)
 
-### Paso 1: Ver qué archivos han cambiado
+### Paso 1: Ver quï¿½ archivos han cambiado
 
 ```powershell
 git status
 ```
 
-**Deberías ver algo como:**
+**Deberï¿½as ver algo como:**
 ```
 Changes not staged for commit:
   modified:   frontend/src/components/layout/MainLayout.tsx
@@ -75,12 +75,12 @@ Changes not staged for commit:
 git add .
 ```
 
-**Confirmación:**
+**Confirmaciï¿½n:**
 ```powershell
 git status
 ```
 
-Deberías ver:
+Deberï¿½as ver:
 ```
 Changes to be committed:
   modified:   frontend/src/components/layout/MainLayout.tsx
@@ -92,12 +92,12 @@ Changes to be committed:
 ### Paso 3: Hacer el commit
 
 ```powershell
-git commit -m "fix: Arreglar importación i18n en MainLayout + Verificar componentes Auth funcionando"
+git commit -m "fix: Arreglar importaciï¿½n i18n en MainLayout + Verificar componentes Auth funcionando"
 ```
 
-**Confirmación:**
+**Confirmaciï¿½n:**
 ```
-[main abc1234] fix: Arreglar importación i18n en MainLayout + Verificar componentes Auth funcionando
+[main abc1234] fix: Arreglar importaciï¿½n i18n en MainLayout + Verificar componentes Auth funcionando
  3 files changed, 150 insertions(+), 5 deletions(-)
 ```
 
@@ -109,7 +109,7 @@ git commit -m "fix: Arreglar importación i18n en MainLayout + Verificar componen
 git push origin main
 ```
 
-**Confirmación:**
+**Confirmaciï¿½n:**
 ```
 Enumerating objects: 15, done.
 Counting objects: 100% (15/15), done.
@@ -127,7 +127,7 @@ Abre en tu navegador:
 https://github.com/VICTORsvydledger/SVYDLEDGER/commits/main
 ```
 
-Deberías ver tu nuevo commit al inicio de la lista.
+Deberï¿½as ver tu nuevo commit al inicio de la lista.
 
 ---
 
@@ -137,12 +137,12 @@ Deberías ver tu nuevo commit al inicio de la lista.
 
 **Causa:** Ya hiciste el commit antes o no hay cambios.
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 git status
 ```
 
-Si dice "nothing to commit, working tree clean" ? Ya está respaldado ?
+Si dice "nothing to commit, working tree clean" ? Ya estï¿½ respaldado ?
 
 ---
 
@@ -150,7 +150,7 @@ Si dice "nothing to commit, working tree clean" ? Ya está respaldado ?
 
 **Causa:** Git necesita tus credenciales.
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # Configurar credenciales (solo una vez)
 git config --global credential.helper wincred
@@ -159,15 +159,15 @@ git config --global credential.helper wincred
 git push origin main
 ```
 
-Te pedirá tu usuario y contraseña de GitHub la primera vez.
+Te pedirï¿½ tu usuario y contraseï¿½a de GitHub la primera vez.
 
 ---
 
 ### Problema 3: "Updates were rejected"
 
-**Causa:** El repositorio remoto tiene cambios que tú no tienes localmente.
+**Causa:** El repositorio remoto tiene cambios que tï¿½ no tienes localmente.
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # Traer cambios del remoto
 git pull origin main
@@ -183,8 +183,8 @@ git push origin main
 
 **Causa:** No tienes permisos de escritura en el repositorio.
 
-**Solución:**
-1. Verifica que estés logueado con la cuenta correcta
+**Soluciï¿½n:**
+1. Verifica que estï¿½s logueado con la cuenta correcta
 2. Verifica que tengas permisos en el repositorio
 3. Usa HTTPS en lugar de SSH si es necesario:
 ```powershell
@@ -193,19 +193,19 @@ git remote set-url origin https://github.com/VICTORsvydledger/SVYDLEDGER.git
 
 ---
 
-## ? VERIFICACIÓN FINAL
+## ? VERIFICACIï¿½N FINAL
 
-### Después del push exitoso:
+### Despuï¿½s del push exitoso:
 
 ```powershell
-# Ver último commit local
+# Ver ï¿½ltimo commit local
 git log -1 --oneline
 
 # Ver estado actual
 git status
 ```
 
-**Deberías ver:**
+**Deberï¿½as ver:**
 ```
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -213,25 +213,25 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-**Esto confirma:** ? Todo está respaldado en GitHub
+**Esto confirma:** ? Todo estï¿½ respaldado en GitHub
 
 ---
 
-## ?? RESUMEN DE LO QUE SE RESPALDÓ
+## ?? RESUMEN DE LO QUE SE RESPALDï¿½
 
 | Aspecto | Detalle |
 |---------|---------|
-| **Problema resuelto** | Importación i18n en MainLayout.tsx |
+| **Problema resuelto** | Importaciï¿½n i18n en MainLayout.tsx |
 | **Componentes verificados** | SignInForm y SignUpForm |
 | **Sistema anti-congelamiento** | Documentado en .github/copilot-instructions.md |
-| **Puerto único** | 5173 confirmado |
+| **Puerto ï¿½nico** | 5173 confirmado |
 | **WelcomePage** | Salvada y funcional |
-| **Compilación** | ? Sin errores |
+| **Compilaciï¿½n** | ? Sin errores |
 | **Valor salvado** | $900 USD de trabajo |
 
 ---
 
-## ?? PRÓXIMOS PASOS DESPUÉS DEL RESPALDO
+## ?? PRï¿½XIMOS PASOS DESPUï¿½S DEL RESPALDO
 
 ### 1. Verificar el respaldo en GitHub
 
@@ -254,7 +254,7 @@ http://localhost:5173
 
 ### 3. Continuar trabajando
 
-Tu código está seguro. Puedes continuar desarrollando sin miedo a perder trabajo.
+Tu cï¿½digo estï¿½ seguro. Puedes continuar desarrollando sin miedo a perder trabajo.
 
 ---
 
@@ -264,18 +264,18 @@ Tu código está seguro. Puedes continuar desarrollando sin miedo a perder trabajo
 ? No pidas al agente que ejecute `git push`  
 ? No pidas al agente que inicie el servidor  
 
-**RAZÓN:** Causa congelamiento y pérdida de trabajo.
+**RAZï¿½N:** Causa congelamiento y pï¿½rdida de trabajo.
 
 ---
 
-## ? LO QUE SÍ PUEDES HACER
+## ? LO QUE Sï¿½ PUEDES HACER
 
-? Ejecutar el script `backup-to-github.ps1` tú mismo  
+? Ejecutar el script `backup-to-github.ps1` tï¿½ mismo  
 ? Ejecutar los comandos git manualmente  
-? Pedir al agente que verifique código (lectura)  
+? Pedir al agente que verifique cï¿½digo (lectura)  
 ? Pedir al agente que modifique archivos  
 
-**RAZÓN:** Seguro y sin congelamiento.
+**RAZï¿½N:** Seguro y sin congelamiento.
 
 ---
 
@@ -283,32 +283,32 @@ Tu código está seguro. Puedes continuar desarrollando sin miedo a perder trabajo
 
 ### ?? Haz respaldos frecuentes
 
-Después de cada cambio importante:
+Despuï¿½s de cada cambio importante:
 ```powershell
 .\backup-to-github.ps1
 ```
 
 ### ?? Verifica siempre en GitHub
 
-Abre tu repositorio y confirma que los cambios están ahí.
+Abre tu repositorio y confirma que los cambios estï¿½n ahï¿½.
 
 ### ?? No dependas del agente para comandos git
 
-El agente puede ayudarte con código, pero **TÚ** controlas el respaldo.
+El agente puede ayudarte con cï¿½digo, pero **Tï¿½** controlas el respaldo.
 
 ---
 
-**¿Listo para hacer el respaldo?** ??
+**ï¿½Listo para hacer el respaldo?** ??
 
 **Ejecuta:** `.\backup-to-github.ps1`
 
 ---
 
-**Última actualización:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
 **Estado:** ? Listo para ejecutar  
 **Script creado:** `backup-to-github.ps1`  
 **Repositorio:** https://github.com/VICTORsvydledger/SVYDLEDGER
 
 ---
 
-**TU TRABAJO ESTÁ LISTO PARA SER RESPALDADO** ?
+**TU TRABAJO ESTï¿½ LISTO PARA SER RESPALDADO** ?

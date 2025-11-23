@@ -1,16 +1,16 @@
-# ?? GUÍA RÁPIDA: Verificar Despliegue i18n + UTF-8
+# ?? GUï¿½A Rï¿½PIDA: Verificar Despliegue i18n + UTF-8
 
-## ? LO QUE SE COMPLETÓ
+## ? LO QUE SE COMPLETï¿½
 
 ### 1. Problema Resuelto
-- ? **ANTES:** Caracteres mostrándose como "?????????"
-- ? **DESPUÉS:** Caracteres UTF-8 correctos en 27 idiomas
+- ? **ANTES:** Caracteres mostrï¿½ndose como "?????????"
+- ? **DESPUï¿½S:** Caracteres UTF-8 correctos en 27 idiomas
 
 ### 2. Cambios Desplegados
 - ? 27 archivos JSON i18n creados/actualizados
 - ? countries.ts corregido con UTF-8
 - ? PostAuthPage.tsx usando useTranslation()
-- ? Sin código hardcodeado
+- ? Sin cï¿½digo hardcodeado
 
 ### 3. Commits Pushed
 ```bash
@@ -20,7 +20,7 @@
 
 ---
 
-## ?? CÓMO VERIFICAR EN PRODUCCIÓN
+## ?? Cï¿½MO VERIFICAR EN PRODUCCIï¿½N
 
 ### Paso 1: Esperar Despliegue (3-5 minutos)
 ```bash
@@ -34,49 +34,49 @@ https://www.svydledger.com
 ```
 
 ### Paso 3: Probar WelcomePage
-1. Cambiar idioma a **Árabe** (ar)
-2. Verificar que el título se muestre: **??????**
-3. Cambiar a **Japonés** (ja)
-4. Verificar que el título se muestre: **????**
+1. Cambiar idioma a **ï¿½rabe** (ar)
+2. Verificar que el tï¿½tulo se muestre: **??????**
+3. Cambiar a **Japonï¿½s** (ja)
+4. Verificar que el tï¿½tulo se muestre: **????**
 5. Cambiar a **Chino** (zh)
-6. Verificar que el título se muestre: **??**
+6. Verificar que el tï¿½tulo se muestre: **??**
 
 ### Paso 4: Probar PostAuthPage
-1. Hacer clic en el botón flotante (esquina inferior derecha)
+1. Hacer clic en el botï¿½n flotante (esquina inferior derecha)
 2. Verificar idioma actual
 3. Verificar que NO se muestren "?" en lugar de caracteres
 4. Ejemplos a verificar:
-   - **Inglés:** "Create New User", "User List"
-   - **Español:** "Crear Usuario Nuevo", "Lista de Usuarios"
-   - **Árabe:** "????? ?????? ????", "????? ??????????"
-   - **Japonés:** "????????", "???????"
+   - **Inglï¿½s:** "Create New User", "User List"
+   - **Espaï¿½ol:** "Crear Usuario Nuevo", "Lista de Usuarios"
+   - **ï¿½rabe:** "????? ?????? ????", "????? ??????????"
+   - **Japonï¿½s:** "????????", "???????"
 
 ---
 
-## ?? PUNTOS ESPECÍFICOS A VERIFICAR
+## ?? PUNTOS ESPECï¿½FICOS A VERIFICAR
 
-### A. Selector de País (Country Input)
+### A. Selector de Paï¿½s (Country Input)
 ? **Verificar que se muestren correctamente:**
 ```
 United States (United States)
-Afghanistan (?????????)       ? Debe ser árabe, NO ?????????
-Albania (Shqipëri)            ? Debe tener ë, NO Shqip?ri
-Algeria (???????)            ? Debe ser árabe, NO ???????
+Afghanistan (?????????)       ? Debe ser ï¿½rabe, NO ?????????
+Albania (Shqipï¿½ri)            ? Debe tener ï¿½, NO Shqip?ri
+Algeria (???????)            ? Debe ser ï¿½rabe, NO ???????
 China (??)                  ? Debe ser chino, NO ??
-Japan (??)                  ? Debe ser japonés, NO ??
-Russia (??????)               ? Debe ser cirílico, NO ??????
+Japan (??)                  ? Debe ser japonï¿½s, NO ??
+Russia (??????)               ? Debe ser cirï¿½lico, NO ??????
 ```
 
 ### B. PostAuthPage - Headers
-? **Verificar en ESPAÑOL:**
+? **Verificar en ESPAï¿½OL:**
 ```
 Crear Usuario Nuevo
 Lista de Usuarios
 CORREOS AUTORIZADOS
-CONTRASEÑA
+CONTRASEï¿½A
 ```
 
-? **Verificar en ÁRABE:**
+? **Verificar en ï¿½RABE:**
 ```
 ????? ?????? ????
 ????? ??????????
@@ -84,7 +84,7 @@ CONTRASEÑA
 ???? ??????
 ```
 
-? **Verificar en JAPONÉS:**
+? **Verificar en JAPONï¿½S:**
 ```
 ????????
 ???????
@@ -93,17 +93,17 @@ CONTRASEÑA
 ```
 
 ### C. PostAuthPage - Botones
-? **Verificar en ESPAÑOL:**
+? **Verificar en ESPAï¿½OL:**
 ```
 ENTRAR | EDITAR | PAPELERA | PAGAR | SALDO
 ```
 
-? **Verificar en FRANCÉS:**
+? **Verificar en FRANCï¿½S:**
 ```
 ENTRER | MODIFIER | CORBEILLE | PAYER | SOLDE
 ```
 
-? **Verificar en ALEMÁN:**
+? **Verificar en ALEMï¿½N:**
 ```
 BETRETEN | BEARBEITEN | PAPIERKORB | BEZAHLEN | SALDO
 ```
@@ -111,28 +111,28 @@ BETRETEN | BEARBEITEN | PAPIERKORB | BEZAHLEN | SALDO
 ### D. PostAuthPage - Mensajes
 ? **Verificar al hacer clic en botones sin seleccionar usuario:**
 
-**Inglés:**
+**Inglï¿½s:**
 ```
 "Please select a user from the list"
 ```
 
-**Español:**
+**Espaï¿½ol:**
 ```
 "Por favor selecciona un usuario de la lista"
 ```
 
-**Portugués:**
+**Portuguï¿½s:**
 ```
-"Por favor selecione um usuário da lista"
+"Por favor selecione um usuï¿½rio da lista"
 ```
 
 ---
 
-## ?? QUÉ HACER SI HAY PROBLEMAS
+## ?? QUï¿½ HACER SI HAY PROBLEMAS
 
 ### Problema 1: Sigue mostrando "????????"
-**Causa:** Despliegue aún no completado
-**Solución:** 
+**Causa:** Despliegue aï¿½n no completado
+**Soluciï¿½n:** 
 1. Verificar GitHub Actions: https://github.com/VICTORsvydledger/SVYDLEDGER/actions
 2. Esperar a que el workflow termine (icono verde ?)
 3. Forzar recarga del navegador: Ctrl+F5 (Windows) o Cmd+Shift+R (Mac)
@@ -140,74 +140,74 @@ BETRETEN | BEARBEITEN | PAPIERKORB | BEZAHLEN | SALDO
 
 ### Problema 2: Caracteres correctos en un idioma, incorrectos en otro
 **Causa:** Archivo JSON corrupto o faltante
-**Solución:**
-1. Ejecutar script de verificación:
+**Soluciï¿½n:**
+1. Ejecutar script de verificaciï¿½n:
    ```powershell
    .\verificar-i18n-deployment.ps1
    ```
 2. Verificar que todos los 27 archivos JSON existan
 3. Re-deployar si es necesario
 
-### Problema 3: PostAuthPage sigue mostrando texto en inglés
-**Causa:** Cambio de idioma no propagándose
-**Solución:**
+### Problema 3: PostAuthPage sigue mostrando texto en inglï¿½s
+**Causa:** Cambio de idioma no propagï¿½ndose
+**Soluciï¿½n:**
 1. Verificar que selectedLanguage se pase como prop
 2. Verificar consola del navegador para errores
-3. Verificar que i18n esté configurado correctamente
+3. Verificar que i18n estï¿½ configurado correctamente
 
 ---
 
-## ?? CHECKLIST DE VERIFICACIÓN COMPLETA
+## ?? CHECKLIST DE VERIFICACIï¿½N COMPLETA
 
-### Pre-Verificación
+### Pre-Verificaciï¿½n
 - [ ] GitHub Actions workflow completado exitosamente
 - [ ] No hay errores en el workflow log
 - [ ] Commit bf7540e visible en main branch
 
 ### WelcomePage
 - [ ] Selector de idioma funciona
-- [ ] Título cambia según idioma seleccionado
-- [ ] Subtítulo cambia según idioma seleccionado
+- [ ] Tï¿½tulo cambia segï¿½n idioma seleccionado
+- [ ] Subtï¿½tulo cambia segï¿½n idioma seleccionado
 - [ ] Botones "Sign In" / "Sign Up" traducidos
 - [ ] NO hay "?" en lugar de caracteres especiales
 
 ### PostAuthPage
-- [ ] Se accede mediante botón flotante
+- [ ] Se accede mediante botï¿½n flotante
 - [ ] Email del usuario se muestra
-- [ ] Header "Create New User" / traducción visible
-- [ ] Header "User List" / traducción visible
+- [ ] Header "Create New User" / traducciï¿½n visible
+- [ ] Header "User List" / traducciï¿½n visible
 - [ ] Labels del formulario traducidos
 - [ ] Botones ENTRAR/EDITAR/PAPELERA/PAGAR traducidos
 - [ ] Mensaje "Only administrator..." traducido
 - [ ] Headers "AUTHORIZED EMAILS" / "PASSWORD" traducidos
 
-### Selector de País
+### Selector de Paï¿½s
 - [ ] "United States (United States)" primero
-- [ ] "Afghanistan (?????????)" muestra árabe
+- [ ] "Afghanistan (?????????)" muestra ï¿½rabe
 - [ ] "China (??)" muestra chino
-- [ ] "Japan (??)" muestra japonés
-- [ ] "Russia (??????)" muestra cirílico
+- [ ] "Japan (??)" muestra japonï¿½s
+- [ ] "Russia (??????)" muestra cirï¿½lico
 
-### Idiomas a Probar (mínimo)
+### Idiomas a Probar (mï¿½nimo)
 - [ ] **en** - English
-- [ ] **es** - Español
+- [ ] **es** - Espaï¿½ol
 - [ ] **ar** - ???????
 - [ ] **ja** - ???
 - [ ] **zh** - ??
 - [ ] **ru** - ???????
-- [ ] **fr** - Français
+- [ ] **fr** - Franï¿½ais
 - [ ] **de** - Deutsch
 
 ### Funcionalidad
 - [ ] Cambio de idioma en WelcomePage
 - [ ] Cambio se mantiene al ir a PostAuthPage
-- [ ] Botón "Back to Welcome" traducido
+- [ ] Botï¿½n "Back to Welcome" traducido
 - [ ] Mensajes de error/success traducidos
 - [ ] No hay console errors en navegador
 
 ---
 
-## ?? COMANDOS ÚTILES
+## ?? COMANDOS ï¿½TILES
 
 ### Ver estado de GitHub Actions
 ```bash
@@ -217,13 +217,13 @@ start https://github.com/VICTORsvydledger/SVYDLEDGER/actions
 
 ### Verificar localmente
 ```powershell
-# Ejecutar script de verificación
+# Ejecutar script de verificaciï¿½n
 .\verificar-i18n-deployment.ps1
 
 # Ver archivos JSON
 ls frontend/src/i18n/locales/
 
-# Ver último commit
+# Ver ï¿½ltimo commit
 git log -1 --oneline
 
 # Ver status de git
@@ -261,30 +261,30 @@ Cmd+Shift+R ? Forzar recarga sin cache
 
 ---
 
-## ? VERIFICACIÓN EXITOSA
+## ? VERIFICACIï¿½N EXITOSA
 
-Si todo funciona correctamente, deberías ver:
+Si todo funciona correctamente, deberï¿½as ver:
 
-### ? WelcomePage (Árabe)
+### ? WelcomePage (ï¿½rabe)
 ```
 ??????
 ???? ???????? ???????? ??????? ?????????
 ????? ?????? | ???????
 ```
 
-### ? PostAuthPage (Español)
+### ? PostAuthPage (Espaï¿½ol)
 ```
-Sesión iniciada como: demo@svydledger.com
+Sesiï¿½n iniciada como: demo@svydledger.com
 Crear Usuario Nuevo
 Lista de Usuarios
 ENTRAR | EDITAR | PAPELERA | PAGAR | SALDO
 ```
 
-### ? Selector de País
+### ? Selector de Paï¿½s
 ```
 United States (United States)
 Afghanistan (?????????)
-Albania (Shqipëri)
+Albania (Shqipï¿½ri)
 Algeria (???????)
 ```
 
@@ -294,12 +294,12 @@ Algeria (???????)
 
 Si encuentras problemas:
 
-1. **Ejecutar script de verificación:**
+1. **Ejecutar script de verificaciï¿½n:**
    ```powershell
    .\verificar-i18n-deployment.ps1
    ```
 
-2. **Revisar documentación:**
+2. **Revisar documentaciï¿½n:**
    ```
    RESUMEN-I18N-POSTAUTH-UTF8-2025-01-15.md
    ```
@@ -311,11 +311,11 @@ Si encuentras problemas:
 
 ---
 
-**URL de Producción:** https://www.svydledger.com  
+**URL de Producciï¿½n:** https://www.svydledger.com  
 **Estado Esperado:** ? Caracteres UTF-8 correctos en 27 idiomas  
-**Tiempo de Verificación:** 5-10 minutos  
+**Tiempo de Verificaciï¿½n:** 5-10 minutos  
 
 ---
 
-**Última actualización:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
 **Commits relacionados:** bf7540e, 7a96090

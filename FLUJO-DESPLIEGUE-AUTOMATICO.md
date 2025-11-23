@@ -1,19 +1,19 @@
-# ?? FLUJO DE DESPLIEGUE AUTOMÁTICO - SVCONTA.COM
+# ?? FLUJO DE DESPLIEGUE AUTOMï¿½TICO - SVCONTA.COM
 
 **Fecha**: 2025-01-15  
-**URL Producción**: https://www.svconta.com  
+**URL Producciï¿½n**: https://www.svconta.com  
 **Plataforma**: Azure Static Web Apps  
 **Estado**: ? ACTIVO
 
 ---
 
-## ?? CONFIGURACIÓN ACTUAL
+## ?? CONFIGURACIï¿½N ACTUAL
 
-### Información del Sitio
-- **URL Pública**: https://www.svconta.com
+### Informaciï¿½n del Sitio
+- **URL Pï¿½blica**: https://www.svconta.com
 - **URL Azure**: https://[generated-name].azurestaticapps.net
 - **Plataforma**: Azure Static Web Apps
-- **Región**: Auto (Azure CDN global)
+- **Regiï¿½n**: Auto (Azure CDN global)
 - **Plan**: Free o Standard
 
 ### Repositorio GitHub
@@ -23,11 +23,11 @@
 
 ---
 
-## ?? DESPLIEGUE AUTOMÁTICO
+## ?? DESPLIEGUE AUTOMï¿½TICO
 
 ### Trigger del Workflow
 
-El despliegue se ejecuta automáticamente cuando:
+El despliegue se ejecuta automï¿½ticamente cuando:
 
 1. ? **Push a `main`** con cambios en `frontend/**`
 2. ? **Workflow manual** (workflow_dispatch)
@@ -39,7 +39,7 @@ on:
       - main
     paths:
       - 'frontend/**'  # Solo si hay cambios en frontend
-  workflow_dispatch:      # Permite ejecución manual
+  workflow_dispatch:      # Permite ejecuciï¿½n manual
 ```
 
 ### Pasos del Despliegue
@@ -52,7 +52,7 @@ on:
                   ?
 ???????????????????????????????????????????
 ? 2. GitHub Actions se activa             ?
-?    - Checkout código                    ?
+?    - Checkout cï¿½digo                    ?
 ?    - Setup Node.js 20                   ?
 ???????????????????????????????????????????
                   ?
@@ -93,15 +93,15 @@ on:
 
 ### En GitHub Repository Settings ? Secrets
 
-| Secret Name | Descripción | Dónde Obtenerlo |
+| Secret Name | Descripciï¿½n | Dï¿½nde Obtenerlo |
 |-------------|-------------|-----------------|
 | `AZURE_STATIC_WEB_APPS_API_TOKEN` | Token de despliegue de Azure SWA | Azure Portal ? Static Web App ? Deployment Tokens |
 
 ### En GitHub Repository Settings ? Variables
 
-| Variable Name | Descripción | Valor |
+| Variable Name | Descripciï¿½n | Valor |
 |---------------|-------------|-------|
-| `VITE_API_URL` | URL del API backend | URL del backend (cuando esté listo) |
+| `VITE_API_URL` | URL del API backend | URL del backend (cuando estï¿½ listo) |
 
 ---
 
@@ -127,15 +127,15 @@ Total: 2-5 minutos
 - **Deploy**: ~30 segundos
 - **CDN Propagation**: ~1-3 minutos
 
-**Total**: 2-5 minutos desde push hasta visualización
+**Total**: 2-5 minutos desde push hasta visualizaciï¿½n
 
 ---
 
 ## ? COMANDOS PARA DESPLEGAR
 
-### 1. Despliegue Normal (Automático)
+### 1. Despliegue Normal (Automï¿½tico)
 ```bash
-# En la raíz del proyecto
+# En la raï¿½z del proyecto
 git add frontend/src/pages/auth/PostAuthPage.tsx
 git commit -m "feat: Agregar nueva funcionalidad"
 git push origin main
@@ -155,7 +155,7 @@ gh workflow run "Azure Static Web Apps CI/CD"
 
 ### 3. Verificar Estado del Despliegue
 ```bash
-# Ver último workflow
+# Ver ï¿½ltimo workflow
 gh run list --workflow="swa-frontend.yml" --limit 1
 
 # Ver logs en tiempo real
@@ -164,9 +164,9 @@ gh run watch
 
 ---
 
-## ?? VERIFICACIÓN POST-DESPLIEGUE
+## ?? VERIFICACIï¿½N POST-DESPLIEGUE
 
-### Checklist de Verificación
+### Checklist de Verificaciï¿½n
 
 1. ? **GitHub Actions**
    ```bash
@@ -174,7 +174,7 @@ gh run watch
    https://github.com/VICTORsvydledger/SVYDLEDGER/actions
    ```
 
-2. ? **Producción**
+2. ? **Producciï¿½n**
    ```bash
    # Abrir sitio
    https://www.svconta.com
@@ -185,7 +185,7 @@ gh run watch
    # - Recursos cargados correctamente
    ```
 
-3. ? **Caché**
+3. ? **Cachï¿½**
    ```bash
    # Si no ves cambios, hacer hard refresh
    Ctrl + Shift + R  (Windows/Linux)
@@ -201,7 +201,7 @@ gh run watch
 .github/workflows/swa-frontend.yml
 ```
 
-### Configuración de Azure Static Web Apps
+### Configuraciï¿½n de Azure Static Web Apps
 ```
 frontend/staticwebapp.config.json
 ```
@@ -218,11 +218,11 @@ frontend/package.json
 
 ### Problema 1: Despliegue Falla
 
-**Síntomas:**
+**Sï¿½ntomas:**
 - ? GitHub Actions muestra error rojo
 - ? Build falla
 
-**Solución:**
+**Soluciï¿½n:**
 ```bash
 # 1. Ver logs del workflow
 gh run view --log-failed
@@ -238,30 +238,30 @@ npm run build
 
 ### Problema 2: No Veo los Cambios
 
-**Síntomas:**
+**Sï¿½ntomas:**
 - ? GitHub Actions exitoso (verde)
 - ? No veo cambios en https://www.svconta.com
 
-**Solución:**
+**Soluciï¿½n:**
 ```bash
 # 1. Esperar 5 minutos completos (CDN propagation)
 
 # 2. Hard refresh en navegador
 Ctrl + Shift + R
 
-# 3. Verificar en modo incógnito
+# 3. Verificar en modo incï¿½gnito
 Ctrl + Shift + N (Chrome)
 
-# 4. Verificar que el archivo cambió en el commit
+# 4. Verificar que el archivo cambiï¿½ en el commit
 git show HEAD:frontend/src/pages/auth/PostAuthPage.tsx
 ```
 
 ### Problema 3: Token Expirado
 
-**Síntomas:**
+**Sï¿½ntomas:**
 - ? Error: "Invalid deployment token"
 
-**Solución:**
+**Soluciï¿½n:**
 ```bash
 # 1. Ir a Azure Portal
 # 2. Static Web Apps ? Tu app ? Deployment tokens
@@ -292,7 +292,7 @@ git show HEAD:frontend/src/pages/auth/PostAuthPage.tsx
 3. **Commit y Push**
    ```bash
    git add frontend/
-   git commit -m "feat: Descripción clara del cambio"
+   git commit -m "feat: Descripciï¿½n clara del cambio"
    git push origin main
    ```
 
@@ -302,7 +302,7 @@ git show HEAD:frontend/src/pages/auth/PostAuthPage.tsx
    https://github.com/VICTORsvydledger/SVYDLEDGER/actions
    ```
 
-5. **Verificar en Producción** (después de 2-5 min)
+5. **Verificar en Producciï¿½n** (despuï¿½s de 2-5 min)
    ```bash
    # Abrir en navegador
    https://www.svconta.com
@@ -313,14 +313,14 @@ git show HEAD:frontend/src/pages/auth/PostAuthPage.tsx
 
 ---
 
-## ?? MEJORES PRÁCTICAS
+## ?? MEJORES PRï¿½CTICAS
 
 ### Commits
 
 ? **Hacer:**
 ```bash
 git commit -m "feat: Agregar botones EDITAR y PAPELERA"
-git commit -m "fix: Corregir codificación UTF-8 en labels"
+git commit -m "fix: Corregir codificaciï¿½n UTF-8 en labels"
 git commit -m "style: Ajustar colores de botones"
 ```
 
@@ -340,15 +340,15 @@ git commit -m "asdf"
 
 ? **Evitar:**
 1. Push sin verificar
-2. "Arreglar" con múltiples commits pequeños
-3. Romper el build en producción
+2. "Arreglar" con mï¿½ltiples commits pequeï¿½os
+3. Romper el build en producciï¿½n
 
 ---
 
-## ?? DOCUMENTACIÓN RELACIONADA
+## ?? DOCUMENTACIï¿½N RELACIONADA
 
 ### Azure Static Web Apps
-- [Documentación oficial](https://learn.microsoft.com/en-us/azure/static-web-apps/)
+- [Documentaciï¿½n oficial](https://learn.microsoft.com/en-us/azure/static-web-apps/)
 - [GitHub Actions integration](https://learn.microsoft.com/en-us/azure/static-web-apps/github-actions-workflow)
 
 ### Vite (Build Tool)
@@ -361,11 +361,11 @@ git commit -m "asdf"
 
 ---
 
-## ?? COMANDOS DE VERIFICACIÓN
+## ?? COMANDOS DE VERIFICACIï¿½N
 
-### Verificar Último Commit Desplegado
+### Verificar ï¿½ltimo Commit Desplegado
 ```bash
-# Ver último commit en main
+# Ver ï¿½ltimo commit en main
 git log -1 --oneline
 
 # Ver si hay commits sin desplegar
@@ -378,24 +378,24 @@ git log HEAD..origin/main --oneline
 # Con GitHub CLI
 gh run list --workflow="swa-frontend.yml" --limit 5
 
-# Ver logs del último run
+# Ver logs del ï¿½ltimo run
 gh run view
 
-# Ver logs de un run específico
+# Ver logs de un run especï¿½fico
 gh run view [RUN_ID] --log
 ```
 
 ### Verificar Archivos Desplegados
 ```bash
-# Ver archivos que se desplegaron en último commit
+# Ver archivos que se desplegaron en ï¿½ltimo commit
 git diff HEAD~1 HEAD --name-only
 ```
 
 ---
 
-## ? SHORTCUTS Y COMANDOS RÁPIDOS
+## ? SHORTCUTS Y COMANDOS Rï¿½PIDOS
 
-### Despliegue Rápido (Todo en uno)
+### Despliegue Rï¿½pido (Todo en uno)
 ```bash
 # Guardar, commit y desplegar en un solo paso
 git add frontend/ && \
@@ -406,19 +406,19 @@ git push origin main
 # ./quick-deploy.sh "Agregar nueva funcionalidad"
 ```
 
-### Verificación Rápida
+### Verificaciï¿½n Rï¿½pida
 ```bash
-# Ver estado + último workflow
+# Ver estado + ï¿½ltimo workflow
 git status && gh run list --limit 1
 ```
 
-### Rollback Rápido (Si algo sale mal)
+### Rollback Rï¿½pido (Si algo sale mal)
 ```bash
 # Volver al commit anterior
 git revert HEAD
 git push origin main
 
-# Esperar redespliegue automático
+# Esperar redespliegue automï¿½tico
 ```
 
 ---
@@ -440,30 +440,30 @@ https://portal.azure.com
 ```
 https://github.com/VICTORsvydledger/SVYDLEDGER/actions
 ? Ver historial de deployments
-? Tiempos de ejecución
-? Tasa de éxito
+? Tiempos de ejecuciï¿½n
+? Tasa de ï¿½xito
 ```
 
 ---
 
 ## ? RESUMEN EJECUTIVO
 
-### ¿Qué Recordar?
+### ï¿½Quï¿½ Recordar?
 
-1. **Cada push a `main` con cambios en `frontend/` despliega automáticamente**
+1. **Cada push a `main` con cambios en `frontend/` despliega automï¿½ticamente**
 2. **El despliegue toma 2-5 minutos**
-3. **Siempre hacer hard refresh (Ctrl+Shift+R) después de despliegue**
+3. **Siempre hacer hard refresh (Ctrl+Shift+R) despuï¿½s de despliegue**
 4. **Verificar en GitHub Actions que el despliegue fue exitoso**
 5. **Los cambios se reflejan en https://www.svconta.com**
 
 ### Workflow Simple
 ```
-Editar código ? Commit ? Push ? Esperar 2-5 min ? Hard Refresh ? Verificar
+Editar cï¿½digo ? Commit ? Push ? Esperar 2-5 min ? Hard Refresh ? Verificar
 ```
 
 ---
 
-**Última actualización**: 2025-01-15  
+**ï¿½ltima actualizaciï¿½n**: 2025-01-15  
 **Mantenido por**: GitHub Copilot Agent  
 **Estado**: ? Activo y funcionando  
 **URL**: https://www.svconta.com

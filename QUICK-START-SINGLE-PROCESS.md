@@ -1,21 +1,21 @@
-# ?? GUÍA RÁPIDA - Solución Proceso Único Node.js
+# ?? GUï¿½A Rï¿½PIDA - Soluciï¿½n Proceso ï¿½nico Node.js
 
 ## ? USO DIARIO (Recomendado)
 
-### Opción 1: Inicio Directo
+### Opciï¿½n 1: Inicio Directo
 ```powershell
 .\start-single-process.ps1
 ```
 
-### Opción 2: Menú Interactivo
+### Opciï¿½n 2: Menï¿½ Interactivo
 ```powershell
 .\dev-manager.ps1
 ```
-Selecciona: **Opción 1** (Single Process Mode)
+Selecciona: **Opciï¿½n 1** (Single Process Mode)
 
 ---
 
-## ??? PREVENCIÓN AUTOMÁTICA (Opcional)
+## ??? PREVENCIï¿½N AUTOMï¿½TICA (Opcional)
 
 ### Ejecutar Monitor en Segundo Plano
 
@@ -35,15 +35,15 @@ Selecciona: **Opción 1** (Single Process Mode)
 
 | Script | Comando | Uso |
 |--------|---------|-----|
-| **Proceso Único** ? | `.\start-single-process.ps1` | Inicio diario |
-| **Monitor** | `.\monitor-node-processes.ps1` | Prevención |
-| **Dev Manager** | `.\dev-manager.ps1` | Menú completo |
+| **Proceso ï¿½nico** ? | `.\start-single-process.ps1` | Inicio diario |
+| **Monitor** | `.\monitor-node-processes.ps1` | Prevenciï¿½n |
+| **Dev Manager** | `.\dev-manager.ps1` | Menï¿½ completo |
 | **Limpieza** | `.\kill-node-processes.ps1` | Matar procesos |
 | **Safe Start** | `.\start-frontend.ps1` | Alternativa |
 
 ---
 
-## ?? SOLUCIÓN DE EMERGENCIA
+## ?? SOLUCIï¿½N DE EMERGENCIA
 
 Si todo falla:
 
@@ -65,9 +65,9 @@ Get-Process node -ErrorAction SilentlyContinue
 
 ---
 
-## ? VERIFICACIÓN
+## ? VERIFICACIï¿½N
 
-### Comando Rápido
+### Comando Rï¿½pido
 ```powershell
 Get-Process node | Measure-Object
 ```
@@ -83,37 +83,37 @@ Count: 1
 
 ---
 
-## ?? DOCUMENTACIÓN COMPLETA
+## ?? DOCUMENTACIï¿½N COMPLETA
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
-| `SOLUCIÓN-PROCESOS-NODE.md` | Guía completa del problema |
+| `SOLUCIï¿½N-PROCESOS-NODE.md` | Guï¿½a completa del problema |
 | `docs\TROUBLESHOOTING.md` | Todos los problemas comunes |
 | `WELCOMEPAGE-README.md` | README principal del proyecto |
 
 ---
 
-## ?? CARACTERÍSTICAS DEL SISTEMA
+## ?? CARACTERï¿½STICAS DEL SISTEMA
 
 ### start-single-process.ps1
 - ? Detecta servidores corriendo
 - ? Archivo de bloqueo (.node-lock)
-- ? Mata procesos automáticamente
+- ? Mata procesos automï¿½ticamente
 - ? Auto-limpieza al salir
 - ? Solo 1 proceso garantizado
 
 ### monitor-node-processes.ps1
 - ?? Monitoreo cada 30 segundos
-- ?? Alertas de múltiples procesos
+- ?? Alertas de mï¿½ltiples procesos
 - ?? Auto-kill opcional (-AutoKill)
-- ?? Estadísticas de memoria
+- ?? Estadï¿½sticas de memoria
 
 ### dev-manager.ps1
-- ?? Menú interactivo
-- ? Proceso único (Opción 1)
-- ?? Safe mode (Opción 2)
-- ??? Limpieza (Opción 3)
-- ?? Status (Opción 5)
+- ?? Menï¿½ interactivo
+- ? Proceso ï¿½nico (Opciï¿½n 1)
+- ?? Safe mode (Opciï¿½n 2)
+- ??? Limpieza (Opciï¿½n 3)
+- ?? Status (Opciï¿½n 5)
 
 ---
 
@@ -124,7 +124,7 @@ Count: 1
 .\start-single-process.ps1
 ```
 
-### Con Protección Extra
+### Con Protecciï¿½n Extra
 ```powershell
 # Terminal 1:
 .\monitor-node-processes.ps1 -AutoKill
@@ -133,10 +133,10 @@ Count: 1
 .\start-single-process.ps1
 ```
 
-### Gestión Completa
+### Gestiï¿½n Completa
 ```powershell
 .\dev-manager.ps1
-# Usar menú según necesidad
+# Usar menï¿½ segï¿½n necesidad
 ```
 
 ---
@@ -158,7 +158,7 @@ Count: 1
                ?
 ???????????????????????????????????????
 ?  3. Terminar con Ctrl+C             ?
-?     (Auto-limpieza automática)      ?
+?     (Auto-limpieza automï¿½tica)      ?
 ???????????????????????????????????????
                ?
                ?
@@ -170,22 +170,22 @@ Count: 1
 
 ---
 
-## ? FAQ RÁPIDO
+## ? FAQ Rï¿½PIDO
 
-**Q: ¿Qué hace el archivo .node-lock?**  
+**Q: ï¿½Quï¿½ hace el archivo .node-lock?**  
 A: Guarda info del proceso activo para evitar duplicados.
 
-**Q: ¿Se elimina automáticamente?**  
-A: Sí, al presionar Ctrl+C se limpia solo.
+**Q: ï¿½Se elimina automï¿½ticamente?**  
+A: Sï¿½, al presionar Ctrl+C se limpia solo.
 
-**Q: ¿Qué pasa si crashea?**  
-A: El script detecta el lock huérfano y lo limpia.
+**Q: ï¿½Quï¿½ pasa si crashea?**  
+A: El script detecta el lock huï¿½rfano y lo limpia.
 
-**Q: ¿Puedo usar npm run dev normal?**  
-A: Sí, pero no tendrás protección contra duplicados.
+**Q: ï¿½Puedo usar npm run dev normal?**  
+A: Sï¿½, pero no tendrï¿½s protecciï¿½n contra duplicados.
 
-**Q: ¿El monitor consume recursos?**  
-A: Mínimo: revisa cada 30 segundos (configurable).
+**Q: ï¿½El monitor consume recursos?**  
+A: Mï¿½nimo: revisa cada 30 segundos (configurable).
 
 ---
 
@@ -203,7 +203,7 @@ Task Manager:
   Procesos: 4 ?
 ```
 
-### Después
+### Despuï¿½s
 ```
 Task Manager:
   Node.js (180 MB)
@@ -217,5 +217,5 @@ Task Manager:
 ---
 
 **Estado:** ? Sistema implementado y funcionando  
-**Última actualización:** 2024-01-15  
-**Versión:** 2.0.0 (con proceso único)
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
+**Versiï¿½n:** 2.0.0 (con proceso ï¿½nico)

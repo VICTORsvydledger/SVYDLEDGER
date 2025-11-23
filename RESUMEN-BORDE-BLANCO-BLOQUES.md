@@ -7,7 +7,7 @@
 
 ## ?? CAMBIO REALIZADO
 
-### Modificación en `.block` (Estilos comunes de bloques)
+### Modificaciï¿½n en `.block` (Estilos comunes de bloques)
 
 **Antes:**
 ```scss
@@ -19,7 +19,7 @@
 }
 ```
 
-**Después:**
+**Despuï¿½s:**
 ```scss
 .block {
   background: transparent;
@@ -62,28 +62,28 @@ Esto crea un efecto de "ventanas enmarcadas" sobre el fondo de nubes y cielo cel
 ```
 
 ### Estado del despliegue:
-- ? Código compilado exitosamente
+- ? Cï¿½digo compilado exitosamente
 - ? Push a GitHub completado
-- ? Despliegue automático activado en Azure Static Web Apps
-- ?? URL de producción: https://www.svydleger.com
+- ? Despliegue automï¿½tico activado en Azure Static Web Apps
+- ?? URL de producciï¿½n: https://www.svydleger.com
 
 ---
 
-## ?? PRÓXIMOS PASOS
+## ?? PRï¿½XIMOS PASOS
 
 1. Espera **2-3 minutos** para que Azure Static Web Apps complete el despliegue
 2. Abre https://www.svydleger.com
-3. Haz clic en el botón de navegación (flecha en esquina inferior derecha)
+3. Haz clic en el botï¿½n de navegaciï¿½n (flecha en esquina inferior derecha)
 4. Verifica que los tres bloques tengan un marco blanco de 4px
 
 ---
 
-## ?? CARACTERÍSTICAS VISUALES ACTUALES
+## ?? CARACTERï¿½STICAS VISUALES ACTUALES
 
-| Característica | Valor |
+| Caracterï¿½stica | Valor |
 |----------------|-------|
 | Fondo de bloques | Transparente |
-| Borde | 4px sólido blanco |
+| Borde | 4px sï¿½lido blanco |
 | Radio de esquinas | 8px |
 | Sombra | 0 4px 20px rgba(0, 0, 0, 0.1) |
 | Elementos internos | Semi-transparentes (50-80%) |

@@ -1,8 +1,8 @@
-# ? CHECKLIST DE VERIFICACIÓN - SELECTOR DE PAÍSES
+# ? CHECKLIST DE VERIFICACIï¿½N - SELECTOR DE PAï¿½SES
 
 **Fecha:** 2025-01-15  
 **URL:** https://www.svydledger.com  
-**Tiempo estimado de despliegue:** 3-5 minutos desde último push (22:30)
+**Tiempo estimado de despliegue:** 3-5 minutos desde ï¿½ltimo push (22:30)
 
 ---
 
@@ -23,50 +23,50 @@ https://www.svydledger.com
 
 ### 2?? **Navegar a PostAuthPage**
 
-**Opción A: Botón flotante (PROVISIONAL)**
-- [ ] Ver botón circular con flecha (?) en esquina inferior derecha
-- [ ] Click en el botón
+**Opciï¿½n A: Botï¿½n flotante (PROVISIONAL)**
+- [ ] Ver botï¿½n circular con flecha (?) en esquina inferior derecha
+- [ ] Click en el botï¿½n
 - [ ] Navega a PostAuthPage
 
-**Opción B: Login/Registro**
+**Opciï¿½n B: Login/Registro**
 - [ ] Completar formulario de Sign In o Sign Up
-- [ ] Click en botón correspondiente
+- [ ] Click en botï¿½n correspondiente
 - [ ] Navega a PostAuthPage
 
 ---
 
-### 3?? **Verificar PostAuthPage se cargó**
+### 3?? **Verificar PostAuthPage se cargï¿½**
 
 **Elementos visibles:**
 - [ ] Fondo con background-3.png
 - [ ] Logo "Svyd" centrado arriba
 - [ ] Email del usuario debajo del logo
-- [ ] Botón "Back to Welcome" en esquina superior izquierda
+- [ ] Botï¿½n "Back to Welcome" en esquina superior izquierda
 - [ ] Dos bloques principales visibles
 
 ---
 
 ### 4?? **Localizar el formulario "Crear Usuario Nuevo"**
 
-**Ubicación:**
+**Ubicaciï¿½n:**
 - [ ] Bloque en el lado IZQUIERDO de la primera fila
-- [ ] Header: "Create New User" (o traducción según idioma)
-- [ ] Formulario con 6 campos + botón verde
+- [ ] Header: "Create New User" (o traducciï¿½n segï¿½n idioma)
+- [ ] Formulario con 6 campos + botï¿½n verde
 
 ---
 
-### 5?? **VERIFICAR CAMPO PAÍS - ANTES vs DESPUÉS**
+### 5?? **VERIFICAR CAMPO PAï¿½S - ANTES vs DESPUï¿½S**
 
 **? ANTES (Input de texto libre):**
 ```
-Campo: País
+Campo: Paï¿½s
 Tipo: Input de texto
 Comportamiento: Usuario escribe libremente
 ```
 
 **? AHORA (Selector desplegable):**
 ```
-Campo: País
+Campo: Paï¿½s
 Tipo: Select / Dropdown
 Comportamiento: Usuario selecciona de lista
 ```
@@ -75,86 +75,86 @@ Comportamiento: Usuario selecciona de lista
 
 ### 6?? **VERIFICACIONES DEL SELECTOR**
 
-#### ? **Verificación 1: Apariencia Visual**
+#### ? **Verificaciï¿½n 1: Apariencia Visual**
 
-**Click en el campo País:**
-- [ ] Se abre un dropdown/menú desplegable
+**Click en el campo Paï¿½s:**
+- [ ] Se abre un dropdown/menï¿½ desplegable
 - [ ] NO es un input de texto libre
 - [ ] Tiene flecha indicadora de dropdown
-- [ ] Placeholder visible: "Select Country / Seleccionar País"
+- [ ] Placeholder visible: "Select Country / Seleccionar Paï¿½s"
 
-#### ? **Verificación 2: Estados Unidos Primero**
+#### ? **Verificaciï¿½n 2: Estados Unidos Primero**
 
 **Abrir dropdown:**
-- [ ] Primera opción es: **United States (United States)**
-- [ ] NO está en orden alfabético general
-- [ ] Está explícitamente en la primera posición
+- [ ] Primera opciï¿½n es: **United States (United States)**
+- [ ] NO estï¿½ en orden alfabï¿½tico general
+- [ ] Estï¿½ explï¿½citamente en la primera posiciï¿½n
 
-#### ? **Verificación 3: Orden Alfabético**
+#### ? **Verificaciï¿½n 3: Orden Alfabï¿½tico**
 
-**Después de United States:**
-- [ ] Segunda opción: Afghanistan (?????????)
-- [ ] Tercera opción: Albania (Shqipëri)
-- [ ] Cuarta opción: Algeria (???????)
-- [ ] El resto sigue orden alfabético A-Z
+**Despuï¿½s de United States:**
+- [ ] Segunda opciï¿½n: Afghanistan (?????????)
+- [ ] Tercera opciï¿½n: Albania (Shqipï¿½ri)
+- [ ] Cuarta opciï¿½n: Algeria (???????)
+- [ ] El resto sigue orden alfabï¿½tico A-Z
 
-#### ? **Verificación 4: Nombres Nativos**
+#### ? **Verificaciï¿½n 4: Nombres Nativos**
 
-**Revisar varios países:**
+**Revisar varios paï¿½ses:**
 - [ ] Japan muestra: Japan (??) ? Caracteres japoneses
 - [ ] China muestra: China (??) ? Caracteres chinos
-- [ ] Russia muestra: Russia (??????) ? Caracteres cirílicos
-- [ ] Egypt muestra: Egypt (???) ? Caracteres árabes
+- [ ] Russia muestra: Russia (??????) ? Caracteres cirï¿½licos
+- [ ] Egypt muestra: Egypt (???) ? Caracteres ï¿½rabes
 - [ ] Greece muestra: Greece (??????) ? Caracteres griegos
-- [ ] Spain muestra: Spain (España) ? Letra Ñ
-- [ ] Mexico muestra: Mexico (México) ? Letra É
+- [ ] Spain muestra: Spain (Espaï¿½a) ? Letra ï¿½
+- [ ] Mexico muestra: Mexico (Mï¿½xico) ? Letra ï¿½
 
-#### ? **Verificación 5: Búsqueda Integrada**
+#### ? **Verificaciï¿½n 5: Bï¿½squeda Integrada**
 
-**Probar búsqueda:**
+**Probar bï¿½squeda:**
 - [ ] Click en campo, escribir "Jap"
 - [ ] Lista se filtra mostrando solo "Japan (??)"
 - [ ] Escribir "Chin"
 - [ ] Lista se filtra a "China (??)"
-- [ ] Búsqueda funciona en tiempo real
+- [ ] Bï¿½squeda funciona en tiempo real
 
-#### ? **Verificación 6: Scroll y Navegación**
+#### ? **Verificaciï¿½n 6: Scroll y Navegaciï¿½n**
 
-**Navegación de lista:**
+**Navegaciï¿½n de lista:**
 - [ ] Hacer scroll en el dropdown
-- [ ] Lista completa visible con 195 países
+- [ ] Lista completa visible con 195 paï¿½ses
 - [ ] Scroll funciona suavemente
-- [ ] Todos los países accesibles
+- [ ] Todos los paï¿½ses accesibles
 
-#### ? **Verificación 7: Selección de País**
+#### ? **Verificaciï¿½n 7: Selecciï¿½n de Paï¿½s**
 
-**Seleccionar un país:**
-- [ ] Click en cualquier país (ej: Japan)
+**Seleccionar un paï¿½s:**
+- [ ] Click en cualquier paï¿½s (ej: Japan)
 - [ ] Dropdown se cierra
-- [ ] País seleccionado aparece en el campo
+- [ ] Paï¿½s seleccionado aparece en el campo
 - [ ] Formato correcto: Japan (??)
 
-#### ? **Verificación 8: Caracteres Unicode**
+#### ? **Verificaciï¿½n 8: Caracteres Unicode**
 
 **Probar varios scripts:**
 
-**Árabe (RTL - Right to Left):**
+**ï¿½rabe (RTL - Right to Left):**
 - [ ] Saudi Arabia (????????)
 - [ ] UAE (????????)
 - [ ] Iraq (??????)
 - Caracteres se muestran correctamente de derecha a izquierda
 
-**Chino/Japonés/Coreano (CJK):**
+**Chino/Japonï¿½s/Coreano (CJK):**
 - [ ] China (??)
 - [ ] Japan (??)
 - [ ] South Korea (??)
-- Caracteres asiáticos se renderizan correctamente
+- Caracteres asiï¿½ticos se renderizan correctamente
 
-**Cirílico:**
+**Cirï¿½lico:**
 - [ ] Russia (??????)
 - [ ] Ukraine (???????)
 - [ ] Bulgaria (????????)
-- Alfabeto cirílico visible y legible
+- Alfabeto cirï¿½lico visible y legible
 
 **Griego:**
 - [ ] Greece (??????)
@@ -167,7 +167,7 @@ Comportamiento: Usuario selecciona de lista
 **Devanagari:**
 - [ ] India (????)
 - [ ] Nepal (?????)
-- Escritura índica correcta
+- Escritura ï¿½ndica correcta
 
 ---
 
@@ -186,7 +186,7 @@ Comportamiento: Usuario selecciona de lista
 - [ ] Dropdown tiene fondo oscuro
 - [ ] Texto legible sobre fondo oscuro
 - [ ] Hover effect al pasar mouse sobre opciones
-- [ ] Opción seleccionada se destaca visualmente
+- [ ] Opciï¿½n seleccionada se destaca visualmente
 
 ---
 
@@ -194,17 +194,17 @@ Comportamiento: Usuario selecciona de lista
 
 #### Comportamiento del Formulario:
 
-- [ ] Campo País es parte del formulario
+- [ ] Campo Paï¿½s es parte del formulario
 - [ ] NO afecta otros campos (Nombre, Id, etc.)
-- [ ] Botón verde "Pay for new user registration" sigue visible
+- [ ] Botï¿½n verde "Pay for new user registration" sigue visible
 - [ ] Formulario completo funciona normalmente
 
 #### Estado del Selector:
 
-- [ ] Inicia vacío (sin selección por defecto)
-- [ ] Placeholder visible cuando vacío
-- [ ] Después de seleccionar, muestra el país elegido
-- [ ] Se puede cambiar selección múltiples veces
+- [ ] Inicia vacï¿½o (sin selecciï¿½n por defecto)
+- [ ] Placeholder visible cuando vacï¿½o
+- [ ] Despuï¿½s de seleccionar, muestra el paï¿½s elegido
+- [ ] Se puede cambiar selecciï¿½n mï¿½ltiples veces
 
 ---
 
@@ -212,46 +212,46 @@ Comportamiento: Usuario selecciona de lista
 
 #### Casos Especiales:
 
-**Países con nombres largos:**
+**Paï¿½ses con nombres largos:**
 - [ ] Saint Vincent and the Grenadines se muestra completo
-- [ ] Central African Republic (République centrafricaine)
-- [ ] Congo (Democratic Republic) (République démocratique du Congo)
+- [ ] Central African Republic (Rï¿½publique centrafricaine)
+- [ ] Congo (Democratic Republic) (Rï¿½publique dï¿½mocratique du Congo)
 - Texto no se corta, se ajusta correctamente
 
-**Búsqueda por nombre nativo:**
+**Bï¿½squeda por nombre nativo:**
 - [ ] Si teclado permite, buscar "??" encuentra Japan
 - [ ] Buscar "??" encuentra China
-- [ ] Búsqueda Unicode funciona (si está implementada)
+- [ ] Bï¿½squeda Unicode funciona (si estï¿½ implementada)
 
 #### Responsive:
 
 - [ ] Si resize ventana, selector se adapta
-- [ ] En pantallas pequeñas, dropdown se ajusta
-- [ ] Touch funciona en dispositivos móviles
+- [ ] En pantallas pequeï¿½as, dropdown se ajusta
+- [ ] Touch funciona en dispositivos mï¿½viles
 
 ---
 
 ### ?? **VERIFICACIONES FINALES**
 
-#### Integración Completa:
+#### Integraciï¿½n Completa:
 
 - [ ] Formulario "Crear Usuario Nuevo" funcional
 - [ ] Todos los 6 campos visibles y funcionando:
   - [ ] Nombre (Input)
   - [ ] Id (Input)
   - [ ] Id Tributario (Input)
-  - [ ] País (SELECT - NUEVO) ? **ESTE ES EL CAMBIO**
+  - [ ] Paï¿½s (SELECT - NUEVO) ? **ESTE ES EL CAMBIO**
   - [ ] Moneda (Input)
   - [ ] Idioma (Input)
 
-- [ ] Botón verde "Pagar registro" visible
+- [ ] Botï¿½n verde "Pagar registro" visible
 - [ ] Texto "Minimum payment amount $10" visible
 
 #### Sin Errores:
 
 - [ ] Console del navegador sin errores JavaScript
 - [ ] No hay warnings relacionados con el selector
-- [ ] Carga rápida del dropdown
+- [ ] Carga rï¿½pida del dropdown
 - [ ] No hay lag al abrir/cerrar selector
 
 ---
@@ -273,8 +273,8 @@ Comportamiento: Usuario selecciona de lista
 ? Id Tributario:                           ?
 ? [                                      ] ?
 ?                                          ?
-? País:                                    ?
-? [ Select Country / Seleccionar País ?] ? ? NUEVO
+? Paï¿½s:                                    ?
+? [ Select Country / Seleccionar Paï¿½s ?] ? ? NUEVO
 ?                                          ?
 ? Moneda:                                  ?
 ? [                                      ] ?
@@ -288,16 +288,16 @@ Comportamiento: Usuario selecciona de lista
 ???????????????????????????????????????????
 ```
 
-### Después de abrir dropdown:
+### Despuï¿½s de abrir dropdown:
 
 ```
 ???????????????????????????????????????????
-? País:                                    ?
+? Paï¿½s:                                    ?
 ? [ United States (United States)    ?] ?
 ??????????????????????????????????????????? ? Dropdown abierto
 ? United States (United States)        ? ? ? PRIMERO
 ? Afghanistan (?????????)                ?
-? Albania (Shqipëri)                      ?
+? Albania (Shqipï¿½ri)                      ?
 ? Algeria (???????)                       ?
 ? Andorra (Andorra)                       ?
 ? Angola (Angola)                         ?
@@ -305,45 +305,45 @@ Comportamiento: Usuario selecciona de lista
 ? Argentina (Argentina)                   ?
 ? Armenia (????????)                      ?
 ? Australia (Australia)                   ?
-? Austria (Österreich)                    ?
-? ... (scroll para ver más)               ?
+? Austria (ï¿½sterreich)                    ?
+? ... (scroll para ver mï¿½s)               ?
 ???????????????????????????????????????????
 ```
 
 ---
 
-## ? RESUMEN DE VERIFICACIÓN
+## ? RESUMEN DE VERIFICACIï¿½N
 
 ### Cambios Principales a Verificar:
 
-1. ? Campo País cambió de Input ? Select
+1. ? Campo Paï¿½s cambiï¿½ de Input ? Select
 2. ? Estados Unidos primero en lista
-3. ? Resto alfabético A-Z
+3. ? Resto alfabï¿½tico A-Z
 4. ? Formato: English (Native)
 5. ? Caracteres especiales funcionan
-6. ? Búsqueda integrada
-7. ? 195 países disponibles
+6. ? Bï¿½squeda integrada
+7. ? 195 paï¿½ses disponibles
 
 ---
 
-## ?? QUÉ HACER SI NO VES EL CAMBIO
+## ?? QUï¿½ HACER SI NO VES EL CAMBIO
 
 ### Problemas comunes:
 
 **1. Dropdown no aparece:**
 - Hacer hard refresh: `Ctrl + Shift + R` (Windows) o `Cmd + Shift + R` (Mac)
-- Limpiar caché del navegador
-- Probar en ventana incógnito
+- Limpiar cachï¿½ del navegador
+- Probar en ventana incï¿½gnito
 
-**2. Todavía veo Input de texto:**
-- Esperar 5 minutos más (despliegue puede tardar)
+**2. Todavï¿½a veo Input de texto:**
+- Esperar 5 minutos mï¿½s (despliegue puede tardar)
 - Verificar GitHub Actions en: https://github.com/VICTORsvydledger/SVYDLEDGER/actions
-- Ver si workflow completó exitosamente
+- Ver si workflow completï¿½ exitosamente
 
-**3. Dropdown vacío o sin países:**
+**3. Dropdown vacï¿½o o sin paï¿½ses:**
 - Abrir DevTools (F12)
 - Revisar Console para errores
-- Revisar Network tab para ver si `countries.ts` se cargó
+- Revisar Network tab para ver si `countries.ts` se cargï¿½
 
 **4. Caracteres especiales no se ven:**
 - Verificar que navegador soporta UTF-8
@@ -354,22 +354,22 @@ Comportamiento: Usuario selecciona de lista
 
 ## ?? SIGUIENTE PASO
 
-**Después de verificar todo:**
+**Despuï¿½s de verificar todo:**
 
 Si todo funciona correctamente:
 - ? Marcar este documento como completado
-- ? Tomar captura de pantalla para documentación
-- ? Confirmar que cambio está en producción
+- ? Tomar captura de pantalla para documentaciï¿½n
+- ? Confirmar que cambio estï¿½ en producciï¿½n
 
 Si hay problemas:
 - ?? Revisar GitHub Actions logs
 - ?? Verificar Console del navegador
-- ?? Reportar error específico para debugging
+- ?? Reportar error especï¿½fico para debugging
 
 ---
 
 **TIEMPO ESTIMADO PARA VERIFICAR:** 5-10 minutos  
-**MEJOR MOMENTO PARA VERIFICAR:** Ahora (después de 3-5 min del último push)
+**MEJOR MOMENTO PARA VERIFICAR:** Ahora (despuï¿½s de 3-5 min del ï¿½ltimo push)
 
 ---
 
@@ -380,26 +380,26 @@ Si hay problemas:
 - [ ] Sitio web accesible: https://www.svydledger.com
 - [ ] PostAuthPage carga correctamente
 - [ ] Formulario "Crear Usuario Nuevo" visible
-- [ ] Campo País es SELECT (no INPUT)
+- [ ] Campo Paï¿½s es SELECT (no INPUT)
 - [ ] Estados Unidos primero en lista
-- [ ] Orden alfabético después de US
-- [ ] Nombres nativos entre paréntesis
+- [ ] Orden alfabï¿½tico despuï¿½s de US
+- [ ] Nombres nativos entre parï¿½ntesis
 - [ ] Caracteres especiales visibles
-- [ ] Búsqueda funciona
-- [ ] Selección funciona
+- [ ] Bï¿½squeda funciona
+- [ ] Selecciï¿½n funciona
 - [ ] Sin errores en Console
 - [ ] Estilo consistente con resto de formulario
 
-**CUANDO TODOS LOS ? ESTÉN MARCADOS:**
+**CUANDO TODOS LOS ? ESTï¿½N MARCADOS:**
 
-? **IMPLEMENTACIÓN VERIFICADA Y COMPLETADA**
+? **IMPLEMENTACIï¿½N VERIFICADA Y COMPLETADA**
 
 ---
 
-**Fecha de creación:** 2025-01-15  
-**Última actualización:** 2025-01-15 22:35  
+**Fecha de creaciï¿½n:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15 22:35  
 **Estado:** ? ESPERANDO DESPLIEGUE (3-5 min)
 
 ---
 
-**¡USA ESTE CHECKLIST PARA VERIFICAR QUE TODO FUNCIONE CORRECTAMENTE!** ?
+**ï¿½USA ESTE CHECKLIST PARA VERIFICAR QUE TODO FUNCIONE CORRECTAMENTE!** ?

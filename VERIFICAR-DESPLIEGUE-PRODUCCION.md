@@ -1,7 +1,7 @@
-# ? VERIFICACIÓN DE DESPLIEGUE EN PRODUCCIÓN
+# ? VERIFICACIï¿½N DE DESPLIEGUE EN PRODUCCIï¿½N
 
 **Fecha:** 2025-01-15  
-**Cambio:** Reducción del formulario "Crear Usuario Nuevo" al 70% de su ancho original  
+**Cambio:** Reducciï¿½n del formulario "Crear Usuario Nuevo" al 70% de su ancho original  
 **Sitio:** https://www.svconta.com
 
 ---
@@ -11,22 +11,22 @@
 ### Workflows Ejecutados:
 
 1. ? **Manual dispatch** - Forzado manualmente
-2. ? **Commit timestamp** - Con marca de actualización
-3. ? **Optimización caché** - Headers de caché mejorados
+2. ? **Commit timestamp** - Con marca de actualizaciï¿½n
+3. ? **Optimizaciï¿½n cachï¿½** - Headers de cachï¿½ mejorados
 
-**Tiempo estimado:** 3-5 minutos desde el último push
+**Tiempo estimado:** 3-5 minutos desde el ï¿½ltimo push
 
 ---
 
-## ?? CÓMO VERIFICAR QUE SE DESPLEGÓ
+## ?? Cï¿½MO VERIFICAR QUE SE DESPLEGï¿½
 
-### Opción 1: Limpiar Caché del Navegador (RECOMENDADO)
+### Opciï¿½n 1: Limpiar Cachï¿½ del Navegador (RECOMENDADO)
 
 **Chrome/Edge:**
 ```
 1. Presiona: Ctrl + Shift + Delete
-2. Selecciona: "Imágenes y archivos en caché"
-3. Período: "Última hora"
+2. Selecciona: "Imï¿½genes y archivos en cachï¿½"
+3. Perï¿½odo: "ï¿½ltima hora"
 4. Click: "Borrar datos"
 5. Cierra el navegador completamente
 6. Abre de nuevo y ve a: https://www.svconta.com
@@ -36,15 +36,15 @@
 **Firefox:**
 ```
 1. Presiona: Ctrl + Shift + Delete
-2. Selecciona: "Caché"
-3. Intervalo: "Última hora"
+2. Selecciona: "Cachï¿½"
+3. Intervalo: "ï¿½ltima hora"
 4. Click: "Limpiar ahora"
 5. Presiona: Ctrl + F5 para forzar recarga
 ```
 
 ---
 
-### Opción 2: Modo Incógnito/Privado
+### Opciï¿½n 2: Modo Incï¿½gnito/Privado
 
 **Chrome/Edge:**
 ```
@@ -60,11 +60,11 @@ Luego ir a: https://www.svconta.com
 
 ---
 
-### Opción 3: Herramientas de Desarrollador
+### Opciï¿½n 3: Herramientas de Desarrollador
 
 1. Abre https://www.svconta.com
 2. Presiona F12 (DevTools)
-3. Ve a la pestaña **Network**
+3. Ve a la pestaï¿½a **Network**
 4. Marca el checkbox: **"Disable cache"**
 5. Click derecho en Reload ? **"Empty Cache and Hard Reload"**
 
@@ -72,40 +72,40 @@ Luego ir a: https://www.svconta.com
 
 ## ?? VERIFICAR ESTADO DE WORKFLOWS
 
-### Ver workflows en ejecución:
+### Ver workflows en ejecuciï¿½n:
 
 ```powershell
 gh run list --limit 5 --workflow="Azure Static Web Apps CI/CD"
 ```
 
 **Buscar:**
-- `*` = En ejecución
+- `*` = En ejecuciï¿½n
 - `?` = Completado exitosamente
 - `X` = Fallido
 
-### Ver detalles del último run:
+### Ver detalles del ï¿½ltimo run:
 
 ```powershell
 gh run view --web
 ```
 
-Esto abrirá GitHub Actions en tu navegador.
+Esto abrirï¿½ GitHub Actions en tu navegador.
 
 ---
 
-## ?? QUÉ VERIFICAR EN EL SITIO
+## ?? QUï¿½ VERIFICAR EN EL SITIO
 
 ### 1. **Formulario "Crear Usuario Nuevo"**
 
 ? **Debe verse:**
-- Más estrecho que antes (35% del ancho total)
-- Mismo número de campos (6 campos)
+- Mï¿½s estrecho que antes (35% del ancho total)
+- Mismo nï¿½mero de campos (6 campos)
 - Misma altura
-- Botón verde "Pagar registro de usuario nuevo"
-- Texto amarillo "Monto mínimo a pagar $10"
+- Botï¿½n verde "Pagar registro de usuario nuevo"
+- Texto amarillo "Monto mï¿½nimo a pagar $10"
 
 ? **El bloque "Lista de Usuarios" a la derecha:**
-- Más ancho que antes (ocupando ~58%)
+- Mï¿½s ancho que antes (ocupando ~58%)
 - Tabla con 5 filas
 - Botones: ENTRAR, PAGAR, SALDO
 
@@ -121,35 +121,35 @@ Esto abrirá GitHub Actions en tu navegador.
 ?????????????????????????????????????????????????????????????
 ```
 
-**DESPUÉS del cambio:**
+**DESPUï¿½S del cambio:**
 ```
 ???????????????????????????????????????????????????????????
-? Crear Usuario    ?    Lista de Usuarios (más ancha)   ?
+? Crear Usuario    ?    Lista de Usuarios (mï¿½s ancha)   ?
 ?   Nuevo (35%)    ?              (~58%)                 ?
 ???????????????????????????????????????????????????????????
 ```
 
 ---
 
-## ? TIEMPO DE PROPAGACIÓN
+## ? TIEMPO DE PROPAGACIï¿½N
 
 **Azure Static Web Apps:**
 - CDN global: 2-5 minutos normalmente
 - En casos extremos: hasta 10 minutos
-- Caché del navegador: inmediato con limpieza
+- Cachï¿½ del navegador: inmediato con limpieza
 
-**Si después de 10 minutos NO se ve el cambio:**
+**Si despuï¿½s de 10 minutos NO se ve el cambio:**
 
-1. Verifica que el workflow se completó: `gh run list`
-2. Verifica en modo incógnito
+1. Verifica que el workflow se completï¿½: `gh run list`
+2. Verifica en modo incï¿½gnito
 3. Prueba desde otro dispositivo/red
-4. Avísame para revisar logs de Azure
+4. Avï¿½same para revisar logs de Azure
 
 ---
 
-## ??? COMANDOS ÚTILES
+## ??? COMANDOS ï¿½TILES
 
-### Verificar último commit:
+### Verificar ï¿½ltimo commit:
 ```powershell
 git log --oneline -3
 ```
@@ -159,7 +159,7 @@ git log --oneline -3
 gh run list --limit 5
 ```
 
-### Ver logs del último deploy:
+### Ver logs del ï¿½ltimo deploy:
 ```powershell
 gh run view
 ```
@@ -181,7 +181,7 @@ gh workflow run "Azure Static Web Apps CI/CD" --ref main
 ```
 
 ### 2. **staticwebapp.config.json**
-Agregados headers de caché:
+Agregados headers de cachï¿½:
 ```json
 {
   "routes": [
@@ -197,13 +197,13 @@ Agregados headers de caché:
 
 ---
 
-## ? CHECKLIST DE VERIFICACIÓN
+## ? CHECKLIST DE VERIFICACIï¿½N
 
 - [ ] Workflows completados en GitHub Actions
-- [ ] Caché del navegador limpiado
-- [ ] Sitio abierto en modo incógnito
-- [ ] Formulario "Crear Usuario Nuevo" más estrecho (35%)
-- [ ] Tabla "Lista de Usuarios" más ancha (~58%)
+- [ ] Cachï¿½ del navegador limpiado
+- [ ] Sitio abierto en modo incï¿½gnito
+- [ ] Formulario "Crear Usuario Nuevo" mï¿½s estrecho (35%)
+- [ ] Tabla "Lista de Usuarios" mï¿½s ancha (~58%)
 - [ ] Gap de 64px entre bloques mantenido
 - [ ] Estilos y colores correctos
 - [ ] Funcionalidad intacta
@@ -212,7 +212,7 @@ Agregados headers de caché:
 
 ## ?? ENLACES IMPORTANTES
 
-- **Sitio producción:** https://www.svconta.com
+- **Sitio producciï¿½n:** https://www.svconta.com
 - **GitHub Actions:** https://github.com/VICTORsvydledger/SVYDLEDGER/actions
 - **Repositorio:** https://github.com/VICTORsvydledger/SVYDLEDGER
 
@@ -223,21 +223,21 @@ Agregados headers de caché:
 1. **Los workflows fallan (X):**
    - Ejecuta: `gh run view --log-failed`
    - Revisa los logs de error
-   - Avísame el mensaje de error
+   - Avï¿½same el mensaje de error
 
 2. **Workflows completos (?) pero sitio no actualizado:**
-   - Limpia caché del navegador completamente
-   - Prueba en modo incógnito
+   - Limpia cachï¿½ del navegador completamente
+   - Prueba en modo incï¿½gnito
    - Prueba desde otro dispositivo
-   - Espera 5 minutos más
+   - Espera 5 minutos mï¿½s
 
-3. **Error 404 o sitio caído:**
+3. **Error 404 o sitio caï¿½do:**
    - Verifica DNS: `nslookup www.svconta.com`
    - Verifica Azure Portal
-   - Avísame inmediatamente
+   - Avï¿½same inmediatamente
 
 ---
 
-**Última actualización:** 2025-01-15  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
 **Responsable del deploy:** GitHub Actions + Azure Static Web Apps  
-**Tiempo total estimado:** 3-5 minutos desde el último push
+**Tiempo total estimado:** 3-5 minutos desde el ï¿½ltimo push

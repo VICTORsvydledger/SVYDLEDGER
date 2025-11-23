@@ -1,32 +1,32 @@
-# ?? Scripts de Gestión - SVYD LEDGER
+# ?? Scripts de Gestiï¿½n - SVYD LEDGER
 
 ## ?? Scripts Disponibles
 
 ### ? Recomendados (Usar Siempre)
 
 #### 1. start-single-process.ps1
-**Propósito:** Inicio con garantía de proceso único
+**Propï¿½sito:** Inicio con garantï¿½a de proceso ï¿½nico
 
 ```powershell
 .\start-single-process.ps1
 ```
 
-**Características:**
+**Caracterï¿½sticas:**
 - ? Sistema de bloqueo (.node-lock)
-- ? Mata procesos anteriores automáticamente
+- ? Mata procesos anteriores automï¿½ticamente
 - ? Solo permite 1 proceso activo
 - ? Auto-limpieza al salir (Ctrl+C)
 - ? Detecta y limpia procesos zombies
 
-**Cuándo usar:**
-- Al empezar el día
+**Cuï¿½ndo usar:**
+- Al empezar el dï¿½a
 - Cada vez que quieras iniciar el frontend
 - Como reemplazo de `npm run dev`
 
 ---
 
 #### 2. dev-manager.ps1
-**Propósito:** Menú interactivo para gestión completa
+**Propï¿½sito:** Menï¿½ interactivo para gestiï¿½n completa
 
 ```powershell
 .\dev-manager.ps1
@@ -42,18 +42,18 @@
 7. Deploy to Azure
 Q. Quit
 
-**Cuándo usar:**
+**Cuï¿½ndo usar:**
 - Cuando necesitas varias opciones
 - Para verificar el estado del sistema
 - Para limpiar dependencias
-- Para gestión completa
+- Para gestiï¿½n completa
 
 ---
 
 ### ?? Herramientas de Monitoreo
 
 #### 3. monitor-node-processes.ps1
-**Propósito:** Monitoreo y prevención automática
+**Propï¿½sito:** Monitoreo y prevenciï¿½n automï¿½tica
 
 ```powershell
 # Solo alertas
@@ -66,16 +66,16 @@ Q. Quit
 .\monitor-node-processes.ps1 -IntervalSeconds 60 -AutoKill
 ```
 
-**Características:**
+**Caracterï¿½sticas:**
 - ?? Revisa cada N segundos (default: 30)
-- ?? Alerta cuando detecta múltiples procesos
+- ?? Alerta cuando detecta mï¿½ltiples procesos
 - ?? Modo auto-kill: elimina procesos extras
 - ?? Muestra uso de memoria en tiempo real
 
-**Cuándo usar:**
+**Cuï¿½ndo usar:**
 - En una terminal separada
 - Para sesiones de desarrollo largas
-- Como protección extra
+- Como protecciï¿½n extra
 - Si el problema persiste
 
 ---
@@ -83,19 +83,19 @@ Q. Quit
 ### ?? Herramientas de Limpieza
 
 #### 4. kill-node-processes.ps1
-**Propósito:** Matar todos los procesos Node.js
+**Propï¿½sito:** Matar todos los procesos Node.js
 
 ```powershell
 .\kill-node-processes.ps1
 ```
 
-**Características:**
-- Usa 3 métodos diferentes
+**Caracterï¿½sticas:**
+- Usa 3 mï¿½todos diferentes
 - Verifica que todo se detuvo
-- Muestra estadísticas
+- Muestra estadï¿½sticas
 
-**Cuándo usar:**
-- Cuando hay múltiples procesos corriendo
+**Cuï¿½ndo usar:**
+- Cuando hay mï¿½ltiples procesos corriendo
 - Antes de un reinicio limpio
 - Si algo no funciona
 - Emergencias
@@ -103,19 +103,19 @@ Q. Quit
 ---
 
 #### 5. start-frontend.ps1
-**Propósito:** Inicio seguro tradicional
+**Propï¿½sito:** Inicio seguro tradicional
 
 ```powershell
 .\start-frontend.ps1
 ```
 
-**Características:**
+**Caracterï¿½sticas:**
 - Mata procesos antes de iniciar
 - Verifica dependencias
-- Limpia caché de Vite
-- Muestra información útil
+- Limpia cachï¿½ de Vite
+- Muestra informaciï¿½n ï¿½til
 
-**Cuándo usar:**
+**Cuï¿½ndo usar:**
 - Como alternativa a start-single-process.ps1
 - Si el sistema de bloqueo da problemas
 - Para pruebas
@@ -125,30 +125,30 @@ Q. Quit
 ### ?? Despliegue
 
 #### 6. deploy-to-azure.ps1
-**Propósito:** Desplegar a Azure
+**Propï¿½sito:** Desplegar a Azure
 
 ```powershell
 .\deploy-to-azure.ps1
 ```
 
-**Cuándo usar:**
-- Para desplegar a producción
-- Después de probar localmente
-- Cuando todo esté listo
+**Cuï¿½ndo usar:**
+- Para desplegar a producciï¿½n
+- Despuï¿½s de probar localmente
+- Cuando todo estï¿½ listo
 
 ---
 
 #### 7. setup-welcomepage.ps1
-**Propósito:** Configuración inicial del WelcomePage
+**Propï¿½sito:** Configuraciï¿½n inicial del WelcomePage
 
 ```powershell
 .\setup-welcomepage.ps1
 ```
 
-**Cuándo usar:**
-- Primera instalación
-- Después de clonar el repo
-- Para verificar instalación
+**Cuï¿½ndo usar:**
+- Primera instalaciï¿½n
+- Despuï¿½s de clonar el repo
+- Para verificar instalaciï¿½n
 
 ---
 
@@ -165,11 +165,11 @@ Q. Quit
 # Al terminar: Ctrl+C
 ```
 
-**Resultado:** 1 proceso limpio, sin acumulación
+**Resultado:** 1 proceso limpio, sin acumulaciï¿½n
 
 ---
 
-### ??? Trabajo con Protección Máxima
+### ??? Trabajo con Protecciï¿½n Mï¿½xima
 
 ```powershell
 # Terminal 1 (Monitor):
@@ -178,20 +178,20 @@ Q. Quit
 # Terminal 2 (Desarrollo):
 .\start-single-process.ps1
 
-# El monitor mantiene solo 1 proceso automáticamente
+# El monitor mantiene solo 1 proceso automï¿½ticamente
 ```
 
-**Resultado:** Protección continua contra múltiples procesos
+**Resultado:** Protecciï¿½n continua contra mï¿½ltiples procesos
 
 ---
 
-### ?? Trabajo con Gestión Completa
+### ?? Trabajo con Gestiï¿½n Completa
 
 ```powershell
 # Ejecutar:
 .\dev-manager.ps1
 
-# Usar menú interactivo según necesidad
+# Usar menï¿½ interactivo segï¿½n necesidad
 ```
 
 **Resultado:** Control total desde un solo lugar
@@ -207,7 +207,7 @@ Q. Quit
 # 2. Abrir dev-manager
 .\dev-manager.ps1
 
-# 3. Seleccionar: Opción 3 (Clean & Reinstall)
+# 3. Seleccionar: Opciï¿½n 3 (Clean & Reinstall)
 
 # 4. Iniciar limpio
 .\start-single-process.ps1
@@ -217,18 +217,18 @@ Q. Quit
 
 ---
 
-## ?? Parámetros Disponibles
+## ?? Parï¿½metros Disponibles
 
 ### monitor-node-processes.ps1
 
-| Parámetro | Tipo | Default | Descripción |
+| Parï¿½metro | Tipo | Default | Descripciï¿½n |
 |-----------|------|---------|-------------|
 | `-IntervalSeconds` | int | 30 | Segundos entre revisiones |
-| `-AutoKill` | switch | false | Eliminar procesos extras automáticamente |
+| `-AutoKill` | switch | false | Eliminar procesos extras automï¿½ticamente |
 
 **Ejemplos:**
 ```powershell
-# Revisión cada minuto
+# Revisiï¿½n cada minuto
 .\monitor-node-processes.ps1 -IntervalSeconds 60
 
 # Auto-kill cada 15 segundos
@@ -240,38 +240,38 @@ Q. Quit
 
 ---
 
-## ?? Comparación de Scripts
+## ?? Comparaciï¿½n de Scripts
 
-| Script | Proceso Único | Auto-Limpieza | Monitoreo | Menú | Recomendado |
+| Script | Proceso ï¿½nico | Auto-Limpieza | Monitoreo | Menï¿½ | Recomendado |
 |--------|---------------|---------------|-----------|------|-------------|
 | `start-single-process.ps1` | ?? | ?? | ? | ? | ??? |
 | `monitor-node-processes.ps1` | ? (con -AutoKill) | ? | ?? | ? | ?? |
-| `dev-manager.ps1` | ? (opción 1) | ? | ? | ?? | ??? |
+| `dev-manager.ps1` | ? (opciï¿½n 1) | ? | ? | ?? | ??? |
 | `start-frontend.ps1` | ?? | ?? | ? | ? | ? |
 | `kill-node-processes.ps1` | ? | ?? | ? | ? | ? |
 
 ---
 
-## ?? Solución de Problemas
+## ?? Soluciï¿½n de Problemas
 
 ### Problema: "Script no se ejecuta"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ### Problema: "Lock file existe pero no hay proceso"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 Remove-Item .node-lock -Force
 .\start-single-process.ps1
 ```
 
-### Problema: "Múltiples procesos siguen apareciendo"
+### Problema: "Mï¿½ltiples procesos siguen apareciendo"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # Terminal 1:
 .\monitor-node-processes.ps1 -AutoKill
@@ -282,14 +282,14 @@ Remove-Item .node-lock -Force
 
 ### Problema: "Todo falla"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # Limpieza extrema:
 Get-Process node | Stop-Process -Force
 Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 .\dev-manager.ps1
-# Opción 3: Clean & Reinstall
-# Opción 1: Start Frontend
+# Opciï¿½n 3: Clean & Reinstall
+# Opciï¿½n 1: Start Frontend
 ```
 
 ---
@@ -297,8 +297,8 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 ## ?? Archivos Generados
 
 ### .node-lock
-**Ubicación:** Raíz del proyecto
-**Propósito:** Bloqueo de proceso único
+**Ubicaciï¿½n:** Raï¿½z del proyecto
+**Propï¿½sito:** Bloqueo de proceso ï¿½nico
 **Contenido:**
 ```json
 {
@@ -308,27 +308,27 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 }
 ```
 
-**Gestión:**
-- ? Creado automáticamente por `start-single-process.ps1`
-- ? Eliminado automáticamente al salir (Ctrl+C)
+**Gestiï¿½n:**
+- ? Creado automï¿½ticamente por `start-single-process.ps1`
+- ? Eliminado automï¿½ticamente al salir (Ctrl+C)
 - ? Verificado antes de iniciar nuevo proceso
 - ?? No versionar (agregado a .gitignore)
 
 ---
 
-## ?? Documentación Relacionada
+## ?? Documentaciï¿½n Relacionada
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
-| `SOLUCIÓN-PROCESOS-NODE.md` | Guía completa del problema y solución |
-| `QUICK-START-SINGLE-PROCESS.md` | Guía rápida de uso diario |
-| `PROBLEMA-RESUELTO.md` | Resumen de la solución implementada |
-| `docs\TROUBLESHOOTING.md` | Solución de todos los problemas |
+| `SOLUCIï¿½N-PROCESOS-NODE.md` | Guï¿½a completa del problema y soluciï¿½n |
+| `QUICK-START-SINGLE-PROCESS.md` | Guï¿½a rï¿½pida de uso diario |
+| `PROBLEMA-RESUELTO.md` | Resumen de la soluciï¿½n implementada |
+| `docs\TROUBLESHOOTING.md` | Soluciï¿½n de todos los problemas |
 | `WELCOMEPAGE-README.md` | README principal del proyecto |
 
 ---
 
-## ?? Tips y Mejores Prácticas
+## ?? Tips y Mejores Prï¿½cticas
 
 ### ? DO (Hacer)
 
@@ -338,7 +338,7 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
    ```
 
 2. **Terminar con Ctrl+C**
-   - Limpia automáticamente
+   - Limpia automï¿½ticamente
    - Elimina el lock file
    - Cierra el proceso correctamente
 
@@ -347,33 +347,33 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
    .\monitor-node-processes.ps1 -AutoKill
    ```
 
-4. **Verificar periódicamente**
+4. **Verificar periï¿½dicamente**
    ```powershell
    .\dev-manager.ps1
-   # Opción 5: Check System Status
+   # Opciï¿½n 5: Check System Status
    ```
 
 ### ? DON'T (No Hacer)
 
 1. **No usar `npm run dev` directamente**
-   - No tiene protección
-   - Puede crear múltiples procesos
+   - No tiene protecciï¿½n
+   - Puede crear mï¿½ltiples procesos
 
 2. **No cerrar el terminal directamente**
    - El lock file no se limpia
-   - El proceso queda huérfano
+   - El proceso queda huï¿½rfano
 
 3. **No ignorar las alertas del monitor**
-   - Si detecta múltiples procesos, investiga
+   - Si detecta mï¿½ltiples procesos, investiga
    - Usa `kill-node-processes.ps1`
 
-4. **No ejecutar múltiples veces seguidas**
+4. **No ejecutar mï¿½ltiples veces seguidas**
    - Espera a que termine el anterior
    - Verifica con Task Manager
 
 ---
 
-## ?? Cómo Funciona
+## ?? Cï¿½mo Funciona
 
 ### Sistema de Bloqueo
 
@@ -381,15 +381,15 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 Usuario ejecuta: .\start-single-process.ps1
          ?
          ?
-    ¿Existe .node-lock?
+    ï¿½Existe .node-lock?
          ?
     ???????????
-   NO         SÍ
+   NO         Sï¿½
     ?          ?
-    ?     ¿Proceso vivo?
+    ?     ï¿½Proceso vivo?
     ?          ?
     ?     ???????????
-    ?    SÍ        NO
+    ?    Sï¿½        NO
     ?     ?         ?
     ?  Mostrar   Limpiar
     ?  opciones  lock
@@ -405,7 +405,7 @@ Usuario ejecuta: .\start-single-process.ps1
     Eliminar .node-lock
 ```
 
-### Monitor Automático
+### Monitor Automï¿½tico
 
 ```
 Inicio del monitor
@@ -420,10 +420,10 @@ proceso   procesos
     ?         ?
  Normal    Alerta
     ?         ?
-    ?    ¿AutoKill?
+    ?    ï¿½AutoKill?
     ?         ?
     ?    ???????????
-    ?   SÍ        NO
+    ?   Sï¿½        NO
     ?    ?         ?
     ?  Matar     Solo
     ?  extras   avisar
@@ -439,7 +439,7 @@ proceso   procesos
 
 ## ?? Estado del Sistema
 
-### Verificaciones Rápidas
+### Verificaciones Rï¿½pidas
 
 **1. Procesos activos:**
 ```powershell
@@ -465,16 +465,16 @@ Get-Content .node-lock -ErrorAction SilentlyContinue | ConvertFrom-Json
 
 ## ?? Objetivo del Sistema
 
-**Antes:** Múltiples procesos Node.js consumiendo recursos innecesarios
-**Después:** Solo 1 proceso controlado y monitoreado
+**Antes:** Mï¿½ltiples procesos Node.js consumiendo recursos innecesarios
+**Despuï¿½s:** Solo 1 proceso controlado y monitoreado
 
-**Ahorro típico:** 
+**Ahorro tï¿½pico:** 
 - Memoria: ~680 MB
 - Procesos: 3 menos
 - Control: 100%
 
 ---
 
-**Última actualización:** 2024-01-15  
-**Versión:** 2.0.0 (Sistema de Proceso Único)  
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
+**Versiï¿½n:** 2.0.0 (Sistema de Proceso ï¿½nico)  
 **Mantenedor:** SVYD LEDGER Team

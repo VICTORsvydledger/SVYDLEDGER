@@ -1,36 +1,36 @@
-# ?? SVYD LEDGER - Guía de Inicio Paso a Paso
+# ?? SVYD LEDGER - Guï¿½a de Inicio Paso a Paso
 
-## ?? Índice
+## ?? ï¿½ndice
 1. [Requisitos Previos](#requisitos-previos)
 2. [Paso 1: Configurar Azure](#paso-1-configurar-azure)
 3. [Paso 2: Configurar GitHub](#paso-2-configurar-github)
 4. [Paso 3: Configurar Variables de Entorno](#paso-3-configurar-variables-de-entorno)
 5. [Paso 4: Desplegar Infraestructura](#paso-4-desplegar-infraestructura)
 6. [Paso 5: Publicar en la Web](#paso-5-publicar-en-la-web)
-7. [Solución de Problemas](#solución-de-problemas)
+7. [Soluciï¿½n de Problemas](#soluciï¿½n-de-problemas)
 
 ---
 
 ## ?? Requisitos Previos
 
-Antes de comenzar, asegúrate de tener instalado:
+Antes de comenzar, asegï¿½rate de tener instalado:
 
-- [ ] **Azure CLI** - [Descargar aquí](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [ ] **GitHub CLI** - [Descargar aquí](https://cli.github.com/)
-- [ ] **Node.js 20+** - [Descargar aquí](https://nodejs.org/)
-- [ ] **Python 3.11+** - [Descargar aquí](https://www.python.org/)
-- [ ] **Docker Desktop** - [Descargar aquí](https://www.docker.com/products/docker-desktop)
+- [ ] **Azure CLI** - [Descargar aquï¿½](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [ ] **GitHub CLI** - [Descargar aquï¿½](https://cli.github.com/)
+- [ ] **Node.js 20+** - [Descargar aquï¿½](https://nodejs.org/)
+- [ ] **Python 3.11+** - [Descargar aquï¿½](https://www.python.org/)
+- [ ] **Docker Desktop** - [Descargar aquï¿½](https://www.docker.com/products/docker-desktop)
 - [ ] **Visual Studio Enterprise 2026** (ya lo tienes)
-- [ ] **PowerShell 7+** - [Descargar aquí](https://docs.microsoft.com/en-us/powershell/)
-- [ ] **Terraform** - [Descargar aquí](https://www.terraform.io/downloads)
+- [ ] **PowerShell 7+** - [Descargar aquï¿½](https://docs.microsoft.com/en-us/powershell/)
+- [ ] **Terraform** - [Descargar aquï¿½](https://www.terraform.io/downloads)
 
 ---
 
 ## ?? Paso 1: Configurar Azure
 
-### 1.1 Iniciar Sesión en Azure
+### 1.1 Iniciar Sesiï¿½n en Azure
 
-**?? ATENCIÓN**: Necesitarás iniciar sesión en Azure manualmente.
+**?? ATENCIï¿½N**: Necesitarï¿½s iniciar sesiï¿½n en Azure manualmente.
 
 1. Abre PowerShell como Administrador
 2. Navega a la carpeta del proyecto:
@@ -38,17 +38,17 @@ Antes de comenzar, asegúrate de tener instalado:
    cd C:\Users\svcon\Desktop\SVYDDATALEDGER
    ```
 
-3. Ejecuta el script de configuración de Azure:
+3. Ejecuta el script de configuraciï¿½n de Azure:
    ```powershell
    .\infrastructure\scripts\setup-azure.ps1
    ```
 
-4. **TE PEDIRÁ AUTENTICACIÓN**: Cuando veas el mensaje de login, se abrirá una ventana del navegador.
-   - Inicia sesión con tu cuenta de Azure
-   - Selecciona la suscripción correcta
+4. **TE PEDIRï¿½ AUTENTICACIï¿½N**: Cuando veas el mensaje de login, se abrirï¿½ una ventana del navegador.
+   - Inicia sesiï¿½n con tu cuenta de Azure
+   - Selecciona la suscripciï¿½n correcta
    - Autoriza el acceso
 
-5. El script creará automáticamente:
+5. El script crearï¿½ automï¿½ticamente:
    - Resource Group (si no existe)
    - Storage Account para Terraform
    - Azure Container Registry (ACR)
@@ -60,7 +60,7 @@ Antes de comenzar, asegúrate de tener instalado:
 az resource list --resource-group svydledger-data --output table
 ```
 
-**? Resultado Esperado**: Deberías ver:
+**? Resultado Esperado**: Deberï¿½as ver:
 - Storage Account: `svydledgerstore`
 - Container Registry: `svydledgeracr`
 
@@ -68,30 +68,30 @@ az resource list --resource-group svydledger-data --output table
 
 ## ?? Paso 2: Configurar GitHub
 
-### 2.1 Autenticación en GitHub
+### 2.1 Autenticaciï¿½n en GitHub
 
-**?? ATENCIÓN**: Necesitarás iniciar sesión en GitHub manualmente.
+**?? ATENCIï¿½N**: Necesitarï¿½s iniciar sesiï¿½n en GitHub manualmente.
 
 1. Ejecuta el script de GitHub Secrets:
    ```powershell
    .\infrastructure\scripts\setup-github-secrets.ps1
    ```
 
-2. **TE PEDIRÁ AUTENTICACIÓN**: 
+2. **TE PEDIRï¿½ AUTENTICACIï¿½N**: 
    - Selecciona "Login with a web browser"
-   - Copia el código de un solo uso que te muestra
+   - Copia el cï¿½digo de un solo uso que te muestra
    - Presiona Enter para abrir el navegador
-   - Pega el código en GitHub
+   - Pega el cï¿½digo en GitHub
    - Autoriza GitHub CLI
 
-3. El script configurará automáticamente:
+3. El script configurarï¿½ automï¿½ticamente:
    - `AZURE_CREDENTIALS` (Service Principal)
    - `ACR_USERNAME`
    - `ACR_PASSWORD`
 
 ### 2.2 Configurar Secrets Manualmente
 
-**?? ATENCIÓN**: Los siguientes secrets DEBES configurarlos manualmente:
+**?? ATENCIï¿½N**: Los siguientes secrets DEBES configurarlos manualmente:
 
 1. Ve a: https://github.com/VICTORsvydledger/SVYDLEDGER/settings/secrets/actions
 
@@ -109,7 +109,7 @@ Valor: Server=tcp:svydserver.database.windows.net,1433;Database=svydledger-hyper
 Nombre: JWT_SECRET_KEY
 Valor: [Genera una clave aleatoria fuerte de 64 caracteres]
 ```
-**?? Cómo generar**:
+**?? Cï¿½mo generar**:
 ```powershell
 # En PowerShell
 -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 64 | ForEach-Object {[char]$_})
@@ -148,7 +148,7 @@ Valor: whsec_XXXXXXXXXXXXX
 3. **?? DEBES LLENAR ESTOS VALORES**:
 
 ```env
-# Suscripción de Azure
+# Suscripciï¿½n de Azure
 AZURE_SUBSCRIPTION_ID=TU-SUBSCRIPTION-ID-AQUI
 
 # Base de datos
@@ -183,21 +183,21 @@ terraform init
 terraform plan -out=tfplan
 ```
 
-**?? TE PREGUNTARÁ**:
+**?? TE PREGUNTARï¿½**:
 - SQL Admin Username ? Ingresa un usuario (ej: `svydadmin`)
-- SQL Admin Password ? Ingresa una contraseña fuerte
+- SQL Admin Password ? Ingresa una contraseï¿½a fuerte
 
 **? Resultado Esperado**: "Plan: X to add, 0 to change, 0 to destroy"
 
 ### 4.3 Aplicar Infraestructura
 
-**?? ATENCIÓN**: Este paso creará recursos en Azure (puede tomar 15-30 minutos)
+**?? ATENCIï¿½N**: Este paso crearï¿½ recursos en Azure (puede tomar 15-30 minutos)
 
 ```powershell
 terraform apply tfplan
 ```
 
-**?? Recursos que se crearán**:
+**?? Recursos que se crearï¿½n**:
 - Azure Kubernetes Service (AKS)
 - Azure SQL Hyperscale
 - Azure Key Vault
@@ -228,9 +228,9 @@ terraform output
 az aks get-credentials --resource-group svydledger-data --name svydledger-aks-dev
 ```
 
-### 5.2 Construir y Subir Imágenes Docker
+### 5.2 Construir y Subir Imï¿½genes Docker
 
-**?? ATENCIÓN**: Asegúrate de que Docker Desktop esté corriendo.
+**?? ATENCIï¿½N**: Asegï¿½rate de que Docker Desktop estï¿½ corriendo.
 
 #### a) Backend Services (Python)
 
@@ -284,7 +284,7 @@ kubectl create secret generic database-secrets `
   --from-literal=connection-string="TU-CONNECTION-STRING-AQUI" `
   --namespace=production
 
-# Crear secret para aplicación
+# Crear secret para aplicaciï¿½n
 kubectl create secret generic app-secrets `
   --from-literal=jwt-secret="TU-JWT-SECRET-AQUI" `
   --from-literal=stripe-secret-key="TU-STRIPE-KEY-AQUI" `
@@ -338,9 +338,9 @@ Abre en navegador: http://localhost:8001/health
 
 ### 5.6 Configurar Dominio (svydledger.com)
 
-**?? ATENCIÓN**: Necesitas acceso al DNS de tu dominio.
+**?? ATENCIï¿½N**: Necesitas acceso al DNS de tu dominio.
 
-1. Obtén la IP pública del Load Balancer:
+1. Obtï¿½n la IP pï¿½blica del Load Balancer:
    ```powershell
    kubectl get service identity-service --namespace=production
    ```
@@ -349,7 +349,7 @@ Abre en navegador: http://localhost:8001/health
    - Crea registro A: `api.svydledger.com` ? IP del Load Balancer
    - Crea registro A: `www.svydledger.com` ? IP del Load Balancer
 
-3. Espera propagación DNS (puede tomar 1-48 horas)
+3. Espera propagaciï¿½n DNS (puede tomar 1-48 horas)
 
 4. Verifica:
    ```powershell
@@ -358,32 +358,32 @@ Abre en navegador: http://localhost:8001/health
 
 ---
 
-## ?? Solución de Problemas
+## ?? Soluciï¿½n de Problemas
 
 ### Problema: "az command not found"
-**Solución**: Instalar Azure CLI y reiniciar PowerShell
+**Soluciï¿½n**: Instalar Azure CLI y reiniciar PowerShell
 
 ### Problema: "terraform command not found"
-**Solución**: Instalar Terraform y agregarlo al PATH
+**Soluciï¿½n**: Instalar Terraform y agregarlo al PATH
 
 ### Problema: "Cannot connect to Docker daemon"
-**Solución**: Iniciar Docker Desktop
+**Soluciï¿½n**: Iniciar Docker Desktop
 
 ### Problema: "Authentication failed"
-**Solución**: 
+**Soluciï¿½n**: 
 ```powershell
 az login
 az account set --subscription TU-SUBSCRIPTION-ID
 ```
 
 ### Problema: Pods en estado "ImagePullBackOff"
-**Solución**: Verificar secreto de ACR
+**Soluciï¿½n**: Verificar secreto de ACR
 ```powershell
 kubectl get secret acr-secret --namespace=production
 ```
 
 ### Problema: Base de datos no conecta
-**Solución**: Verificar firewall de Azure SQL
+**Soluciï¿½n**: Verificar firewall de Azure SQL
 ```powershell
 az sql server firewall-rule create `
   --resource-group svydledger-data `
@@ -392,7 +392,7 @@ az sql server firewall-rule create `
   --start-ip-address 0.0.0.0 `
   --end-ip-address 255.255.255.255
 ```
-**?? NOTA**: En producción, configurar IPs específicas
+**?? NOTA**: En producciï¿½n, configurar IPs especï¿½ficas
 
 ---
 
@@ -403,7 +403,7 @@ az sql server firewall-rule create `
 - [ ] Secrets configurados en GitHub
 - [ ] Variables de entorno en `.env`
 - [ ] Terraform aplicado exitosamente
-- [ ] Imágenes Docker subidas a ACR
+- [ ] Imï¿½genes Docker subidas a ACR
 - [ ] Secrets de Kubernetes creados
 - [ ] Servicios desplegados en AKS
 - [ ] Health checks funcionando
@@ -411,11 +411,11 @@ az sql server firewall-rule create `
 
 ---
 
-## ?? Próximos Pasos
+## ?? Prï¿½ximos Pasos
 
-Una vez que todo esté funcionando:
+Una vez que todo estï¿½ funcionando:
 
-1. **Crear tablas en Azure SQL** (cuando tú lo indiques)
+1. **Crear tablas en Azure SQL** (cuando tï¿½ lo indiques)
 2. **Configurar Azure API Management**
 3. **Configurar SSL/TLS con certificados**
 4. **Configurar monitoreo con Application Insights**
@@ -423,13 +423,13 @@ Una vez que todo esté funcionando:
 
 ---
 
-## ?? ¿Necesitas Ayuda?
+## ?? ï¿½Necesitas Ayuda?
 
 **Cuando encuentres un error o necesites mi ayuda**:
 
 1. Copia el mensaje de error completo
-2. Indica en qué paso estás
-3. Muéstrame el comando que ejecutaste
-4. Te daré instrucciones específicas paso a paso
+2. Indica en quï¿½ paso estï¿½s
+3. Muï¿½strame el comando que ejecutaste
+4. Te darï¿½ instrucciones especï¿½ficas paso a paso
 
-**¡Estoy aquí para ayudarte en cada paso del camino!**
+**ï¿½Estoy aquï¿½ para ayudarte en cada paso del camino!**

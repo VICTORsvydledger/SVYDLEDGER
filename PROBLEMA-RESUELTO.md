@@ -12,31 +12,31 @@ Estado: LIMPIO
 
 ---
 
-## ?? PRÓXIMO PASO: INICIAR FRONTEND
+## ?? PRï¿½XIMO PASO: INICIAR FRONTEND
 
-Ahora puedes iniciar el frontend de forma segura usando cualquiera de estos métodos:
+Ahora puedes iniciar el frontend de forma segura usando cualquiera de estos mï¿½todos:
 
-### Método 1: Dev Manager (Recomendado) ?
+### Mï¿½todo 1: Dev Manager (Recomendado) ?
 ```powershell
 .\dev-manager.ps1
 ```
 **Ventajas:**
-- Menú interactivo
+- Menï¿½ interactivo
 - Opciones completas
-- Verificación automática
-- Fácil de usar
+- Verificaciï¿½n automï¿½tica
+- Fï¿½cil de usar
 
-### Método 2: Script Directo ?
+### Mï¿½todo 2: Script Directo ?
 ```powershell
 .\start-frontend.ps1
 ```
 **Ventajas:**
 - Inicio directo
-- Verificaciones automáticas
-- Limpia caché
-- Muestra información útil
+- Verificaciones automï¿½ticas
+- Limpia cachï¿½
+- Muestra informaciï¿½n ï¿½til
 
-### Método 3: Manual ??
+### Mï¿½todo 3: Manual ??
 ```powershell
 cd frontend
 npm run dev
@@ -44,7 +44,7 @@ npm run dev
 **Ventajas:**
 - Control total
 - Sin scripts
-- Más rápido si todo está OK
+- Mï¿½s rï¿½pido si todo estï¿½ OK
 
 ---
 
@@ -55,26 +55,26 @@ npm run dev
 - [x] Ruta de imagen de fondo arreglada
 - [x] Fuentes ajustadas (48px, 30px, 12px)
 - [x] Orden de idiomas correcto
-- [x] Código limpio sin warnings
+- [x] Cï¿½digo limpio sin warnings
 
 ### 2. ? Scripts Creados
-- [x] `dev-manager.ps1` - Gestor de desarrollo con menú
+- [x] `dev-manager.ps1` - Gestor de desarrollo con menï¿½
 - [x] `start-frontend.ps1` - Inicio seguro mejorado
-- [x] `deploy-to-azure.ps1` - Despliegue automático
-- [x] `setup-welcomepage.ps1` - Verificación del proyecto
+- [x] `deploy-to-azure.ps1` - Despliegue automï¿½tico
+- [x] `setup-welcomepage.ps1` - Verificaciï¿½n del proyecto
 
-### 3. ? Documentación Completa
-- [x] `WELCOMEPAGE-README.md` - Guía principal
-- [x] `docs/WELCOMEPAGE-QUICKSTART.md` - Inicio rápido
+### 3. ? Documentaciï¿½n Completa
+- [x] `WELCOMEPAGE-README.md` - Guï¿½a principal
+- [x] `docs/WELCOMEPAGE-QUICKSTART.md` - Inicio rï¿½pido
 - [x] `docs/WELCOMEPAGE-STATUS.md` - Estado del proyecto
 - [x] `docs/WELCOMEPAGE-CORRECTIONS.md` - Correcciones detalladas
 - [x] `docs/AZURE-DNS-SETUP.md` - Setup de Azure
 - [x] `docs/EXECUTIVE-SUMMARY-WELCOMEPAGE.md` - Resumen ejecutivo
-- [x] `docs/TROUBLESHOOTING.md` - Solución de problemas
-- [x] `SOLUCIÓN-PROCESOS-NODE.md` - Este problema específico
+- [x] `docs/TROUBLESHOOTING.md` - Soluciï¿½n de problemas
+- [x] `SOLUCIï¿½N-PROCESOS-NODE.md` - Este problema especï¿½fico
 
 ### 4. ? Problemas Resueltos
-- [x] Múltiples procesos Node.js detenidos
+- [x] Mï¿½ltiples procesos Node.js detenidos
 - [x] Memoria liberada (~862 MB)
 - [x] Sistema limpio para iniciar
 
@@ -82,18 +82,18 @@ npm run dev
 
 ## ?? CHECKLIST ANTES DE INICIAR
 
-Verifica que todo está OK:
+Verifica que todo estï¿½ OK:
 
 - [x] ? Procesos Node.js detenidos
 - [ ] Puerto 5173 libre
 - [ ] Dependencias instaladas (`frontend/node_modules`)
 - [ ] Imagen de fondo agregada (opcional)
 
-Para verificar todo automáticamente:
+Para verificar todo automï¿½ticamente:
 ```powershell
 .\dev-manager.ps1
 ```
-Opción `4`: Check System Status
+Opciï¿½n `4`: Check System Status
 
 ---
 
@@ -105,7 +105,7 @@ Ejecuta esto para iniciar el frontend:
 .\start-frontend.ps1
 ```
 
-O para tener más control:
+O para tener mï¿½s control:
 
 ```powershell
 .\dev-manager.ps1
@@ -113,24 +113,24 @@ O para tener más control:
 
 ---
 
-## ?? GUÍAS DISPONIBLES
+## ?? GUï¿½AS DISPONIBLES
 
-| Guía | Comando |
+| Guï¿½a | Comando |
 |------|---------|
 | Ver estado del proyecto | `code WELCOMEPAGE-README.md` |
-| Inicio rápido | `code docs\WELCOMEPAGE-QUICKSTART.md` |
-| Solución de problemas | `code docs\TROUBLESHOOTING.md` |
+| Inicio rï¿½pido | `code docs\WELCOMEPAGE-QUICKSTART.md` |
+| Soluciï¿½n de problemas | `code docs\TROUBLESHOOTING.md` |
 | Setup de Azure | `code docs\AZURE-DNS-SETUP.md` |
 
 ---
 
-## ? CARACTERÍSTICAS DE WELCOMEPAGE
+## ? CARACTERï¿½STICAS DE WELCOMEPAGE
 
-Cuando inicies el frontend, verás:
+Cuando inicies el frontend, verï¿½s:
 
-### ?? Diseño
+### ?? Diseï¿½o
 - Logo "Svyd" elegante (48px)
-- Subtítulo profesional (30px)
+- Subtï¿½tulo profesional (30px)
 - Texto promocional (12px)
 - Fondo con overlay semitransparente
 - Efectos de desenfoque modernos
@@ -141,31 +141,31 @@ Cuando inicies el frontend, verás:
 - Nombres nativos correctos
 
 ### ?? Formularios
-- **Sign In:** Email, Password, ¿Forgot password?
+- **Sign In:** Email, Password, ï¿½Forgot password?
 - **Sign Up:** Email, Password, Confirm password
 - Validaciones completas
 - Estados de loading
 
 ### ?? Seguridad
-- Autenticación 2FA
-- Código de 6 dígitos
-- Recuperación de contraseña
+- Autenticaciï¿½n 2FA
+- Cï¿½digo de 6 dï¿½gitos
+- Recuperaciï¿½n de contraseï¿½a
 
 ### ?? Responsive
 - Desktop (2 columnas)
-- Tablet (adaptación)
+- Tablet (adaptaciï¿½n)
 - Mobile (1 columna)
 
 ---
 
 ## ?? TODO LISTO
 
-El proyecto está **95% completo** y listo para usar.
+El proyecto estï¿½ **95% completo** y listo para usar.
 
 **Solo falta:**
 - [ ] Agregar imagen `background-1.png` (opcional, 5 minutos)
 
-**Para producción:**
+**Para producciï¿½n:**
 - [ ] Integrar con Identity Service (Backend)
 - [ ] Multi-idioma con Language Service
 - [ ] Despliegue a Azure (www.svydledger.com)
@@ -176,17 +176,17 @@ El proyecto está **95% completo** y listo para usar.
 
 Ejecuta uno de estos comandos:
 
-### Opción A: Dev Manager (Más completo)
+### Opciï¿½n A: Dev Manager (Mï¿½s completo)
 ```powershell
 .\dev-manager.ps1
 ```
 
-### Opción B: Start Frontend (Más directo)
+### Opciï¿½n B: Start Frontend (Mï¿½s directo)
 ```powershell
 .\start-frontend.ps1
 ```
 
-### Opción C: Manual (Más simple)
+### Opciï¿½n C: Manual (Mï¿½s simple)
 ```powershell
 cd frontend
 npm run dev
@@ -194,9 +194,9 @@ npm run dev
 
 ---
 
-## ? VERIFICACIÓN DE ÉXITO
+## ? VERIFICACIï¿½N DE ï¿½XITO
 
-Cuando funcione correctamente, verás:
+Cuando funcione correctamente, verï¿½s:
 
 ### Terminal:
 ```
@@ -223,7 +223,7 @@ VITE v5.x.x  ready in xxx ms
 
 ---
 
-## ?? SIGUIENTE ACCIÓN
+## ?? SIGUIENTE ACCIï¿½N
 
 **AHORA MISMO:**
 
@@ -238,20 +238,20 @@ Y listo! ??
 **Tiempo invertido:** ~3 horas  
 **Problemas resueltos:** 7+  
 **Scripts creados:** 4  
-**Documentación:** 8 archivos  
+**Documentaciï¿½n:** 8 archivos  
 **Estado:** ? LISTO PARA DESARROLLO
 
 ---
 
-**¡Feliz desarrollo!** ??
+**ï¿½Feliz desarrollo!** ??
 
 ---
 
-# ?? SOLUCIÓN IMPLEMENTADA - Proceso Único Node.js
+# ?? SOLUCIï¿½N IMPLEMENTADA - Proceso ï¿½nico Node.js
 
 ## ? PROBLEMA RESUELTO
 
-El sistema ahora incluye **3 herramientas principales** para eliminar definitivamente el problema de múltiples procesos Node.js:
+El sistema ahora incluye **3 herramientas principales** para eliminar definitivamente el problema de mï¿½ltiples procesos Node.js:
 
 ---
 
@@ -264,20 +264,20 @@ El sistema ahora incluye **3 herramientas principales** para eliminar definitiva
 .\start-single-process.ps1
 ```
 
-**¿Qué hace?**
+**ï¿½Quï¿½ hace?**
 ```
 ???????????????????????????????????????
-? ¿Existe servidor corriendo?         ?
+? ï¿½Existe servidor corriendo?         ?
 ???????????????????????????????????????
 ? NO  ? Inicia nuevo servidor         ?
-? SÍ  ? Muestra opciones:             ?
+? Sï¿½  ? Muestra opciones:             ?
 ?       1. Abrir en navegador         ?
 ?       2. Matar y reiniciar          ?
 ?       3. Salir                      ?
 ???????????????????????????????????????
 ```
 
-**Características:**
+**Caracterï¿½sticas:**
 - ? Crea archivo de bloqueo (.node-lock)
 - ? Mata TODOS los procesos Node.js antes de iniciar
 - ? Solo permite 1 proceso activo
@@ -298,7 +298,7 @@ El sistema ahora incluye **3 herramientas principales** para eliminar definitiva
 .\monitor-node-processes.ps1 -AutoKill
 ```
 
-**¿Qué hace?**
+**ï¿½Quï¿½ hace?**
 ```
 ???????????????????????????????????????
 ? Revisa cada 30 segundos             ?
@@ -308,8 +308,8 @@ El sistema ahora incluye **3 herramientas principales** para eliminar definitiva
 ? 2+ procesos ? ?? ALERTA             ?
 ?                                     ?
 ? Con -AutoKill:                      ?
-?   ? Mantiene solo el más reciente  ?
-?   ? Elimina los demás               ?
+?   ? Mantiene solo el mï¿½s reciente  ?
+?   ? Elimina los demï¿½s               ?
 ???????????????????????????????????????
 ```
 
@@ -331,7 +331,7 @@ El sistema ahora incluye **3 herramientas principales** para eliminar definitiva
 .\dev-manager.ps1
 ```
 
-**Menú actualizado:**
+**Menï¿½ actualizado:**
 ```
 ============================================
    SVYD LEDGER - Development Manager
@@ -349,10 +349,10 @@ El sistema ahora incluye **3 herramientas principales** para eliminar definitiva
 Q. Quit
 ```
 
-**Nuevas características:**
-- ? Muestra advertencia si hay múltiples procesos
-- ? Opción 1 usa el nuevo sistema de proceso único
-- ? Menú más informativo
+**Nuevas caracterï¿½sticas:**
+- ? Muestra advertencia si hay mï¿½ltiples procesos
+- ? Opciï¿½n 1 usa el nuevo sistema de proceso ï¿½nico
+- ? Menï¿½ mï¿½s informativo
 
 ---
 
@@ -361,41 +361,41 @@ Q. Quit
 ### Trabajo Diario Simple
 
 ```powershell
-# Al empezar el día:
+# Al empezar el dï¿½a:
 .\start-single-process.ps1
 
 # Desarrollar en: http://localhost:5173
 
-# Al terminar: Ctrl+C (limpieza automática)
+# Al terminar: Ctrl+C (limpieza automï¿½tica)
 ```
 
-### Con Protección Máxima
+### Con Protecciï¿½n Mï¿½xima
 
 ```powershell
-# Terminal 1 (Monitor automático):
+# Terminal 1 (Monitor automï¿½tico):
 .\monitor-node-processes.ps1 -AutoKill
 
 # Terminal 2 (Desarrollo):
 .\start-single-process.ps1
 
-# El monitor mantendrá solo 1 proceso activo todo el tiempo
+# El monitor mantendrï¿½ solo 1 proceso activo todo el tiempo
 ```
 
-### Con Menú Interactivo
+### Con Menï¿½ Interactivo
 
 ```powershell
 # Ejecutar:
 .\dev-manager.ps1
 
 # Seleccionar:
-# Opción 1: Start Frontend (Single Process Mode)
+# Opciï¿½n 1: Start Frontend (Single Process Mode)
 ```
 
 ---
 
-## ?? COMPARACIÓN
+## ?? COMPARACIï¿½N
 
-### Antes (SIN solución)
+### Antes (SIN soluciï¿½n)
 
 ```
 Task Manager:
@@ -411,12 +411,12 @@ Task Manager:
 
 PowerShell:
 $ npm run dev
-(se inicia otro proceso más...)
+(se inicia otro proceso mï¿½s...)
 
 Problema: Sin control, procesos se acumulan
 ```
 
-### Después (CON start-single-process.ps1)
+### Despuï¿½s (CON start-single-process.ps1)
 
 ```
 Task Manager:
@@ -446,7 +446,7 @@ Control total: Solo 1 proceso permitido
 
 ### Archivo .node-lock
 
-**Ubicación:** `.node-lock` (raíz del proyecto)
+**Ubicaciï¿½n:** `.node-lock` (raï¿½z del proyecto)
 
 **Contenido:**
 ```json
@@ -461,17 +461,17 @@ Control total: Solo 1 proceso permitido
 ```
 1. start-single-process.ps1 se ejecuta
    ?
-2. ¿Existe .node-lock?
+2. ï¿½Existe .node-lock?
    ?? NO  ? Crear .node-lock y continuar
-   ?? SÍ  ? ¿El proceso está vivo?
-            ?? SÍ ? Mostrar opciones
+   ?? Sï¿½  ? ï¿½El proceso estï¿½ vivo?
+            ?? Sï¿½ ? Mostrar opciones
             ?? NO ? Eliminar .node-lock (proceso zombie)
    ?
 3. Servidor corriendo con lock activo
    ?
 4. Usuario presiona Ctrl+C
    ?
-5. Script elimina .node-lock automáticamente
+5. Script elimina .node-lock automï¿½ticamente
 ```
 
 ---
@@ -519,11 +519,11 @@ Get-Content .node-lock | ConvertFrom-Json
 
 ---
 
-## ?? SOLUCIÓN DE PROBLEMAS
+## ?? SOLUCIï¿½N DE PROBLEMAS
 
 ### Problema: "Lock file existe pero no hay proceso"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 Remove-Item .node-lock -Force
 .\start-single-process.ps1
@@ -531,7 +531,7 @@ Remove-Item .node-lock -Force
 
 ### Problema: "No puedo iniciar nuevo servidor"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
 # Matar todos los procesos
 Get-Process node | Stop-Process -Force
@@ -543,11 +543,11 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 .\start-single-process.ps1
 ```
 
-### Problema: "Múltiples procesos siguen apareciendo"
+### Problema: "Mï¿½ltiples procesos siguen apareciendo"
 
-**Solución:**
+**Soluciï¿½n:**
 ```powershell
-# Usa el monitor automático:
+# Usa el monitor automï¿½tico:
 .\monitor-node-processes.ps1 -AutoKill
 
 # En otra terminal:
@@ -556,12 +556,12 @@ Remove-Item .node-lock -Force -ErrorAction SilentlyContinue
 
 ---
 
-## ?? DOCUMENTACIÓN RELACIONADA
+## ?? DOCUMENTACIï¿½N RELACIONADA
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
-| `SOLUCIÓN-PROCESOS-NODE.md` | Documentación completa de la solución |
-| `QUICK-START-SINGLE-PROCESS.md` | Guía rápida de uso |
+| `SOLUCIï¿½N-PROCESOS-NODE.md` | Documentaciï¿½n completa de la soluciï¿½n |
+| `QUICK-START-SINGLE-PROCESS.md` | Guï¿½a rï¿½pida de uso |
 | `docs\TROUBLESHOOTING.md` | Todos los problemas y soluciones |
 | `WELCOMEPAGE-README.md` | README principal del proyecto |
 
@@ -591,7 +591,7 @@ npm run dev
 ### 3. Al terminar, SIEMPRE usa Ctrl+C
 ```
 No cierres el terminal directamente
-Usa: Ctrl+C (limpieza automática)
+Usa: Ctrl+C (limpieza automï¿½tica)
 ```
 
 ### 4. Si algo falla, reinicia limpio
@@ -605,29 +605,29 @@ Usa: Ctrl+C (limpieza automática)
 ## ?? RESUMEN
 
 ### Scripts Creados
-? `start-single-process.ps1` - Inicio con proceso único  
-? `monitor-node-processes.ps1` - Monitor automático  
-? `dev-manager.ps1` - Menú actualizado  
-? `kill-node-processes.ps1` - Limpieza rápida (ya existía)  
-? `start-frontend.ps1` - Safe mode (ya existía)
+? `start-single-process.ps1` - Inicio con proceso ï¿½nico  
+? `monitor-node-processes.ps1` - Monitor automï¿½tico  
+? `dev-manager.ps1` - Menï¿½ actualizado  
+? `kill-node-processes.ps1` - Limpieza rï¿½pida (ya existï¿½a)  
+? `start-frontend.ps1` - Safe mode (ya existï¿½a)
 
-### Documentación Actualizada
-? `SOLUCIÓN-PROCESOS-NODE.md` - Guía completa  
-? `QUICK-START-SINGLE-PROCESS.md` - Guía rápida  
+### Documentaciï¿½n Actualizada
+? `SOLUCIï¿½N-PROCESOS-NODE.md` - Guï¿½a completa  
+? `QUICK-START-SINGLE-PROCESS.md` - Guï¿½a rï¿½pida  
 ? `docs\TROUBLESHOOTING.md` - Troubleshooting  
 ? `PROBLEMA-RESUELTO.md` - Este archivo
 
-### Características
+### Caracterï¿½sticas
 ? Sistema de bloqueo (.node-lock)  
-? Auto-limpieza automática  
-? Detección de procesos zombies  
+? Auto-limpieza automï¿½tica  
+? Detecciï¿½n de procesos zombies  
 ? Monitor opcional con auto-kill  
-? Menú interactivo mejorado  
-? Protección contra duplicados
+? Menï¿½ interactivo mejorado  
+? Protecciï¿½n contra duplicados
 
 ---
 
-## ?? PRÓXIMOS PASOS
+## ?? PRï¿½XIMOS PASOS
 
 ### Ahora mismo:
 
@@ -635,7 +635,7 @@ Usa: Ctrl+C (limpieza automática)
 # Ejecuta esto:
 .\start-single-process.ps1
 
-# Verás:
+# Verï¿½s:
 ? Lock acquired - Only ONE process will run
 VITE v5.x.x  ready in xxx ms
 ?  Local:   http://localhost:5173/
@@ -660,16 +660,16 @@ Ctrl+C
 
 **Estado:** ? Sistema completamente implementado  
 **Fecha:** 2024-01-15  
-**Versión:** 2.0.0 (Sistema de Proceso Único)  
-**Probado:** ? Sí  
-**Funcionando:** ? Sí
+**Versiï¿½n:** 2.0.0 (Sistema de Proceso ï¿½nico)  
+**Probado:** ? Sï¿½  
+**Funcionando:** ? Sï¿½
 
 ---
 
 ## ?? OBJETIVO CUMPLIDO
 
 **Antes:** 4 procesos Node.js consumiendo 862 MB ?  
-**Después:** 1 proceso Node.js consumiendo 180 MB ?  
+**Despuï¿½s:** 1 proceso Node.js consumiendo 180 MB ?  
 **Ahorro:** 680 MB y 3 procesos eliminados ??
 
-**¡Problema resuelto definitivamente!** ??
+**ï¿½Problema resuelto definitivamente!** ??

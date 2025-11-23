@@ -4,8 +4,8 @@
 
 Sistema de contabilidad universal basado en microservicios desplegado en Microsoft Azure.
 
-### ?? Configuración de Región
-- **Región Principal**: Central US (centralus)
+### ?? Configuraciï¿½n de Regiï¿½n
+- **Regiï¿½n Principal**: Central US (centralus)
 - **Entornos**: dev, stage, prod (todos en Central US)
 
 ### ??? Arquitectura
@@ -43,12 +43,12 @@ Sistema de contabilidad universal basado en microservicios desplegado en Microso
             ????????????????????
 ```
 
-### ?? Stack Tecnológico
+### ?? Stack Tecnolï¿½gico
 
 #### Backend
 - **Python**: FastAPI, Pydantic
 - **Node.js**: TypeScript, Express.js
-- **Autenticación**: JWT + OAuth 2.0
+- **Autenticaciï¿½n**: JWT + OAuth 2.0
 - **Seguridad**: Azure Key Vault
 - **Pagos**: Stripe Billing
 
@@ -62,23 +62,23 @@ Sistema de contabilidad universal basado en microservicios desplegado en Microso
 #### Base de Datos
 - **Azure SQL Hyperscale** (Central US)
 - **ORM**: Prisma (TypeScript)
-- **Patrón**: Database per Service
+- **Patrï¿½n**: Database per Service
 
 #### Infraestructura
 - **Cloud**: Microsoft Azure (Central US)
 - **Contenedores**: Docker
-- **Orquestación**: Azure Kubernetes Service (AKS)
+- **Orquestaciï¿½n**: Azure Kubernetes Service (AKS)
 - **Registro**: Azure Container Registry (ACR)
 - **IaC**: Terraform
 - **CI/CD**: GitHub Actions
-- **Mensajería**: Azure Service Bus
+- **Mensajerï¿½a**: Azure Service Bus
 
 #### Monitoreo & Seguridad
 - **SSL/TLS**: Certificados automatizados
 - **Cifrado**: En reposo (Azure SQL)
 - **Monitoreo**: Prometheus + Grafana
 - **Logs**: ELK Stack (Elasticsearch, Logstash, Kibana)
-- **Auditoría**: Automatizada
+- **Auditorï¿½a**: Automatizada
 
 ### ??? Estructura del Proyecto
 
@@ -87,15 +87,15 @@ SVYDLEDGER/
 ??? backend/                     # Microservicios Backend
 ?   ??? identity-service/        # Servicio de Identidad (Python/FastAPI)
 ?   ??? language-service/        # Servicio de Idiomas (Python/FastAPI)
-?   ??? country-service/         # Servicio de Países (Python/FastAPI)
+?   ??? country-service/         # Servicio de Paï¿½ses (Python/FastAPI)
 ?   ??? accounting-service/      # Servicio de Contabilidad (Node.js/TypeScript)
 ?   ??? reports-service/         # Servicio de Reportes (Node.js/TypeScript)
 ?   ??? payments-service/        # Servicio de Pagos (Node.js/TypeScript)
-?   ??? shared/                  # Código compartido
+?   ??? shared/                  # Cï¿½digo compartido
 ?       ??? utils/
 ?       ??? middleware/
 ?       ??? types/
-??? frontend/                    # Aplicación Web React
+??? frontend/                    # Aplicaciï¿½n Web React
 ?   ??? public/
 ?   ??? src/
 ?   ?   ??? components/
@@ -106,7 +106,7 @@ SVYDLEDGER/
 ?   ?   ??? App.tsx
 ?   ??? package.json
 ?   ??? vite.config.ts
-??? infrastructure/              # Infraestructura como Código
+??? infrastructure/              # Infraestructura como Cï¿½digo
 ?   ??? terraform/              # Terraform IaC
 ?   ?   ??? modules/
 ?   ?   ?   ??? aks/
@@ -139,11 +139,11 @@ SVYDLEDGER/
 ??? docker/                     # Dockerfiles
 ?   ??? backend/
 ?   ??? frontend/
-??? docs/                       # Documentación
+??? docs/                       # Documentaciï¿½n
 ?   ??? architecture/
 ?   ??? api/
 ?   ??? deployment/
-??? monitoring/                 # Configuración de Monitoreo
+??? monitoring/                 # Configuraciï¿½n de Monitoreo
 ?   ??? prometheus/
 ?   ??? grafana/
 ?   ??? elk/
@@ -155,7 +155,7 @@ SVYDLEDGER/
 
 ### ?? Recursos Azure (Grupo: svydledger-data)
 
-- **Región**: Central US
+- **Regiï¿½n**: Central US
 - **Dominio**: svydledger.com
 - **SQL Server**: svydserver
 - **Base de Datos**: svydledger-hyperescala (Azure SQL Hyperscale)
@@ -164,22 +164,22 @@ SVYDLEDGER/
 
 ### ?? Microservicios
 
-1. **Identity Service** - Gestión de usuarios, roles, autenticación OAuth 2.0
-2. **Language Service** - Traducciones y gestión de idiomas
-3. **Country Service** - Sistemas tributarios por país
+1. **Identity Service** - Gestiï¿½n de usuarios, roles, autenticaciï¿½n OAuth 2.0
+2. **Language Service** - Traducciones y gestiï¿½n de idiomas
+3. **Country Service** - Sistemas tributarios por paï¿½s
 4. **Accounting Service** - Cuentas contables (Activos, Pasivos, Ingresos, etc.)
 5. **Reports Service** - Estados Financieros y reportes
-6. **Payments Service** - Integración con Stripe Billing
+6. **Payments Service** - Integraciï¿½n con Stripe Billing
 
 ### ?? Despliegue
 
 Todos los servicios se despliegan en **Central US** usando:
-- **AKS (Azure Kubernetes Service)** para orquestación
-- **ACR (Azure Container Registry)** para imágenes Docker
+- **AKS (Azure Kubernetes Service)** para orquestaciï¿½n
+- **ACR (Azure Container Registry)** para imï¿½genes Docker
 - **GitHub Actions** para CI/CD automatizado
 - **Terraform** para infraestructura reproducible
 
-### ?? URL de Producción
+### ?? URL de Producciï¿½n
 
 **https://www.svydledger.com**
 
@@ -189,7 +189,7 @@ Todos los servicios se despliegan en **Central US** usando:
 - Azure Key Vault para secretos
 - SSL/TLS en todas las comunicaciones
 - Cifrado en reposo (Azure SQL)
-- Auditorías automatizadas
+- Auditorï¿½as automatizadas
 - GDPR y CCPA compliant
 
 ### ?? Repositorio
@@ -200,13 +200,13 @@ Todos los servicios se despliegan en **Central US** usando:
 
 ## ?? Notas Importantes
 
-- **Región parametrizada**: Central US en toda la infraestructura
+- **Regiï¿½n parametrizada**: Central US en toda la infraestructura
 - **Base de datos por servicio**: Cada microservicio tiene su esquema
-- **Sin JOINs entre servicios**: Comunicación vía eventos (Azure Service Bus)
-- **Terraform**: Toda la infraestructura está versionada
+- **Sin JOINs entre servicios**: Comunicaciï¿½n vï¿½a eventos (Azure Service Bus)
+- **Terraform**: Toda la infraestructura estï¿½ versionada
 - **Monitoreo completo**: Prometheus, Grafana, ELK Stack
 
 ---
 
-**Versión**: 1.0.0  
-**Última actualización**: 2025
+**Versiï¿½n**: 1.0.0  
+**ï¿½ltima actualizaciï¿½n**: 2025

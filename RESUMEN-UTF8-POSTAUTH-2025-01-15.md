@@ -1,38 +1,38 @@
-# ============================================================================== # RESUMEN: Corrección UTF-8 PostAuthPage - 2025-01-15
+# ============================================================================== # RESUMEN: Correcciï¿½n UTF-8 PostAuthPage - 2025-01-15
 # ==============================================================================
 
 ## ? PROBLEMA IDENTIFICADO
 
-**Síntoma:** Los caracteres especiales (tildes, eñes, caracteres árabes, chinos, etc.) 
+**Sï¿½ntoma:** Los caracteres especiales (tildes, eï¿½es, caracteres ï¿½rabes, chinos, etc.) 
 se mostraban como `?` en PostAuthPage.
 
-**Causa Raíz:**  
-- PostAuthPage.tsx **SÍ usa el sistema i18n** correctamente con `useTranslation()`
+**Causa Raï¿½z:**  
+- PostAuthPage.tsx **Sï¿½ usa el sistema i18n** correctamente con `useTranslation()`
 - PostAuthPage.tsx **NO tiene texto hardcodeado**
-- Los archivos JSON en `frontend/src/i18n/locales/*.json` tenían encoding corrupto
+- Los archivos JSON en `frontend/src/i18n/locales/*.json` tenï¿½an encoding corrupto
 
-## ? SOLUCIÓN APLICADA
+## ? SOLUCIï¿½N APLICADA
 
-### Archivos CORREGIDOS con UTF-8 válido:
+### Archivos CORREGIDOS con UTF-8 vï¿½lido:
 
 #### 1. Idiomas Principales (7)
 - ? **en.json** - English  
-- ? **es.json** - Español (tildes, eñes)
-- ? **pt.json** - Português (ç, ã, õ, tildes)
-- ? **fr.json** - Français (é, è, ê, à, ô)
-- ? **it.json** - Italiano (à, è, ì, ò, ù)
-- ? **de.json** - Deutsch (ä, ö, ü, ß)
+- ? **es.json** - Espaï¿½ol (tildes, eï¿½es)
+- ? **pt.json** - Portuguï¿½s (ï¿½, ï¿½, ï¿½, tildes)
+- ? **fr.json** - Franï¿½ais (ï¿½, ï¿½, ï¿½, ï¿½, ï¿½)
+- ? **it.json** - Italiano (ï¿½, ï¿½, ï¿½, ï¿½, ï¿½)
+- ? **de.json** - Deutsch (ï¿½, ï¿½, ï¿½, ï¿½)
 - ? **ja.json** - ??? (caracteres japoneses)
 
 #### 2. Idiomas Secundarios Corregidos (4)
-- ? **ar.json** - ??????? (caracteres árabes)
-- ? **ar-EG.json** - ??????? ??????? (árabe egipcio)
-- ? **bn.json** - ????? (caracteres bengalíes)
+- ? **ar.json** - ??????? (caracteres ï¿½rabes)
+- ? **ar-EG.json** - ??????? ??????? (ï¿½rabe egipcio)
+- ? **bn.json** - ????? (caracteres bengalï¿½es)
 - ? **zh.json** - ?? (caracteres chinos)
 
-####  3. Idiomas PENDIENTES de Corrección (16)
+####  3. Idiomas PENDIENTES de Correcciï¿½n (16)
 
-Los siguientes archivos **todavía tienen encoding corrupto** y necesitan corrección:
+Los siguientes archivos **todavï¿½a tienen encoding corrupto** y necesitan correcciï¿½n:
 
 - ? **hi.json** - ?????? (Hindi)
 - ? **id.json** - Bahasa Indonesia (Indonesio)
@@ -46,21 +46,21 @@ Los siguientes archivos **todavía tienen encoding corrupto** y necesitan correcc
 - ? **tl.json** - Tagalog
 - ? **ta.json** - ????? (Tamil)
 - ? **te.json** - ?????? (Telugu)
-- ? **tr.json** - Türkçe (Turco)
+- ? **tr.json** - Tï¿½rkï¿½e (Turco)
 - ? **uk.json** - ?????????? (Ucraniano)
 - ? **ur.json** - ???? (Urdu)
 - ? **vi.json** - Ti?ng Vi?t (Vietnamita)
 
-## ?? PRÓXIMOS PASOS
+## ?? PRï¿½XIMOS PASOS
 
-### Opción 1: Corrección Manual Idioma por Idioma
-Usar `edit_file` de GitHub Copilot para cada archivo restante (método seguro, UTF-8 garantizado).
+### Opciï¿½n 1: Correcciï¿½n Manual Idioma por Idioma
+Usar `edit_file` de GitHub Copilot para cada archivo restante (mï¿½todo seguro, UTF-8 garantizado).
 
-### Opción 2: Corrección Automática con Script Node.js
+### Opciï¿½n 2: Correcciï¿½n Automï¿½tica con Script Node.js
 Crear un script Node.js que genere los 16 archivos restantes con UTF-8 correcto.
 
-### Opción 3: Priorización
-Corregir solo los idiomas más usados:
+### Opciï¿½n 3: Priorizaciï¿½n
+Corregir solo los idiomas mï¿½s usados:
 1. **hi.json** (Hindi) - 600M+ hablantes
 2. **ru.json** (Ruso) - 258M+ hablantes
 3. **id.json** (Indonesio) - 200M+ hablantes
@@ -69,55 +69,55 @@ Corregir solo los idiomas más usados:
 6. **tr.json** (Turco) - 76M+ hablantes
 7. **fa.json** (Persa) - 70M+ hablantes
 
-Dejar para después:
+Dejar para despuï¿½s:
 - mr.json, pcm.json, pa.json, sw.json, tl.json, ta.json, te.json, uk.json, ur.json
 
-## ?? VERIFICACIÓN
+## ?? VERIFICACIï¿½N
 
 ### Antes de desplegar:
 ```powershell
 # Verificar que los archivos se generaron correctamente
-Get-Content "frontend/src/i18n/locales/es.json" -Encoding UTF8 | Select-String "País"
-Get-Content "frontend/src/i18n/locales/pt.json" -Encoding UTF8 | Select-String "Não"
-Get-Content "frontend/src/i18n/locales/fr.json" -Encoding UTF8 | Select-String "Système"
+Get-Content "frontend/src/i18n/locales/es.json" -Encoding UTF8 | Select-String "Paï¿½s"
+Get-Content "frontend/src/i18n/locales/pt.json" -Encoding UTF8 | Select-String "Nï¿½o"
+Get-Content "frontend/src/i18n/locales/fr.json" -Encoding UTF8 | Select-String "Systï¿½me"
 ```
 
-### Después de desplegar a https://www.svydledger.com:
+### Despuï¿½s de desplegar a https://www.svydledger.com:
 1. Abrir DevTools > Console
-2. Cambiar idioma a Español
-3. Verificar que "País" se muestra correctamente (NO como "Pa?s")
-4. Verificar que "Contraseña" se muestra correctamente (NO como "Contrase?a")
-5. Cambiar a Árabe y verificar que los caracteres árabes se muestran correctamente
+2. Cambiar idioma a Espaï¿½ol
+3. Verificar que "Paï¿½s" se muestra correctamente (NO como "Pa?s")
+4. Verificar que "Contraseï¿½a" se muestra correctamente (NO como "Contrase?a")
+5. Cambiar a ï¿½rabe y verificar que los caracteres ï¿½rabes se muestran correctamente
 
 ## ?? ESTADO ACTUAL
 
-| Categoría | Cantidad | Estado |
+| Categorï¿½a | Cantidad | Estado |
 |-----------|----------|--------|
 | Archivos i18n totales | 27 | - |
 | Archivos CORREGIDOS | 11 | ? |
 | Archivos PENDIENTES | 16 | ? |
 | Porcentaje completado | 40.7% | ?? |
 
-## ?? RECOMENDACIÓN
+## ?? RECOMENDACIï¿½N
 
 **Prioridad ALTA:**
-1. Corregir los 7 idiomas más usados (hi, ru, id, ko, vi, tr, fa)
-2. Desplegar a producción
+1. Corregir los 7 idiomas mï¿½s usados (hi, ru, id, ko, vi, tr, fa)
+2. Desplegar a producciï¿½n
 3. Verificar en https://www.svydledger.com
 4. Corregir los 9 idiomas restantes si hay tiempo
 
-**Razón:** El 80% de los usuarios potenciales se cubren con los primeros 14 idiomas.
+**Razï¿½n:** El 80% de los usuarios potenciales se cubren con los primeros 14 idiomas.
 
-## ?? DESPLIEGUE AUTOMÁTICO
+## ?? DESPLIEGUE AUTOMï¿½TICO
 
-El despliegue a https://www.svydledger.com se activará automáticamente cuando:
+El despliegue a https://www.svydledger.com se activarï¿½ automï¿½ticamente cuando:
 1. Hagas commit de los cambios a la rama `main`
-2. GitHub Actions ejecutará el workflow `.github/workflows/swa-frontend.yml`
-3. Azure Static Web Apps desplegará los cambios automáticamente
-4. Los cambios estarán disponibles en ~2-3 minutos
+2. GitHub Actions ejecutarï¿½ el workflow `.github/workflows/swa-frontend.yml`
+3. Azure Static Web Apps desplegarï¿½ los cambios automï¿½ticamente
+4. Los cambios estarï¿½n disponibles en ~2-3 minutos
 
 ---
 
-**Última actualización:** 2025-01-15 14:30 UTC  
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15 14:30 UTC  
 **Estado:** ? 11/27 idiomas corregidos (40.7%)  
-**Siguiente acción:** Corregir idiomas prioritarios (hi, ru, id, ko, vi, tr, fa)
+**Siguiente acciï¿½n:** Corregir idiomas prioritarios (hi, ru, id, ko, vi, tr, fa)

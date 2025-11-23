@@ -1,16 +1,16 @@
-# ?? TUTORIAL: Cómo Usar el Sistema de Proceso Único
+# ?? TUTORIAL: Cï¿½mo Usar el Sistema de Proceso ï¿½nico
 
-## ?? ¿Qué Acabas de Ver en la Demostración?
+## ?? ï¿½Quï¿½ Acabas de Ver en la Demostraciï¿½n?
 
-### ? Resumen de la Demostración
+### ? Resumen de la Demostraciï¿½n
 
-Acabamos de ejecutar una demostración completa del sistema. Aquí está lo que sucedió:
+Acabamos de ejecutar una demostraciï¿½n completa del sistema. Aquï¿½ estï¿½ lo que sucediï¿½:
 
 ---
 
-## ?? PASO A PASO DE LA DEMOSTRACIÓN
+## ?? PASO A PASO DE LA DEMOSTRACIï¿½N
 
-### **Paso 1: Verificación Inicial**
+### **Paso 1: Verificaciï¿½n Inicial**
 
 ```powershell
 ========================================
@@ -24,14 +24,14 @@ Verificando archivo de bloqueo:
   ? No existe .node-lock
 ```
 
-**¿Qué hizo?**
-- Verificó que no hay procesos Node.js corriendo
-- Verificó que no existe archivo de bloqueo previo
+**ï¿½Quï¿½ hizo?**
+- Verificï¿½ que no hay procesos Node.js corriendo
+- Verificï¿½ que no existe archivo de bloqueo previo
 - ? **Sistema limpio y listo**
 
 ---
 
-### **Paso 2: Flujo Automático del Script**
+### **Paso 2: Flujo Automï¿½tico del Script**
 
 ```powershell
 ?? PASO 1: Verificando procesos existentes...
@@ -54,11 +54,11 @@ Verificando archivo de bloqueo:
    }
 ```
 
-**¿Qué hizo?**
-1. ? Verificó procesos existentes (ninguno encontrado)
-2. ? Verificó lock file (no existía)
-3. ? Verificó dependencias (node_modules existe)
-4. ? Creó el archivo de bloqueo con información del proceso
+**ï¿½Quï¿½ hizo?**
+1. ? Verificï¿½ procesos existentes (ninguno encontrado)
+2. ? Verificï¿½ lock file (no existï¿½a)
+3. ? Verificï¿½ dependencias (node_modules existe)
+4. ? Creï¿½ el archivo de bloqueo con informaciï¿½n del proceso
 
 ---
 
@@ -69,45 +69,45 @@ Verificando archivo de bloqueo:
    ? SISTEMA LISTO                     
 ========================================
 
-En este punto, el script iniciaría:
+En este punto, el script iniciarï¿½a:
    npm run dev
 
-Y verías:
+Y verï¿½as:
    VITE v5.x.x  ready in xxx ms
    ?  Local:   http://localhost:5173/
 ```
 
-**¿Qué significa?**
-- El sistema está configurado y listo
-- Solo falta iniciar el servidor (que haría automáticamente)
+**ï¿½Quï¿½ significa?**
+- El sistema estï¿½ configurado y listo
+- Solo falta iniciar el servidor (que harï¿½a automï¿½ticamente)
 - Todo el proceso es transparente para ti
 
 ---
 
-## ?? CÓMO LO USAS TÚ (MUY SIMPLE)
+## ?? Cï¿½MO LO USAS Tï¿½ (MUY SIMPLE)
 
-### Opción 1: Comando Directo (Recomendado)
+### Opciï¿½n 1: Comando Directo (Recomendado)
 
 ```powershell
 .\start-single-process.ps1
 ```
 
 **Eso es TODO.** El sistema hace:
-- ? Mata procesos previos automáticamente
-- ? Crea bloqueo automáticamente
-- ? Inicia servidor automáticamente
-- ? Previene duplicados automáticamente
-- ? Se limpia automáticamente al salir (Ctrl+C)
+- ? Mata procesos previos automï¿½ticamente
+- ? Crea bloqueo automï¿½ticamente
+- ? Inicia servidor automï¿½ticamente
+- ? Previene duplicados automï¿½ticamente
+- ? Se limpia automï¿½ticamente al salir (Ctrl+C)
 
 ---
 
-### Opción 2: Menú Interactivo
+### Opciï¿½n 2: Menï¿½ Interactivo
 
 ```powershell
 .\dev-manager.ps1
 ```
 
-Verás:
+Verï¿½s:
 
 ```
 ============================================
@@ -132,7 +132,7 @@ Select an option: _
 
 ---
 
-## ?? ¿Qué Hace el Archivo .node-lock?
+## ?? ï¿½Quï¿½ Hace el Archivo .node-lock?
 
 ### Contenido del Lock File
 
@@ -144,15 +144,15 @@ Select an option: _
 }
 ```
 
-### ¿Qué Significa Cada Parte?
+### ï¿½Quï¿½ Significa Cada Parte?
 
-| Campo | Descripción | Para Qué Sirve |
+| Campo | Descripciï¿½n | Para Quï¿½ Sirve |
 |-------|-------------|----------------|
 | `ProcessId` | ID del proceso Node.js | Verificar si sigue vivo |
-| `StartTime` | Cuándo se inició | Información de tracking |
-| `Port` | Puerto del servidor | Saber dónde está corriendo |
+| `StartTime` | Cuï¿½ndo se iniciï¿½ | Informaciï¿½n de tracking |
+| `Port` | Puerto del servidor | Saber dï¿½nde estï¿½ corriendo |
 
-### ¿Cuándo Se Crea y Se Elimina?
+### ï¿½Cuï¿½ndo Se Crea y Se Elimina?
 
 ```
 ???????????????????????????????????????
@@ -163,7 +163,7 @@ Select an option: _
                ?
 ???????????????????????????????????????
 ? Script crea .node-lock              ?
-? (automáticamente)                   ?
+? (automï¿½ticamente)                   ?
 ???????????????????????????????????????
                ?
                ?
@@ -180,15 +180,15 @@ Select an option: _
                ?
 ???????????????????????????????????????
 ? Script elimina .node-lock           ?
-? (automáticamente)                   ?
+? (automï¿½ticamente)                   ?
 ???????????????????????????????????????
 ```
 
-**TÚ NO TIENES QUE TOCARLO NUNCA**
+**Tï¿½ NO TIENES QUE TOCARLO NUNCA**
 
 ---
 
-## ??? ¿Qué Pasa Si...?
+## ??? ï¿½Quï¿½ Pasa Si...?
 
 ### Escenario 1: Intentas Iniciar Dos Veces
 
@@ -210,26 +210,26 @@ Opciones:
 Select (1/2/3): _
 ```
 
-**El sistema te protege automáticamente** y te da opciones.
+**El sistema te protege automï¿½ticamente** y te da opciones.
 
 ---
 
 ### Escenario 2: El Script Crashea
 
 ```powershell
-# La próxima vez que ejecutes:
+# La prï¿½xima vez que ejecutes:
 PS> .\start-single-process.ps1
 
 ?? Lock file encontrado
-?? Verificando si proceso está vivo...
+?? Verificando si proceso estï¿½ vivo...
 ? Proceso no existe (zombie)
-??? Limpiando lock huérfano...
+??? Limpiando lock huï¿½rfano...
 ? Lock eliminado
 
 Continuando con inicio limpio...
 ```
 
-**El sistema detecta y limpia automáticamente.**
+**El sistema detecta y limpia automï¿½ticamente.**
 
 ---
 
@@ -239,18 +239,18 @@ Continuando con inicio limpio...
 PS> .\start-single-process.ps1
 
 ?? Encontrados 3 proceso(s) Node.js previos
-?? Matando procesos automáticamente...
+?? Matando procesos automï¿½ticamente...
 ? Procesos eliminados
 
 Iniciando servidor limpio...
 ? VITE v5.x.x  ready in xxx ms
 ```
 
-**El sistema limpia automáticamente antes de iniciar.**
+**El sistema limpia automï¿½ticamente antes de iniciar.**
 
 ---
 
-## ?? ANTES vs DESPUÉS
+## ?? ANTES vs DESPUï¿½S
 
 ### Antes (Sin Sistema)
 
@@ -272,10 +272,10 @@ Task Manager:
   Total: 862 MB
   Procesos: 4
 
-Problema: Acumulación sin control
+Problema: Acumulaciï¿½n sin control
 ```
 
-### Después (Con Sistema) ?
+### Despuï¿½s (Con Sistema) ?
 
 ```
 Tu flujo de trabajo:
@@ -290,14 +290,14 @@ Task Manager:
   Total: 180 MB
   Procesos: 1
 
-Solución: Control automático
+Soluciï¿½n: Control automï¿½tico
 ```
 
 **Ahorro: 680 MB y 3 procesos**
 
 ---
 
-## ?? CONSEJOS PRÁCTICOS
+## ?? CONSEJOS PRï¿½CTICOS
 
 ### ? DO (Hacer)
 
@@ -307,34 +307,34 @@ Solución: Control automático
    ```
 
 2. **Termina con Ctrl+C**
-   - Limpia automáticamente
-   - No dejes procesos huérfanos
+   - Limpia automï¿½ticamente
+   - No dejes procesos huï¿½rfanos
 
-3. **Si tienes dudas, usa el menú**
+3. **Si tienes dudas, usa el menï¿½**
    ```powershell
    .\dev-manager.ps1
-   # Opción 5: Check System Status
+   # Opciï¿½n 5: Check System Status
    ```
 
 ### ? DON'T (No Hacer)
 
 1. **No uses `npm run dev` directamente**
-   - No tiene protección
-   - Puede crear múltiples procesos
+   - No tiene protecciï¿½n
+   - Puede crear mï¿½ltiples procesos
 
 2. **No edites el .node-lock manualmente**
-   - Se gestiona automáticamente
+   - Se gestiona automï¿½ticamente
    - No necesitas tocarlo
 
 3. **No cierres el terminal directamente**
    - Usa Ctrl+C
-   - Permite limpieza automática
+   - Permite limpieza automï¿½tica
 
 ---
 
-## ?? VERIFICACIONES RÁPIDAS
+## ?? VERIFICACIONES Rï¿½PIDAS
 
-### ¿Cuántos Procesos Tengo?
+### ï¿½Cuï¿½ntos Procesos Tengo?
 
 ```powershell
 Get-Process node -ErrorAction SilentlyContinue | Measure-Object
@@ -345,7 +345,7 @@ Get-Process node -ErrorAction SilentlyContinue | Measure-Object
 Count: 1  ?
 ```
 
-### ¿Cuánta Memoria Usa?
+### ï¿½Cuï¿½nta Memoria Usa?
 
 ```powershell
 Get-Process node | Measure-Object -Property WS -Sum | Select-Object @{N='TotalMB';E={[math]::Round($_.Sum/1MB,1)}}
@@ -358,7 +358,7 @@ TotalMB
 180.0   ?
 ```
 
-### ¿Existe Lock File?
+### ï¿½Existe Lock File?
 
 ```powershell
 Get-Content .node-lock -ErrorAction SilentlyContinue | ConvertFrom-Json
@@ -375,7 +375,7 @@ Get-Content .node-lock -ErrorAction SilentlyContinue | ConvertFrom-Json
 
 **Si no hay servidor:**
 ```
-(vacío o error - normal)
+(vacï¿½o o error - normal)
 ```
 
 ---
@@ -384,75 +384,75 @@ Get-Content .node-lock -ErrorAction SilentlyContinue | ConvertFrom-Json
 
 ### Lo Que Aprendiste:
 
-1. ? **El sistema es 100% automático**
-   - Tú solo ejecutas el script
-   - Todo lo demás es automático
+1. ? **El sistema es 100% automï¿½tico**
+   - Tï¿½ solo ejecutas el script
+   - Todo lo demï¿½s es automï¿½tico
 
 2. ? **El archivo .node-lock es invisible**
-   - Se crea automáticamente
-   - Se elimina automáticamente
+   - Se crea automï¿½ticamente
+   - Se elimina automï¿½ticamente
    - No necesitas tocarlo nunca
 
-3. ? **Protección contra duplicados**
+3. ? **Protecciï¿½n contra duplicados**
    - Solo 1 proceso permitido
-   - Si intentas iniciar otro, te pregunta qué hacer
+   - Si intentas iniciar otro, te pregunta quï¿½ hacer
    - Ahorro garantizado de recursos
 
 4. ? **Auto-limpieza**
    - Al salir con Ctrl+C se limpia todo
-   - Si crashea, detecta y limpia la próxima vez
-   - Sin procesos huérfanos
+   - Si crashea, detecta y limpia la prï¿½xima vez
+   - Sin procesos huï¿½rfanos
 
 ---
 
-## ?? TU PRÓXIMO PASO
+## ?? TU PRï¿½XIMO PASO
 
-**Cuando estés listo para trabajar:**
+**Cuando estï¿½s listo para trabajar:**
 
 ```powershell
 .\start-single-process.ps1
 ```
 
-**¡Y eso es todo!** ??
+**ï¿½Y eso es todo!** ??
 
-El sistema hará TODO el resto automáticamente.
+El sistema harï¿½ TODO el resto automï¿½ticamente.
 
 ---
 
-## ?? DOCUMENTACIÓN RELACIONADA
+## ?? DOCUMENTACIï¿½N RELACIONADA
 
-| Archivo | Descripción |
+| Archivo | Descripciï¿½n |
 |---------|-------------|
-| `QUICK-START-SINGLE-PROCESS.md` | Guía rápida de 1 página |
-| `SOLUCIÓN-PROCESOS-NODE.md` | Documentación completa |
+| `QUICK-START-SINGLE-PROCESS.md` | Guï¿½a rï¿½pida de 1 pï¿½gina |
+| `SOLUCIï¿½N-PROCESOS-NODE.md` | Documentaciï¿½n completa |
 | `SCRIPTS-README.md` | Todos los scripts explicados |
-| `PROBLEMA-RESUELTO.md` | Resumen de la solución |
+| `PROBLEMA-RESUELTO.md` | Resumen de la soluciï¿½n |
 
 ---
 
 ## ? PREGUNTAS FRECUENTES
 
-**Q: ¿Necesito hacer algo especial?**  
+**Q: ï¿½Necesito hacer algo especial?**  
 A: No, solo ejecuta `.\start-single-process.ps1`
 
-**Q: ¿Qué pasa con el .node-lock?**  
-A: Se gestiona automáticamente, no lo toques.
+**Q: ï¿½Quï¿½ pasa con el .node-lock?**  
+A: Se gestiona automï¿½ticamente, no lo toques.
 
-**Q: ¿Cómo sé que funciona?**  
-A: Verifica con Task Manager - verás solo 1 proceso.
+**Q: ï¿½Cï¿½mo sï¿½ que funciona?**  
+A: Verifica con Task Manager - verï¿½s solo 1 proceso.
 
-**Q: ¿Y si algo falla?**  
-A: El sistema detecta y limpia automáticamente.
+**Q: ï¿½Y si algo falla?**  
+A: El sistema detecta y limpia automï¿½ticamente.
 
-**Q: ¿Necesito el monitor también?**  
-A: No, es opcional. El script básico ya funciona perfecto.
-
----
-
-**¡Todo está listo! El problema está resuelto para siempre.** ???
+**Q: ï¿½Necesito el monitor tambiï¿½n?**  
+A: No, es opcional. El script bï¿½sico ya funciona perfecto.
 
 ---
 
-**Última actualización:** 2024-01-15  
+**ï¿½Todo estï¿½ listo! El problema estï¿½ resuelto para siempre.** ???
+
+---
+
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
 **Estado:** ? Tutorial completado  
-**Demostración:** ? Ejecutada exitosamente
+**Demostraciï¿½n:** ? Ejecutada exitosamente

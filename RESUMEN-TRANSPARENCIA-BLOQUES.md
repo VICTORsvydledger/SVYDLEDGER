@@ -1,7 +1,7 @@
 # ? RESUMEN: Transparencia de Bloques en PostAuthPage
 
 **Fecha:** 2025-01-15  
-**Objetivo:** Hacer completamente transparentes los tres bloques principales de PostAuthPage para que se vea el fondo de nubes y cielo celeste a través de ellos.
+**Objetivo:** Hacer completamente transparentes los tres bloques principales de PostAuthPage para que se vea el fondo de nubes y cielo celeste a travï¿½s de ellos.
 
 ---
 
@@ -9,36 +9,36 @@
 
 ### 1. **Bloque Principal (`.block`)**
 - **Antes:** `background: rgba(255, 255, 255, 0.95)` (fondo blanco casi opaco)
-- **Después:** `background: transparent` (completamente transparente)
+- **Despuï¿½s:** `background: transparent` (completamente transparente)
 
 ### 2. **Bloque 1: Crear Usuario Nuevo**
 
 #### Encabezado:
 - **Antes:** `background: #FFFF00` (amarillo opaco)
-- **Después:** `background: rgba(255, 255, 0, 0.7)` (amarillo semi-transparente 70%)
+- **Despuï¿½s:** `background: rgba(255, 255, 0, 0.7)` (amarillo semi-transparente 70%)
 
 #### Campos de entrada:
 - **Antes:** `background: #D4F1D4` (verde claro opaco)
-- **Después:** `background: rgba(212, 241, 212, 0.7)` (verde claro semi-transparente 70%)
+- **Despuï¿½s:** `background: rgba(212, 241, 212, 0.7)` (verde claro semi-transparente 70%)
 
-#### Botón PAY:
+#### Botï¿½n PAY:
 - **Antes:** `background: #00FF00` (verde opaco)
-- **Después:** `background: rgba(0, 255, 0, 0.8)` (verde semi-transparente 80%)
+- **Despuï¿½s:** `background: rgba(0, 255, 0, 0.8)` (verde semi-transparente 80%)
 
-#### Mínimo de pago:
+#### Mï¿½nimo de pago:
 - **Antes:** `background: #FFFFCC` (amarillo claro opaco)
-- **Después:** `background: rgba(255, 255, 204, 0.7)` (amarillo claro semi-transparente 70%)
+- **Despuï¿½s:** `background: rgba(255, 255, 204, 0.7)` (amarillo claro semi-transparente 70%)
 
 #### Labels:
-- **Añadido:** `text-shadow: 0 0 3px white` para mejorar legibilidad sobre fondo transparente
+- **Aï¿½adido:** `text-shadow: 0 0 3px white` para mejorar legibilidad sobre fondo transparente
 
 ### 3. **Bloque 2: Lista de Usuarios**
 
 #### Encabezado:
 - **Antes:** `background: #FFFF00` (amarillo opaco)
-- **Después:** `background: rgba(255, 255, 0, 0.7)` (amarillo semi-transparente 70%)
+- **Despuï¿½s:** `background: rgba(255, 255, 0, 0.7)` (amarillo semi-transparente 70%)
 
-#### Botones de acción:
+#### Botones de acciï¿½n:
 - **ENTRAR:** `rgba(0, 255, 0, 0.8)` (verde semi-transparente 80%)
 - **EDITAR:** `rgba(255, 215, 0, 0.8)` (dorado semi-transparente 80%)
 - **PAPELERA:** `rgba(255, 107, 107, 0.8)` (rojo claro semi-transparente 80%)
@@ -61,11 +61,11 @@
 
 #### Encabezados:
 - **Antes:** `background: #FFFF00` (amarillo opaco)
-- **Después:** `background: rgba(255, 255, 0, 0.7)` (amarillo semi-transparente 70%)
+- **Despuï¿½s:** `background: rgba(255, 255, 0, 0.7)` (amarillo semi-transparente 70%)
 
 #### Celdas de tabla:
 - **Antes:** `background: white` (blanco opaco)
-- **Después:** `background: rgba(255, 255, 255, 0.5)` (blanco semi-transparente 50%)
+- **Despuï¿½s:** `background: rgba(255, 255, 255, 0.5)` (blanco semi-transparente 50%)
 
 ---
 
@@ -75,7 +75,7 @@
 |----------|----------|
 | Bloque principal | 0% (completamente transparente) |
 | Encabezados | 70% |
-| Botones de acción | 80% |
+| Botones de acciï¿½n | 80% |
 | Campos de entrada | 70% |
 | Celdas de tabla | 50% |
 | Fondos generales | 50% |
@@ -90,16 +90,16 @@ b1f1b31 PostAuthPage: Make all 3 blocks transparent to show background through t
 ```
 
 ### Estado del despliegue:
-- ? Código compilado exitosamente
+- ? Cï¿½digo compilado exitosamente
 - ? Push a GitHub completado
-- ? Despliegue automático activado en Azure Static Web Apps
-- ?? URL de producción: https://www.svydleger.com
+- ? Despliegue automï¿½tico activado en Azure Static Web Apps
+- ?? URL de producciï¿½n: https://www.svydleger.com
 
 ---
 
 ## ?? RESULTADO VISUAL
 
-Ahora los tres bloques principales son semi-transparentes, permitiendo que el fondo de nubes y cielo celeste se vea a través de ellos:
+Ahora los tres bloques principales son semi-transparentes, permitiendo que el fondo de nubes y cielo celeste se vea a travï¿½s de ellos:
 
 1. **Bloque Crear Usuario Nuevo** - Verde claro transparente con amarillo en encabezado
 2. **Bloque Lista de Usuarios** - Tabla con columnas de colores semi-transparentes
@@ -109,16 +109,16 @@ Los elementos mantienen suficiente opacidad para ser legibles, mientras permiten
 
 ---
 
-## ? VERIFICACIÓN
+## ? VERIFICACIï¿½N
 
-Para verificar los cambios en producción:
+Para verificar los cambios en producciï¿½n:
 
 1. Espera 2-3 minutos para que Azure Static Web Apps complete el despliegue
 2. Abre https://www.svydleger.com
-3. Haz clic en el botón de navegación (flecha en esquina inferior derecha)
-4. Verifica que los tres bloques sean semi-transparentes y se vea el fondo a través de ellos
+3. Haz clic en el botï¿½n de navegaciï¿½n (flecha en esquina inferior derecha)
+4. Verifica que los tres bloques sean semi-transparentes y se vea el fondo a travï¿½s de ellos
 
 ---
 
 **Estado:** ? COMPLETADO  
-**Próximo paso:** Esperar confirmación visual del usuario
+**Prï¿½ximo paso:** Esperar confirmaciï¿½n visual del usuario

@@ -1,86 +1,86 @@
-# ?? EJEMPLOS DE PAÍSES CON CARACTERES ESPECIALES
+# ?? EJEMPLOS DE PAï¿½SES CON CARACTERES ESPECIALES
 
-Este documento muestra ejemplos específicos de cómo se visualizan los países en el selector del formulario "Crear Usuario Nuevo".
+Este documento muestra ejemplos especï¿½ficos de cï¿½mo se visualizan los paï¿½ses en el selector del formulario "Crear Usuario Nuevo".
 
 ---
 
 ## ?? FORMATO
 
-Todos los países siguen el formato:
+Todos los paï¿½ses siguen el formato:
 ```
-[Nombre en Inglés] ([Nombre en Idioma Nativo])
+[Nombre en Inglï¿½s] ([Nombre en Idioma Nativo])
 ```
 
 ---
 
 ## ?? EJEMPLOS POR SISTEMA DE ESCRITURA
 
-### 1?? **Alfabeto Latino Estándar**
+### 1?? **Alfabeto Latino Estï¿½ndar**
 
-Países que usan caracteres latinos básicos:
+Paï¿½ses que usan caracteres latinos bï¿½sicos:
 
 - United States (United States)
 - Canada (Canada)
 - Brazil (Brasil)
 - Argentina (Argentina)
 - Colombia (Colombia)
-- Mexico (México)
+- Mexico (Mï¿½xico)
 - Chile (Chile)
-- Peru (Perú)
-- Panama (Panamá)
+- Peru (Perï¿½)
+- Panama (Panamï¿½)
 
 ---
 
-### 2?? **Alfabeto Latino con Diacríticos**
+### 2?? **Alfabeto Latino con Diacrï¿½ticos**
 
-Países con caracteres especiales latinos:
+Paï¿½ses con caracteres especiales latinos:
 
-- **Español:**
-  - Spain (España)
-  - Mexico (México)
-  - Peru (Perú)
+- **Espaï¿½ol:**
+  - Spain (Espaï¿½a)
+  - Mexico (Mï¿½xico)
+  - Peru (Perï¿½)
 
-- **Portugués:**
+- **Portuguï¿½s:**
   - Brazil (Brasil)
-  - Sao Tome and Principe (São Tomé e Príncipe)
+  - Sao Tome and Principe (Sï¿½o Tomï¿½ e Prï¿½ncipe)
 
-- **Francés:**
+- **Francï¿½s:**
   - France (France)
-  - Ivory Coast (Côte d'Ivoire)
+  - Ivory Coast (Cï¿½te d'Ivoire)
   - Cameroon (Cameroun)
-  - Senegal (Sénégal)
-  - Benin (Bénin)
-  - Haiti (Haïti)
+  - Senegal (Sï¿½nï¿½gal)
+  - Benin (Bï¿½nin)
+  - Haiti (Haï¿½ti)
 
-- **Alemán:**
+- **Alemï¿½n:**
   - Germany (Deutschland)
-  - Austria (Österreich)
+  - Austria (ï¿½sterreich)
   - Switzerland (Schweiz)
 
 - **Turco:**
-  - Turkey (Türkiye)
-  - Turkmenistan (Türkmenistan)
+  - Turkey (Tï¿½rkiye)
+  - Turkmenistan (Tï¿½rkmenistan)
 
 - **Polaco:**
   - Poland (Polska)
 
 - **Checo:**
-  - Czech Republic (?eská republika)
+  - Czech Republic (?eskï¿½ republika)
 
-- **Islandés:**
-  - Iceland (Ísland)
+- **Islandï¿½s:**
+  - Iceland (ï¿½sland)
 
-- **Irlandés:**
-  - Ireland (Éire)
+- **Irlandï¿½s:**
+  - Ireland (ï¿½ire)
 
-- **Húngaro:**
-  - Hungary (Magyarország)
+- **Hï¿½ngaro:**
+  - Hungary (Magyarorszï¿½g)
 
 ---
 
-### 3?? **Alfabeto Árabe (RTL - Right to Left)**
+### 3?? **Alfabeto ï¿½rabe (RTL - Right to Left)**
 
-Países con escritura de derecha a izquierda:
+Paï¿½ses con escritura de derecha a izquierda:
 
 - **Medio Oriente:**
   - Saudi Arabia (????????)
@@ -95,7 +95,7 @@ Países con escritura de derecha a izquierda:
   - Iraq (??????)
   - Yemen (?????)
 
-- **Norte de África:**
+- **Norte de ï¿½frica:**
   - Egypt (???)
   - Libya (?????)
   - Tunisia (????)
@@ -113,9 +113,9 @@ Países con escritura de derecha a izquierda:
 
 ---
 
-### 4?? **Alfabeto Cirílico**
+### 4?? **Alfabeto Cirï¿½lico**
 
-Países que usan caracteres cirílicos:
+Paï¿½ses que usan caracteres cirï¿½licos:
 
 - Russia (??????)
 - Ukraine (???????)
@@ -144,7 +144,7 @@ Países que usan caracteres cirílicos:
 
 - Japan (??)
 
-Nota: Usa combinación de Kanji (ideogramas chinos adaptados).
+Nota: Usa combinaciï¿½n de Kanji (ideogramas chinos adaptados).
 
 ---
 
@@ -182,14 +182,14 @@ Nota: Usa combinación de Kanji (ideogramas chinos adaptados).
 
 ### 1??2?? **Escritura Devanagari**
 
-Usado en Hindi y otras lenguas índicas:
+Usado en Hindi y otras lenguas ï¿½ndicas:
 
 - India (????)
 - Nepal (?????)
 
 ---
 
-### 1??3?? **Escritura Bengalí**
+### 1??3?? **Escritura Bengalï¿½**
 
 - Bangladesh (????????)
 
@@ -225,9 +225,9 @@ Usado en Hindi y otras lenguas índicas:
 
 ---
 
-### 1??9?? **Escritura Amhárica (Ge'ez)**
+### 1??9?? **Escritura Amhï¿½rica (Ge'ez)**
 
-Usada en Etiopía y Eritrea:
+Usada en Etiopï¿½a y Eritrea:
 
 - Ethiopia (?????)
 - Eritrea (????)
@@ -240,7 +240,7 @@ Usada en Etiopía y Eritrea:
 
 ---
 
-### 2??1?? **Escritura Árabe con Variantes Locales**
+### 2??1?? **Escritura ï¿½rabe con Variantes Locales**
 
 **Persa (Farsi):**
 - Iran (?????)
@@ -278,7 +278,7 @@ Usada en Etiopía y Eritrea:
 
 - Vietnam (Vi?t Nam)
 
-Nota: Usa alfabeto latino con numerosos diacríticos especiales.
+Nota: Usa alfabeto latino con numerosos diacrï¿½ticos especiales.
 
 ---
 
@@ -308,42 +308,42 @@ Nota: Usa alfabeto latino con numerosos diacríticos especiales.
 
 ## ?? CASOS ESPECIALES
 
-### Países sin Traducción Nativa:
+### Paï¿½ses sin Traducciï¿½n Nativa:
 
-Estos países se muestran igual en inglés y nombre nativo:
+Estos paï¿½ses se muestran igual en inglï¿½s y nombre nativo:
 
 - United States (United States)
 - Canada (Canada)
 - Australia (Australia)
 - New Zealand (New Zealand)
-- Ireland (Éire) - Aunque técnicamente usa gaélico
+- Ireland (ï¿½ire) - Aunque tï¿½cnicamente usa gaï¿½lico
 - Singapore (Singapore)
-- Philippines (Pilipinas) - Usa nombre español antiguo
+- Philippines (Pilipinas) - Usa nombre espaï¿½ol antiguo
 - Malta (Malta)
 - Luxembourg (Luxembourg)
 
 ---
 
-### Países con Múltiples Nombres Oficiales:
+### Paï¿½ses con Mï¿½ltiples Nombres Oficiales:
 
-**Bélgica:**
-- Belgium (België) - Muestra versión neerlandesa
-- Nombres oficiales: België (NL), Belgique (FR), Belgien (DE)
+**Bï¿½lgica:**
+- Belgium (Belgiï¿½) - Muestra versiï¿½n neerlandesa
+- Nombres oficiales: Belgiï¿½ (NL), Belgique (FR), Belgien (DE)
 
 **Suiza:**
-- Switzerland (Schweiz) - Muestra versión alemana
+- Switzerland (Schweiz) - Muestra versiï¿½n alemana
 - Nombres oficiales: Schweiz (DE), Suisse (FR), Svizzera (IT), Svizra (RM)
 
 ---
 
-## ?? BÚSQUEDA EN EL SELECTOR
+## ?? Bï¿½SQUEDA EN EL SELECTOR
 
 El componente Select permite buscar por:
 
-1. **Nombre en inglés completo:**
+1. **Nombre en inglï¿½s completo:**
    - Buscar "Japan" ? Encuentra "Japan (??)"
 
-2. **Nombre en inglés parcial:**
+2. **Nombre en inglï¿½s parcial:**
    - Buscar "Jap" ? Filtra a Japan
 
 3. **Nombre nativo (si el teclado lo permite):**
@@ -355,7 +355,7 @@ El componente Select permite buscar por:
 
 ## ? SOPORTE UNICODE
 
-Todos estos caracteres están codificados en **UTF-8** y se visualizan correctamente en:
+Todos estos caracteres estï¿½n codificados en **UTF-8** y se visualizan correctamente en:
 
 - ? Navegadores modernos (Chrome, Firefox, Safari, Edge)
 - ? Sistemas operativos (Windows, macOS, Linux, iOS, Android)
@@ -366,12 +366,12 @@ Todos estos caracteres están codificados en **UTF-8** y se visualizan correctame
 
 ## ?? ORDEN EN EL SELECTOR
 
-**Primer país (siempre):**
+**Primer paï¿½s (siempre):**
 1. **United States (United States)**
 
-**Resto (orden alfabético A-Z por nombre en inglés):**
+**Resto (orden alfabï¿½tico A-Z por nombre en inglï¿½s):**
 2. Afghanistan (?????????)
-3. Albania (Shqipëri)
+3. Albania (Shqipï¿½ri)
 4. Algeria (???????)
 5. Andorra (Andorra)
 ...
@@ -381,17 +381,17 @@ Todos estos caracteres están codificados en **UTF-8** y se visualizan correctame
 
 ---
 
-## ?? ESTADÍSTICAS
+## ?? ESTADï¿½STICAS
 
-- **Total de países:** 195
-- **Sistemas de escritura únicos:** ~25
+- **Total de paï¿½ses:** 195
+- **Sistemas de escritura ï¿½nicos:** ~25
 - **Idiomas representados:** ~100
 - **Caracteres Unicode especiales:** Miles
-- **Soporte RTL (Right-to-Left):** Árabe, Hebreo
+- **Soporte RTL (Right-to-Left):** ï¿½rabe, Hebreo
 
 ---
 
-**TODOS ESTOS PAÍSES ESTÁN DISPONIBLES EN EL SELECTOR DEL FORMULARIO** ?
+**TODOS ESTOS PAï¿½SES ESTï¿½N DISPONIBLES EN EL SELECTOR DEL FORMULARIO** ?
 
 **Fecha:** 2025-01-15  
-**Ubicación:** https://www.svydledger.com ? PostAuthPage ? Crear Usuario Nuevo ? Campo País
+**Ubicaciï¿½n:** https://www.svydledger.com ? PostAuthPage ? Crear Usuario Nuevo ? Campo Paï¿½s

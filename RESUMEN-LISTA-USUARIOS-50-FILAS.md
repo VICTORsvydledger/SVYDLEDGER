@@ -8,7 +8,7 @@
 
 ## ?? OBJETIVO COMPLETADO
 
-Agregar 45 líneas adicionales a la **Lista de Usuarios** en `PostAuthPage`, totalizando **50 filas** con barra de desplazamiento vertical, manteniendo la altura fija del bloque.
+Agregar 45 lï¿½neas adicionales a la **Lista de Usuarios** en `PostAuthPage`, totalizando **50 filas** con barra de desplazamiento vertical, manteniendo la altura fija del bloque.
 
 ---
 
@@ -25,7 +25,7 @@ const usersData = Array(5).fill(null).map((_, i) => ({
   saldo: '$'
 }))
 
-// DESPUÉS: 50 filas
+// DESPUï¿½S: 50 filas
 const usersData = Array(50).fill(null).map((_, i) => ({
   key: i,
   nombre: '',
@@ -34,7 +34,7 @@ const usersData = Array(50).fill(null).map((_, i) => ({
 }))
 ```
 
-**Resultado:** Dataset ampliado de 5 a 50 filas vacías (45 nuevas líneas).
+**Resultado:** Dataset ampliado de 5 a 50 filas vacï¿½as (45 nuevas lï¿½neas).
 
 ---
 
@@ -71,32 +71,32 @@ const usersData = Array(50).fill(null).map((_, i) => ({
       }
     }
   }
-  // ...resto del código
+  // ...resto del cï¿½digo
 }
 ```
 
-**Características:**
+**Caracterï¿½sticas:**
 
 - ? **Altura fija:** 300px (muestra 8-10 filas visibles)
-- ? **Scroll vertical:** Activado automáticamente
-- ? **Barra personalizada:** Estilo blanco semi-transparente acorde al diseño
+- ? **Scroll vertical:** Activado automï¿½ticamente
+- ? **Barra personalizada:** Estilo blanco semi-transparente acorde al diseï¿½o
 - ? **Hover effect:** La barra se ilumina al pasar el mouse
-- ? **Responsive:** Se adapta a diferentes tamaños de pantalla
+- ? **Responsive:** Se adapta a diferentes tamaï¿½os de pantalla
 
 ---
 
-## ?? CARACTERÍSTICAS VISUALES
+## ?? CARACTERï¿½STICAS VISUALES
 
 ### **Lista de Usuarios:**
 
 | Propiedad | Valor |
 |-----------|-------|
 | **Total de filas** | 50 |
-| **Filas visibles** | 8-10 (según altura de pantalla) |
+| **Filas visibles** | 8-10 (segï¿½n altura de pantalla) |
 | **Altura del bloque** | Fija en 300px |
-| **Scroll** | Vertical automático |
+| **Scroll** | Vertical automï¿½tico |
 | **Filas editables** | No (solo lectura por ahora) |
-| **Selección** | Radio button (una a la vez) |
+| **Selecciï¿½n** | Radio button (una a la vez) |
 | **Columnas** | NOMBRE, ID, $ (Saldo) |
 
 ### **Barra de desplazamiento:**
@@ -145,58 +145,58 @@ const usersData = Array(50).fill(null).map((_, i) => ({
 ## ?? FUNCIONALIDAD ACTUAL
 
 ### **Filas no editables:**
-- Las 50 filas están vacías y son de solo lectura
+- Las 50 filas estï¿½n vacï¿½as y son de solo lectura
 - No hay inputs editables en las celdas
 - Solo se puede seleccionar una fila con el radio button
 
-### **Preparación para futuro:**
-Las filas están listas para recibir datos del formulario **"Crear Usuario Nuevo"** cuando se implemente la funcionalidad de guardado.
+### **Preparaciï¿½n para futuro:**
+Las filas estï¿½n listas para recibir datos del formulario **"Crear Usuario Nuevo"** cuando se implemente la funcionalidad de guardado.
 
 ---
 
-## ?? PRÓXIMOS PASOS SUGERIDOS
+## ?? PRï¿½XIMOS PASOS SUGERIDOS
 
 1. **Implementar guardado de usuarios:** Conectar el formulario "Crear Usuario Nuevo" con la Lista de Usuarios
 2. **Backend integration:** Conectar con la API para persistir usuarios
 3. **Funcionalidad de botones:**
    - ENTRAR: Navegar al usuario seleccionado
-   - EDITAR: Abrir modal de edición
+   - EDITAR: Abrir modal de ediciï¿½n
    - PAPELERA: Eliminar usuario (soft delete)
    - PAGAR: Procesar pago para el usuario
    - SALDO: Mostrar detalles del saldo
 
-4. **Búsqueda y filtrado:** Agregar un input de búsqueda para filtrar usuarios
-5. **Paginación opcional:** Si se necesitan más de 50 usuarios
+4. **Bï¿½squeda y filtrado:** Agregar un input de bï¿½squeda para filtrar usuarios
+5. **Paginaciï¿½n opcional:** Si se necesitan mï¿½s de 50 usuarios
 
 ---
 
 ## ?? ARCHIVOS MODIFICADOS
 
-| Archivo | Líneas Modificadas | Tipo de Cambio |
+| Archivo | Lï¿½neas Modificadas | Tipo de Cambio |
 |---------|-------------------|----------------|
 | `frontend/src/pages/auth/PostAuthPage.tsx` | +1 | Dataset ampliado a 50 filas |
 | `frontend/src/pages/auth/PostAuthPage.scss` | +24 | Scroll vertical con estilos personalizados |
 
-**Total:** 2 archivos, 25 líneas modificadas
+**Total:** 2 archivos, 25 lï¿½neas modificadas
 
 ---
 
-## ? VALIDACIÓN
+## ? VALIDACIï¿½N
 
-- ? **Compilación:** Sin errores
+- ? **Compilaciï¿½n:** Sin errores
 - ? **Build:** Exitoso (vite v5.4.21)
 - ? **Despliegue:** Completado en Azure Static Web Apps
-- ? **URL en producción:** https://www.svydleger.com
+- ? **URL en producciï¿½n:** https://www.svydleger.com
 
 ---
 
-## ?? CONCLUSIÓN
+## ?? CONCLUSIï¿½N
 
-La **Lista de Usuarios** ahora cuenta con **50 filas** (45 nuevas líneas agregadas) con una barra de desplazamiento vertical elegante y funcional. El bloque mantiene su altura fija de 300px, mostrando 8-10 filas visibles y permitiendo desplazamiento suave para ver las 50 filas completas.
+La **Lista de Usuarios** ahora cuenta con **50 filas** (45 nuevas lï¿½neas agregadas) con una barra de desplazamiento vertical elegante y funcional. El bloque mantiene su altura fija de 300px, mostrando 8-10 filas visibles y permitiendo desplazamiento suave para ver las 50 filas completas.
 
-**Estado:** ? **COMPLETADO Y DESPLEGADO EN PRODUCCIÓN**
+**Estado:** ? **COMPLETADO Y DESPLEGADO EN PRODUCCIï¿½N**
 
 ---
 
-**Última actualización:** 2025-01-15  
-**URL de verificación:** https://www.svydleger.com
+**ï¿½ltima actualizaciï¿½n:** 2025-01-15  
+**URL de verificaciï¿½n:** https://www.svydleger.com

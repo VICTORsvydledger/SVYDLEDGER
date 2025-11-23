@@ -1,22 +1,22 @@
-# ??? Guía de Configuración de Herramientas MCP - SVYD LEDGER
+# ??? Guï¿½a de Configuraciï¿½n de Herramientas MCP - SVYD LEDGER
 
-## ?? ¿Qué es MCP?
+## ?? ï¿½Quï¿½ es MCP?
 
-**Model Context Protocol (MCP)** es un protocolo estándar que permite a los asistentes de IA (como GitHub Copilot) acceder a herramientas externas, datos y servicios de forma segura y controlada.
+**Model Context Protocol (MCP)** es un protocolo estï¿½ndar que permite a los asistentes de IA (como GitHub Copilot) acceder a herramientas externas, datos y servicios de forma segura y controlada.
 
 ---
 
 ## ? **HERRAMIENTAS MCP ACTIVADAS PARA TU PROYECTO**
 
-### **1. Azure MCP Server** (? CRÍTICA)
+### **1. Azure MCP Server** (? CRï¿½TICA)
 
-**Por qué la necesitas:**
-- Gestión de recursos Azure (AKS, ACR, Storage, SQL, Service Bus)
+**Por quï¿½ la necesitas:**
+- Gestiï¿½n de recursos Azure (AKS, ACR, Storage, SQL, Service Bus)
 - Deployment de infraestructura con Terraform
 - Monitoreo y logs
-- Gestión de Key Vault y secretos
+- Gestiï¿½n de Key Vault y secretos
 
-**Herramientas específicas activadas:**
+**Herramientas especï¿½ficas activadas:**
 ```
 ? appservice        - Azure App Services (frontend)
 ? functionapp       - Azure Functions (si las usas)
@@ -25,7 +25,7 @@
 ? deploy            - Deployment automation
 ? get_bestpractices - Best practices para Azure
 ? azureterraformbestpractices - Terraform best practices
-? monitor           - Azure Monitor (logs/métricas)
+? monitor           - Azure Monitor (logs/mï¿½tricas)
 ? resourcehealth    - Estado de recursos
 ? group_list        - Listar resource groups
 ? applens           - Diagnostics avanzados
@@ -33,38 +33,38 @@
 
 ---
 
-### **2. Microsoft Learn** (? CRÍTICA)
+### **2. Microsoft Learn** (? CRï¿½TICA)
 
-**Por qué la necesitas:**
-- Documentación oficial de Azure
-- Ejemplos de código de React, TypeScript, Node.js
+**Por quï¿½ la necesitas:**
+- Documentaciï¿½n oficial de Azure
+- Ejemplos de cï¿½digo de React, TypeScript, Node.js
 - Best practices de desarrollo
 
-**Herramientas específicas activadas:**
+**Herramientas especï¿½ficas activadas:**
 ```
-? microsoft_docs_search      - Buscar documentación
+? microsoft_docs_search      - Buscar documentaciï¿½n
 ? microsoft_docs_fetch       - Obtener docs completas
-? microsoft_code_sample_search - Buscar ejemplos de código
+? microsoft_code_sample_search - Buscar ejemplos de cï¿½digo
 ```
 
 ---
 
 ## ? **HERRAMIENTAS DESACTIVADAS (No necesarias para tu proyecto)**
 
-| Herramienta | Por Qué Desactivada |
+| Herramienta | Por Quï¿½ Desactivada |
 |-------------|---------------------|
-| ? **Azure SignalR** | No usas comunicación en tiempo real |
+| ? **Azure SignalR** | No usas comunicaciï¿½n en tiempo real |
 | ? **Azure Grafana** | Ya tienes Azure Monitor + App Insights |
 | ? **Azure Speech** | No hay speech-to-text en tu app |
 | ? **Azure Marketplace** | No necesitas servicios de marketplace ahora |
 
 ---
 
-## ?? **CÓMO FUNCIONA EN VS CODE**
+## ?? **Cï¿½MO FUNCIONA EN VS CODE**
 
-### **Archivo de Configuración: `.mcp.json`**
+### **Archivo de Configuraciï¿½n: `.mcp.json`**
 
-He creado el archivo `.mcp.json` en la raíz de tu proyecto con la configuración optimizada.
+He creado el archivo `.mcp.json` en la raï¿½z de tu proyecto con la configuraciï¿½n optimizada.
 
 ```json
 {
@@ -94,7 +94,7 @@ He creado el archivo `.mcp.json` en la raíz de tu proyecto con la configuración 
 
 ---
 
-## ?? **OPTIMIZACIÓN POR FASE DEL PROYECTO**
+## ?? **OPTIMIZACIï¿½N POR FASE DEL PROYECTO**
 
 ### **Fase 1: Desarrollo Frontend (ACTUAL)**
 
@@ -102,11 +102,11 @@ He creado el archivo `.mcp.json` en la raíz de tu proyecto con la configuración 
 ACTIVAS:
   ? Microsoft Learn (docs de React/TypeScript)
   ? Azure App Service (para deployment)
-  ? Azure Best Practices (código)
+  ? Azure Best Practices (cï¿½digo)
 
 DESACTIVADAS:
-  ? Azure Monitor (no hay deployment aún)
-  ? Azure App Lens (no hay issues aún)
+  ? Azure Monitor (no hay deployment aï¿½n)
+  ? Azure App Lens (no hay issues aï¿½n)
 ```
 
 ---
@@ -141,7 +141,7 @@ DESACTIVADAS:
 
 ---
 
-### **Fase 4: Producción**
+### **Fase 4: Producciï¿½n**
 
 ```
 ACTIVAS:
@@ -156,27 +156,27 @@ DESACTIVADAS:
 
 ---
 
-## ?? **VENTAJAS DE ESTA CONFIGURACIÓN**
+## ?? **VENTAJAS DE ESTA CONFIGURACIï¿½N**
 
 ### ? **Rendimiento Optimizado**
-- Solo las herramientas necesarias están activas
+- Solo las herramientas necesarias estï¿½n activas
 - Menos llamadas a APIs innecesarias
-- Respuestas más rápidas de Copilot
+- Respuestas mï¿½s rï¿½pidas de Copilot
 
 ### ? **Seguridad**
-- Control granular de qué herramientas pueden ejecutarse
+- Control granular de quï¿½ herramientas pueden ejecutarse
 - No se exponen APIs innecesarias
-- Autenticación solo donde se necesita
+- Autenticaciï¿½n solo donde se necesita
 
 ### ? **Costos Reducidos**
 - Menos uso de tokens MCP
 - Menos llamadas a servicios Azure
-- Optimización de recursos
+- Optimizaciï¿½n de recursos
 
 ### ? **Mejor Experiencia de Desarrollo**
-- Sugerencias más relevantes
+- Sugerencias mï¿½s relevantes
 - Menos ruido en las opciones
-- Contexto más preciso para Copilot
+- Contexto mï¿½s preciso para Copilot
 
 ---
 
@@ -186,27 +186,27 @@ DESACTIVADAS:
 
 1. Abre la **Paleta de Comandos** (Ctrl+Shift+P)
 2. Busca: `GitHub Copilot: Show MCP Servers`
-3. Verás la lista de servidores MCP activos
+3. Verï¿½s la lista de servidores MCP activos
 
 ### **En GitHub Copilot Chat:**
 
 Pregunta:
 ```
-@workspace Qué herramientas MCP están activas?
+@workspace Quï¿½ herramientas MCP estï¿½n activas?
 ```
 
 ---
 
-## ??? **APROBACIÓN DE HERRAMIENTAS**
+## ??? **APROBACIï¿½N DE HERRAMIENTAS**
 
-Cuando una herramienta MCP intenta ejecutarse por primera vez, VS Code te pedirá confirmación:
+Cuando una herramienta MCP intenta ejecutarse por primera vez, VS Code te pedirï¿½ confirmaciï¿½n:
 
 ```
 ??????????????????????????????????????????
 ? Allow Azure MCP Server to:            ?
-? • Access Azure resources               ?
-? • Deploy infrastructure                ?
-? • Read/write storage                   ?
+? ï¿½ Access Azure resources               ?
+? ï¿½ Deploy infrastructure                ?
+? ï¿½ Read/write storage                   ?
 ?                                        ?
 ? [ ] Allow for this session             ?
 ? [ ] Allow for this solution            ?
@@ -216,30 +216,30 @@ Cuando una herramienta MCP intenta ejecutarse por primera vez, VS Code te pedirá
 ??????????????????????????????????????????
 ```
 
-**Recomendación:**
+**Recomendaciï¿½n:**
 - Primera vez: "Allow for this session" (probar)
 - Si funciona bien: "Allow for this solution"
-- Solo si confías 100%: "Allow always"
+- Solo si confï¿½as 100%: "Allow always"
 
 ---
 
-## ?? **CONFIGURACIÓN AVANZADA**
+## ?? **CONFIGURACIï¿½N AVANZADA**
 
 ### **Settings en `.mcp.json`:**
 
 ```json
 {
   "settings": {
-    "autoApprove": false,        // Siempre pedir confirmación
-    "sessionCache": true,        // Cache de herramientas en sesión
+    "autoApprove": false,        // Siempre pedir confirmaciï¿½n
+    "sessionCache": true,        // Cache de herramientas en sesiï¿½n
     "timeout": 30000            // Timeout de 30 segundos
   }
 }
 ```
 
-### **¿Cuándo cambiar?**
+### **ï¿½Cuï¿½ndo cambiar?**
 
-| Setting | Valor Recomendado | Cuándo Cambiar |
+| Setting | Valor Recomendado | Cuï¿½ndo Cambiar |
 |---------|-------------------|----------------|
 | `autoApprove` | `false` | Solo `true` en CI/CD automatizado |
 | `sessionCache` | `true` | `false` si hay problemas de estado |
@@ -247,7 +247,7 @@ Cuando una herramienta MCP intenta ejecutarse por primera vez, VS Code te pedirá
 
 ---
 
-## ?? **RECURSOS Y DOCUMENTACIÓN**
+## ?? **RECURSOS Y DOCUMENTACIï¿½N**
 
 ### **Oficiales:**
 - [MCP Specification](https://modelcontextprotocol.io/specification)
@@ -255,17 +255,17 @@ Cuando una herramienta MCP intenta ejecutarse por primera vez, VS Code te pedirá
 - [VS Code MCP Integration](https://code.visualstudio.com/docs/copilot/mcp)
 
 ### **En tu proyecto:**
-- `.mcp.json` - Configuración de herramientas
-- `MCP-TOOLS-GUIDE.md` - Esta guía (este archivo)
-- `docs/TROUBLESHOOTING.md` - Solución de problemas
+- `.mcp.json` - Configuraciï¿½n de herramientas
+- `MCP-TOOLS-GUIDE.md` - Esta guï¿½a (este archivo)
+- `docs/TROUBLESHOOTING.md` - Soluciï¿½n de problemas
 
 ---
 
-## ?? **PRÓXIMOS PASOS**
+## ?? **PRï¿½XIMOS PASOS**
 
 ### **1. Reiniciar VS Code**
 ```powershell
-# Cierra y abre VS Code para aplicar la configuración
+# Cierra y abre VS Code para aplicar la configuraciï¿½n
 ```
 
 ### **2. Verificar Herramientas**
@@ -281,31 +281,31 @@ Cuando una herramienta MCP intenta ejecutarse por primera vez, VS Code te pedirá
 ```
 
 ### **4. Ajustar si Necesario**
-Si alguna herramienta no funciona o necesitas más, edita `.mcp.json`
+Si alguna herramienta no funciona o necesitas mï¿½s, edita `.mcp.json`
 
 ---
 
 ## ? **PREGUNTAS FRECUENTES**
 
-### **Q: ¿Necesito instalar algo más?**
+### **Q: ï¿½Necesito instalar algo mï¿½s?**
 A: No, solo necesitas:
 - VS Code con GitHub Copilot
 - Node.js (para Azure MCP Server)
 - Azure CLI (si usas Azure)
 
-### **Q: ¿Puedo agregar más herramientas?**
-A: Sí, edita `.mcp.json` y agrega en `allowedTools`
+### **Q: ï¿½Puedo agregar mï¿½s herramientas?**
+A: Sï¿½, edita `.mcp.json` y agrega en `allowedTools`
 
-### **Q: ¿Cómo desactivo una herramienta temporalmente?**
-A: Agrégala a `disabledTools` en `.mcp.json`
+### **Q: ï¿½Cï¿½mo desactivo una herramienta temporalmente?**
+A: Agrï¿½gala a `disabledTools` en `.mcp.json`
 
-### **Q: ¿Las herramientas MCP tienen costo?**
+### **Q: ï¿½Las herramientas MCP tienen costo?**
 A: No directamente, pero:
 - Las llamadas a Azure APIs pueden tener costo
-- GitHub Copilot requiere suscripción
+- GitHub Copilot requiere suscripciï¿½n
 
-### **Q: ¿Cómo sé si una herramienta está funcionando?**
-A: Usa GitHub Copilot Chat y pregunta algo específico:
+### **Q: ï¿½Cï¿½mo sï¿½ si una herramienta estï¿½ funcionando?**
+A: Usa GitHub Copilot Chat y pregunta algo especï¿½fico:
 ```
 @workspace List my Azure storage accounts
 ```
@@ -324,7 +324,7 @@ Azure:
 
 GitHub Copilot:
   ? Copilot License - Para usar MCP tools
-  ? Repo Access - Para acceder a tu código
+  ? Repo Access - Para acceder a tu cï¿½digo
 ```
 
 ### **Best Practices:**
@@ -336,7 +336,7 @@ GitHub Copilot:
    - No hardcodees credenciales
 
 3. ? **Revisa logs de MCP**
-   - Verifica qué herramientas se ejecutan
+   - Verifica quï¿½ herramientas se ejecutan
 
 4. ? **Limita alcance de herramientas**
    - Solo activa lo que necesitas
@@ -350,7 +350,7 @@ GitHub Copilot:
 En VS Code:
 1. **View** > **Output**
 2. Selecciona: **GitHub Copilot** en el dropdown
-3. Busca líneas con `[MCP]`
+3. Busca lï¿½neas con `[MCP]`
 
 ### **Logs Comunes:**
 
@@ -365,30 +365,30 @@ En VS Code:
 
 ## ?? **RESULTADO ESPERADO**
 
-Con esta configuración, tendrás:
+Con esta configuraciï¿½n, tendrï¿½s:
 
 ? **Herramientas Optimizadas**
 - Solo lo necesario para SVYD LEDGER
 - Sin overhead innecesario
 
 ? **Mejor Rendimiento**
-- Respuestas más rápidas
+- Respuestas mï¿½s rï¿½pidas
 - Menos errores
 
-? **Más Seguridad**
+? **Mï¿½s Seguridad**
 - Control granular
-- Aprobaciones explícitas
+- Aprobaciones explï¿½citas
 
-? **Desarrollo Más Eficiente**
+? **Desarrollo Mï¿½s Eficiente**
 - Sugerencias relevantes
 - Contexto preciso
 
 ---
 
-**¡Configuración de herramientas MCP optimizada para SVYD LEDGER!** ???
+**ï¿½Configuraciï¿½n de herramientas MCP optimizada para SVYD LEDGER!** ???
 
 ---
 
-**Última actualización:** 2024-01-15  
-**Versión:** 1.0.0  
-**Estado:** ? Configuración lista para usar
+**ï¿½ltima actualizaciï¿½n:** 2024-01-15  
+**Versiï¿½n:** 1.0.0  
+**Estado:** ? Configuraciï¿½n lista para usar
