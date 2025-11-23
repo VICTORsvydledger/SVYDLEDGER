@@ -1,221 +1,52 @@
-{
-  "welcomePage": {
-    "subtitle": "Evrensel Muhasebe Sistemi ve Finansal Yönetim",
-    "description": "Bu sistem çal???r: hesap kodlar? olmadan, hesap plan? olmadan, yevmiye kay?tlar? olmadan, mali kapan??lar olmadan, mali dönemler olmadan. Zamans?z. Gerçek ki?i ile tüzel ki?i aras?nda ayr?m yapma gere?i yok",
-    "welcome": "Ho? Geldiniz"
+ï»¿{
+  "welcome": {
+    "title": "Ho? Geldiniz",
+    "subtitle": "Evrensel Muhasebe Sistemi ve Finansal Yï¿½netim",
+    "tagline": "Bu sistem ï¿½al???r: hesap kodlar? olmadan, hesap plan? olmadan, yevmiye kay?tlar? olmadan, mali kapan??lar olmadan, mali dï¿½nemler olmadan. Zamans?z. Gerï¿½ek ki?i ile tï¿½zel ki?i aras?nda ayr?m yapma gere?i yok",
+    "signIn": "Giri? Yap",
+    "signUp": "Kay?t Ol"
   },
-  "auth": {
-    "signIn": {
-      "title": "Giri? Yap",
-      "email": "E-posta Adresi",
-      "password": "?ifre",
-      "rememberMe": "Beni Hat?rla",
-      "forgotPassword": "?ifremi Unuttum?",
-      "submit": "Giri? Yap",
-      "twoFactorRequired": "?ki Faktörlü Kimlik Do?rulama Gerekli"
+  "postAuth": {
+    "backButton": "Ho? Geldinize Dï¿½n",
+    "loggedInAs": "Giri? yap?ld?:",
+    "adminOnly": "Bu blo?u yaln?zca yï¿½netici dï¿½zenleyebilir",
+    "headers": {
+      "createUser": "Yeni Kullan?c? Olu?tur",
+      "userList": "Kullan?c? Listesi",
+      "authorizedEmails": "YETK?LEND?R?LM?? E-POSTALAR",
+      "password": "??FRE"
     },
-    "signUp": {
-      "title": "Kay?t Ol",
-      "email": "E-posta Adresi",
-      "password": "?ifre",
-      "confirmPassword": "?ifreyi Onayla",
-      "firstName": "Ad",
-      "lastName": "Soyad",
-      "company": "?irket (?ste?e Ba?l?)",
-      "submit": "Hesap Olu?tur",
-      "termsAgreement": "?artlar ve Ko?ullar? kabul ediyorum"
+    "labels": {
+      "nombre": "Ad",
+      "id": "Id",
+      "idTributario": "Vergi Kimli?i",
+      "pais": "ï¿½lke",
+      "moneda": "Para Birimi",
+      "idioma": "Dil"
     },
-    "forgotPassword": {
-      "title": "?ifremi Unuttum?",
-      "description": "Gelen kutunuza kurtarma e-postas? gönderin",
-      "email": "E-posta Adresi",
-      "send": "Kurtarma E-postas? Gönder",
-      "sent": "Kurtarma e-postas? gönderildi! Gelen kutunuzu kontrol edin.",
-      "close": "Kapat",
-      "cancel": "?ptal"
+    "buttons": {
+      "entrar": "G?R",
+      "editar": "Dï¿½ZENLE",
+      "papelera": "ï¿½ï¿½P",
+      "pagar": "ï¿½DE",
+      "saldo": "BAK?YE",
+      "pagarRegistro": "Yeni kullan?c? kayd? iï¿½in ï¿½deme yap"
     },
-    "twoFactor": {
-      "title": "?ki Faktörlü Kimlik Do?rulama",
-      "description": "E-postan?za gönderilen 6 haneli do?rulama kodunu girin.",
-      "code": "Do?rulama Kodu",
-      "placeholder": "000000",
-      "verify": "Do?rula"
+    "messages": {
+      "minimumPayment": "Minimum ï¿½deme tutar? $10",
+      "selectUser": "Lï¿½tfen listeden bir kullan?c? seï¿½in",
+      "selectUserEdit": "Lï¿½tfen dï¿½zenlemek iï¿½in bir kullan?c? seï¿½in",
+      "selectUserDelete": "Lï¿½tfen silmek iï¿½in bir kullan?c? seï¿½in",
+      "selectUserPay": "Lï¿½tfen ï¿½deme yapmak iï¿½in bir kullan?c? seï¿½in",
+      "entering": "Kullan?c? kimli?i ile sisteme giri?:",
+      "editing": "Kullan?c? kimli?i dï¿½zenleme:",
+      "movedToTrash": "Kullan?c? kimli?i: {id} ï¿½ï¿½pe ta??nd?",
+      "processingPayment": "Kullan?c? kimli?i iï¿½in ï¿½deme i?lemi:"
+    },
+    "tableColumns": {
+      "nombre": "AD",
+      "id": "ID",
+      "saldo": "$"
     }
-  },
-  "dashboard": {
-    "title": "Muhasebe Kontrol Paneli",
-    "welcome": "Muhasebe kontrol panelinize ho? geldiniz"
-  },
-  "accounts": {
-    "title": "Hesaplar",
-    "chartOfAccounts": "Hesap Plan?",
-    "generalLedger": "Genel Muhasebe Defteri",
-    "accountType": "Hesap Türü",
-    "accountNumber": "Hesap Numaras?",
-    "accountName": "Hesap Ad?",
-    "balance": "Bakiye",
-    "debit": "Borç",
-    "credit": "Alacak",
-    "create": "Yeni Hesap Olu?tur",
-    "edit": "Hesab? Düzenle",
-    "delete": "Hesab? Sil",
-    "types": {
-      "asset": "Varl?k (Aktif)",
-      "liability": "Borç (Pasif)",
-      "equity": "Özsermaye",
-      "revenue": "Gelir",
-      "expense": "Gider",
-      "contraAsset": "Kar??t Varl?k",
-      "contraLiability": "Kar??t Borç",
-      "contraEquity": "Kar??t Özsermaye"
-    }
-  },
-  "journal": {
-    "title": "Yevmiye Kay?tlar?",
-    "createEntry": "Kay?t Olu?tur",
-    "entryDate": "Kay?t Tarihi",
-    "description": "Aç?klama",
-    "reference": "Referans Numaras?",
-    "amount": "Tutar",
-    "post": "Kayd? Naklet",
-    "posted": "Nakledildi",
-    "pending": "Beklemede",
-    "reversed": "?ptal Edildi",
-    "adjusting": "Düzeltme Kayd?",
-    "closing": "Kapan?? Kayd?",
-    "opening": "Aç?l?? Kayd?"
-  },
-  "reports": {
-    "title": "Finansal Raporlar",
-    "balanceSheet": "Bilanço (Finansal Durum Tablosu)",
-    "incomeStatement": "Gelir Tablosu (Kapsaml? Gelir Tablosu)",
-    "cashFlow": "Nakit Ak?? Tablosu",
-    "trialBalance": "Mizan",
-    "generalLedger": "Genel Muhasebe Defteri Raporu",
-    "accountsReceivable": "Alacak Hesaplar?",
-    "accountsPayable": "Borç Hesaplar?",
-    "aging": "Ya?land?rma Raporu",
-    "generate": "Rapor Olu?tur",
-    "export": "D??a Aktar",
-    "print": "Yazd?r",
-    "dateRange": "Tarih Aral???",
-    "fromDate": "Ba?lang?ç Tarihi",
-    "toDate": "Biti? Tarihi"
-  },
-  "settings": {
-    "title": "Ayarlar",
-    "general": "Genel Ayarlar",
-    "company": "?irket Bilgileri",
-    "fiscal": "Mali Dönem",
-    "users": "Kullan?c? Yönetimi",
-    "security": "Güvenlik",
-    "notifications": "Bildirimler",
-    "language": "Dil",
-    "currency": "Para Birimi",
-    "dateFormat": "Tarih Format?",
-    "timezone": "Saat Dilimi",
-    "save": "De?i?iklikleri Kaydet",
-    "cancel": "?ptal"
-  },
-  "common": {
-    "save": "Kaydet",
-    "cancel": "?ptal",
-    "delete": "Sil",
-    "edit": "Düzenle",
-    "create": "Olu?tur",
-    "search": "Ara",
-    "filter": "Filtrele",
-    "export": "D??a Aktar",
-    "import": "?çe Aktar",
-    "refresh": "Yenile",
-    "close": "Kapat",
-    "submit": "Gönder",
-    "reset": "S?f?rla",
-    "back": "Geri",
-    "next": "?leri",
-    "previous": "Önceki",
-    "loading": "Yükleniyor...",
-    "error": "Hata",
-    "success": "Ba?ar?l?",
-    "warning": "Uyar?",
-    "info": "Bilgi",
-    "confirm": "Onayla",
-    "yes": "Evet",
-    "no": "Hay?r",
-    "all": "Tümü",
-    "none": "Hiçbiri",
-    "select": "Seç",
-    "selected": "Seçildi",
-    "total": "Toplam",
-    "subtotal": "Ara Toplam",
-    "date": "Tarih",
-    "time": "Saat",
-    "name": "Ad",
-    "description": "Aç?klama",
-    "amount": "Tutar",
-    "status": "Durum",
-    "actions": "??lemler"
-  },
-  "validation": {
-    "required": "Bu alan zorunludur",
-    "email": "Geçerli bir e-posta adresi girin",
-    "minLength": "En az {min} karakter olmal?d?r",
-    "maxLength": "En fazla {max} karakter olabilir",
-    "numeric": "Sadece rakam giriniz",
-    "positive": "Pozitif bir say? olmal?d?r",
-    "passwordMatch": "?ifreler e?le?miyor",
-    "invalidDate": "Geçersiz tarih",
-    "futureDate": "Gelecek tarih olamaz",
-    "pastDate": "Geçmi? tarih olamaz"
-  },
-  "notifications": {
-    "success": {
-      "saved": "Ba?ar?yla kaydedildi",
-      "deleted": "Ba?ar?yla silindi",
-      "created": "Ba?ar?yla olu?turuldu",
-      "updated": "Ba?ar?yla güncellendi",
-      "exported": "Ba?ar?yla d??a aktar?ld?",
-      "imported": "Ba?ar?yla içe aktar?ld?"
-    },
-    "error": {
-      "general": "Bir hata olu?tu. Tekrar deneyin.",
-      "network": "A? hatas?. Ba?lant?n?z? kontrol edin.",
-      "unauthorized": "Yetkilendirilmemi?. Tekrar giri? yap?n.",
-      "notFound": "Kaynak bulunamad?",
-      "validation": "Do?rulama hatas?. Giri?inizi kontrol edin.",
-      "server": "Sunucu hatas?. Daha sonra tekrar deneyin."
-    }
-  },
-  "fiscal": {
-    "period": "Mali Dönem",
-    "year": "Mali Y?l",
-    "quarter": "Çeyrek",
-    "month": "Ay",
-    "startDate": "Ba?lang?ç Tarihi",
-    "endDate": "Biti? Tarihi",
-    "status": {
-      "open": "Aç?k",
-      "closed": "Kapal?",
-      "locked": "Kilitli"
-    },
-    "closing": {
-      "title": "Mali Dönem Kapan???",
-      "description": "Mevcut mali dönemi kapat?n ve bir sonrakine geçin",
-      "confirm": "Bu dönemi kapatmak istedi?inizden emin misiniz?",
-      "success": "Mali dönem ba?ar?yla kapat?ld?",
-      "error": "Mali dönem kapat?lamad?"
-    }
-  },
-  "taxes": {
-    "title": "Vergi Yönetimi",
-    "vatRate": "KDV Oran? (Katma De?er Vergisi)",
-    "withholdingTax": "Stopaj Vergisi",
-    "salesTax": "Sat?? Vergisi",
-    "incomeTax": "Gelir Vergisi",
-    "taxReport": "Vergi Raporu",
-    "taxPeriod": "Vergi Dönemi",
-    "taxableAmount": "Vergilendirilebilir Tutar",
-    "taxAmount": "Vergi Tutar?",
-    "netAmount": "Net Tutar"
   }
 }

@@ -1,0 +1,52 @@
+﻿{
+  "welcome": {
+    "title": "Bienvenue",
+    "subtitle": "Syst�me Comptable Universel",
+    "tagline": "Ce syst�me fonctionne: sans codes, sans plan comptable, sans �critures comptables, sans cl�tures, sans exercices comptables. Intemporel. Pas besoin de distinguer entre personne physique et personne morale",
+    "signIn": "Se Connecter",
+    "signUp": "S'inscrire"
+  },
+  "postAuth": {
+    "backButton": "Retour � l'accueil",
+    "loggedInAs": "Connect� en tant que:",
+    "adminOnly": "Seul l'administrateur peut modifier ce bloc",
+    "headers": {
+      "createUser": "Cr�er un Nouvel Utilisateur",
+      "userList": "Liste des Utilisateurs",
+      "authorizedEmails": "E-MAILS AUTORIS�S",
+      "password": "MOT DE PASSE"
+    },
+    "labels": {
+      "nombre": "Nom",
+      "id": "Id",
+      "idTributario": "ID Fiscal",
+      "pais": "Pays",
+      "moneda": "Devise",
+      "idioma": "Langue"
+    },
+    "buttons": {
+      "entrar": "ENTRER",
+      "editar": "MODIFIER",
+      "papelera": "CORBEILLE",
+      "pagar": "PAYER",
+      "saldo": "SOLDE",
+      "pagarRegistro": "Payer l'inscription du nouvel utilisateur"
+    },
+    "messages": {
+      "minimumPayment": "Montant minimum de paiement $10",
+      "selectUser": "Veuillez s�lectionner un utilisateur dans la liste",
+      "selectUserEdit": "Veuillez s�lectionner un utilisateur � modifier",
+      "selectUserDelete": "Veuillez s�lectionner un utilisateur � supprimer",
+      "selectUserPay": "Veuillez s�lectionner un utilisateur � payer",
+      "entering": "Entr�e dans le syst�me avec l'utilisateur ID:",
+      "editing": "Modification de l'utilisateur ID:",
+      "movedToTrash": "Utilisateur ID: {id} d�plac� vers la corbeille",
+      "processingPayment": "Traitement du paiement pour l'utilisateur ID:"
+    },
+    "tableColumns": {
+      "nombre": "NOM",
+      "id": "ID",
+      "saldo": "$"
+    }
+  }
+}

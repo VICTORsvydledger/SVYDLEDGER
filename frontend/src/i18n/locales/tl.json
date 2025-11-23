@@ -1,221 +1,52 @@
-{
-  "welcomePage": {
+﻿{
+  "welcome": {
+    "title": "Maligayang Pagdating",
     "subtitle": "Pandaigdigang Sistema ng Accounting at Pamamahala ng Pananalapi",
-    "description": "Ang sistemang ito ay gumagana: walang mga account codes, walang chart of accounts, walang mga journal entries, walang mga fiscal closing, walang mga fiscal periods. Walang panahon. Hindi kailangang magtangi sa pagitan ng natural person at juridical person",
-    "welcome": "Maligayang Pagdating"
+    "tagline": "Ang sistemang ito ay gumagana: walang mga account codes, walang chart of accounts, walang mga journal entries, walang mga fiscal closing, walang mga fiscal periods. Walang panahon. Hindi kailangang magtangi sa pagitan ng natural person at juridical person",
+    "signIn": "Mag-sign In",
+    "signUp": "Mag-sign Up"
   },
-  "auth": {
-    "signIn": {
-      "title": "Mag-sign In",
-      "email": "Email Address",
-      "password": "Password",
-      "rememberMe": "Tandaan Ako",
-      "forgotPassword": "Nakalimutan ang Password?",
-      "submit": "Mag-sign In",
-      "twoFactorRequired": "Kinakailangan ang Two-Factor Authentication"
+  "postAuth": {
+    "backButton": "Bumalik sa Welcome",
+    "loggedInAs": "Naka-log in bilang:",
+    "adminOnly": "Ang administrator lamang ang maaaring mag-edit ng block na ito",
+    "headers": {
+      "createUser": "Lumikha ng Bagong User",
+      "userList": "Listahan ng User",
+      "authorizedEmails": "MGA AWTORISADONG EMAIL",
+      "password": "PASSWORD"
     },
-    "signUp": {
-      "title": "Mag-sign Up",
-      "email": "Email Address",
-      "password": "Password",
-      "confirmPassword": "Kumpirmahin ang Password",
-      "firstName": "Pangalan",
-      "lastName": "Apelyido",
-      "company": "Kumpanya (Opsyonal)",
-      "submit": "Lumikha ng Account",
-      "termsAgreement": "Sumasang-ayon ako sa mga Tuntunin at Kondisyon"
+    "labels": {
+      "nombre": "Pangalan",
+      "id": "Id",
+      "idTributario": "Tax ID",
+      "pais": "Bansa",
+      "moneda": "Pera",
+      "idioma": "Wika"
     },
-    "forgotPassword": {
-      "title": "Nakalimutan ang Password?",
-      "description": "Magpadala ng recovery email sa iyong inbox",
-      "email": "Email Address",
-      "send": "Magpadala ng Recovery Email",
-      "sent": "Na-send na ang recovery email! Suriin ang iyong inbox.",
-      "close": "Isara",
-      "cancel": "Kanselahin"
+    "buttons": {
+      "entrar": "PUMASOK",
+      "editar": "I-EDIT",
+      "papelera": "BASURAHAN",
+      "pagar": "MAGBAYAD",
+      "saldo": "BALANSE",
+      "pagarRegistro": "Magbayad para sa bagong user registration"
     },
-    "twoFactor": {
-      "title": "Two-Factor Authentication",
-      "description": "Ipasok ang 6-digit verification code na ipinadala sa iyong email.",
-      "code": "Verification Code",
-      "placeholder": "000000",
-      "verify": "I-verify"
+    "messages": {
+      "minimumPayment": "Minimum na halaga ng bayad $10",
+      "selectUser": "Pakipili ang isang user mula sa listahan",
+      "selectUserEdit": "Pakipili ang isang user na ie-edit",
+      "selectUserDelete": "Pakipili ang isang user na tatanggalin",
+      "selectUserPay": "Pakipili ang isang user na babayaran",
+      "entering": "Pumapasok sa system gamit ang user ID:",
+      "editing": "Ine-edit ang user ID:",
+      "movedToTrash": "User ID: {id} ay inilipat sa basurahan",
+      "processingPayment": "Pinoproseso ang bayad para sa user ID:"
+    },
+    "tableColumns": {
+      "nombre": "PANGALAN",
+      "id": "ID",
+      "saldo": "$"
     }
-  },
-  "dashboard": {
-    "title": "Dashboard ng Accounting",
-    "welcome": "Maligayang pagdating sa iyong accounting dashboard"
-  },
-  "accounts": {
-    "title": "Mga Account",
-    "chartOfAccounts": "Chart of Accounts",
-    "generalLedger": "General Ledger",
-    "accountType": "Uri ng Account",
-    "accountNumber": "Account Number",
-    "accountName": "Pangalan ng Account",
-    "balance": "Balance",
-    "debit": "Debit",
-    "credit": "Credit",
-    "create": "Lumikha ng Bagong Account",
-    "edit": "I-edit ang Account",
-    "delete": "Burahin ang Account",
-    "types": {
-      "asset": "Asset (Ari-arian)",
-      "liability": "Liability (Pananagutan)",
-      "equity": "Equity (Ekwidad ng May-ari)",
-      "revenue": "Revenue (Kita)",
-      "expense": "Expense (Gastos)",
-      "contraAsset": "Contra-Asset",
-      "contraLiability": "Contra-Liability",
-      "contraEquity": "Contra-Equity"
-    }
-  },
-  "journal": {
-    "title": "Mga Journal Entry",
-    "createEntry": "Lumikha ng Entry",
-    "entryDate": "Petsa ng Entry",
-    "description": "Paglalarawan",
-    "reference": "Reference Number",
-    "amount": "Halaga",
-    "post": "I-post ang Entry",
-    "posted": "Nai-post",
-    "pending": "Nakabinbin",
-    "reversed": "Nirebersa",
-    "adjusting": "Adjusting Entry",
-    "closing": "Closing Entry",
-    "opening": "Opening Entry"
-  },
-  "reports": {
-    "title": "Mga Financial Report",
-    "balanceSheet": "Balance Sheet (Statement of Financial Position)",
-    "incomeStatement": "Income Statement (Statement of Comprehensive Income)",
-    "cashFlow": "Cash Flow Statement (Statement of Cash Flows)",
-    "trialBalance": "Trial Balance",
-    "generalLedger": "General Ledger Report",
-    "accountsReceivable": "Accounts Receivable (Mga Utang sa Atin)",
-    "accountsPayable": "Accounts Payable (Mga Utang Natin)",
-    "aging": "Aging Report",
-    "generate": "Bumuo ng Report",
-    "export": "I-export",
-    "print": "I-print",
-    "dateRange": "Saklaw ng Petsa",
-    "fromDate": "Mula sa Petsa",
-    "toDate": "Hanggang Petsa"
-  },
-  "settings": {
-    "title": "Mga Setting",
-    "general": "General Settings",
-    "company": "Company Information",
-    "fiscal": "Fiscal Period",
-    "users": "User Management",
-    "security": "Security",
-    "notifications": "Mga Notification",
-    "language": "Wika",
-    "currency": "Currency",
-    "dateFormat": "Date Format",
-    "timezone": "Timezone",
-    "save": "I-save ang mga Pagbabago",
-    "cancel": "Kanselahin"
-  },
-  "common": {
-    "save": "I-save",
-    "cancel": "Kanselahin",
-    "delete": "Burahin",
-    "edit": "I-edit",
-    "create": "Lumikha",
-    "search": "Maghanap",
-    "filter": "I-filter",
-    "export": "I-export",
-    "import": "I-import",
-    "refresh": "I-refresh",
-    "close": "Isara",
-    "submit": "Isumite",
-    "reset": "I-reset",
-    "back": "Bumalik",
-    "next": "Susunod",
-    "previous": "Nakaraan",
-    "loading": "Naglo-load...",
-    "error": "Error",
-    "success": "Tagumpay",
-    "warning": "Babala",
-    "info": "Impormasyon",
-    "confirm": "Kumpirmahin",
-    "yes": "Oo",
-    "no": "Hindi",
-    "all": "Lahat",
-    "none": "Wala",
-    "select": "Pumili",
-    "selected": "Napili",
-    "total": "Kabuuan",
-    "subtotal": "Subtotal",
-    "date": "Petsa",
-    "time": "Oras",
-    "name": "Pangalan",
-    "description": "Paglalarawan",
-    "amount": "Halaga",
-    "status": "Status",
-    "actions": "Mga Aksyon"
-  },
-  "validation": {
-    "required": "Kinakailangan ang field na ito",
-    "email": "Maglagay ng wastong email address",
-    "minLength": "Dapat may hindi bababa sa {min} character",
-    "maxLength": "Dapat may hindi hihigit sa {max} character",
-    "numeric": "Dapat numero lamang",
-    "positive": "Dapat positibong numero",
-    "passwordMatch": "Hindi tugma ang mga password",
-    "invalidDate": "Hindi wastong petsa",
-    "futureDate": "Hindi maaaring petsa sa hinaharap",
-    "pastDate": "Hindi maaaring petsa sa nakaraan"
-  },
-  "notifications": {
-    "success": {
-      "saved": "Matagumpay na na-save",
-      "deleted": "Matagumpay na nabura",
-      "created": "Matagumpay na nalikha",
-      "updated": "Matagumpay na na-update",
-      "exported": "Matagumpay na na-export",
-      "imported": "Matagumpay na na-import"
-    },
-    "error": {
-      "general": "May nangyaring error. Subukan muli.",
-      "network": "Network error. Suriin ang iyong koneksyon.",
-      "unauthorized": "Walang authorization. Mag-login muli.",
-      "notFound": "Hindi nahanap ang resource",
-      "validation": "Validation error. Suriin ang iyong input.",
-      "server": "Server error. Subukan muli mamaya."
-    }
-  },
-  "fiscal": {
-    "period": "Fiscal Period",
-    "year": "Fiscal Year",
-    "quarter": "Quarter",
-    "month": "Buwan",
-    "startDate": "Petsa ng Pagsisimula",
-    "endDate": "Petsa ng Pagtatapos",
-    "status": {
-      "open": "Bukas",
-      "closed": "Sarado",
-      "locked": "Naka-lock"
-    },
-    "closing": {
-      "title": "Fiscal Period Closing",
-      "description": "Isara ang kasalukuyang fiscal period at maglipat sa susunod",
-      "confirm": "Sigurado ka bang nais mong isara ang period na ito?",
-      "success": "Matagumpay na naisara ang fiscal period",
-      "error": "Hindi maisara ang fiscal period"
-    }
-  },
-  "taxes": {
-    "title": "Tax Management",
-    "vatRate": "VAT Rate (Value Added Tax)",
-    "withholdingTax": "Withholding Tax",
-    "salesTax": "Sales Tax",
-    "incomeTax": "Income Tax",
-    "taxReport": "Tax Report",
-    "taxPeriod": "Tax Period",
-    "taxableAmount": "Taxable Amount",
-    "taxAmount": "Tax Amount",
-    "netAmount": "Net Amount"
   }
 }

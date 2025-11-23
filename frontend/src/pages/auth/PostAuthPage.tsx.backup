@@ -1,4 +1,4 @@
-import { Button, Input, Table, message } from 'antd'
+ï»¿import { Button, Input, Table, message } from 'antd'
 import { ArrowLeftOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import { useState } from 'react'
 import './PostAuthPage.scss'
@@ -10,7 +10,7 @@ interface PostAuthPageProps {
 }
 
 // Sistema de traducciones para PostAuthPage - 27 idiomas
-// Definir estructura de traducción base
+// Definir estructura de traducciÃ³n base
 interface PostAuthTranslation {
   backButton: string
   loggedInAs: string
@@ -101,18 +101,18 @@ function getTranslations(lang: string): PostAuthTranslation {
     },
     es: {
       backButton: 'Volver a Bienvenida',
-      loggedInAs: 'Sesión iniciada como:',
+      loggedInAs: 'SesiÃ³n iniciada como:',
       headers: {
         createUser: 'Crear Usuario Nuevo',
         userList: 'Lista de Usuarios',
         authorizedEmails: 'CORREOS AUTORIZADOS',
-        password: 'CONTRASEÑA'
+        password: 'CONTRASEÃ‘A'
       },
       labels: {
         nombre: 'Nombre',
         id: 'Id',
         idTributario: 'Id Tributario',
-        pais: 'País',
+        pais: 'PaÃ­s',
         moneda: 'Moneda',
         idioma: 'Idioma'
       },
@@ -125,7 +125,7 @@ function getTranslations(lang: string): PostAuthTranslation {
         pagarRegistro: 'Pagar registro de usuario nuevo'
       },
       messages: {
-        minimumPayment: 'Monto mínimo a pagar $10',
+        minimumPayment: 'Monto mÃ­nimo a pagar $10',
         selectUser: 'Por favor selecciona un usuario de la lista',
         selectUserEdit: 'Por favor selecciona un usuario para editar',
         selectUserDelete: 'Por favor selecciona un usuario para eliminar',
@@ -142,11 +142,11 @@ function getTranslations(lang: string): PostAuthTranslation {
       }
     },
     pt: {
-      backButton: 'Voltar à Boas-vindas',
+      backButton: 'Voltar Ã  Boas-vindas',
       loggedInAs: 'Conectado como:',
       headers: {
-        createUser: 'Criar Novo Usuário',
-        userList: 'Lista de Usuários',
+        createUser: 'Criar Novo UsuÃ¡rio',
+        userList: 'Lista de UsuÃ¡rios',
         authorizedEmails: 'E-MAILS AUTORIZADOS',
         password: 'SENHA'
       },
@@ -154,7 +154,7 @@ function getTranslations(lang: string): PostAuthTranslation {
         nombre: 'Nome',
         id: 'Id',
         idTributario: 'ID Fiscal',
-        pais: 'País',
+        pais: 'PaÃ­s',
         moneda: 'Moeda',
         idioma: 'Idioma'
       },
@@ -164,18 +164,18 @@ function getTranslations(lang: string): PostAuthTranslation {
         papelera: 'LIXEIRA',
         pagar: 'PAGAR',
         saldo: 'SALDO',
-        pagarRegistro: 'Pagar registro de novo usuário'
+        pagarRegistro: 'Pagar registro de novo usuÃ¡rio'
       },
       messages: {
-        minimumPayment: 'Valor mínimo de pagamento $10',
-        selectUser: 'Por favor selecione um usuário da lista',
-        selectUserEdit: 'Por favor selecione um usuário para editar',
-        selectUserDelete: 'Por favor selecione um usuário para excluir',
-        selectUserPay: 'Por favor selecione um usuário para pagar',
-        entering: 'Entrando no sistema com usuário ID:',
-        editing: 'Editando usuário ID:',
-        movedToTrash: 'Usuário ID: {id} movido para a lixeira',
-        processingPayment: 'Processando pagamento para usuário ID:'
+        minimumPayment: 'Valor mÃ­nimo de pagamento $10',
+        selectUser: 'Por favor selecione um usuÃ¡rio da lista',
+        selectUserEdit: 'Por favor selecione um usuÃ¡rio para editar',
+        selectUserDelete: 'Por favor selecione um usuÃ¡rio para excluir',
+        selectUserPay: 'Por favor selecione um usuÃ¡rio para pagar',
+        entering: 'Entrando no sistema com usuÃ¡rio ID:',
+        editing: 'Editando usuÃ¡rio ID:',
+        movedToTrash: 'UsuÃ¡rio ID: {id} movido para a lixeira',
+        processingPayment: 'Processando pagamento para usuÃ¡rio ID:'
       },
       tableColumns: {
         nombre: 'NOME',
@@ -184,12 +184,12 @@ function getTranslations(lang: string): PostAuthTranslation {
       }
     },
     fr: {
-      backButton: 'Retour à l\'accueil',
-      loggedInAs: 'Connecté en tant que:',
+      backButton: 'Retour Ã  l\'accueil',
+      loggedInAs: 'ConnectÃ© en tant que:',
       headers: {
-        createUser: 'Créer un Nouvel Utilisateur',
+        createUser: 'CrÃ©er un Nouvel Utilisateur',
         userList: 'Liste des Utilisateurs',
-        authorizedEmails: 'E-MAILS AUTORISÉS',
+        authorizedEmails: 'E-MAILS AUTORISÃ‰S',
         password: 'MOT DE PASSE'
       },
       labels: {
@@ -210,13 +210,13 @@ function getTranslations(lang: string): PostAuthTranslation {
       },
       messages: {
         minimumPayment: 'Montant minimum de paiement $10',
-        selectUser: 'Veuillez sélectionner un utilisateur dans la liste',
-        selectUserEdit: 'Veuillez sélectionner un utilisateur à modifier',
-        selectUserDelete: 'Veuillez sélectionner un utilisateur à supprimer',
-        selectUserPay: 'Veuillez sélectionner un utilisateur à payer',
-        entering: 'Entrée dans le système avec l\'utilisateur ID:',
+        selectUser: 'Veuillez sÃ©lectionner un utilisateur dans la liste',
+        selectUserEdit: 'Veuillez sÃ©lectionner un utilisateur Ã  modifier',
+        selectUserDelete: 'Veuillez sÃ©lectionner un utilisateur Ã  supprimer',
+        selectUserPay: 'Veuillez sÃ©lectionner un utilisateur Ã  payer',
+        entering: 'EntrÃ©e dans le systÃ¨me avec l\'utilisateur ID:',
         editing: 'Modification de l\'utilisateur ID:',
-        movedToTrash: 'Utilisateur ID: {id} déplacé vers la corbeille',
+        movedToTrash: 'Utilisateur ID: {id} dÃ©placÃ© vers la corbeille',
         processingPayment: 'Traitement du paiement pour l\'utilisateur ID:'
       },
       tableColumns: {
@@ -268,7 +268,7 @@ function getTranslations(lang: string): PostAuthTranslation {
       }
     },
     de: {
-      backButton: 'Zurück zur Willkommensseite',
+      backButton: 'ZurÃ¼ck zur Willkommensseite',
       loggedInAs: 'Angemeldet als:',
       headers: {
         createUser: 'Neuen Benutzer Erstellen',
@@ -281,7 +281,7 @@ function getTranslations(lang: string): PostAuthTranslation {
         id: 'Id',
         idTributario: 'Steuernummer',
         pais: 'Land',
-        moneda: 'Währung',
+        moneda: 'WÃ¤hrung',
         idioma: 'Sprache'
       },
       buttons: {
@@ -294,14 +294,14 @@ function getTranslations(lang: string): PostAuthTranslation {
       },
       messages: {
         minimumPayment: 'Mindestbetrag $10',
-        selectUser: 'Bitte wählen Sie einen Benutzer aus der Liste',
-        selectUserEdit: 'Bitte wählen Sie einen Benutzer zum Bearbeiten',
-        selectUserDelete: 'Bitte wählen Sie einen Benutzer zum Löschen',
-        selectUserPay: 'Bitte wählen Sie einen Benutzer zum Bezahlen',
+        selectUser: 'Bitte wÃ¤hlen Sie einen Benutzer aus der Liste',
+        selectUserEdit: 'Bitte wÃ¤hlen Sie einen Benutzer zum Bearbeiten',
+        selectUserDelete: 'Bitte wÃ¤hlen Sie einen Benutzer zum LÃ¶schen',
+        selectUserPay: 'Bitte wÃ¤hlen Sie einen Benutzer zum Bezahlen',
         entering: 'Systemzugriff mit Benutzer ID:',
         editing: 'Bearbeitung Benutzer ID:',
         movedToTrash: 'Benutzer ID: {id} in den Papierkorb verschoben',
-        processingPayment: 'Zahlungsabwicklung für Benutzer ID:'
+        processingPayment: 'Zahlungsabwicklung fÃ¼r Benutzer ID:'
       },
       tableColumns: {
         nombre: 'NAME',
@@ -353,7 +353,7 @@ function getTranslations(lang: string): PostAuthTranslation {
     }
   }
   
-  // Retornar traducción del idioma solicitado o inglés por defecto
+  // Retornar traducciÃ³n del idioma solicitado o inglÃ©s por defecto
   return translations[lang] || translations.en
 }
 
@@ -441,7 +441,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       return
     }
     message.success(`${t.messages.entering} ${selectedUser}`)
-    // TODO: Implementar lógica de entrada al sistema
+    // TODO: Implementar lÃ³gica de entrada al sistema
   }
 
   const handleEditar = () => {
@@ -450,7 +450,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       return
     }
     message.info(`${t.messages.editing} ${selectedUser}`)
-    // TODO: Implementar lógica de edición
+    // TODO: Implementar lÃ³gica de ediciÃ³n
   }
 
   const handlePapelera = () => {
@@ -460,7 +460,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
     }
     message.warning(t.messages.movedToTrash.replace('{id}', String(selectedUser)))
     setSelectedUser(null)
-    // TODO: Implementar lógica de eliminación
+    // TODO: Implementar lÃ³gica de eliminaciÃ³n
   }
 
   const handlePagar = () => {
@@ -469,10 +469,10 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       return
     }
     message.success(`${t.messages.processingPayment} ${selectedUser}`)
-    // TODO: Implementar lógica de pago
+    // TODO: Implementar lÃ³gica de pago
   }
 
-  // Handler para selección de fila en la tabla
+  // Handler para selecciÃ³n de fila en la tabla
   const rowSelection = {
     type: 'radio' as const,
     onChange: (selectedRowKeys: React.Key[]) => {
@@ -488,7 +488,7 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
       
       {/* Contenido principal */}
       <div className="post-auth-content">
-        {/* Botón Back en esquina superior izquierda */}
+        {/* BotÃ³n Back en esquina superior izquierda */}
         <div className="back-button-container">
           <Button
             type="default"

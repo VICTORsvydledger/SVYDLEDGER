@@ -65,7 +65,7 @@
     }
   }
 
-  // BotÛn flotante de navegaciÛn PROVISIONAL - Esquina inferior derecha
+  // Bot√≥n flotante de navegaci√≥n PROVISIONAL - Esquina inferior derecha
   .provisional-nav-button {
     position: fixed !important;
     bottom: 30px;
@@ -81,18 +81,18 @@
     transition: all 0.3s ease !important;
     cursor: pointer !important;
     
-    // Icono dentro del botÛn
+    // Icono dentro del bot√≥n
     .anticon {
       font-size: 24px !important;
       color: #000000 !important;
     }
 
     &:hover {
-      background: #00ff99 !important; // Verde m·s brillante en hover
+      background: #00ff99 !important; // Verde m√°s brillante en hover
       border-color: #00ff99 !important;
       color: #000000 !important;
       box-shadow: 0 0 30px rgba(0, 255, 153, 0.8), 
-                  0 6px 16px rgba(0, 0, 0, 0.4) !important; // Glow m·s intenso
+                  0 6px 16px rgba(0, 0, 0, 0.4) !important; // Glow m√°s intenso
       transform: scale(1.1) !important; // Efecto de agrandamiento
     }
 
@@ -290,7 +290,7 @@
       background: transparent !important; // Fondo completamente transparente
       backdrop-filter: none !important; // Sin blur
       border-radius: 12px !important;
-      border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco m·s visible
+      border: 1px solid rgba(255, 255, 255, 0.5) !important; // Borde blanco m√°s visible
       color: white !important;
       transition: all 0.3s ease !important;
       padding: 6px 10px !important; // Reducido proporcionalmente
@@ -300,14 +300,14 @@
 
       &:hover {
         background: transparent !important; // Mantener transparente en hover
-        border-color: rgba(255, 255, 255, 0.8) !important; // Borde m·s brillante al hover
+        border-color: rgba(255, 255, 255, 0.8) !important; // Borde m√°s brillante al hover
         cursor: pointer !important; // Cursor pointer en hover
       }
     }
 
     .ant-select-focused .ant-select-selector {
-      background: transparent !important; // Mantener transparente cuando est· enfocado
-      border-color: white !important; // Borde blanco sÛlido cuando est· activo
+      background: transparent !important; // Mantener transparente cuando est√° enfocado
+      border-color: white !important; // Borde blanco s√≥lido cuando est√° activo
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
     }
 
@@ -330,7 +330,7 @@
     width: 100%;
     text-align: center;
     margin-bottom: 40px !important;
-    margin-top: 0px !important; // Cambiado de 4px a 0px (4px m·s arriba)
+    margin-top: 0px !important; // Cambiado de 4px a 0px (4px m√°s arriba)
     
     .welcome-text {
       font-family: Arial, sans-serif !important; // Cambiado de Vladimir Script a Arial
@@ -351,7 +351,7 @@
       }
 
       @media (max-width: 480px) {
-        font-size: 20px !important; // Ajustado proporcionalmente para mÛviles
+        font-size: 20px !important; // Ajustado proporcionalmente para m√≥viles
         letter-spacing: 1px;
       }
     }
@@ -400,18 +400,18 @@
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3) !important; // Sombra blanca suave al hover
-      border-color: rgba(255, 255, 255, 0.9) !important; // Borde m·s brillante al hover
+      border-color: rgba(255, 255, 255, 0.9) !important; // Borde m√°s brillante al hover
     }
 
     @media (max-width: 768px) {
       padding: 17.5px; // 70% de 25px = 17.5px
-      border-width: 3px !important; // Borde un poco m·s delgado en tablet
+      border-width: 3px !important; // Borde un poco m√°s delgado en tablet
     }
 
     @media (max-width: 480px) {
       padding: 14px; // 70% de 20px = 14px
       border-radius: 11.2px; // 70% de 16px = 11.2px
-      border-width: 2px !important; // Borde m·s delgado en mÛvil
+      border-width: 2px !important; // Borde m√°s delgado en m√≥vil
     }
 
     // Reducir inputs y espacios al 70% dentro de los formularios
@@ -421,7 +421,7 @@
         margin-bottom: 10.5px !important; // 70% de 15px (aprox)
       }
 
-      // Labels - TamaÒo 14px, color blanco, sin negritas
+      // Labels - Tama√±o 14px, color blanco, sin negritas
       .ant-form-item-label {
         padding-bottom: 2.8px !important; // 70% de 4px = 2.8px
         
@@ -436,7 +436,7 @@
             color: white !important; // Asterisco (*) en blanco
           }
           
-          // Asterisco despuÈs del texto tambiÈn en blanco
+          // Asterisco despu√©s del texto tambi√©n en blanco
           .ant-form-item-required-mark {
             color: white !important; // Marca de requerido en blanco
           }
@@ -521,7 +521,7 @@
           }
         }
         
-        // Icono del ojo especÌficamente
+        // Icono del ojo espec√≠ficamente
         .ant-input-password-icon {
           color: white !important;
           
@@ -544,14 +544,14 @@
         
         &:hover {
           background: transparent !important; // Mantener transparente en hover
-          border-color: rgba(255, 255, 255, 0.8) !important; // Borde m·s brillante en hover
+          border-color: rgba(255, 255, 255, 0.8) !important; // Borde m√°s brillante en hover
           color: white !important; // Mantener texto blanco
         }
         
         &:focus,
         &:active {
           background: transparent !important; // Mantener transparente en focus/active
-          border-color: white !important; // Borde blanco sÛlido
+          border-color: white !important; // Borde blanco s√≥lido
           color: white !important; // Mantener texto blanco
         }
       }
@@ -560,7 +560,7 @@
       .ant-btn-link {
         border: none !important; // Sin borde para "Forgot your password?"
         padding: 0 !important; // Sin padding
-        height: auto !important; // Altura autom·tica
+        height: auto !important; // Altura autom√°tica
         
         &:hover,
         &:focus,
@@ -570,7 +570,7 @@
       }
 
       .ant-btn-lg {
-        height: 28px !important; // Forzar mismo tamaÒo
+        height: 28px !important; // Forzar mismo tama√±o
         padding: 4.55px 10.5px !important; // 70% de 6.5px-15px = 4.55px-10.5px
         font-size: 14px !important; // Aumentado a 14px para legibilidad
       }
@@ -580,22 +580,22 @@
         background: transparent !important; // Fondo transparente
         border-color: rgba(255, 255, 255, 0.5) !important; // Borde blanco semi-transparente
         color: white !important; // Texto blanco
-        transition: all 0.3s ease !important; // TransiciÛn suave
+        transition: all 0.3s ease !important; // Transici√≥n suave
         
         &:hover {
           background: transparent !important; // Mantener transparente en hover
-          border-color: rgba(255, 255, 255, 0.8) !important; // Borde m·s brillante
+          border-color: rgba(255, 255, 255, 0.8) !important; // Borde m√°s brillante
           color: white !important; // Mantener texto blanco
         }
         
         &:focus,
         &:active {
           background: transparent !important; // Mantener transparente
-          border-color: white !important; // Borde blanco sÛlido
+          border-color: white !important; // Borde blanco s√≥lido
           color: white !important; // Mantener texto blanco
         }
         
-        // BotÛn con contenido - Verde vibrante
+        // Bot√≥n con contenido - Verde vibrante
         &.has-content {
           background: #00ff88 !important; // Verde vibrante muy brillante
           border-color: #00ff88 !important; // Borde verde vibrante
@@ -603,10 +603,10 @@
           box-shadow: 0 0 20px rgba(0, 255, 136, 0.6) !important; // Glow verde
           
           &:hover {
-            background: #00ff99 !important; // Verde a˙n m·s brillante en hover
+            background: #00ff99 !important; // Verde a√∫n m√°s brillante en hover
             border-color: #00ff99 !important;
             color: #000000 !important;
-            box-shadow: 0 0 30px rgba(0, 255, 153, 0.8) !important; // Glow m·s intenso
+            box-shadow: 0 0 30px rgba(0, 255, 153, 0.8) !important; // Glow m√°s intenso
           }
           
           &:focus,
@@ -634,7 +634,7 @@
       
       // Success messages - Color blanco
       .ant-form-item-explain-success {
-        color: white !important; // Mensajes de Èxito en blanco
+        color: white !important; // Mensajes de √©xito en blanco
         font-size: 12px !important; // Consistente con otros mensajes
       }
       
@@ -657,7 +657,7 @@
     }
   }
 
-  // Form Title - Reducido a 70% del tamaÒo original
+  // Form Title - Reducido a 70% del tama√±o original
   .form-title {
     font-size: 19.6px !important; // 70% de 28px = 19.6px
     font-weight: 600 !important;

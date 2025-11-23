@@ -1,0 +1,52 @@
+﻿{
+  "welcome": {
+    "title": "Willkommen",
+    "subtitle": "Universelles Buchhaltungssystem",
+    "tagline": "Dieses System funktioniert: ohne Kontonummern, ohne Kontenplan, ohne Buchungss�tze, ohne Abschl�sse, ohne Gesch�ftsjahre. Zeitlos. Keine Unterscheidung zwischen nat�rlicher Person und juristischer Person erforderlich",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren"
+  },
+  "postAuth": {
+    "backButton": "Zur�ck zur Willkommensseite",
+    "loggedInAs": "Angemeldet als:",
+    "adminOnly": "Nur der Administrator kann diesen Block bearbeiten",
+    "headers": {
+      "createUser": "Neuen Benutzer Erstellen",
+      "userList": "Benutzerliste",
+      "authorizedEmails": "AUTORISIERTE E-MAILS",
+      "password": "PASSWORT"
+    },
+    "labels": {
+      "nombre": "Name",
+      "id": "Id",
+      "idTributario": "Steuernummer",
+      "pais": "Land",
+      "moneda": "W�hrung",
+      "idioma": "Sprache"
+    },
+    "buttons": {
+      "entrar": "BETRETEN",
+      "editar": "BEARBEITEN",
+      "papelera": "PAPIERKORB",
+      "pagar": "BEZAHLEN",
+      "saldo": "SALDO",
+      "pagarRegistro": "Registrierung des neuen Benutzers bezahlen"
+    },
+    "messages": {
+      "minimumPayment": "Mindestbetrag $10",
+      "selectUser": "Bitte w�hlen Sie einen Benutzer aus der Liste",
+      "selectUserEdit": "Bitte w�hlen Sie einen Benutzer zum Bearbeiten",
+      "selectUserDelete": "Bitte w�hlen Sie einen Benutzer zum L�schen",
+      "selectUserPay": "Bitte w�hlen Sie einen Benutzer zum Bezahlen",
+      "entering": "Systemzugriff mit Benutzer ID:",
+      "editing": "Bearbeitung Benutzer ID:",
+      "movedToTrash": "Benutzer ID: {id} in den Papierkorb verschoben",
+      "processingPayment": "Zahlungsabwicklung f�r Benutzer ID:"
+    },
+    "tableColumns": {
+      "nombre": "NAME",
+      "id": "ID",
+      "saldo": "$"
+    }
+  }
+}

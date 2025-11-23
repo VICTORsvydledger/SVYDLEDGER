@@ -1,0 +1,52 @@
+﻿{
+  "welcome": {
+    "title": "Selamat Datang",
+    "subtitle": "Sistem Akuntansi Universal dan Manajemen Keuangan",
+    "tagline": "Solusi lengkap untuk manajemen akuntansi, penyusunan laporan keuangan, dan kepatuhan pajak untuk perusahaan modern. Kontrol penuh atas buku besar, jurnal entri, dan laporan keuangan dengan teknologi cloud yang aman.",
+    "signIn": "Masuk",
+    "signUp": "Daftar"
+  },
+  "postAuth": {
+    "backButton": "Kembali ke Selamat Datang",
+    "loggedInAs": "Masuk sebagai:",
+    "adminOnly": "Hanya administrator yang dapat mengedit blok ini",
+    "headers": {
+      "createUser": "Buat Pengguna Baru",
+      "userList": "Daftar Pengguna",
+      "authorizedEmails": "EMAIL YANG DIOTORISASI",
+      "password": "KATA SANDI"
+    },
+    "labels": {
+      "nombre": "Nama",
+      "id": "Id",
+      "idTributario": "ID Pajak",
+      "pais": "Negara",
+      "moneda": "Mata Uang",
+      "idioma": "Bahasa"
+    },
+    "buttons": {
+      "entrar": "MASUK",
+      "editar": "EDIT",
+      "papelera": "SAMPAH",
+      "pagar": "BAYAR",
+      "saldo": "SALDO",
+      "pagarRegistro": "Bayar pendaftaran pengguna baru"
+    },
+    "messages": {
+      "minimumPayment": "Jumlah pembayaran minimum $10",
+      "selectUser": "Silakan pilih pengguna dari daftar",
+      "selectUserEdit": "Silakan pilih pengguna untuk diedit",
+      "selectUserDelete": "Silakan pilih pengguna untuk dihapus",
+      "selectUserPay": "Silakan pilih pengguna untuk dibayar",
+      "entering": "Masuk ke sistem dengan ID pengguna:",
+      "editing": "Mengedit ID pengguna:",
+      "movedToTrash": "ID pengguna: {id} dipindahkan ke tempat sampah",
+      "processingPayment": "Memproses pembayaran untuk ID pengguna:"
+    },
+    "tableColumns": {
+      "nombre": "NAMA",
+      "id": "ID",
+      "saldo": "$"
+    }
+  }
+}

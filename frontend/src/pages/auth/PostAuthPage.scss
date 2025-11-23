@@ -1,6 +1,6 @@
 // ===============================================
 // PostAuthPage Styles
-// Última actualización: 2025-01-15 - Bloques desplazados 230px derecha
+// Ãšltima actualizaciÃ³n: 2025-01-15 - Bloques desplazados 230px derecha
 // ===============================================
 
 .post-auth-page {
@@ -35,7 +35,7 @@
   flex-direction: column;
 }
 
-// Botón Back en esquina superior izquierda
+// BotÃ³n Back en esquina superior izquierda
 .back-button-container {
   position: absolute;
   top: 2rem;
@@ -72,7 +72,7 @@
     transform: translateX(-2px);
   }
   
-  // Asegurar que el ícono también sea blanco
+  // Asegurar que el Ã­cono tambiÃ©n sea blanco
   .anticon {
     color: white;
   }
@@ -81,11 +81,11 @@
     font-size: 0.875rem;
     height: 42px;
     padding: 0 16px;
-    border-width: 3px; // Borde un poco más delgado en móvil
+    border-width: 3px; // Borde un poco mÃ¡s delgado en mÃ³vil
   }
 }
 
-// Logo Svyd centrado (más arriba)
+// Logo Svyd centrado (mÃ¡s arriba)
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -108,7 +108,7 @@
   }
   
   @media (max-width: 576px) {
-    font-size: 48px; // Ajustado proporcionalmente para móvil
+    font-size: 48px; // Ajustado proporcionalmente para mÃ³vil
   }
 }
 
@@ -144,14 +144,14 @@
   
   @media (max-width: 1200px) {
     padding: 0 2rem 2rem 2rem;
-    margin: 0 auto; // Centrado en pantallas pequeñas
+    margin: 0 auto; // Centrado en pantallas pequeÃ±as
   }
 }
 
 // PRIMERA FILA: Crear Usuario Nuevo (50%) + Lista de Usuarios (50%)
 .top-row {
   display: flex;
-  gap: 64px; // Separación exacta de 64px
+  gap: 64px; // SeparaciÃ³n exacta de 64px
   
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -198,7 +198,7 @@
     margin-bottom: 10px;
     text-align: center;
     width: 100%;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // Añadir sombra negra para mejor legibilidad
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // AÃ±adir sombra negra para mejor legibilidad
   }
   
   .block {
@@ -206,7 +206,7 @@
     min-width: 0;
     
     @media (max-width: 1200px) {
-      flex: 1; // En pantallas pequeñas mantener responsive
+      flex: 1; // En pantallas pequeÃ±as mantener responsive
     }
   }
 }
@@ -257,8 +257,8 @@
       border: 2px solid white; // Cambiado de 1px solid #999 a 2px solid white
       padding: 4px 8px; // Reducido de 8px 12px
       font-size: 0.75rem; // Reducido de 0.9rem
-      height: 28px; // Altura específica reducida
-      color: white; // Añadir color blanco al texto del input
+      height: 28px; // Altura especÃ­fica reducida
+      color: white; // AÃ±adir color blanco al texto del input
       
       &::placeholder {
         color: rgba(255, 255, 255, 0.6); // Placeholder en blanco semi-transparente
@@ -283,7 +283,7 @@
   }
 
   .minimum-payment {
-    background: rgba(0, 255, 0, 0.8); // Cambiado de rgba(255, 255, 204, 0.7) a verde vibrante igual que el botón
+    background: rgba(0, 255, 0, 0.8); // Cambiado de rgba(255, 255, 204, 0.7) a verde vibrante igual que el botÃ³n
     padding: 6px 12px; // Reducido de 12px 20px
     text-align: center;
     font-size: 0.75rem; // Reducido de 0.9rem
@@ -382,7 +382,7 @@
   .users-table {
     .ant-table {
       background: transparent;
-      font-size: 0.75rem; // Reducir tamaño de fuente de la tabla
+      font-size: 0.75rem; // Reducir tamaÃ±o de fuente de la tabla
     }
     
     // AGREGAR SCROLL VERTICAL CON ALTURA FIJA PARA 13 FILAS VISIBLES
@@ -441,7 +441,7 @@
       background: transparent; // Cambiado de rgba(255, 255, 255, 0.5) a transparent
       padding: 4px 8px; // Reducido de padding por defecto
       font-size: 0.7rem; // Reducido
-      color: white; // Añadir color blanco al texto de las celdas
+      color: white; // AÃ±adir color blanco al texto de las celdas
 
       &:first-child {
         background: transparent; // Cambiado de rgba(212, 241, 212, 0.5) a transparent
@@ -474,7 +474,7 @@
       }
     }
 
-    // Estilo para la columna de selección
+    // Estilo para la columna de selecciÃ³n
     .ant-table-selection-column {
       width: 40px;
       padding-left: 12px !important;
@@ -500,7 +500,7 @@
       font-size: 0.9rem;
       color: white;
       text-align: center;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // Añadir sombra para mejor legibilidad
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); // AÃ±adir sombra para mejor legibilidad
       
       &.correos-header {
         background: transparent; // Cambiado de rgba(255, 255, 0, 0.7) a transparent
@@ -521,7 +521,7 @@
       padding: 8px 12px;
       color: white;
       
-      // Hacer los inputs dentro de las celdas transparentes también
+      // Hacer los inputs dentro de las celdas transparentes tambiÃ©n
       .ant-input {
         background: transparent !important;
         border: 1px solid white !important;
@@ -535,7 +535,7 @@
   }
 }
 
-// Animación de entrada
+// AnimaciÃ³n de entrada
 .post-auth-page {
   animation: fadeIn 0.5s ease-out;
 }

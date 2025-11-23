@@ -1,0 +1,52 @@
+﻿{
+  "welcome": {
+    "title": "Karibu",
+    "subtitle": "Mfumo wa Uhasibu wa Ulimwengu na Usimamizi wa Fedha",
+    "tagline": "Suluhisho kamili kwa usimamizi wa akaunti, uandaaji wa taarifa za kifedha, na utii wa kodi kwa biashara za kisasa. Udhibiti kamili wa daftari kuu, maingizo ya jarida, na taarifa za kifedha kwa teknolojia salama ya wingu.",
+    "signIn": "Ingia",
+    "signUp": "Jisajili"
+  },
+  "postAuth": {
+    "backButton": "Rudi kwenye Karibu",
+    "loggedInAs": "Umeingia kama:",
+    "adminOnly": "Msimamizi pekee anaweza kuhariri kitalu hiki",
+    "headers": {
+      "createUser": "Unda Mtumiaji Mpya",
+      "userList": "Orodha ya Watumiaji",
+      "authorizedEmails": "BARUA PEPE ZILIZOIDHINISHWA",
+      "password": "NENOSIRI"
+    },
+    "labels": {
+      "nombre": "Jina",
+      "id": "Kitambulisho",
+      "idTributario": "Kitambulisho cha Kodi",
+      "pais": "Nchi",
+      "moneda": "Sarafu",
+      "idioma": "Lugha"
+    },
+    "buttons": {
+      "entrar": "INGIA",
+      "editar": "HARIRI",
+      "papelera": "TAKATAKA",
+      "pagar": "LIPA",
+      "saldo": "SALIO",
+      "pagarRegistro": "Lipa usajili wa mtumiaji mpya"
+    },
+    "messages": {
+      "minimumPayment": "Kiasi cha chini cha malipo $10",
+      "selectUser": "Tafadhali chagua mtumiaji kutoka kwenye orodha",
+      "selectUserEdit": "Tafadhali chagua mtumiaji wa kuhariri",
+      "selectUserDelete": "Tafadhali chagua mtumiaji wa kufuta",
+      "selectUserPay": "Tafadhali chagua mtumiaji wa kulipa",
+      "entering": "Kuingia kwenye mfumo na kitambulisho cha mtumiaji:",
+      "editing": "Kuhariri kitambulisho cha mtumiaji:",
+      "movedToTrash": "Kitambulisho cha mtumiaji: {id} kimehamishwa kwenye takataka",
+      "processingPayment": "Kuchakata malipo kwa kitambulisho cha mtumiaji:"
+    },
+    "tableColumns": {
+      "nombre": "JINA",
+      "id": "KITAMBULISHO",
+      "saldo": "$"
+    }
+  }
+}

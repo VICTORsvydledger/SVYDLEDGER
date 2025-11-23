@@ -1,0 +1,52 @@
+﻿{
+  "welcome": {
+    "title": "Benvenuto",
+    "subtitle": "Sistema Contabile Universale",
+    "tagline": "Questo sistema funziona: senza codici, senza piano dei conti, senza scritture contabili, senza chiusure, senza esercizi contabili. Atemporale. Non necessita di distinguere tra persona fisica e persona giuridica",
+    "signIn": "Accedi",
+    "signUp": "Registrati"
+  },
+  "postAuth": {
+    "backButton": "Torna al Benvenuto",
+    "loggedInAs": "Connesso come:",
+    "adminOnly": "Solo l'amministratore pu� modificare questo blocco",
+    "headers": {
+      "createUser": "Crea Nuovo Utente",
+      "userList": "Elenco Utenti",
+      "authorizedEmails": "E-MAIL AUTORIZZATE",
+      "password": "PASSWORD"
+    },
+    "labels": {
+      "nombre": "Nome",
+      "id": "Id",
+      "idTributario": "ID Fiscale",
+      "pais": "Paese",
+      "moneda": "Valuta",
+      "idioma": "Lingua"
+    },
+    "buttons": {
+      "entrar": "ENTRA",
+      "editar": "MODIFICA",
+      "papelera": "CESTINO",
+      "pagar": "PAGA",
+      "saldo": "SALDO",
+      "pagarRegistro": "Paga registrazione nuovo utente"
+    },
+    "messages": {
+      "minimumPayment": "Importo minimo di pagamento $10",
+      "selectUser": "Seleziona un utente dall'elenco",
+      "selectUserEdit": "Seleziona un utente da modificare",
+      "selectUserDelete": "Seleziona un utente da eliminare",
+      "selectUserPay": "Seleziona un utente da pagare",
+      "entering": "Accesso al sistema con utente ID:",
+      "editing": "Modifica utente ID:",
+      "movedToTrash": "Utente ID: {id} spostato nel cestino",
+      "processingPayment": "Elaborazione pagamento per utente ID:"
+    },
+    "tableColumns": {
+      "nombre": "NOME",
+      "id": "ID",
+      "saldo": "$"
+    }
+  }
+}

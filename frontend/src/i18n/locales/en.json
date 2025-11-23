@@ -1,0 +1,52 @@
+{
+  "welcome": {
+    "title": "Welcome",
+    "subtitle": "Universal Accounting System",
+    "tagline": "This system works: without codes, without chart of accounts, without journal entries, without closings, without fiscal periods. Timeless. No need to distinguish between natural person and legal entity",
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "postAuth": {
+    "backButton": "Back to Welcome",
+    "loggedInAs": "Logged in as:",
+    "adminOnly": "Only the administrator can edit this block",
+    "headers": {
+      "createUser": "Create New User",
+      "userList": "User List",
+      "authorizedEmails": "AUTHORIZED EMAILS",
+      "password": "PASSWORD"
+    },
+    "labels": {
+      "nombre": "Name",
+      "id": "Id",
+      "idTributario": "Tax ID",
+      "pais": "Country",
+      "moneda": "Currency",
+      "idioma": "Language"
+    },
+    "buttons": {
+      "entrar": "ENTER",
+      "editar": "EDIT",
+      "papelera": "TRASH",
+      "pagar": "PAY",
+      "saldo": "BALANCE",
+      "pagarRegistro": "Pay for new user registration"
+    },
+    "messages": {
+      "minimumPayment": "Minimum payment amount $10",
+      "selectUser": "Please select a user from the list",
+      "selectUserEdit": "Please select a user to edit",
+      "selectUserDelete": "Please select a user to delete",
+      "selectUserPay": "Please select a user to pay",
+      "entering": "Entering system with user ID:",
+      "editing": "Editing user ID:",
+      "movedToTrash": "User ID: {id} moved to trash",
+      "processingPayment": "Processing payment for user ID:"
+    },
+    "tableColumns": {
+      "nombre": "NAME",
+      "id": "ID",
+      "saldo": "$"
+    }
+  }
+}

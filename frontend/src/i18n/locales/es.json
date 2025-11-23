@@ -1,0 +1,52 @@
+{
+  "welcome": {
+    "title": "Bienvenido",
+    "subtitle": "Sistema de Contabilidad Universal",
+    "tagline": "Este sistema trabaja: sin códigos, sin catálogos de cuenta, sin asientos contables, sin cierres, sin periodos fiscales. Atemporal. No necesita distinguir entre persona física y persona jurídica",
+    "signIn": "Iniciar Sesión",
+    "signUp": "Registrarse"
+  },
+  "postAuth": {
+    "backButton": "Volver a Bienvenida",
+    "loggedInAs": "Sesión iniciada como:",
+    "adminOnly": "Solo el administrador puede editar este bloque",
+    "headers": {
+      "createUser": "Crear Usuario Nuevo",
+      "userList": "Lista de Usuarios",
+      "authorizedEmails": "CORREOS AUTORIZADOS",
+      "password": "CONTRASEÑA"
+    },
+    "labels": {
+      "nombre": "Nombre",
+      "id": "Id",
+      "idTributario": "Id Tributario",
+      "pais": "País",
+      "moneda": "Moneda",
+      "idioma": "Idioma"
+    },
+    "buttons": {
+      "entrar": "ENTRAR",
+      "editar": "EDITAR",
+      "papelera": "PAPELERA",
+      "pagar": "PAGAR",
+      "saldo": "SALDO",
+      "pagarRegistro": "Pagar registro de usuario nuevo"
+    },
+    "messages": {
+      "minimumPayment": "Monto mínimo a pagar $10",
+      "selectUser": "Por favor selecciona un usuario de la lista",
+      "selectUserEdit": "Por favor selecciona un usuario para editar",
+      "selectUserDelete": "Por favor selecciona un usuario para eliminar",
+      "selectUserPay": "Por favor selecciona un usuario para pagar",
+      "entering": "Entrando al sistema con usuario ID:",
+      "editing": "Editando usuario ID:",
+      "movedToTrash": "Usuario ID: {id} movido a la papelera",
+      "processingPayment": "Procesando pago para usuario ID:"
+    },
+    "tableColumns": {
+      "nombre": "NOMBRE",
+      "id": "ID",
+      "saldo": "$"
+    }
+  }
+}
