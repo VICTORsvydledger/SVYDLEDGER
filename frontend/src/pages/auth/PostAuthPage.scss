@@ -183,6 +183,7 @@
 .bottom-row {
   display: flex;
   justify-content: center; // Centrar el bloque
+  margin-top: 30px; // Desplazar 30px hacia abajo
   
   @media (max-width: 1200px) {
     flex-direction: column;
