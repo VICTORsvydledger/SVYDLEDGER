@@ -385,9 +385,9 @@ const PostAuthPage = ({ onBack, userEmail, selectedLanguage = 'en' }: PostAuthPa
   // Datos de ejemplo para la tabla de usuarios (AUMENTADO A 50 FILAS)
   const usersData = Array(50).fill(null).map((_, i) => ({
     key: i,
-    nombre: '',
-    id: '',
-    saldo: '$'
+    nombre: `User ${i + 1}`, // Agregar número para visualizar mejor
+    id: `ID-${String(i + 1).padStart(3, '0')}`, // Agregar ID numérico
+    saldo: '$0.00' // Agregar saldo para mejor visualización
   }))
 
   // Datos de ejemplo para correos autorizados
