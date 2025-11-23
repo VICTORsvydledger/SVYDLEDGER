@@ -269,7 +269,7 @@
   .pay-button {
     margin: 6px 12px; // Reducido de 10px 20px
     background: rgba(0, 255, 0, 0.8); // Hacer semi-transparente pero visible
-    border: 2px solid #000;
+    border: 2px solid white; // Cambiado de 2px solid #000 a 2px solid white
     color: white; // Cambiar de #000 a white
     font-weight: 600;
     height: 32px; // Reducido de 40px
@@ -277,13 +277,13 @@
     
     &:hover {
       background: rgba(0, 221, 0, 0.9) !important; // Hacer semi-transparente pero visible
-      border-color: #000 !important;
+      border-color: white !important; // Cambiado de #000 a white
       color: white !important; // Cambiar de #000 a white
     }
   }
 
   .minimum-payment {
-    background: rgba(255, 255, 204, 0.7); // Hacer semi-transparente
+    background: rgba(0, 255, 0, 0.8); // Cambiado de rgba(255, 255, 204, 0.7) a verde vibrante igual que el botón
     padding: 6px 12px; // Reducido de 12px 20px
     text-align: center;
     font-size: 0.75rem; // Reducido de 0.9rem
