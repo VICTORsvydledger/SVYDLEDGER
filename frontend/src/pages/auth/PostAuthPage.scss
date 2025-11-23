@@ -264,45 +264,54 @@
     }
     
     // ===============================================
-    // ESTILOS PARA EL SELECT (COMBO DE PAÍSES) - TRANSPARENTE
+    // ESTILOS PARA EL SELECT (COMBOS) - TRANSPARENTE CON CURSOR POINTER
     // ===============================================
     .ant-select {
+      cursor: pointer !important; // Cursor manita en todo el componente Select
+      
       .ant-select-selector {
         background: transparent !important;
         border: 2px solid white !important;
         padding: 0 8px !important;
         height: 28px !important;
         color: white !important;
+        cursor: pointer !important; // Cursor manita en el selector
         
         .ant-select-selection-search-input {
           height: 24px !important;
           color: white !important;
+          cursor: pointer !important; // Cursor manita en el input de búsqueda
         }
         
         .ant-select-selection-placeholder {
           color: rgba(255, 255, 255, 0.6) !important;
+          cursor: pointer !important; // Cursor manita en placeholder
         }
         
         .ant-select-selection-item {
           color: white !important;
           line-height: 24px !important;
+          cursor: pointer !important; // Cursor manita en el item seleccionado
         }
       }
       
       // Flecha del dropdown
       .ant-select-arrow {
         color: white !important;
+        cursor: pointer !important; // Cursor manita en la flecha
       }
       
       // Estilo hover
       &:hover .ant-select-selector {
         border-color: white !important;
+        cursor: pointer !important; // Cursor manita en hover
       }
       
       // Estilo focus
       &.ant-select-focused .ant-select-selector {
         border-color: white !important;
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+        cursor: pointer !important; // Cursor manita en focus
       }
     }
   }
