@@ -185,7 +185,7 @@
   flex-direction: column; // Cambiar a columna para incluir el mensaje
   align-items: center; // Centrar los elementos
   justify-content: center; // Centrar el bloque
-  margin-top: 30px; // Desplazar 30px hacia abajo
+  margin-top: 10px; // Cambiado de 30px a 10px (mover 20px hacia arriba)
   
   @media (max-width: 1200px) {
     flex-direction: column;
